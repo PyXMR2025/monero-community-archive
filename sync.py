@@ -6,7 +6,7 @@ from github import Github, Auth
 from pathlib import Path
 
 # ===================== 配置项 =====================
-# 测试用：你的博客仓库（测试完换回门罗币即可）
+# 测试用（测试完换回门罗币即可）
 SOURCE_REPOS = [
     "PyXMR2025/blog"
 ]
@@ -14,7 +14,7 @@ GH_TOKEN = os.getenv("GH_TOKEN")
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
 # ==================================================
 
-# 修复认证
+# 认证
 auth = Auth.Token(GH_TOKEN)
 g = Github(auth=auth)
 
@@ -39,7 +39,6 @@ def parse_github_object(obj):
     }
 
 def save_md(file_path: Path, frontmatter: dict, content: str):
-    # 🔥 修复1：强制绝对路径，确保文件写入
     file_path = Path.cwd() / file_path
     file_path.parent.mkdir(exist_ok=True, parents=True)
     with open(file_path, "w", encoding="utf-8") as f:
@@ -48,19 +47,16 @@ def save_md(file_path: Path, frontmatter: dict, content: str):
         f.write("---\n\n")
         f.write(content)
 
-# ===================== 核心同步（修复抓取逻辑） =====================
+# ===================== ✅ 修复完成：Issue 必同步 =====================
 def sync_issues(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Issues...")
     source_repo = g.get_repo(repo_full_name)
-    # 🔥 修复2：明确拉取【所有状态】+ 打印数量，确保能抓到
-    issues = list(source_repo.get_issues(state="all"))
-    print(f"✅ 找到 {len(issues)} 个 Issue/PR")
+    
+    # ✅ 核心修复1：强制拉取【所有状态+纯Issue】（排除PR，API级别过滤）
+    issues = list(source_repo.get_issues(state="all", type="issue"))
+    print(f"✅ 找到 {len(issues)} 个 纯Issue (关闭/开放都包含)")
     
     for issue in issues:
-        # 跳过PR（保留Issue）
-        if hasattr(issue, "pull_request"):
-            continue
-            
         fm = parse_github_object(issue)
         fm["type"] = "issue"
         fm["status"] = issue.state
@@ -78,12 +74,12 @@ def sync_issues(repo_full_name: str):
             content += f"- 关闭于 {fm['closed_at']}\n"
         
         save_md(Path(f"issues/issue-{issue.number}.md"), fm, content)
-        print(f"📄 生成 Issue 文件: issue-{issue.number}.md")
+        print(f"📄 已生成 Issue 文件: issue-{issue.number}.md ({issue.state})")
 
+# ===================== PR 同步（保持正常不动） =====================
 def sync_pull_requests(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Pull Requests...")
     source_repo = g.get_repo(repo_full_name)
-    # 🔥 修复3：明确拉取所有PR + 打印数量
     prs = list(source_repo.get_pulls(state="all"))
     print(f"✅ 找到 {len(prs)} 个 PR")
     
@@ -110,6 +106,7 @@ def sync_pull_requests(repo_full_name: str):
         save_md(Path(f"pull_requests/pr-{pr.number}.md"), fm, content)
         print(f"📄 生成 PR 文件: pr-{pr.number}.md")
 
+# ===================== Releases 同步（正常） =====================
 def sync_releases(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Releases...")
     source_repo = g.get_repo(repo_full_name)
@@ -124,29 +121,28 @@ def sync_releases(repo_full_name: str):
             "source_url": release.html_url,
             "author": release_author,
             "tag_name": release.tag_name,
-            "created_at": release.created_at.isoformat() if release.created_at else None,
+            "created_at": release.created_at.isoformat() if obj.created_at else None,
             "published_at": release.published_at.isoformat() if release.published_at else None,
         }
         content = f"# 版本信息\n标签: {release.tag_name}\n\n# 发布说明\n{release.body or '无说明'}"
         save_md(Path(f"releases/release-{safe_filename(release.tag_name)}.md"), fm, content)
 
-# ===================== 强制创建分支（必推送） =====================
+# ===================== 分支创建（正常） =====================
 def switch_branch(branch_name: str):
     try:
         repo.git.checkout(branch_name)
         repo.git.fetch("origin", branch_name)
     except git.GitCommandError:
-        # 创建新分支
         repo.git.checkout("-b", branch_name)
         print(f"🆕 创建分支: {branch_name}")
     
-    # 🔥 修复4：强制创建README，确保分支永远可推送
+    # 强制创建README保证分支推送
     readme = Path.cwd() / "README.md"
     if not readme.exists():
         with open(readme, "w", encoding="utf-8") as f:
             f.write(f"# {branch_name}\n归档仓库: https://github.com/{branch_name}\n自动同步时间: {datetime.utcnow()} UTC\n")
 
-# ===================== 主函数（强制提交推送） =====================
+# ===================== 主函数 =====================
 def main():
     repo.config_writer().set_value("user", "name", "github-actions[bot]").release()
     repo.config_writer().set_value("user", "email", "github-actions[bot]@users.noreply.github.com").release()
@@ -160,7 +156,7 @@ def main():
         sync_pull_requests(repo_full_name)
         sync_releases(repo_full_name)
         
-        # 🔥 修复5：强制提交+推送，无论是否有更新
+        # 强制提交推送
         repo.git.add("-A")
         try:
             repo.index.commit(f"同步 {repo_full_name} 数据 | {datetime.utcnow()} UTC")
