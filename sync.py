@@ -10,12 +10,8 @@ from pathlib import Path
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
 # 需要同步的源仓库列表
 SOURCE_REPOS = [
-    "monero-project/monero",
-    "monero-project/monero-docs",
-    "monero-project/monero-gui",
-    "monero-project/monero-site",
-    "monero-project/meta",
-    "monero-project/research-lab"
+    "PyXMR2025/blog",
+    "xmrig/xmrig"
 ]
 # GitHub令牌（从环境变量读取，由Actions自动注入）
 GH_TOKEN = os.getenv("GH_TOKEN")
@@ -73,13 +69,15 @@ def sync_issues(repo_full_name: str):
         
         # 正文内容
         content = f"# 原始描述\n{issue.body or '无描述'}\n\n# 讨论记录\n"
-        # 抓取评论
+        # 抓取评论 ✅ 修复用户空指针
         for comment in issue.get_comments():
             time_str = comment.created_at.isoformat()
-            content += f"## {comment.user.login} | {time_str}\n{comment.body or '无内容'}\n\n"
-        # 抓取处理记录
+            comment_user = comment.user.login if comment.user else "unknown"
+            content += f"## {comment_user} | {time_str}\n{comment.body or '无内容'}\n\n"
+        # 抓取处理记录 ✅ 修复用户空指针
         content += "# 处理记录\n"
-        content += f"- {issue.user.login} opened this issue on {fm['created_at']}\n"
+        issue_user = issue.user.login if issue.user else "unknown"
+        content += f"- {issue_user} opened this issue on {fm['created_at']}\n"
         if issue.state == "closed":
             content += f"- 关闭时间: {fm['closed_at']}\n"
         
@@ -103,13 +101,15 @@ def sync_pull_requests(repo_full_name: str):
         
         # 正文内容
         content = f"# 原始描述\n{pr.body or '无描述'}\n\n# 讨论记录\n"
-        # 抓取评论
+        # 抓取评论 ✅ 修复用户空指针（核心报错点）
         for comment in pr.get_comments():
             time_str = comment.created_at.isoformat()
-            content += f"## {comment.user.login} | {time_str}\n{comment.body or '无内容'}\n\n"
-        # 处理记录
+            comment_user = comment.user.login if comment.user else "unknown"
+            content += f"## {comment_user} | {time_str}\n{comment.body or '无内容'}\n\n"
+        # 处理记录 ✅ 修复用户空指针
         content += "# 处理记录\n"
-        content += f"- {pr.user.login} opened this PR on {fm['created_at']}\n"
+        pr_user = pr.user.login if pr.user else "unknown"
+        content += f"- {pr_user} opened this PR on {fm['created_at']}\n"
         if pr.merged:
             content += f"- 合并时间: {fm['merged_at']}\n"
         elif pr.state == "closed":
