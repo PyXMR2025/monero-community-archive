@@ -10,8 +10,7 @@ from pathlib import Path
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
 # 需要同步的源仓库列表
 SOURCE_REPOS = [
-    "PyXMR2025/blog",
-    "xmrig/xmrig"
+    "PyXMR2025/blog"
 ]
 # GitHub令牌（从环境变量读取，由Actions自动注入）
 GH_TOKEN = os.getenv("GH_TOKEN")
