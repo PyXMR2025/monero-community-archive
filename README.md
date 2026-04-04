@@ -28,7 +28,7 @@ Each entry is an independent MD file containing:
 - Opening/closing or merging and other handling history
 
 ## Synchronization Mechanism
-- Automatic synchronization: Incremental updates are performed daily at **12:00 UTC**
+- Automatic synchronization: Incremental updates are performed **every 3 days at 12:00 UTC**.
 - Synchronization method: GitHub Actions + Python
 - Update strategy: Only pull newly added or changed content while retaining historical versions
 
