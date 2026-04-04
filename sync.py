@@ -2,7 +2,7 @@ import os
 import git
 import yaml
 from datetime import datetime
-from github import Github, Auth
+from github import Github, Auth, GithubException
 from pathlib import Path
 
 # ===================== Config =====================
@@ -14,16 +14,36 @@ SOURCE_REPOS = [
     "monero-project/meta",
     "monero-project/research-lab"
 ]
-GH_TOKEN = os.getenv("GH_TOKEN")
+GH_TOKEN1 = os.getenv("GH_TOKEN1")
+GH_TOKEN2 = os.getenv("GH_TOKEN2")
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
 # ==================================================
 
-auth = Auth.Token(GH_TOKEN)
-g = Github(auth=auth)
+if not GH_TOKEN1 or not GH_TOKEN2:
+    raise ValueError("请配置环境变量 GH_TOKEN1 和 GH_TOKEN2")
+TOKENS = [GH_TOKEN1, GH_TOKEN2]
+current_token_idx = 0  # 当前使用的TOKEN索引
 
+def get_current_token() -> str:
+    """获取当前活跃的TOKEN"""
+    return TOKENS[current_token_idx]
+
+def switch_token() -> None:
+    """切换到下一个TOKEN（轮番）"""
+    global current_token_idx
+    current_token_idx = (current_token_idx + 1) % 2
+    print(f"🔄 切换TOKEN → 第 {current_token_idx + 1} 个")
+
+def mask_token(token: str) -> str:
+    """脱敏显示TOKEN（安全日志）"""
+    if len(token) > 8:
+        return token[:4] + "****" + token[-4:]
+    return "****"
+
+# 初始化Git
 repo = git.Repo(".")
 origin = repo.remote("origin")
-origin.set_url(f"https://{GH_TOKEN}@github.com/{TARGET_REPO}.git")
+# ============================================================
 
 def safe_filename(text: str) -> str:
     return text.replace("/", "_").replace("\\","_").replace(":","_").replace(" ","_")
@@ -50,6 +70,7 @@ def save_md(file_path: Path, frontmatter: dict, content: str):
 # ===================== Sync Issues =====================
 def sync_issues(repo_full_name: str):
     print(f"🔍 Starting to sync Issues for {repo_full_name} (all states)")
+    g = Github(auth=Auth.Token(get_current_token()))
     source_repo = g.get_repo(repo_full_name)
     count = 0
 
@@ -85,6 +106,7 @@ def sync_issues(repo_full_name: str):
 # ===================== Sync Pull Requests =====================
 def sync_pull_requests(repo_full_name: str):
     print(f"🔍 Starting to sync Pull Requests for {repo_full_name}")
+    g = Github(auth=Auth.Token(get_current_token()))
     source_repo = g.get_repo(repo_full_name)
     count = 0
 
@@ -118,6 +140,7 @@ def sync_pull_requests(repo_full_name: str):
 # ===================== Sync Releases =====================
 def sync_releases(repo_full_name: str):
     print(f"🔍 Starting to sync Releases for {repo_full_name}")
+    g = Github(auth=Auth.Token(get_current_token()))
     source_repo = g.get_repo(repo_full_name)
     releases = list(source_repo.get_releases())
     
@@ -136,7 +159,7 @@ def sync_releases(repo_full_name: str):
     print(f"🎉 Sync completed! Total Releases captured: {len(releases)}\n")
 
 # ===================== Branch Management =====================
-def switch_branch(branch_name):
+def switch_branch(branch_name: str, repo_full_name: str):
     try:
         repo.git.checkout(branch_name)
         repo.git.fetch("origin", branch_name)
@@ -158,9 +181,14 @@ def main():
         branch = repo_full_name.split("/")[-1]
         print(f"\n========================================")
         print(f"Syncing repo: {repo_full_name} -> Branch: {branch}")
+        print(f"当前使用TOKEN: {mask_token(get_current_token())}")
         print(f"========================================\n")
+
+        current_token = get_current_token()
+        origin.set_url(f"https://{current_token}@github.com/{TARGET_REPO}.git")
         
-        switch_branch(branch)
+        switch_branch(branch, repo_full_name)
+        
         sync_issues(repo_full_name)
         sync_pull_requests(repo_full_name)
         sync_releases(repo_full_name)
@@ -172,6 +200,8 @@ def main():
             print(f"✅ Push successful: {branch}")
         except Exception as e:
             print(f"ℹ️ Data is already up to date: {branch}")
+        
+        switch_token()
 
 if __name__ == "__main__":
     main()
