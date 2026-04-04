@@ -1,0 +1,216 @@
+---
+title: 'build error win7 32bit '
+source_url: https://github.com/monero-project/monero-gui/issues/1394
+author: blockchainbuzz
+assignees: []
+labels:
+- resolved
+created_at: '2018-05-09T22:56:46+00:00'
+updated_at: '2018-07-04T08:45:30+00:00'
+type: issue
+status: closed
+closed_at: '2018-07-04T08:45:30+00:00'
+---
+
+# Original Description
+I don't understand why I got the error. Any idea how to solve it?
+
+Install the project...
+-- Install configuration: "Release"
+-- Installing: C:/xmr/monero-gui/monero/lib/liblmdb.a
+make: Leaving directory '/c/xmr/monero-gui/monero/build/release/external/db_drivers/liblmdb'
+Installing libunbound...
+/c/xmr/monero-gui/monero/build/release/external/unbound /c/xmr/monero-gui/monero/build/release /c/xmr/monero-gui /c/xmr/monero-gui
+[100%] Built target unbound
+Install the project...
+-- Install configuration: "Release"
+-- Installing: C:/xmr/monero-gui/monero/lib/libunbound.a
+/c/xmr/monero-gui/monero/build/release /c/xmr/monero-gui /c/xmr/monero-gui
+/c/xmr/monero-gui /c/xmr/monero-gui
+make: Entering directory '/c/xmr/monero-gui/src/zxcvbn-c'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/c/xmr/monero-gui/src/zxcvbn-c'
+You are currently on commit 76a1052
+The most recent tag was at 755977d
+You are ahead of or behind a tagged release
+/c/xmr/monero-gui/monero /c/xmr/monero-gui /c/xmr/monero-gui
+You are currently on commit 80b673dc
+The most recent tag was at c29890c2
+You are ahead of or behind a tagged release
+/c/xmr/monero-gui /c/xmr/monero-gui
+Project MESSAGE: Host is 32bit
+Project MESSAGE: Target is 32bit
+Project MESSAGE: Host is 32bit
+Project MESSAGE: Target is 32bit
+Project MESSAGE: Host is 32bit
+Project MESSAGE: Target is 32bit
+make -f Makefile.Release
+make[1]: Entering directory '/c/xmr/monero-gui/build'
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 454 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ar.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ar.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ar.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ar.qm'...
+    Generated 306 translation(s) (306 finished and 0 unfinished)
+    Ignored 121 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_pt-br.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-br.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-br.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-br.qm'...
+    Generated 436 translation(s) (436 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_de.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_de.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_de.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_de.qm'...
+    Generated 319 translation(s) (319 finished and 0 unfinished)
+    Ignored 91 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_eo.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_eo.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_eo.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_eo.qm'...
+    Generated 365 translation(s) (365 finished and 0 unfinished)
+    Ignored 72 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_es.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_es.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_es.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_es.qm'...
+    Generated 422 translation(s) (422 finished and 0 unfinished)
+    Ignored 2 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_fi.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_fi.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_fi.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_fi.qm'...
+    Generated 159 translation(s) (159 finished and 0 unfinished)
+    Ignored 243 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_fr.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_fr.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_fr.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_fr.qm'...
+    Generated 420 translation(s) (420 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_hr.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_hr.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_hr.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_hr.qm'...
+    Generated 434 translation(s) (434 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_id.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_id.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_id.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_id.qm'...
+    Generated 309 translation(s) (309 finished and 0 unfinished)
+    Ignored 104 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_hi.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_hi.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_hi.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_hi.qm'...
+    Generated 61 translation(s) (61 finished and 0 unfinished)
+    Ignored 372 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_it.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_it.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_it.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_it.qm'...
+    Generated 428 translation(s) (428 finished and 0 unfinished)
+    Ignored 1 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ja.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ja.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ja.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ja.qm'...
+    Generated 439 translation(s) (439 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_nl.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_nl.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_nl.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_nl.qm'...
+    Generated 443 translation(s) (443 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_pl.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_pl.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pl.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pl.qm'...
+    Generated 439 translation(s) (439 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ru.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ru.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ru.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ru.qm'...
+    Generated 440 translation(s) (440 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_sv.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_sv.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sv.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sv.qm'...
+    Generated 437 translation(s) (437 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_zh-cn.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-cn.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-cn.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-cn.qm'...
+    Generated 420 translation(s) (420 finished and 0 unfinished)
+    Ignored 9 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_zh-tw.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-tw.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-tw.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_zh-tw.qm'...
+    Generated 440 translation(s) (440 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_he.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_he.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_he.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_he.qm'...
+    Generated 448 translation(s) (448 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ko.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ko.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ko.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ko.qm'...
+    Generated 325 translation(s) (325 finished and 0 unfinished)
+    Ignored 83 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ro.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ro.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ro.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ro.qm'...
+    Generated 431 translation(s) (431 finished and 0 unfinished)
+    Ignored 3 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_da.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_da.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_da.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_da.qm'...
+    Generated 310 translation(s) (310 finished and 0 unfinished)
+    Ignored 79 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_cs.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_cs.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_cs.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_cs.qm'...
+    Generated 410 translation(s) (410 finished and 0 unfinished)
+    Ignored 19 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_sk.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_sk.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sk.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sk.qm'...
+    Generated 327 translation(s) (327 finished and 0 unfinished)
+    Ignored 76 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_sl.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_sl.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sl.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_sl.qm'...
+    Generated 373 translation(s) (373 finished and 0 unfinished)
+    Ignored 33 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_rs.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_rs.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_rs.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_rs.qm'...
+    Generated 419 translation(s) (419 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_cat.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_cat.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_cat.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_cat.qm'...
+    Generated 280 translation(s) (280 finished and 0 unfinished)
+    Ignored 85 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_tr.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_tr.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_tr.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_tr.qm'...
+    Generated 434 translation(s) (434 finished and 0 unfinished)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_ua.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_ua.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ua.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_ua.qm'...
+    Generated 440 translation(s) (440 finished and 0 unfinished)
+    Ignored 12 untranslated source text(s)
+C:/Qt/5.7/mingw53_32/bin\lrelease.exe -compress -nounfinished -removeidentical ../translations/monero-core_pt-pt.ts -qm C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-pt.qm
+Updating 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-pt.qm'...
+Removing translations equal to source text in 'C:/xmr/monero-gui/build/release/bin/translations/monero-core_pt-pt.qm'...
+    Generated 435 translation(s) (435 finished and 0 unfinished)
+make[1]: *** No rule to make target '../../../../Qt/5.7/mingw53_32/include/QtWidgets/QApplication', needed by 'release/main.o'.  Stop.
+make[1]: Leaving directory '/c/xmr/monero-gui/build'
+make: *** [Makefile:34: release] Error 2
+
+
+# Discussion History
+## rbrunner7 | 2018-05-23T08:40:37+00:00
+A late answer, but still: 32 bit builds for Windows are not officially suported anymore, so probably over time more and more problems are to be expected because the code is not checked anymore to compile and to run.
+
+I am afraid nobody will look into this issue because of this.
+
+## barretts | 2018-06-04T23:25:37+00:00
+32 bit builds maybe be unsupported but I get the same error on Windows 10 and 7 in 64 bit. I haven't found a solution yet 
+
+@blockchainbuzz did you ever get this working?
+
+## dEBRUYNE-1 | 2018-07-04T08:43:47+00:00
+Given the inactivity of this particular issue, I am going to close it.
+
+## dEBRUYNE-1 | 2018-07-04T08:43:54+00:00
++resolved
+
+# Action History
+- Created by: blockchainbuzz | 2018-05-09T22:56:46+00:00
+- Closed at: 2018-07-04T08:45:30+00:00

@@ -1,0 +1,34 @@
+---
+title: Entire pruned data.mdb is getting bigger and bigger. What do Monero developers
+  plan to do about it?
+source_url: https://github.com/monero-project/monero-gui/issues/4369
+author: ch9PcB
+assignees: []
+labels: []
+created_at: '2024-11-01T12:07:57+00:00'
+updated_at: '2024-11-01T12:07:57+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+At the time of writing this post, November 1, the file size of data.mdb in the folder/directory called lmdb is a whopping 79.4GB. It's massive in size considering the fact that I downloaded the entire **_pruned_** blockchain to my local device.
+
+I have a suggestion.
+
+According to Wikipedia, Monero was first launched publicly in 2014.
+
+Could Monero developers hive off the blockchain from 2014 till 2023 and name it "archive till 2023" or something? The archive can be stored on a separate server.
+
+People who are interested in the archive can access this separate server by paying about 30 USD or an amount to be determined by Monero developers. And who are these people? They are most likely to be law enforcement agencies such as the American FBI, US Department of Justice, CipherTrace and those who analyze illicit money flows to terrorists, criminal gangs, ransomware hackers and pariah regimes such as Iran, North Korea, Russia etc.
+
+Would buyers, sellers and traders of XMR coins be interested in historical data stretching back to 2020? I don't think so.
+
+We buyers will raise issues with the sellers immediately if we do not receive XMR coins in our wallets. Buyers don't wait for a month, a year or three years before we ask the sellers some such question as "Hey, we sent you money in 2022 and up till now (that is November 2024) we haven't received your payment of XMR coins in our wallets."
+
+Correct me if I am wrong: customers of commercial banks such as Citibank, Standard Chartered, HSBC etc. can only access records of their own bank transactions for at most five years. They will have to pay administrative fees to their banks if they wish to access records of bank transactions beyond the time limit of five years.
+
+# Discussion History
+# Action History
+- Created by: ch9PcB | 2024-11-01T12:07:57+00:00
