@@ -1,0 +1,52 @@
+---
+title: Enhanced P2Pool Block Found banner
+source_url: https://github.com/monero-project/monero-site/issues/2353
+author: NadimGhaznavi
+assignees: []
+labels: []
+created_at: '2024-08-19T04:41:31+00:00'
+updated_at: '2024-08-19T13:51:00+00:00'
+type: issue
+status: closed
+closed_at: '2024-08-19T13:50:59+00:00'
+---
+
+# Original Description
+Yeah, I know, it's P2Pool, not monerod. But still!!!! 
+
+I have written a Python application that monitors the P2Pool daemon log and extracts "block found", "share found" and "XMR payout" events and loads them into MongoDb. I have a front end today that displays my Wallet transactions, per day, and graphs them using JavaScript's ApexCharts. My next step is to replace that manual process of exporting the wallet transactions into daily payouts in CSV format and pushing it to my GitHub pages site. Instead I'd like the P2Pool.monitor_p2pool_log() function to call the appropriate classes to do those steps for me. So I'll have a real-time dashboard showing the XMR earnings over time.
+
+In the spirit of P2Pool's "BLOCK FOUND" banner, my app has the following output.
+```
+dan@sally:~$ db4e.py -a monitor_p2pool_log
+Monitoring log file (/opt/prod/db4e/logs/p2pool.log)
+-- SHARE FOUND EVENT ----------------------
+   Miner: phoebe
+   Effort: 8.84
+   Difficulty: 106617560
+   IP address: 192.168.1.8
+   Timestamp: 2024-08-19 06:43:19.680700
+-- XMR TRANSACTION FOUND ------------------
+   _________     _______   ____      ____   _______    ____   ____   __________   
+  |   __    \   /       \ |   \\    /   ||/       \\  |   |\ |   \\/          \\ 
+  |   || \   \ /   /\    \\    \\  /   ///   //\   \\ |   || |   ||\___    ___// 
+  |   ||_/   ||   ||_|   ||\    \\/   ///   //  \   \\|   || |   ||    |   ||      
+  |         /||          || \        // |  ||    |  |||   || |   ||    |   ||      
+  |   _____|/ |   ____   ||  \_     //  \   \\  /   //|   || |   ||    |   ||      
+  |   ||      |   || |   ||   /    //    \   \\/   // |   ||_|   ||    |   ||      
+  |___|/      |___|| | __|/  |____//      \_______//   \_________//    |___|/      
+
+   Wallet       : 48xZ...
+   Amount       : 0.000538612872
+   Block number : 3217638
+   Timestamp    : 2024-08-18 05:14:57.777500
+```
+
+
+# Discussion History
+## plowsof | 2024-08-19T13:50:59+00:00
+https://github.com/SCheBSXrnykh/p2pool
+
+# Action History
+- Created by: NadimGhaznavi | 2024-08-19T04:41:31+00:00
+- Closed at: 2024-08-19T13:50:59+00:00
