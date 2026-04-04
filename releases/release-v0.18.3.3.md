@@ -1,0 +1,65 @@
+---
+title: Fluorine Fermi, Point Release 3.3
+type: release
+source_url: https://github.com/monero-project/monero/releases/tag/v0.18.3.3
+author: binaryFate
+tag_name: v0.18.3.3
+published_at: '2024-04-02T00:37:59+00:00'
+---
+
+# Version: v0.18.3.3
+
+# Release Notes
+# Overview
+
+This is the v0.18.3.3 release of the Monero software. This release fixes connecting to password protected nodes.
+
+Some highlights of this release are:
+
+- Wallet: fix connecting to password protected nodes (#9238)
+- Add support for RISC-V update notifications (#9229)
+- Rename `trunc_amount` back to `amount` in ECDH tuple field (#9244)
+
+# Contributors for this Release
+
+This release was the direct result of 3 people who worked, largely unpaid and altruistically, to put out 8 commits containing 30 new lines of code. We'd like to thank them very much for their time and effort. In no particular order they are:
+
+- luigi1111
+- selsta
+- jeffro256
+
+# Official Download Links
+
+[Windows, 64-bit](https://downloads.getmonero.org/cli/monero-win-x64-v0.18.3.3.zip)
+[Windows, 32-bit](https://downloads.getmonero.org/cli/monero-win-x86-v0.18.3.3.zip)
+[macOS, Intel](https://downloads.getmonero.org/cli/monero-mac-x64-v0.18.3.3.tar.bz2)
+[macOS, ARM](https://downloads.getmonero.org/cli/monero-mac-armv8-v0.18.3.3.tar.bz2)
+[Linux, 64-bit](https://downloads.getmonero.org/cli/monero-linux-x64-v0.18.3.3.tar.bz2)
+[Linux, 32-bit](https://downloads.getmonero.org/cli/monero-linux-x86-v0.18.3.3.tar.bz2)
+[Linux, armv7](https://downloads.getmonero.org/cli/monero-linux-armv7-v0.18.3.3.tar.bz2)
+[Linux, armv8](https://downloads.getmonero.org/cli/monero-linux-armv8-v0.18.3.3.tar.bz2)
+[Linux, riscv64](https://downloads.getmonero.org/cli/monero-linux-riscv64-v0.18.3.3.tar.bz2)
+[Android, armv7](https://downloads.getmonero.org/cli/monero-android-armv7-v0.18.3.3.tar.bz2)
+[Android, armv8](https://downloads.getmonero.org/cli/monero-android-armv8-v0.18.3.3.tar.bz2)
+[FreeBSD, 64-bit](https://downloads.getmonero.org/cli/monero-freebsd-x64-v0.18.3.3.tar.bz2)
+
+# Download Hashes
+
+If you would like to verify that you have downloaded the correct file, please use the following SHA256 hashes:
+
+```
+monero-win-x64-v0.18.3.3.zip, a35e96680543d1385a9958940bc64a8effd41594599a504e02f95bb6018f0d1c
+monero-win-x86-v0.18.3.3.zip, a8248e46a7e72a483507c11243227c1d0335cca0b109860b6c1c570e32cb57a6
+monero-mac-x64-v0.18.3.3.tar.bz2, 34b01bc4466bd1294f7b2403da5bd61e3ec4a8ceff52ca5f5d506261368b8b94
+monero-mac-armv8-v0.18.3.3.tar.bz2, c59aca8a5ecc1c97df0288bf79a3110201a30530fb4d685c0ea2f9a64c1adafe
+monero-linux-x64-v0.18.3.3.tar.bz2, 47c7e6b4b88a57205800a2538065a7874174cd087eedc2526bee1ebcce0cc5e3
+monero-linux-x86-v0.18.3.3.tar.bz2, b1dd19a12d764f2e9fc8e4dc9d172da13e11020b609765849b98248eef509763
+monero-linux-armv8-v0.18.3.3.tar.bz2, eb3f924c085ae5df85f5bf9ee27faaa20acd309835684e27e3fbb98b9666b649
+monero-linux-armv7-v0.18.3.3.tar.bz2, f3f982b141cb6c88939d15a83aaa26334d628c0d2766d6834371030dd00401d3
+monero-linux-riscv64-v0.18.3.3.tar.bz2 b54dcedd901c69c81144f952dd8d844da9f2f07c6c37c89977a056f5555b35aa
+monero-android-armv8-v0.18.3.3.tar.bz2, dee23cedc25183f6fe864911f357edb0b0fed514eaf79e01096fe27c00a8d996
+monero-android-armv7-v0.18.3.3.tar.bz2, 9be3c50b6d9080a9a90ed3dff48678102cfe7bdded4a0d4932184b1da2ca4373
+monero-freebsd-x64-v0.18.3.3.tar.bz2, d9a3df4e287e7b622bcf33b8ad186aad65b41973f1de053208f1e6203e7ab986
+```
+
+A GPG-signed list of the hashes is at [https://getmonero.org/downloads/hashes.txt](https://getmonero.org/downloads/hashes.txt) and should be treated as canonical, with the signature checked against the appropriate GPG key in the source code (in /utils/gpg_keys). To ensure that the files you download are those originally posted by the maintainers, you should both check that the hashes of your files match those on the signed list, and that the signature on the list is valid.
