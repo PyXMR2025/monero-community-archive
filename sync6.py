@@ -7,7 +7,7 @@ from pathlib import Path
 
 # ===================== Config =====================
 SOURCE_REPOS = [
-    "monero-project/monero"
+    "monero-project/research-lab"
 ]
 GH_TOKEN = os.getenv("GH_TOKEN")
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")

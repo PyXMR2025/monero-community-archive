@@ -1,7 +1,7 @@
-name: 同步 monero
+name: 同步 monero-gui
 on:
   schedule:
-    - cron: '0 2 */3 * *'
+    - cron: '0 10 */3 * *'
   workflow_dispatch:
 
 jobs:
@@ -29,4 +29,4 @@ jobs:
       - name: 执行同步脚本
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: python sync.py
+        run: python sync3.py
