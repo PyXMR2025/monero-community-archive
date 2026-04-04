@@ -1,0 +1,23 @@
+---
+title: Swap proposal from h4sh3d
+source_url: https://github.com/monero-project/research-lab/issues/63
+author: SarangNoether
+assignees: []
+labels: []
+created_at: '2020-01-31T13:04:05+00:00'
+updated_at: '2020-01-31T13:04:05+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+A swap proposal from h4sh3d was introduced a while back, using XMR and BTC in particular: https://github.com/h4sh3d/xmr-btc-atomic-swap
+
+The proposal assumes, among other things, a zero-knowledge proof of equality of the preimge of a given SHA-256 hash and the discrete log preimage of a given `ed25519` group element. The original [Bulletproofs](https://crypto.stanford.edu/bulletproofs/) paper provides timing examples for a circuit with this capability.
+
+It would be useful to examine the entire swap protocol in more detail, as well as determine the feasibility of such a preimage equality zero-knowledge proof.
+
+# Discussion History
+# Action History
+- Created by: SarangNoether | 2020-01-31T13:04:05+00:00

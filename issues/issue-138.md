@@ -1,0 +1,227 @@
+---
+title: Hybrid PoW+PoB (proof-of-burn)
+source_url: https://github.com/monero-project/research-lab/issues/138
+author: impredicative
+assignees: []
+labels: []
+created_at: '2025-08-13T05:05:39+00:00'
+updated_at: '2025-08-23T16:53:49+00:00'
+type: issue
+status: closed
+closed_at: '2025-08-23T16:42:16+00:00'
+---
+
+# Original Description
+Any hybrid solution is less desirable than adapting the PoW itself for more decentralization, but to the extent we consider hybrids, PoW+PoB merits consideration. It might be thought of as giving weight to those who actually use Monero.
+
+**Disclosure**: This remainder of comment is altogether LLM generated, but it is on point. I would do a disservice to it by summarizing the concept in fewer words.
+
+---
+
+A hybrid system that keeps RandomX proof-of-work as the security backbone while adding a **recurring proof-of-burn cost** that raises the economic bar for any entity trying to dominate hashrate. Below is a proposal that is compatible with Monero’s privacy goals and does not require identifying miners on-chain beyond a rotating, self-chosen “mining identity.”
+
+# Burn-Boosted RandomX (BBR): a PoW + PoB hybrid for Monero
+
+## High-level idea
+
+* **PoW remains primary:** Blocks must still satisfy the global RandomX difficulty.
+* **Burn adds a *temporary efficiency boost*** to the miner that performs it: for a limited number of blocks (“epoch”), valid burn “tickets” reduce that miner’s effective difficulty by a bounded factor.
+* **Attack cost rises** because sustaining majority control requires not only majority hashpower but also **continuous burn flow** (an operating expense, not a one-time bond).
+
+This preserves permissionless entry (anyone can mine with CPUs), but adds a metered, recurring cost that scales with dominance.
+
+## Core components
+
+### 1) Mining identity (privacy-preserving)
+
+Each miner uses an **ephemeral VRF keypair** `(sk_vrf, pk_vrf)` as their mining identity for the current epoch (e.g., rotates every \~1–2 weeks). The block header includes `pk_vrf`. This is **not** a spending key and reveals no wallet linkage.
+
+### 2) Burn tickets
+
+A **burn ticket** is a special transaction a miner broadcasts and confirms on-chain that:
+
+* **Burns XMR verifiably** to an unspendable one-time address (protocol-defined “burn template”).
+* **Reveals the burned amount v** *without linking to any spendable address*, using a standard equality-of-commitments proof in RingCT: the ticket includes
+
+  * the output commitment `C_out` of the burned output,
+  * a cleartext amount `v`,
+  * a zero-knowledge proof that `C_out` commits to `v` (reveals `v` but keeps the blinding factor hidden).
+* **Binds the burn to a mining identity** via a signature over `(pk_vrf, C_out, v, epoch_id)`.
+* **Sets an expiration**: ticket is only valid for `E` blocks (e.g., \~2016 blocks ≈ 3 days) from its confirmation height.
+
+This design reveals *only the burn amount* and the ephemeral `pk_vrf` it benefits—no sender, no recipient, and no linkability to other funds.
+
+### 3) From burn to “boost”
+
+A miner’s **effective difficulty** for block finding becomes:
+
+$$
+D_{\text{eff}} = \frac{D_{\text{global}}}{\,1 + g(W)\,}
+$$
+
+where:
+
+* `W` is the miner’s **current ticket weight** (sum over unexpired tickets bound to their `pk_vrf`), capped by a protocol parameter `W_max` per identity to prevent runaway advantages.
+* `g(·)` is a **diminishing-returns function** (e.g., $g(W)=\alpha \cdot \sqrt{W}$ with $0<\alpha \ll 1$) so whales cannot 10× their edge linearly by burning 10× more.
+
+Result: burning helps, but **small miners gain proportionally more** from small burns than large miners gain from massive burns.
+
+### 4) Rate limits and caps (anti-centralization)
+
+* **Per-identity cap:** `W ≤ W_max` per epoch.
+* **Per-block ticket quota:** a single identity can only add up to `k` new tickets per M blocks.
+* **Epoch rotation:** miners must rotate `pk_vrf` each epoch (enforced by header rules), so burn advantages **expire** unless renewed. Rotations help prevent deanonymization via long-lived identities.
+
+### 5) Neutrality and safety valves
+
+* **No burn required to mine:** miners without tickets simply mine at `D_global`—Monero stays accessible.
+* **Emergency brake:** a soft-fork flag can set `g(·)=0` (disabling boost) if pathological effects or exploits are discovered.
+* **Tail emission unchanged:** the security budget remains dominated by PoW issuance + fees. Burn does not fund anyone; it reduces circulating supply.
+
+## Consensus and validation flow
+
+1. **Ticket tx validation**
+
+   * Check burn output conforms to the burn template (provably unspendable).
+   * Verify amount-equality proof: `C_out` commits to the revealed `v`.
+   * Verify signature binding `(pk_vrf, v, epoch_id)` to the ticket.
+   * Store ticket in an indexed cache keyed by `(pk_vrf, expiry_height)`.
+
+2. **Mining**
+
+   * Miner selects their `pk_vrf` for the epoch and aggregates all **confirmed, unexpired** tickets bound to it to compute `W`.
+   * They mine against target `T_eff` derived from `D_eff`.
+
+3. **Block acceptance**
+
+   * Node recomputes `W` for the `pk_vrf` in the header and verifies the candidate block hash meets `T_eff`.
+   * Reject if the claimed boost exceeds cap, tickets are expired, duplicated, or not bound correctly.
+
+All of the above preserves **non-interactive verification** for full nodes, with modest index overhead.
+
+## Why this raises the cost of a 51% attack
+
+Let:
+
+* $H_A$ be attacker hashrate, $H_H$ honest hashrate,
+* $b_A, b_H$ be average on-going **burn per unit time** by attacker/honest miners, converted to steady-state weights $W_A, W_H$ under caps,
+* $f(W)=1+g(W)$ the multiplier (≥1).
+
+The attacker’s **effective share of block production** is roughly:
+
+$$
+S_A \approx \frac{H_A \cdot f(W_A)}{H_A \cdot f(W_A) + H_H \cdot f(W_H)}
+$$
+
+Under pure PoW, $f(\cdot)=1$. With BBR, to reach $S_A>0.5$, an attacker must increase **either** hashrate **or** sustained burn—**both are costly**, and burn costs scale **per time**, not just up-front.
+
+Because of **caps** and **diminishing returns**, there is a point where it is cheaper for many small miners to maintain modest tickets than for one entity to buy a dominant advantage. This **tilts economics toward a broad base**.
+
+## Privacy analysis
+
+* **No linkage to spend keys:** tickets disclose `v` and `pk_vrf` only. The RingCT equality proof confirms `v` without revealing the blinding factor or any wallet address.
+* **Fresh identities per epoch:** rotating `pk_vrf` prevents long-term clustering.
+* **Standard Monero tx graph unaffected:** tickets are just another tx type; ordinary transfers remain indistinguishable.
+
+## Parameter suggestions (illustrative, to be tuned on testnet)
+
+* Epoch length `E`: \~2,016 blocks (\~3 days).
+* Cap `W_max`: e.g., equivalent of **50 XMR** per identity per epoch.
+* Diminishing function: $g(W)=\alpha \sqrt{W}$ with $\alpha$ set so max boost is **≤15–20%** at the cap.
+* Ticket granularity: any amount ≥ **0.1 XMR**; smaller burns are allowed but inefficient due to per-ticket overhead.
+* Per-identity issuance rate: at most **1 ticket / 10 blocks** to smooth accrual.
+* Mempool/relay: prioritize inclusion of tickets to avoid censorship by a dominant pool (or discount relay fees for tickets).
+
+These figures make it **uneconomical** for a single pool to buy a massive advantage, while letting small miners afford a helpful bump.
+
+## Adversarial considerations & mitigations
+
+* **Sybil identities:** Caps are per identity; an attacker could split burn across many identities. Counter: the **per-block issuance rate** and **epoch rotation** limit how quickly weight can be amassed, forcing the attacker to maintain high *ongoing* burn across many identities—logistically and financially harder than coordinating hash alone.
+* **Ticket censorship by a dominant pool:** Honest miners can mine their own blocks; also consider:
+
+  * Relay incentives for ticket txs,
+  * Optional rule: if a miner claims boost from `W`, they must include ≥`x%` of mempool tickets by others, or the boost is invalidated (complex—use cautiously).
+* **Side-channel deanonymization via amounts:** Encourage **common ticket denominations** (e.g., {0.5, 1, 2, 5 XMR}) to reduce uniqueness of `v`.
+
+## Migration and governance path
+
+1. **Research prototype:** Implement ticket format, equality-of-commitments proof, and node accounting in a dev branch.
+2. **Testnet A/B trials:**
+
+   * Start with $g(W)$ tiny (e.g., max 5% boost) to measure behavior.
+   * Stress-test mempool, propagation, and mining software.
+3. **Parameter hardening:** Tune `E`, `W_max`, $\alpha$, and quotas based on empirical pool behavior.
+4. **Soft-fork rollout:** Activate after broad consensus; retain the **emergency brake** (set $g=0$) as a safety valve.
+
+## Why this suits Monero
+
+* **Addresses the “evil pool” concern** by turning dominance into a **recurring expense** rather than a pure hashrate contest.
+* **Keeps CPU mining viable**; small miners gain proportionally more from small burns, helping decentralization.
+* **Preserves privacy** with minimal, controlled disclosure (amount only, bound to an ephemeral mining key).
+* **Reversible if needed** via the emergency brake.
+
+# Discussion History
+## PPPDUD | 2025-08-23T15:13:23+00:00
+If you LLM-generated an advanced proposal to an important financial institution, I think that you might consider providing an ELI5 proposal too.
+
+---
+LLM-generated wasteful fluff that makes me look smart: If you’ve created an **advanced, LLM-generated proposal** for a major financial institution,  
+it may also be worthwhile to prepare a companion piece: an **ELI5 (“Explain Like I’m 5”) proposal**.  
+
+Why?  
+
+- **Accessibility:** Not everyone reviewing the proposal will have the same level of technical expertise.  
+- **Clarity:** A simplified version helps distill the key points without jargon or complexity.  
+- **Alignment:** Decision-makers often appreciate a high-level overview before diving into the details.  
+- **Efficiency:** Providing both versions ensures that stakeholders at all levels—technical, strategic, and executive—can engage meaningfully with the content.  
+
+In short:  
+> Pairing a sophisticated, detail-rich proposal with a simplified, plain-language summary maximizes impact and understanding.
+
+
+## impredicative | 2025-08-23T15:23:08+00:00
+> LLM-generated wasteful fluff that makes me look smart
+
+Neither of this is true for the submission. Please focus on enhancing and attacking the idea so it can be made more concrete, not on its delivery or on the deliverer.
+
+The plain-language goal is to come up with a proposal that integrates PoB into PoW to realign the distribution of the rewards of PoW to those who actually use Monero rather than to those who just mine it.
+
+## PPPDUD | 2025-08-23T15:31:45+00:00
+> > LLM-generated wasteful fluff that makes me look smart
+> 
+> Neither of this is true here. Please focus on enhancing and attacking the idea so it can be made more concrete, not on its delivery or on the deliverer.
+> 
+> The plain-language goal is to come up with a proposal that integrates PoB into PoW to realign the distribution of the rewards of PoW to those who actually use Monero rather than to those who just mine it.
+
+Is the fluff that I generated not wasteful enough?
+
+## impredicative | 2025-08-23T15:40:46+00:00
+> Is the fluff that I generated not wasteful enough?
+
+Just because something is LLM generated doesn't mean it's fluff. The two are not logically equivalent. Yours is; mine isn't. Moreover, you had initially even failed to declare that it's LLM generated. Even so, I had replied to it in good faith.
+
+If you can't **concretely improve or attack or develop the idea based on its technical merits and demerits**, please find something else to do.
+
+## PPPDUD | 2025-08-23T16:35:17+00:00
+> > Is the fluff that I generated not wasteful enough?
+> 
+> Just because something is LLM generated doesn't mean it's fluff. The two are not logically equivalent. Yours is; mine isn't. Moreover, you had initially even failed to declare that it's LLM generated. Even so, I had replied to it in good faith.
+> 
+> If you can't **concretely improve or attack or develop the idea based on its technical merits and demerits**, please find something else to do.
+
+I was not saying that all LLM-generated content is fluff, or even that _your LLM-generated content_ is fluff (it does appear to hold some value, in fact). You liberally interpreted my words so as to make them hold an unintended meaning.
+
+---
+I realize that this is turning into a flame war, so I will leave now.
+
+## impredicative | 2025-08-23T16:42:16+00:00
+I will close this issue for now, and perhaps reopen it later when I have a more thought-out proposal.
+
+## PPPDUD | 2025-08-23T16:53:49+00:00
+> I will close this issue for now, and perhaps reopen it later when I have a more thought-out proposal.
+
+I'm sorry if I induced you to do that. I didn't mean to cause any harm.
+
+# Action History
+- Created by: impredicative | 2025-08-13T05:05:39+00:00
+- Closed at: 2025-08-23T16:42:16+00:00

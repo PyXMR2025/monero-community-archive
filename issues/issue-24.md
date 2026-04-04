@@ -1,0 +1,34 @@
+---
+title: 'Request: More research into reducing effectiveness of malicious nodes, firewalls,
+  sybil attacks through asynchronous byzantine'
+source_url: https://github.com/monero-project/research-lab/issues/24
+author: MatthewCroughan
+assignees: []
+labels: []
+created_at: '2017-12-24T03:24:45+00:00'
+updated_at: '2017-12-24T12:10:40+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+As it stands, Bitcoin or any other conventional blockchain system could be compromised by an attack vector that not many people talk about. In a world where we have a cryptocurrency, centralised in a country that happens to have a huge firewall around it, there is an opportunity for an easy double-spend scenario, should that part of the world fall silent for a moment, forking the chain temporarily whilst the rest of the world's hashpower mines away at a shorter chain. Partition detectors don't solve this, and co-operation with a botnet or large amount of malicious hashpower worsens the situation. 
+
+some elements of Hashgraph can solve this, asynchronous byzantine can solve this. And I'm not sure at all how this could be implemented into Monero, considering its privacy model, but if it can, I'd love to have asked for it to be researched. As you can tell, I'm young, I don't have much experience, and am likely fallible on almost every term I've ever mentioned, but I'm convinced by Leemon that some elements of Hashgraph could be a game-changer for cryptocurrency or networked applications in general, and would hate to have not asked for more research to be done on it in relation to Monero/Kovri.
+
+
+Hashgraph Whitepaper:
+http://www.swirlds.com/downloads/SWIRLDS-TR-2016-01.pdf
+
+Hashgraph Implementation in Non-Permissioned/Public Ledgers:
+http://www.swirlds.com/downloads/Swirlds-and-Sybil-Attacks.pdf
+
+Leemon Baird's most recent talk on his implementation of asynchronous byzantine in Hashgraph:
+https://youtu.be/pOc23lJw7ls 
+
+
+
+# Discussion History
+# Action History
+- Created by: MatthewCroughan | 2017-12-24T03:24:45+00:00

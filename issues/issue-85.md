@@ -1,0 +1,132 @@
+---
+title: Tx chaining and reorg protection with ring member fingerprint
+source_url: https://github.com/monero-project/research-lab/issues/85
+author: Gingeropolous
+assignees: []
+labels: []
+created_at: '2021-07-02T04:26:13+00:00'
+updated_at: '2021-07-09T15:01:16+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+I was gonna add this as a comment for 
+
+https://github.com/monero-project/research-lab/issues/84
+
+but it got long and perhaps off topic and yah know I might be talking nonsense so I didn't want to derail things
+
+But here it is
+
+I guess I just don't get why the following wouldn't work.
+
+So, for the sake of simplicity, lets just use a ringsize of 3, so we have the actual output A and 2 decoys B and C. 
+Presumably, there's some point at which ring signature math is performed such that [ ringsig(A,B,C) -> newoutputs ] works and the protocol says "yippee, its valid".
+So in an ideal world, where we have infinite storage space, A, B, and C would be actual ID of the outputs, which we'll just call A, B, and C. 
+Just so we're on the same page, im referring to the ID of the outputs as the things shown here:
+https://xmrchain.net/tx/3949053af8535057aba0515fa4930f19d2341d6380f93524214599924f676b8a
+so the first 3 inputs to the transaction,
+A=7d4e7ac3c27ec17326fd07204bb6fb2a714327a62a2632a88cdc3ee3f7c82ae0
+B=e08dc5943cdc9ab7cf4a8a74b434adc2f7d691c500644ca80780d8c28580422f
+C=bb5ece724254ba1bfb0fceddd0c24be97d61490e5753b30303e69f664849b678
+
+The transaction is received, the protocol goes "i need to find A, B, C " and then looks for them in the chain. It then pulls those into its ringsig calculation and cryptomaths happen. 
+Obviously, we have storage issues. So instead of storing a large string in the description of the new transaction that uses A,B,C, we use its location. So the protocol goes "ok, pull in the data from Loc[A], Loc[B], Loc[C]". The location schema currently used is that of the offset. 
+
+So in my thinkings about this, I use the following sort of thought construct.
+A is 7d4e7ac3c27ec17326fd07204bb6fb2a714327a62a2632a88cdc3ee3f7c82ae0
+Loc[A] is 7d4e7ac3c27ec17326fd07204bb6fb2a714327a62a2632a88cdc3ee3f7c82ae0
+because the end goal is that you want to feed 7d4e7ac3c27ec17326fd07204bb6fb2a714327a62a2632a88cdc3ee3f7c82ae0 into the cryptomaths, so Loc[A] is a pointer. 
+
+so Loc[A] == A. 
+
+therefore, the digest of (A,B,C) == digest of (Loc[A],Loc[B],Loc[C]) . digest being whatever .. sha256, keccak, something strong. I'm like 50% on my understanding of merkle trees, but I think that could slide in here as well.  
+
+OK, with that being said, we can create a transaction in which the section that says "these are the inputs we are going to use" has the following sort of logic and data structure.
+
+
+Input 1 = A or Loc[A]
+Input 2 = B or Loc[B]
+Input 3 = C or Loc[C]
+RingMemberFingerprint = digest (Input 1, Input 2, Input 3)
+
+
+So, during initial construction, the transaction stores the raw values of A, B, and C and the RingMemberFingerprint(RMF). Which I guess can be called a ring member commitment or image or whatever. 
+
+In this state, the protocol can go grab those data no matter where they are. A, B, and C could be in the mempool. 
+
+After some time, the blockchain will prune A and instead store Loc[A]. 
+
+But then there is a reorg. Massive. We have two chains, equally valid, just separated from each ther for whatever reason, and they reform. We'll call them Main and Alt. 
+
+In Alt, we have our transaction above, which has been stored in the pruned form
+
+Input 1 = Loc[A]
+Input 2 = Loc[B]
+Input 3 = Loc[C]
+RingMemberFingerprint = digest (Input 1, Input 2, Input 3)
+
+A main chain node receives the alt chain. It takes the above transaction and uses that information to repopulate A, B, and C in a transmogrification
+
+Input 1 = Alt(Loc[A])
+Input 2 = Alt(Loc[B])
+Input 3 = Alt(Loc[C])
+RingMemberFingerprint = digest (Input 1, Input 2, Input 3)
+
+transmogrified
+
+Input 1 = A
+Input 2 = B
+Input 3 = C
+RingMemberFingerprint = digest (Input 1, Input 2, Input 3)
+
+It used the offset information that is valid for the alt chain to grab the values A, B and C, confirmed the RingMemberFingerprint, and reformed this section of the transaction description with values A, B, and C instead of the offsets.
+
+Over time, the main chain prunes A, B, and C and replaces them with Loc[A], Loc[B], Loc[C] in the main chain.  
+
+Input 1 = Loc[A]
+Input 2 = Loc[B]
+Input 3 = Loc[C]
+RingMemberFingerprint = digest (Input 1, Input 2, Input 3)
+
+If we use, say, a 256 bit digest, current stats would have this adding 0.5 Mb to the chain a day. And this stays constant regardless of the ringsize.
+
+# Discussion History
+## UkoeHB | 2021-07-02T05:11:16+00:00
+This is what issue #84 is doing for the floating offset, while the other bin members have fixed index. Basically to do what you are proposing for all ring members means storing a distinct locator for each one. So if there are 128 ring members, and 4-byte locators for each (i.e. varint index offsets), that's 512 bytes per input.
+
+That is, unless you find an efficient mapping between {set of arbitrary indices} <-> {cheap identifier}.
+
+## Gingeropolous | 2021-07-02T11:50:13+00:00
+ah ok, and with #84, you are effectively using a hash digest of something constant to create a map, such that you don't have to store the indices, but instead some hash output that can tell you the indices?
+
+and with all of them floating, like described above, that scheme wouldn't be possible because you'd have to somehow re-find a digest that creates a useful map. Almost like mining, but worse because your actually looking for a collision. 
+
+although, that could be something nodes could do over time, is look for digests that describe an inputs ring member positions.
+
+so a transaction would be able to transition between 3 storage states
+
+raw <-> indices <-> hash compressed indices.
+
+or is that just crazy. 
+
+
+
+## Gingeropolous | 2021-07-02T13:33:28+00:00
+lulz. i wonder if we could use bitcoin asics to find index collisions to compress index descriptions. 
+
+## UkoeHB | 2021-07-02T17:05:03+00:00
+It can technically be done, but I don't know how practical it would be.
+
+## Gingeropolous | 2021-07-02T17:37:59+00:00
+> It can technically be done,
+
+It meaning "raw <-> indices <-> hash compressed indices." ?
+
+## UkoeHB | 2021-07-04T03:47:56+00:00
+Yes that
+
+# Action History
+- Created by: Gingeropolous | 2021-07-02T04:26:13+00:00

@@ -1,0 +1,133 @@
+---
+title: Natural block size limit
+source_url: https://github.com/monero-project/research-lab/issues/155
+author: tevador
+assignees: []
+labels: []
+created_at: '2025-12-02T06:42:09+00:00'
+updated_at: '2025-12-03T06:37:16+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+The topic is partly related to:
+
+* https://github.com/monero-project/research-lab/issues/152
+* https://github.com/monero-project/research-lab/issues/154
+* other scaling-related discussions outside of this repository
+
+I'm proposing to set a hard cap on the block size naturally so that the median user will always be able to sync the blockchain (from the genesis block to the tip) in time $\tau_{max}$.
+
+Let's say the maximum blockchain growth rate at time $t$ is:
+
+$$
+R(t) = R_0 e^{\alpha t}
+$$
+
+(Eqn. 1)
+
+where $R_0$ is the starting blockchain growth rate limit and $\alpha$ is a constant that determines how quickly the limit increases.
+
+The maximum total blockchain size at time $t$ will be:
+
+$$
+S(t) = \int_{0}^{T} R(t) dt = \int_{0}^{T} R_0 e^{\alpha t} dt = \frac{R_0}{\alpha} (e^{\alpha T} - 1)
+$$
+
+(Eqn. 2)
+
+Similarly, we will assume that the median user's download bandwidth at time $t$ is:
+
+$$
+B(t) = B_0 e^{\beta t}
+$$
+
+(Eqn. 3)
+
+where $B_0$ is the bandwidth at $t = 0$ and $\beta$ is a constant that determines how quickly the median bandwidth grows. The exponential growth of internet bandwidth has been empirically observed as the [Nielsen's law](https://www.nngroup.com/articles/law-of-bandwidth/).
+
+The time $\tau$ to download the blockchain at time $T$ is then (from Eqn. 2 and Eqn. 3):
+
+$$
+\tau(T) = \frac{S(T)}{B(T)} = \frac{R_0 (e^{\alpha T} - 1)}{\alpha B_0 e^{\beta T}}
+$$
+
+(Eqn. 4)
+
+The proposal is that $\tau(T) \le \tau_{max}$ for any value of $T$.
+
+There are 3 distinct cases:
+
+1. If $\alpha > \beta$, we have $\lim_{T\to\infty} \tau(T) = \infty$, which means that at some point, new nodes can no longer sync the blockchain.
+2. If $\alpha < \beta$, we have $\lim_{T\to\infty} \tau(T) = 0$, which means that blockchain sync gradually becomes faster and faster, but the block size cap is suboptimal.
+3. Finally, if $\alpha = \beta$, we have:
+
+$$
+\lim_{T\to\infty} \tau(T) = \frac{R_0}{\beta B_0}
+$$
+
+(Eqn. 5)
+
+which means that the maximum scaling occurs when:
+
+$$
+R_0 = \tau_{max} \beta B_0
+$$
+
+(Eqn. 6)
+
+### Estimating $B_0$
+
+This is relatively easy. [speedtest.net](https://www.speedtest.net/global-index) lists the global median fixed broadband download speed, which is 111.91 Mbps as of October 2025.
+
+### Estimating $\beta$
+
+This is a bit more difficult. Nielsen's law sets the growth at 50% per year for high-end users, which might be an overestimate.
+
+Akamai's Q4 2015 "State of the Internet" report listed the global median download speed as 3.1 Mbps. That would imply a growth of 43% per year between 2015 and 2025.
+
+It's probably safe to assume a 40% per year growth, so we have $\beta = \ln (1.4) \  \mathrm{year}^{-1}$.
+
+### Setting $\tau_{max}$
+
+This is subjective, but I think users should expect to sync the blockchain in less than one week at all times, so I'm proposing $\tau_{max} = 1 \mathrm{week} \approx \frac{1}{52} \mathrm{year}$.
+
+### Proposed block size cap
+
+Plugging the above values to Eqn. 6 gives:
+
+$$
+R_0 = \frac{1}{52} \cdot \ln (1.4) \cdot 111.91 \mathrm{Mbps} \approx 0.72 \mathrm{Mbps} 
+$$
+
+With an average block time of 120 seconds, we get a block size cap of 10.8 MB, growing by 40% per year, or roughly doubling every 2 years.
+
+The maximum blockchain size in 10 years will be about 236 TB, assuming every block hits the limit. The median download speed in 10 years is presumed to be 3.2 Gbps, so the median user will be able to sync the blockchain in about 6.8 days.
+
+I think this scaling proposal is as agressive as possible, while still allowing the blockchain to function even at the limit.
+
+### Big bang attack mitigation
+
+The long-term median block size limit was introduced in response to the [blockchain big bang](https://github.com/noncesense-research-lab/Blockchain_big_bang/blob/master/models/Isthmus_Bx_big_bang_model.ipynb) scenario, which allowed the blockchain to explode to about 176 TB in 36 hours under the old scaling rules.
+
+The growing block size cap in this proposal mitigates the big bang attack, so Monero could revert to the old simple short term median rule.
+
+### Verification time constraints
+
+The exact same formulas I used to derive the natural block size cap can be used to derive a block verification time cap. Instead of the median download speed, the formula would use the median CPU performance and its annual growth rate.
+
+# Discussion History
+## ArticMine | 2025-12-03T06:03:38+00:00
+This does work for scaling. As such I have incorporated it into my proposal. 
+
+## ArticMine | 2025-12-03T06:22:26+00:00
+Some other comments. 
+
+1) There are very likely scenarios where the adaptive block weight fee market will produce a very significant lower block weight that what this  cap or any similar type of cap will allow. Under normal circumstances this is what I would expect.  For this reason i would advise against using this cap alone with just the short term median rule to mitigate against a big bang type attack.
+
+2) I consider bandwidth to be the parameter over which the Monero community and individual node operators have the least control. As such i find bandwidth the optimal parameter for a sanity cap. 
+
+# Action History
+- Created by: tevador | 2025-12-02T06:42:09+00:00

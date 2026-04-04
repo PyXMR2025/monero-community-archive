@@ -1,0 +1,23 @@
+---
+title: OutProofs are CanScanProofs for transparent-amount outputs
+source_url: https://github.com/monero-project/research-lab/issues/130
+author: kayabaNerve
+assignees: []
+labels: []
+created_at: '2024-12-05T00:24:26+00:00'
+updated_at: '2024-12-05T00:24:26+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+For an output one-time key of `O = S + H(8rV)G`, an adversary can send to S, V, and then can sample V', before calculating `S' = O - H(8rV')G`. While the transaction wasn't sent to this address, it can scan for it (at least, it can rebuild the output key, the view tag would have would have to be grinded) if anyone knew its private keys. It's unknown if any OutProof is for such a derived address or for the actually sent to address.
+
+This doesn't allow faking a payment to a store. This does allow claiming a payment made to someone was made to someone else (a random address no one knows the keys for).
+
+This doesn't immediately work for outputs with amount privacy. The amount decrypted will be gibberish, the randomness different, and the commitment won't line up. I'd have to double-check the exact applicability here (even when using amount privacy) with regards to main/sub addresses and upon collusion with the recipient (as then you do have leeway with coercing the view key as necessary). I'm not fully mapping this out as this is a quirk and a rabbit hole, but there's no known real-world use. I just wanted to ensure it's documented.
+
+# Discussion History
+# Action History
+- Created by: kayabaNerve | 2024-12-05T00:24:26+00:00
