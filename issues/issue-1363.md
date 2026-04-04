@@ -5,7 +5,7 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-03-29T23:15:10+00:00'
-updated_at: '2026-04-03T20:16:34+00:00'
+updated_at: '2026-04-04T12:19:08+00:00'
 type: issue
 status: open
 closed_at: null
@@ -38,10 +38,11 @@ News: [Monero Observer](https://www.monero.observer/) - [Revuo Monero](https://r
   f. SyntheticBird - [Site and CCS UI/UX, Transitions & Animations work (4 months)](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/644)    
   g. jpk68 - [I2P SAMv3 support](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/650)    
   h. acx - [part-time work on Monfluo 2026Q2](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/662)  
-  I. [Events] - [39C3 Support](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/622)    
+  I. SNeedlewoods - [part-time-dev-Q2-26](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/664)  
   j. [MRL] CjS77 - [Grease Payment Channels -- production implementation and SDK](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/651)    
   k. [MRL] - [FCMP++ Integration Audit](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/663)  
   l. dangerousfreedom - [Integrate FCMP++ into monero-inflation-checker](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/645)    
+  m. [Events] - [39C3 Support](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/622)    
 5. Workgroup reports    
   a. Dev workgroup  
   b. Localization workgroup  

@@ -5,10 +5,10 @@ author: PyXMR2025
 assignees: []
 labels: []
 created_at: '2026-03-29T17:43:20+00:00'
-updated_at: '2026-04-04T06:55:06+00:00'
+updated_at: '2026-04-04T17:36:40+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-04T17:30:11+00:00'
 ---
 
 # Original Description
@@ -22,9 +22,37 @@ This document aims to introduce the self-hosted Forgejo mirror site established 
 
 Access address: [https://repo.openenet.cn/monero-project](https://repo.openenet.cn/monero-project)
 
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Access address: [https://repo.openenet.cn/monero-project](https://repo.openenet.cn/monero-project)
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQTplea0vauG7PFc++wm9vs48gNGQUCadEEmgAKCRCwm9vs48gN
+GTCvAP4oHgfWg5q0sqE5avYhn5DRH9j6nl+V/f8yymXHbiHExgEAoCI8OdV4EIvn
+GBFL6RtfG8JmjczpHN+jsuo9i8+/CQM=
+=xPkl
+-----END PGP SIGNATURE-----
+```
+
 ### 2. Tor Hidden Service Access
 
-Access address: [http://6tpr5ewpc4kevnm76i2bzxori3ofi46phqghkb5736r5wb7gq47yh3yd.onion/monero-project](http://6tpr5ewpc4kevnm76i2bzxori3ofi46phqghkb5736r5wb7gq47yh3yd.onion/monero-project)
+Access address: `sixye4k3ey5fjfjblqtlw66lf3g7qdfqtz4qilllajccaqbhtedtixyd.onion/monero-project`
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Access address: `sixye4k3ey5fjfjblqtlw66lf3g7qdfqtz4qilllajccaqbhtedtixyd.onion/monero-project`
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQTplea0vauG7PFc++wm9vs48gNGQUCadEFSQAKCRCwm9vs48gN
+GXZsAP9jaTBzo43vSMlX0d+hC0a2/DKqRIWrBYwpAdC8sD/HUQEA/Nv4KpIxd0fH
+5bUf45B84PUh0qmUHZKbEeElmnYIlgA=
+=nVJD
+-----END PGP SIGNATURE-----
+```
 
 ## Hardware and Infrastructure Configuration
 
@@ -121,5 +149,12 @@ This mirror site is an **unofficial community backup site** that only provides c
 
 
 # Discussion History
+## PyXMR2025 | 2026-04-04T17:31:03+00:00
+It has been published at https://github.com/monero-project/meta/issues/1363, so this is closed.
+
+## PyXMR2025 | 2026-04-04T17:36:40+00:00
+update on https://repo.openenet.cn/no-reply/info
+
 # Action History
 - Created by: PyXMR2025 | 2026-03-29T17:43:20+00:00
+- Closed at: 2026-04-04T17:30:11+00:00
