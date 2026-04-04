@@ -1,0 +1,55 @@
+---
+title: 'Community Workgroup Meeting: 29 February 2020 17:00 UTC'
+source_url: https://github.com/monero-project/meta/issues/442
+author: SamsungGalaxyPlayer
+assignees: []
+labels: []
+created_at: '2020-02-24T21:18:08+00:00'
+updated_at: '2020-03-02T16:20:06+00:00'
+type: issue
+status: closed
+closed_at: '2020-03-02T16:20:06+00:00'
+---
+
+# Original Description
+**Location**
+
+[Freenode](https://kiwiirc.com/nextclient/#irc://irc.freenode.net/#monero-community) | [Mattermost](https://mattermost.getmonero.org/monero/channels/monero-community) | Irc2P
+
+Please test the relays shortly before using. If there are any issues, please use Freenode IRC directly.
+
+ - `#monero-community`
+
+**Time**
+
+17:00 UTC (normal time)
+
+[Use this timezone calculator to convert UTC to your time zone](https://www.timeanddate.com/worldclock/converter.html?iso=20191207T170000&p1=tz_et&p2=28&p3=111&p4=49&p5=179&p6=70&p7=224&p8=48&p9=136).
+
+**Proposed Meeting Items**
+
+Please comment on GitHub in advance of the meeting if you would like to propose an agenda item.
+
+0. Introduction
+1. Greetings
+2. Community highlights
+3. CCS updates
+4. Workgroup report
+   a. Daemon/CLI workgroup
+   b. Localization workgroup
+   c. GUI workgroup
+   d. Outreach workgroup
+   e. Monero Research Lab
+   f. Website workgroup
+5. Open ideas time
+   a. Moneroversary #438 
+6. Confirm next meeting date/time
+7. Conclusion
+
+# Discussion History
+## SamsungGalaxyPlayer | 2020-02-29T16:40:35+00:00
+The workgroup reports will be streamlined only to those who are present with an update this week to fit in all the CCS discussions in a reasonable time.
+
+# Action History
+- Created by: SamsungGalaxyPlayer | 2020-02-24T21:18:08+00:00
+- Closed at: 2020-03-02T16:20:06+00:00

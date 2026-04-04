@@ -1,0 +1,125 @@
+---
+title: Monero Repository Mirror Public Notice
+source_url: https://github.com/monero-project/meta/issues/1362
+author: PyXMR2025
+assignees: []
+labels: []
+created_at: '2026-03-29T17:43:20+00:00'
+updated_at: '2026-04-04T06:55:06+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+## Jackie's Repo | Monero Mirror Backup Instructions
+
+This document aims to introduce the self-hosted Forgejo mirror site established and maintained by [Jackie(@PyXMR2025)](https://github.com/PyXMR2025). This site provides mirror backup and access redundancy services for [monero-project](https://github.com/monero-project) and its important ecosystem code repositories, enhancing repository availability and risk resistance.
+
+## Mirror Access Methods
+
+### 1. Clearnet Access
+
+Access address: [https://repo.openenet.cn/monero-project](https://repo.openenet.cn/monero-project)
+
+### 2. Tor Hidden Service Access
+
+Access address: [http://6tpr5ewpc4kevnm76i2bzxori3ofi46phqghkb5736r5wb7gq47yh3yd.onion/monero-project](http://6tpr5ewpc4kevnm76i2bzxori3ofi46phqghkb5736r5wb7gq47yh3yd.onion/monero-project)
+
+## Hardware and Infrastructure Configuration
+
+### Node 1 | Forgejo Main Node (Main Service + MariaDB)
+
+- **Device**: LCPI-H616 development board
+- **SoC**: Allwinner H616
+- **Memory**: 1024MB DDR3 (512MB zram enabled)
+- **Swap Partition**: 2GB
+- **Network**: China Mobile home broadband in Chengdu, China (NAT1, 100Mbps)
+- **Storage**: 64GB persistent storage
+- **Operating System**: Ubuntu 22.04.5 LTS
+- **Kernel Version**: Linux 6.1.31-sun50iw9
+
+### Node 2 | Relay Node (Tor + WireGuard)
+
+- **Location**: Los Angeles, Zone 1, USA
+- **CPU**: Intel Xeon E5 v4 (2 vCPUs)
+- **Memory**: 2GB
+- **Storage**: 30GB
+- **Bandwidth**: Inbound 30Mbps / Outbound 50Mbps
+- **Operating System**: Ubuntu Server 24.04 LTS
+
+## Network Architecture Overview
+
+### 1. Clearnet Access Link
+
+LCPI-H616 → WireGuard (udp2raw) → Los Angeles Relay Node → Cloudflare
+
+### 2. Tor Network Access Link
+
+LCPI-H616 → WireGuard (udp2raw) → Los Angeles Relay Node → Tor Hidden Service
+
+### 3. Typical Access Speed
+
+50 KB/s to 2 MB/s (specific speed is affected by network environment and node load)
+
+## Synchronization Strategy and Mechanism
+
+- **Synchronization Scope**: Covers most core repositories and important ecosystem projects of [monero-project](https://github.com/monero-project) on GitHub/GitLab.
+- **Automatic Synchronization**: Synchronization is performed every 8 hours (except for [monero-project/guix](https://repo.openenet.cn/monero-project/guix) due to LFS restrictions).
+- **Data Consistency**: Ensures that the repository status remains synchronized with the upstream GitHub repository.
+
+## List of Mirrored Repositories
+
+1. [monero-project/monero](https://github.com/monero-project/monero)
+2. [cake-tech/cake_wallet](https://github.com/cake-tech/cake_wallet)
+3. [vtnerd/monero-lws](https://github.com/vtnerd/monero-lws)
+4. [haveno-dex/haveno-ts](https://github.com/haveno-dex/haveno-ts)
+5. [PyXMR2025/monero-community-archive](https://github.com/PyXMR2025/monero-community-archive)
+
+[PyXMR2025/monero-community-archive](https://github.com/PyXMR2025/monero-community-archive) is used to archive and store issues, pull requests, and release information for active repositories under [monero-project](https://github.com/monero-project).
+
+6. [haveno-dex/haveno](https://github.com/haveno-dex/haveno)
+7. [monero-project/guix](https://github.com/monero-project/guix)
+8. [monero-project/monero-docs](https://github.com/monero-project/monero-docs)
+9. [cake-tech/cupcake](https://github.com/cake-tech/cupcake)
+10. [monero-project/ccs-proposals](https://repo.getmonero.org/monero-project/ccs-proposals)
+11. [monero-integrations/moneroodoo](https://github.com/monero-integrations/moneroodoo)
+12. [monero-project/monero-gui](https://github.com/monero-project/monero-gui)
+13. [xmrig/xmrig](https://github.com/xmrig/xmrig)
+14. [xmrig/xmrig-proxy](https://github.com/xmrig/xmrig-proxy)
+15. [monero-rs/monero-rpc-rs](https://github.com/monero-rs/monero-rpc-rs)
+16. [monero-project/monero-site](https://github.com/monero-project/monero-site)
+17. [SChernykh/p2pool](https://github.com/SChernykh/p2pool)
+18. [monero-project/gitian.sigs](https://github.com/monero-project/gitian.sigs)
+19. [woodser/monero-java](https://github.com/woodser/monero-java)
+20. [woodser/monero-ts](https://github.com/woodser/monero-ts)
+21. [monero-project/meta](https://github.com/monero-project/meta)
+22. [woodser/monero-cpp](https://github.com/woodser/monero-cpp)
+23. [comit-network/xmr-btc-swap](https://github.com/comit-network/xmr-btc-swap)
+24. [monero-project/research-lab](https://github.com/monero-project/research-lab)
+25. [monero-rs/monero-rs](https://github.com/monero-rs/monero-rs)
+26. [monero-project/guix.sigs](https://github.com/monero-project/guix.sigs)
+27. [monero-integrations/monerophp](https://github.com/monero-integrations/monerophp)
+
+## Service Availability and Maintenance
+
+- **Operating Mode**: 24/7 continuous operation.
+- **Availability**: Online for more than 95% of the day.
+- **Scheduled Maintenance**: Router restarts are performed daily from 14:00 to 14:10 UTC (may cause short-term network interruptions).
+- **Notification Mechanism**: Service interruptions due to scheduled maintenance or force majeure factors will be announced in advance.
+- **Status Inquiry**: [Jackie's Service Status](https://stats.uptimerobot.com/T9lfuWD9HP)
+
+## Backup Mechanism and Strategy
+
+- **Main Service Node**: Node 1 (located in China).
+- **Automatic Backup**: Full synchronization is performed daily at 14:30 UTC to Node 2.
+- **Off-site Backup Storage**: Node 2 (US VPS) stores a complete copy of the repositories to ensure data security.
+
+## Disclaimer and Statement
+
+This mirror site is an **unofficial community backup site** that only provides code repository redundancy and mirror services. It is not affiliated with the Monero Core team. Community members are welcome to use this service and [support this project](https://repo.openenet.cn/no-reply/donate).
+
+
+# Discussion History
+# Action History
+- Created by: PyXMR2025 | 2026-03-29T17:43:20+00:00

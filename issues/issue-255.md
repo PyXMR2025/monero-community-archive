@@ -1,0 +1,97 @@
+---
+title: 'DefCon 26 Workgroup Meeting: 14 July 2018 16:00 UTC '
+source_url: https://github.com/monero-project/meta/issues/255
+author: scottAnselmo
+assignees: []
+labels: []
+created_at: '2018-07-04T07:31:21+00:00'
+updated_at: '2018-07-16T08:49:17+00:00'
+type: issue
+status: closed
+closed_at: '2018-07-16T08:49:17+00:00'
+---
+
+# Original Description
+**How to Join DefCon Workgroup**
+1. Click 'Contact the project' in [Taiga workgroup](https://taiga.getmonero.org/project/michael-vegas-august-2018/)
+2. Submit an email to use to join the group. 
+3. Check to see if there are any [roles](https://taiga.getmonero.org/project/michael-vegas-august-2018/us/5?kanban-status=284) that catch your interest in particular. If not, please create one for yourself!
+
+If you haven't gotten any response / invite using 'Contact the Project' on Taiga please highlight 'rehrar' 'sean' or 'msvb-lab' on #monero-community on IRC (freenode)
+
+**Meeting Location**
+
+[Riot/Matrix](https://matrix.org/docs/projects/client/riot.html) | [Freenode](https://webchat.freenode.net/) | [OFTC](https://webchat.oftc.net/) | [Mattermost](https://mattermost.getmonero.org/) | [Slack](https://monero.slack.com/) | Irc2P
+
+Please [PM SGP on Reddit](https://www.reddit.com/message/compose/?to=SamsungGalaxyPlayer&subject=Monero%20Slack%20invite%20(from%20GitHub)&message=Hello%20please%20send%20a%20Monero%20Slack%20invite%20to%20the%20following%20email:) with your email for a Slack invite if you want to use Slack.
+
+*    #monero-community
+
+Note that some bridges such as Matrix/Riot and MatterMost have experienced issues recently and it may be best simply to connect directly over IRC via an OSS IRC client like Hex for the duration of the meeting.
+
+**Meeting Time**
+
+[Use this timezone calculator to convert UTC to your time zone.](https://www.timeanddate.com/worldclock/converter.html?iso=20180714T160000&p1=224&p2=70&p3=tz_et&p4=179&p5=136&p6=111&p7=48&p8=49&p9=28)
+
+San Francisco, USA            Sat, Jul 14, 2018 at 9:00 am PDT       
+Dallas, USA                   Sat, Jul 14, 2018 at 11:00 am CDT      
+Eastern Time, ET              Sat, Jul 14, 2018 at 12:00 noon EDT    
+New York, USA                 Sat, Jul 14, 2018 at 12:00 noon EDT    
+London, United Kingdom        Sat, Jul 14, 2018 at 5:00 pm BST       
+Johannesburg, South Africa    Sat, Jul 14, 2018 at 6:00 pm SAST      
+Brussels, Belgium             Sat, Jul 14, 2018 at 6:00 pm CEST      
+Bucharest, Romania            Sat, Jul 14, 2018 at 7:00 pm EEST      
+Bangkok, Thailand             Sat, Jul 14, 2018 at 11:00 pm ICT      
+Corresponding UTC             Sat, Jul 14, 2018 at 16:00       
+
+**Proposed Meeting Items**
+
+1. Introduction / Greetings
+2. Sales promoter application, due Monday
+3. corklander to report on cost list for General Bytes ATM machine
+4. Treasurers report the sales plan
+5. Press relations report the byline
+6. Hardware badge status report
+7. Vendor tables and if a space can be secured for M.A.G.I.C. to give away free merch and solicit donations
+8. We have three Saturdays after this before DefCon which would mean one more meeting 7/28; is going to every Saturday to have three meetings instead warranted to ensure final alignment on various items?
+9. TBD (Leave agenda item suggestions in the comments)
+10. Triage Questions (What is time sensitive, etc going off the Taiga board that needs help, etc)
+11. Opens
+12. Conclusion
+
+For any other proposed items, please leave in comments below and I'll try to update in timely fashion
+
+**Etherpad**
+[https://public.etherpad-mozilla.org/p/monero-defcon-26](https://public.etherpad-mozilla.org/p/monero-defcon-26)
+
+# Discussion History
+## michaesc | 2018-07-11T15:52:02+00:00
+Hello @sanecito some things we can add are:
+
+- [x] Treasurers report the sales plan [1]
+- [x] Press relations report the byline [2]
+- [x] Hardware badge status report
+- [ ] **Urgent**: Sales promoter application
+
+## SamsungGalaxyPlayer | 2018-07-11T19:48:20+00:00
+I would like to talk about the vendor tables.
+
+MAGIC will have free merchandise available, and we would like to ideally have some space to give out the free t-shirts, webcam covers, stickers, and flyers, and to solicit donations.
+
+## scottAnselmo | 2018-07-13T07:09:26+00:00
+/Updated
+
+## michaesc | 2018-07-13T11:08:37+00:00
+Hello @sanecito, the organizer (DT himself) set a Monday deadline giving all villages no time to submit their _one time promoter applications_. He titled his message **red alert** so we should probably do this before anything else in the meeting?
+
+## scottAnselmo | 2018-07-13T19:24:12+00:00
+Agreed! /updated
+
+## ajs-xmr | 2018-07-14T01:28:14+00:00
+For item 4, I will not be able to attend the meeting tomorrow, but the draft expenses report for supplies is available here for review: https://taiga.getmonero.org/project/michael-vegas-august-2018/wiki/budget
+
+If anyone wants to add any other supplies to the budget, PM me on Mattermost/Slack/Riot or add a comment in Taiga [#16 Multievent shopping list](https://taiga.getmonero.org/project/michael-vegas-august-2018/us/16?kanban-status=286). FFS will be requested to cover these expenses.
+
+# Action History
+- Created by: scottAnselmo | 2018-07-04T07:31:21+00:00
+- Closed at: 2018-07-16T08:49:17+00:00
