@@ -45,20 +45,17 @@ def save_md(file_path: Path, frontmatter: dict, content: str):
         f.write("---\n\n")
         f.write(content)
 
-# ===================== ✅ 终极修复：Issue 100%抓取 =====================
+# ===================== Issue 同步（100%抓取） =====================
 def sync_issues(repo_full_name: str):
     print(f"🔍 开始同步 {repo_full_name} Issues (所有状态)")
     source_repo = g.get_repo(repo_full_name)
     count = 0
 
-    # 核心修复：遍历所有Issues，精准过滤PR，兼容所有状态
     for issue in source_repo.get_issues(state="all"):
-        # 官方标准判断：是PR就跳过
+        # 精准过滤PR
         if hasattr(issue, 'pull_request') and issue.pull_request is not None:
-            print(f"⏭️ 跳过PR条目 #{issue.number}")
             continue
 
-        # 抓到纯Issue！
         count += 1
         print(f"✅ 捕获Issue #{issue.number} | 状态: {issue.state}")
         
@@ -84,7 +81,7 @@ def sync_issues(repo_full_name: str):
 
     print(f"🎉 同步完成！共抓取纯 Issue: {count} 个\n")
 
-# ===================== PR 同步（正常+自动更新） =====================
+# ===================== PR 同步 =====================
 def sync_pull_requests(repo_full_name: str):
     print(f"🔍 开始同步 {repo_full_name} Pull Requests")
     source_repo = g.get_repo(repo_full_name)
@@ -144,18 +141,19 @@ def switch_branch(branch_name):
         repo.git.fetch("origin", branch_name)
     except:
         repo.git.checkout("-b", branch_name)
-        print(f"🆕 创建远程分支: {branch_name}")
+        print(f"🆕 创建分支: {branch_name}")
 
-    # 强制创建README，保证分支必推送
+    # 强制创建README
     readme = Path("README.md")
     if not readme.exists():
         with open(readme, "w", encoding="utf-8") as f:
             f.write(f"# {branch_name}\n归档源: https://github.com/{repo_full_name}\n自动同步\n")
 
-# ===================== 主函数 =====================
+# ===================== 主函数（修复Git配置！） =====================
 def main():
-    repo.config_writer().set_value("user.name", "github-actions[bot]").release()
-    repo.config_writer().set_value("user.email", "github-actions[bot]@users.noreply.github.com").release()
+    # ✅ 修复核心错误：Git配置语法
+    repo.config_writer().set_value("user", "name", "github-actions[bot]").release()
+    repo.config_writer().set_value("user", "email", "github-actions[bot]@users.noreply.github.com").release()
 
     for repo_full_name in SOURCE_REPOS:
         branch = repo_full_name.split("/")[-1]
@@ -168,14 +166,14 @@ def main():
         sync_pull_requests(repo_full_name)
         sync_releases(repo_full_name)
         
-        # 提交+推送（自动更新已有文件）
+        # 提交推送
         repo.git.add(".")
         try:
             repo.index.commit(f"更新 {branch} | {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}")
             repo.git.push("--set-upstream", "origin", branch)
             print(f"✅ 推送成功: {branch}")
         except Exception as e:
-            print(f"ℹ️ 数据已最新，无需提交: {branch}")
+            print(f"ℹ️ 数据已最新: {branch}")
 
 if __name__ == "__main__":
     main()
