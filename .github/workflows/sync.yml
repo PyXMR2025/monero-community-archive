@@ -1,14 +1,14 @@
 name: 同步 Issue/PR/Release
 on:
   schedule:
-    - cron: '0 12 * * *' # 每日UTC 12:00执行
-  workflow_dispatch: # 手动触发
+    - cron: '0 12 */3 * *'
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 赋予Git推送权限
+      contents: write 
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
