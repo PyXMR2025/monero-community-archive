@@ -6,7 +6,6 @@ from github import Github, Auth
 from pathlib import Path
 
 # ===================== 配置项 =====================
-# 测试用（测试完换回门罗币即可）
 SOURCE_REPOS = [
     "PyXMR2025/blog"
 ]
@@ -47,16 +46,22 @@ def save_md(file_path: Path, frontmatter: dict, content: str):
         f.write("---\n\n")
         f.write(content)
 
-# ===================== ✅ 修复完成：Issue 必同步 =====================
+# ===================== 修复：Issue 同步（无无效参数） =====================
 def sync_issues(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Issues...")
     source_repo = g.get_repo(repo_full_name)
     
-    # ✅ 核心修复1：强制拉取【所有状态+纯Issue】（排除PR，API级别过滤）
-    issues = list(source_repo.get_issues(state="all", type="issue"))
-    print(f"✅ 找到 {len(issues)} 个 纯Issue (关闭/开放都包含)")
+    # ✅ 修复：删除错误参数 type="issue"，GitHub API 不支持！
+    issues = list(source_repo.get_issues(state="all"))
+    print(f"✅ 找到 {len(issues)} 个 Issue/PR 总数")
     
+    count = 0
     for issue in issues:
+        # ✅ 官方正确方式：过滤 PR，只保留纯 Issue
+        if hasattr(issue, "pull_request"):
+            continue
+            
+        count += 1
         fm = parse_github_object(issue)
         fm["type"] = "issue"
         fm["status"] = issue.state
@@ -75,8 +80,9 @@ def sync_issues(repo_full_name: str):
         
         save_md(Path(f"issues/issue-{issue.number}.md"), fm, content)
         print(f"📄 已生成 Issue 文件: issue-{issue.number}.md ({issue.state})")
+    print(f"✅ 最终同步纯 Issue 数量: {count}")
 
-# ===================== PR 同步（保持正常不动） =====================
+# ===================== PR 同步（正常） =====================
 def sync_pull_requests(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Pull Requests...")
     source_repo = g.get_repo(repo_full_name)
@@ -106,7 +112,7 @@ def sync_pull_requests(repo_full_name: str):
         save_md(Path(f"pull_requests/pr-{pr.number}.md"), fm, content)
         print(f"📄 生成 PR 文件: pr-{pr.number}.md")
 
-# ===================== Releases 同步（正常） =====================
+# ===================== Releases 同步（修复笔误） =====================
 def sync_releases(repo_full_name: str):
     print(f"🔍 同步 {repo_full_name} Releases...")
     source_repo = g.get_repo(repo_full_name)
@@ -121,7 +127,7 @@ def sync_releases(repo_full_name: str):
             "source_url": release.html_url,
             "author": release_author,
             "tag_name": release.tag_name,
-            "created_at": release.created_at.isoformat() if obj.created_at else None,
+            "created_at": release.created_at.isoformat() if release.created_at else None,
             "published_at": release.published_at.isoformat() if release.published_at else None,
         }
         content = f"# 版本信息\n标签: {release.tag_name}\n\n# 发布说明\n{release.body or '无说明'}"
@@ -140,7 +146,7 @@ def switch_branch(branch_name: str):
     readme = Path.cwd() / "README.md"
     if not readme.exists():
         with open(readme, "w", encoding="utf-8") as f:
-            f.write(f"# {branch_name}\n归档仓库: https://github.com/{branch_name}\n自动同步时间: {datetime.utcnow()} UTC\n")
+            f.write(f"# {branch_name}\n归档仓库: https://github.com/{repo_full_name}\n自动同步时间: {datetime.utcnow()} UTC\n")
 
 # ===================== 主函数 =====================
 def main():
