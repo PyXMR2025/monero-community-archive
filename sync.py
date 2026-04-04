@@ -7,7 +7,12 @@ from pathlib import Path
 
 # ===================== Config =====================
 SOURCE_REPOS = [
-    "PyXMR2025/blog"
+    "monero-project/monero",
+    "monero-project/monero-docs",
+    "monero-project/monero-gui",
+    "monero-project/monero-site",
+    "monero-project/meta",
+    "monero-project/research-lab"
 ]
 GH_TOKEN = os.getenv("GH_TOKEN")
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
