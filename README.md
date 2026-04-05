@@ -12,6 +12,12 @@ Synchronize all Issues, PRs, Releases, and complete records from the following r
 - [monero-project/monero-site](https://github.com/monero-project/monero-site)
 - [monero-project/meta](https://github.com/monero-project/meta)
 - [monero-project/research-lab](https://github.com/monero-project/research-lab)
+- [seraphis-migration/monero](https://github.com/seraphis-migration/monero)
+- [Cuprate/cuprate](https://github.com/Cuprate/cuprate)
+- [xmrig/xmrig](https://github.com/xmrig/xmrig)
+- [Cuprate/randomx-rs](https://github.com/Cuprate/randomx-rs)
+- [MrCyjaneK/monero_c](https://github.com/MrCyjaneK/monero_c)
+- [monero-project/ccs-proposals](https://repo.getmonero.org/monero-project/ccs-proposals)
 
 ## Repository Structure
 This repository uses **branches to correspond to source repositories**, with a unified structure within each branch:
