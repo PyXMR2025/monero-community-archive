@@ -28,5 +28,5 @@ jobs:
 
       - name: 执行同步脚本
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN3: ${{ secrets.GH_TOKEN2 }}
         run: python sync9.py
