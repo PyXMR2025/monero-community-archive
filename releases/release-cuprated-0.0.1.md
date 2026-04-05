@@ -1,0 +1,43 @@
+---
+title: cuprated 0.0.1 Molybdenite
+type: release
+source_url: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.1
+author: hinto-janai
+tag_name: cuprated-0.0.1
+published_at: '2025-03-12T13:20:17+00:00'
+---
+
+# Version: cuprated-0.0.1
+
+# Release Notes
+Cuprate is an alternative and independent Monero node implementation that is focused on being fast, user-friendly, and backwards compatible with [`monerod`](https://github.com/monero-project/monero).
+
+This is the first release of the Cuprate node, `cuprated`.
+
+To get started, see: <https://user.cuprate.org>.
+
+For an FAQ on Cuprate, see: <https://user.cuprate.org/#faq>.
+
+## Downloads
+For convenience, the following binaries are produced using GitHub CI in a non-reproducible way; it is highly recommended to build `cuprated` from source instead, see <https://user.cuprate.org/getting-started/source>.
+
+| OS      | Architecture | Download |
+|---------|--------------|----------|
+| Linux   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.1/cuprated-0.0.1-linux-x64.tar.gz>
+| Linux   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.1/cuprated-0.0.1-linux-arm64.tar.gz>
+| macOS   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.1/cuprated-0.0.1-macos-x64.tar.gz>
+| macOS   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.1/cuprated-0.0.1-macos-arm64.tar.gz>
+| Windows | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.1/cuprated-0.0.1-windows-x64.zip>
+
+## Contributors
+Thank you to everyone who directly contributed to this release:
+
+- @Asurar0
+- @Boog900
+- @dimalinux
+- @hinto-janai
+- @jomuel
+- @kayabaNerve
+- @SyntheticBird45
+
+There are other contributors that are not listed here, thank you to them as well.

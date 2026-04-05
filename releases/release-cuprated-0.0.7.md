@@ -1,0 +1,37 @@
+---
+title: cuprated 0.0.7 Molybdenite
+type: release
+source_url: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.7
+author: hinto-janai
+tag_name: cuprated-0.0.7
+published_at: '2025-10-12T13:46:48+00:00'
+---
+
+# Version: cuprated-0.0.7
+
+# Release Notes
+Cuprate is an alternative Monero node implementation. To get started, see: <https://user.cuprate.org>.
+
+## Changes
+- Update `monero_oxide` ([#543](https://github.com/Cuprate/cuprate/pull/543))
+- Add `pop_blocks` command ([#545](https://github.com/Cuprate/cuprate/pull/545))
+- Fix `DefaultOrCustom<T>` docs ([#550](https://github.com/Cuprate/cuprate/pull/550))
+
+## Downloads
+For convenience, the following binaries are produced using GitHub CI in a non-reproducible way; it is highly recommended to build `cuprated` from source instead, see <https://user.cuprate.org/getting-started/source>.
+
+| OS      | Architecture | Download |
+|---------|--------------|----------|
+| Windows | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.7/cuprated-0.0.7-x86_64-pc-windows-msvc.zip>
+| macOS   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.7/cuprated-0.0.7-x86_64-apple-darwin.tar.gz>
+| macOS   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.7/cuprated-0.0.7-aarch64-apple-darwin.tar.gz>
+| Linux   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.7/cuprated-0.0.7-x86_64-unknown-linux.tar.gz>
+| Linux   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.7/cuprated-0.0.7-aarch64-unknown-linux.tar.gz>
+
+## Contributors
+Thank you to everyone who directly contributed to this release:
+
+- @Boog900
+- @hinto-janai
+
+There are other contributors that are not listed here, thank you to them as well.

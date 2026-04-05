@@ -1,0 +1,47 @@
+---
+title: cuprated 0.0.2 Molybdenite
+type: release
+source_url: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.2
+author: hinto-janai
+tag_name: cuprated-0.0.2
+published_at: '2025-04-09T20:21:22+00:00'
+---
+
+# Version: cuprated-0.0.2
+
+# Release Notes
+Cuprate is an alternative Monero node implementation.
+
+This is the second release of the Cuprate node, `cuprated`.
+
+To get started, see: <https://user.cuprate.org>.
+
+For an FAQ on Cuprate, see: <https://user.cuprate.org/#faq>.
+
+## Changes
+- User book changes, config documentation ([#402](https://github.com/Cuprate/cuprate/pull/402), [#406](https://github.com/Cuprate/cuprate/pull/406), [#418](https://github.com/Cuprate/cuprate/pull/418))
+- Blockchain reorganizations fixes ([#408](https://github.com/Cuprate/cuprate/pull/408))
+- STDOUT/STDIN fixes ([#415](https://github.com/Cuprate/cuprate/pull/415))
+- Replace remaining `println` with `tracing` ([#417](https://github.com/Cuprate/cuprate/pull/417))
+- Fix blockchain database error mappings  ([#419](https://github.com/Cuprate/cuprate/pull/419))
+- Update `fast-sync` to height `3384832` ([#427](https://github.com/Cuprate/cuprate/pull/427))
+
+## Downloads
+For convenience, the following binaries are produced using GitHub CI in a non-reproducible way; it is highly recommended to build `cuprated` from source instead, see <https://user.cuprate.org/getting-started/source>.
+
+| OS      | Architecture | Download |
+|---------|--------------|----------|
+| Linux   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.2/cuprated-0.0.2-linux-x64.tar.gz>
+| Linux   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.2/cuprated-0.0.2-linux-arm64.tar.gz>
+| macOS   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.2/cuprated-0.0.2-macos-x64.tar.gz>
+| macOS   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.2/cuprated-0.0.2-macos-arm64.tar.gz>
+| Windows | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.2/cuprated-0.0.2-windows-x64.zip>
+
+## Contributors
+Thank you to everyone who directly contributed to this release:
+
+- @Boog900
+- @hinto-janai
+- @jermanuts
+
+There are other contributors that are not listed here, thank you to them as well.

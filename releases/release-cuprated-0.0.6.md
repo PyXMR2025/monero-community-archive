@@ -1,0 +1,42 @@
+---
+title: cuprated 0.0.6 Molybdenite
+type: release
+source_url: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.6
+author: Boog900
+tag_name: cuprated-0.0.6
+published_at: '2025-08-28T00:14:57+00:00'
+---
+
+# Version: cuprated-0.0.6
+
+# Release Notes
+# cuprated 0.0.6 Molybdenite (2025-08-27)
+Cuprate is an alternative Monero node implementation. To get started, see: <https://user.cuprate.org>.
+
+**This release contains a breaking change in the tx-pool, you will need to delete the tx-pool file.**
+
+## Changes
+- Add Tor support to Cuprate (Arti, Tor Daemon, Dandelion router) ([#509](https://github.com/Cuprate/cuprate/pull/509))
+- P2P: Add hourly warning logging for no incoming P2P connections ([#520](https://github.com/Cuprate/cuprate/pull/520))
+- make ports depend on network zones ([#533](https://github.com/Cuprate/cuprate/pull/533))
+- cuprated: add txpool manager ([#483](https://github.com/Cuprate/cuprate/pull/483))
+
+## Downloads
+For convenience, the following binaries are produced using GitHub CI in a non-reproducible way; it is highly recommended to build `cuprated` from source instead, see <https://user.cuprate.org/getting-started/source>.
+
+| OS      | Architecture | Download |
+|---------|--------------|----------|
+| Windows | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.6/cuprated-0.0.6-x86_64-pc-windows-msvc.zip>
+| macOS   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.6/cuprated-0.0.6-x86_64-apple-darwin.tar.gz>
+| macOS   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.6/cuprated-0.0.6-aarch64-apple-darwin.tar.gz>
+| Linux   | x64          | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.6/cuprated-0.0.6-x86_64-unknown-linux-gnu.tar.gz>
+| Linux   | ARM64        | <https://github.com/Cuprate/cuprate/releases/download/cuprated-0.0.6/cuprated-0.0.6-aarch64-unknown-linux-gnu.tar.gz>
+
+## Contributors
+Thank you to everyone who directly contributed to this release:
+
+- @Boog900
+- @SyntheticBird45
+- @omurad
+
+There are other contributors that are not listed here, thank you to them as well.
