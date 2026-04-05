@@ -8,11 +8,10 @@ import gitlab
 SOURCE_REPOS = [
     "monero-project/ccs-proposals"
 ]
-GITLAB_TOKEN = os.getenv("GITLAB_TOKEN")
 GITLAB_URL = "https://repo.getmonero.org"
 TARGET_REPO = os.getenv("GITHUB_REPOSITORY")
 
-gl = gitlab.Gitlab(GITLAB_URL, private_token=GITLAB_TOKEN)
+gl = gitlab.Gitlab(GITLAB_URL)
 
 repo = git.Repo(".")
 origin = repo.remote("origin")
