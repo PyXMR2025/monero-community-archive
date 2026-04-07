@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-02-27T09:38:44+00:00'
+updated_at: '2026-04-04T18:49:03+00:00'
 type: issue
 status: open
 closed_at: null
@@ -15,7 +15,7 @@ closed_at: null
 # Original Description
 ## Guix
 
-Time machine: Oct 25 2025
+Time machine: Feb 22 2026
 
 | Package  | Version | PR |
 |----------|---------|------|
