@@ -6,7 +6,7 @@ assignees: []
 labels:
 - need feedback
 created_at: '2021-04-01T23:18:12+00:00'
-updated_at: '2022-01-02T19:46:16+00:00'
+updated_at: '2026-04-08T21:03:33+00:00'
 type: issue
 status: open
 closed_at: null
@@ -211,6 +211,16 @@ Maybe see if it's possible to drag some of those PPC devs back to update stuff. 
 I've looked into this a bit, and it seems it'll be tricky because the build system will require some significant changes to sanely support another platform. Like @Spudz76 said, the way it currently works is that the CMake scripts check if the platform is Arm, and if not, it just assumes the platform is x86, so the build currently fails completely on ppc64le platforms even if you only want to use OpenCL/CUDA. There's also quite a lot of `#ifdef XMRIG_ARM`-type checks in the C++ code, as well, so it's difficult to tell at a glance what needs to be changed to support ppc64le.
 
 IMO, the code should be refactored to move platform-specific code into their own source files as much as possible, then select the platform-specific files in the CMake scripts based on what platform the scripts identify is the target. That way, more platforms could be added in the future without having to touch a bunch of files unrelated to those platforms. These modifications could be made by a developer even without access to a POWER8/POWER9 system, so anyone familiar with the code should be able to make them. I'd do it myself, but I've only just begun to read and understand this code so it might be a while before I get around to it.
+
+## cyrozap | 2026-04-08T21:03:33+00:00
+I have a work-in-progress port of xmrig to Power ISA [here](https://github.com/cyrozap/xmrig/tree/wip-power-support). This code is downstream of [my PR to RandomX](https://github.com/tevador/RandomX/pull/320), and while it does work it's not yet in a state where I'd feel comfortable submitting an MR to xmrig. The main issues are:
+
+- I had to add a lot of stub code for CryptoNight to get xmrig to build, and I'd really prefer for that to be configurable so that I don't need to include all that stub code and so that users won't be surprised if they try and fail to mine CryptoNight on a Power system. Plus, it generates a lot of ugly warnings about unused variables during the build.
+- I'm still not super confident all the CMake code I wrote is correct.
+- I want to test xmrig on big-endian Power, and if I can get that working I'll need to do a bit of cleanup to make sure the architecture is handled and reported correctly in various places.
+- Some results for `--bench=10M` are getting rejected and I don't know why. I've also seen some runs (both of benchmarks and of normal mining) end in segfaults, and a very small number of runs of the upstream RandomX code is resulting in segfaults as well. This is very concerning to me as these issues all point to there being memory or pointer corruption happening somewhere in my code, and the intermittent nature of it means the root cause could be very difficult to track down.
+
+So with all this in mind, please feel free to try it out, but do manage your expectations for the moment. I'll open a PR once I believe the code is ready to be merged.
 
 # Action History
 - Created by: RunAIPilot | 2021-04-01T23:18:12+00:00
