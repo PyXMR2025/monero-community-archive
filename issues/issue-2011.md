@@ -28,7 +28,7 @@ To my knowledge, currently the wallets listed on getmonero that send data back h
 - Mymonero
 
 # Discussion History
-## r4v3r23 | 2022-08-04T08:25:34+00:00
+## ghost | 2022-08-04T08:25:34+00:00
 i think a "warning" label for those wallets is more appropriate with an explanation that they leak sensitive data by default
 
 ## ChristopherKing42 | 2022-08-09T19:05:30+00:00
@@ -79,7 +79,7 @@ I can confirm cake and monero.com can be run without making any external connect
 ## erciccione | 2023-02-22T12:56:06+00:00
 Edited the issue accordingly.
 
-## r4v3r23 | 2023-02-22T20:56:19+00:00
+## ghost | 2023-02-22T20:56:19+00:00
 *by default* is the issue at hand. looks like cake still does that, and buries an option to disable it, rather than off by default and opting in
 
 # Action History

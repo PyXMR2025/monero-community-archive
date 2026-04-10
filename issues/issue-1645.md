@@ -1,7 +1,7 @@
 ---
 title: Merchant evolution-host.com no longer accepts Monero.
 source_url: https://github.com/monero-project/monero-site/issues/1645
-author: JasonTable
+author: ghost
 assignees: []
 labels:
 - '🏪 merchant: removal'
@@ -21,5 +21,5 @@ And all the crypto payment options are gone.
 
 # Discussion History
 # Action History
-- Created by: JasonTable | 2021-05-28T07:47:31+00:00
+- Created by: ghost | 2021-05-28T07:47:31+00:00
 - Closed at: 2021-06-01T06:33:00+00:00
