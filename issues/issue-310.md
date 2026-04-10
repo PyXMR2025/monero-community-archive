@@ -5,13 +5,15 @@ author: UkoeHB
 assignees: []
 labels: []
 created_at: '2026-04-07T01:16:19+00:00'
-updated_at: '2026-04-07T04:24:40+00:00'
+updated_at: '2026-04-07T22:42:24+00:00'
 type: issue
 status: open
 closed_at: null
 ---
 
 # Original Description
+**EDIT:** Interpret this document as instead advocating the following: simplify Carrot to just 'Legacy-Carrot' (removing the new key hierarchy), and push for Jamtis-PQ after the FCMP++ hardfork (essentially Jamtis-Carrot with improved quantum forward-secrecy).
+
 [Carrot](https://github.com/jeffro256/carrot/blob/pq_secure_ki/carrot.md) is a new addressing protocol with two pieces. First is an enote construction and scanning protocol, and second is a new key hierarchy. Both old CryptoNote-style addresses and new Carrot-key-hierarchy addresses would use the same enote construction/scanning protocol. Addresses for the new key hierarchy would look like old addresses.
 
 The Carrot key hierarchy and enote construction details trace back to [Jamtis](https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024) (also see [Seraphis impl](https://raw.githubusercontent.com/UkoeHB/Seraphis/master/implementing_seraphis/Impl-Seraphis-0-0-4.pdf) and the variation [Jamtis-RCT](https://gist.github.com/tevador/d3656a217c0177c160b9b6219d9ebb96)).
@@ -141,6 +143,147 @@ However, what would likely be the time delay for something like that feature alo
 The greatest benefit to monero users currently is the FCMPs and I wouldn't want to delay that any longer than necessary even if I would love to see changes like these.
 
 Would this push back the hardfork by more than 3 months or so? If so I would personally vote for it being a separate hardfork simply to get FCMPs out the door as soon as possible.
+
+## tevador | 2026-04-07T05:21:02+00:00
+> The advent of quantum threats is controversial, so PQ updates may get stalled or killed by opposition (either to quantum itself or its efficiency implications) or because of complexity. Tying features to PQ is therefore risky. It also muddies the waters around whether PQ is actually desired for its own sake.
+
+I think it's nearly universally accepted now that PQ encryption is required ASAP for any protocol that needs forward secrecy due to "harvest now, decrypt later" type of attacks.
+
+> Instead of waiting for Jamtis-PQ.
+
+The change from "Jamtis-Carrot" to "Jamtis-PQ" is smaller than you think.
+
+I'm still working on the full specs, but here is how Jamtis-PQ is planned to work, assuming the Carrot on-chain e-note format is used:
+
+1. Each Jamtis-PQ address encodes the tuple <code>(j', K<sub>1</sub><sup>j</sup>, D<sub>2</sub><sup>j</sup>, D<sub>3</sub><sup>j</sup>, D<sub>4</sub><sup>j</sup>, Z<sub>5</sub><sup>j</sup>)</code>, where `j'` is the encrypted value of `j` and the other five values are public keys: 1x Ed25519 public key, 3x Curve25519 public keys and 1x CSIDH-1024 public key.
+2. The address index `j` is a 128-bit value, `j'` is `j` encrypted with Twofish.
+3. The Jamtis-PQ address length is 464 base32 characters.
+4. When Jamtis-PQ is shipped, a new field is added to tx_extra of **all transactions** (a total of 132 bytes). The presence of the field is validated with a soft forking rule. The new field contains: primary view tag size in bits and the sender's CSIDH-1024 public key. This makes the Jamtis-PQ upgrade a soft-fork, so it doesn't delay the FCMP++ hard fork.
+5. The 24-bit Carrot view tag is split into the primary and secondary view tags according to the primary view tag size stored in tx_extra. The primary view tag size will probably be restricted to 8 bits via a relay rule.
+6. The encrypted value of `j'` is stored in the Carrot Janus anchor field. This allows for deterministic scanning.
+7. The scanning performance is nearly identical to Jamtis-Carrot because the CSIDH-1024 shared secret is only calculated upon a full view tag match.
+
+This allows for e-notes to be sent to both legacy addresses and to Jamtis-PQ addresses without any detectable on-chain differences.
+
+Jamtis-PQ e-notes have a total of 4 shared secrets between the sender and the recipient:
+
+1. The first X25519 shared secret is used for the primary view tag (filter assist).
+2. The second X25519 shared secret is used for the secondary view tag and for decrypting `j'`.
+3. The third X25519 shared secret is used for Janus attack protection and for decrypting the e-note.
+4. The CSIDH-1024 post-quantum shared secret is combined with the third shared secret (hybrid encryption), which makes the e-note amount and the pubkey extensions hidden from quantum enabled attackers.
+
+Therefore I'm strongly in favor of implementing Jamtis-PQ instead of Jamtis-Carrot to limit the number of address formats used in the Monero ecosystem.
+
+
+## rbrunner7 | 2026-04-07T05:23:57+00:00
+I don't understand the *Implementation notes* in chapter 1 about filter-assist keys. Maybe you can elaborate?
+
+Two points that especially confuse me:
+
+> Carrot [section 7.8.3](https://github.com/jeffro256/carrot/blob/pq_secure_ki/carrot.md#783-mandatory-self-send-enote-rule) has a rule about mandatory self-sends, but the design does not support it.
+
+Does that mean that the design of Carrot has a problem not yet addressed?
+
+> so all enotes you construct will have an exclusive selfsend (even if it's a dummy).
+
+Does that mean that every enote will become two, with a corresponding faster growth rate for the blockchain? And if yes, is that new, or already a part of Carrot that I am not aware?
+
+## UkoeHB | 2026-04-07T15:19:27+00:00
+## @ComputeryPony 
+
+> Would this push back the hardfork by more than 3 months or so?
+
+It should not interfere with the hardfork. If necessary it could be released at a later date and only Legacy-Carrot would accompany FCMP++.
+
+## @tevador 
+
+> I think it's nearly universally accepted now that PQ encryption is required ASAP for any protocol that needs forward secrecy due to "harvest now, decrypt later" type of attacks.
+
+For some reason I thought Jamtis-PQ would go with a PQ tx protocol. Forward secrecy is much more plausible and less complex. I definitely look forward to seeing the full protocol, as forward secrecy is quite difficult.
+
+We can look at the details once you have published, but I will be pushing to include an index mode byte as described in the OP (the MAC would be nice but is not that important).
+
+> Therefore I'm strongly in favor of implementing Jamtis-PQ instead of Jamtis-Carrot to limit the number of address formats used in the Monero ecosystem.
+
+@jeffro256 what do you think about simplifying Carrot to *just* Legacy-Carrot and removing the new key hierarchy? Then you and I pushing hard on Jamtis-PQ once there is a spec (or falling back to Jamtis-Carrot if the forward secrecy effort is deemed intractable). This would alleviate FCMP++ hardfork pressure, avoid excess wallet complexity, and accelerate Jamtis feature inclusion.
+
+## @rbrunner7 
+
+> Does that mean that the design of Carrot has a problem not yet addressed?
+
+At least a claim that isn't supported (specifically that all txs contain a selfsend that light wallets can identify). This only affects light wallets and IMO is a minor concern.
+
+> Does that mean that every enote will become two, with a corresponding faster growth rate for the blockchain? And if yes, is that new, or already a part of Carrot that I am not aware?
+
+No, most txs have a change output, which is a selfsend. Only 0-change txs will include a dummy.
+
+## kayabaNerve | 2026-04-07T16:23:43+00:00
+Without commentary on the proposal as a whole, I'd like to be clear I'm against this being discussed in conjunction with the FCMP++ HF. Specifically, I am against notable changes to CARROT or the introduction of visibly different addresses being done now, before the HF.
+
+For one proposed change here, changing the private key used to differentiate self-send outputs with no effect into the address/TX format, I do not mind it being discussed prior to the upcoming HF.
+
+## tevador | 2026-04-07T16:44:49+00:00
+> For some reason I thought Jamtis-PQ would go with a PQ tx protocol. Forward secrecy is much more plausible and less complex. I definitely look forward to seeing the full protocol, as forward secrecy is quite difficult.
+
+Jamtis-PQ is essentially Jamtis-RCT with an extra PQ key exchange and minor tweaks, shoehorned into the Carrot enote format for indistinguishability
+
+I don't think there is any practically usable PQ technology that could be used to replace FCMP++ as a whole, without balooning transaction sizes to hundreds of kilobytes and having file-sized addresses.
+
+> I will be pushing to include an index mode byte
+
+1. "Index mode" is a wallet implementation detail. The address index will be a 128-bit opaque value and it will be up to individual wallets how it is presented to the user.
+2. There is no space for more than 128 bits because the index reuses the Carrot Janus anchor field, which is 16 bytes per e-note. Technically it could be added to tx_extra (one per output), but I think that's hard to justify and ugly.
+3. The Jamtis-PQ address format is already optimized around a 128-bit index size. The CSIDH prime size (1021 bits) was selected specifically so that the total address payload size is a multiple of 5 bits for optimal base32 encoding.
+
+> the MAC would be nice but is not that important
+
+The old Jamtis MAC is obsolete now and not needed due to the 24-bit view tag size.
+
+## UkoeHB | 2026-04-07T17:20:48+00:00
+> There is no space for more than 128 bits because the index reuses the Carrot Janus anchor field, which is 16 bytes per e-note. Technically it could be added to tx_extra (one per output), but I think that's hard to justify and ugly.
+
+The anchor field isn't released, it can be changed to 17 bytes trivially.
+
+> The Jamtis-PQ address format is already optimized around a 128-bit index size. 
+
+Two empty bits out of > 2000 is not practically meaningful. It's just aesthetically slightly irksome.
+
+> "Index mode" is a wallet implementation detail.
+
+Yes the mode is for wallets. Without communicating the mode, multi-mode wallets and wallet interoperability become either much more difficult, unreliable, or impossible.
+
+## tevador | 2026-04-07T17:33:46+00:00
+> The anchor field isn't released, it can be changed to 17 bytes trivially.
+
+Jamtis-PQ is designed to fit into the Carrot e-note format described [here](https://github.com/jeffro256/carrot/blob/master/carrot.md) without hard forking changes. I don't think the transaction protocol should be changed at this point. I specifically wanted to avoid any such discussions that could delay the FCMP++ hard fork.
+
+## UkoeHB | 2026-04-07T17:38:07+00:00
+> Jamtis-PQ is designed to fit into the Carrot e-note format described [here](https://github.com/jeffro256/carrot/blob/master/carrot.md) without hard forking changes. I don't think the transaction protocol should be changed at this point. I specifically wanted to avoid any such discussions that could delay the FCMP++ hard fork.
+
+This is a very frustrating response. It's not released, it's not merged, it doesn't need an audit, the diff to change it is trivial (1 line to change the `JANUS_ANCHOR_BYTES` constant), and the hardfork is months away.
+
+## kayabaNerve | 2026-04-07T17:57:05+00:00
+@tevador Off-topic, but I prior sketched a composition to discuss what one would look for a PQ transaction protocol, the goal being to modularize each component. In my work, I found that nesting commitments meant we could actually have minimal spend keys and so on, due to expanding within the spend proof: https://github.com/kayabaNerve/monero-pq This was chicken scratch I did before getting burnt out and stepping back though, and being a couple years old, is lacking my current knowledge and more modern developments...
+
+RE: the future of Monero addresses, I'm not for any further changes before the FCMP++ HF except as I scoped above. Targeting deployment in a later upgrade isn't something I object to, so long as so clearly scoped.
+
+One thing I'd like clarified is JAMTIS-CARROT vs JAMTIS. I'd assume, from an initial read, JAMTIS-CARROT would be easier to implement (with more consolidated code) due to closing the gap between CARROT and JAMTIS, not replacing it like JAMTIS would?
+
+Personally, while we can discuss the UX of JAMTIS/JAMTIS-CARROT as establishing features which would carry to something like JAMTIS-PQ as well, I'm uncomfortable at the idea of having three active address formats. A key part of CARROT was the complete continuation of all existing addresses and the indistinguishability between them (except maybe an incredibly marginal amount of bias which could be detected by a QC? I remember some stray comment about that). In that sense, I would prefer to wait for a PQ address format, especially if it makes a selling point out of the new and unique features the post-quantum address format would bring.
+
+One would have to argue that JAMTIS-CARROT fills a gap between CARROT and a PQ proposal which justifies maintaining yet another address format. The only way I see that happening if if the time-to-live for JAMTIS-CARROT is ~more than a year, year a half, sooner than a PQ format, when if we don't adjust the FCMP++ HF, both would presumably be kicked to a future upgrade anyways. Unfortunately, I think that likely makes this proposal untimely.
+
+## tevador | 2026-04-07T19:26:18+00:00
+@UkoeHB I consider the Carrot e-note format to be frozen. I think it's too late for any non-security related changes. I will refrain from discussing this further. I'd rather focus on completing Jamtis-PQ.
+
+> The only way I see that happening if if the time-to-live for JAMTIS-CARROT is ~more than a year, year a half, sooner than a PQ format
+
+I think the work should focus on deploying FCMP++ as soon as possible and then adding PQ encryption as the next step. The other Jamtis features are less important and it's better to end up with only 2 distinct address formats rather than 3.
+
+If shipping FCMP++ only with the legacy key hierarchy makes it easier to deploy, then it might be worth considering.
+
+## kayabaNerve | 2026-04-07T19:55:09+00:00
+I can agree with that, tevador, even if a bit more strict than my own message. As for FCMP++ without CARROT, as we originally discussed, at least a minimal set of tweaks is needed in order to achieve forward secrecy (the additional derivation of the re-randomization over T). I've told jeffro I won't endorse CARROT if it threatens the FCMP timelines, but I believe at this point, the addressing protocol is specified, implemented, and reviewed, and therefore not a concern to the FCMP++ timeline _except for how ecosystems which re-implemented address derivation may be delayed_. At the same time, I don't see how Monero's HF would be blocked by such ecosystem considerations, as actual integrations use `wallet2` which will be ready and able.
 
 # Action History
 - Created by: UkoeHB | 2026-04-07T01:16:19+00:00
