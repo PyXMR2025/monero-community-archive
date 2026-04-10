@@ -230,7 +230,7 @@ EDIT3: added griefing vector described [here](https://github.com/monero-project/
 
 https://bitcoincashresearch.org/t/introducing-arcc-allowable-revocable-contract-chain-system-for-bitcoin-cash/522
 
-## r4v3r23 | 2021-09-22T14:53:33+00:00
+## ghost | 2021-09-22T14:53:33+00:00
 Subscription model makes no sense - no subscription I've ever had locks X amount of payments ahead of time.
 
 ## UkoeHB | 2021-09-22T14:55:46+00:00
@@ -243,7 +243,7 @@ I agree that the subscription use case makes very little sense: The subscriber n
 
 The following is not, and should not be considered, investment advice: I think the "vesting" concept strains credulity, as vesting schemes involve selling an issuer's contractual right in a common enterprise. There's no common enterprise here, and minting Monero has a cost, so why would anyone deliberately lock it away? The act of locking itself introduces a negative return, which isn't really the case with unvested stock.
 
-## r4v3r23 | 2021-09-22T17:29:08+00:00
+## ghost | 2021-09-22T17:29:08+00:00
 > > Subscription model makes no sense - no subscription I've ever had locks X amount of payments ahead of time.
 > 
 > The point is - how can you have scheduled payments that can be canceled (i.e. without pre-paying all months) in Monero? The method he described is one of the few available methods, even if not very appealing UX.
@@ -255,7 +255,7 @@ Features should reflect real world habits and use cases. No need for complicated
 
 Ok... academically, it is our responsibility to enumerate theoretical use cases. After enumerating them, then you can assess practicality and usability. Which you have been doing, but I want to be clear that @j-berman is not in the wrong for discussing subscriptions.
 
-## r4v3r23 | 2021-09-22T17:34:03+00:00
+## ghost | 2021-09-22T17:34:03+00:00
 I understand, but no one sets aside a year worth of payments upfront. Otherwise they'd just pay in full.
 
 The idea of recurring payments is interesting, but I don't think locking up funds for future payments is the solution.
@@ -411,7 +411,7 @@ All that being said, I completely understand if my use case does not seem "real"
 
 I just really want to voice support for keeping the feature, as I do intend to keep using it, and it has already saved me from selling my Monero during multiple moments of weakness.  I would like to see it stay.
 
-## r4v3r23 | 2021-11-15T20:19:48+00:00
+## ghost | 2021-11-15T20:19:48+00:00
 I don't see why hodling needs to be enforced at the protocol level.
 
 You say it forces you to not sell but what if you were in an emergency and needed those funds?

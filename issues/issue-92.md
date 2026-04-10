@@ -147,7 +147,7 @@ I agree with you now about the 3rd party service risk. In light of that, Janus A
 
 Janus C is less useful I think. I can see many uses for a Tier 1 key that can't view spends, but Janus C doesn't allow that.
 
-## r4v3r23 | 2021-11-19T17:05:28+00:00
+## ghost | 2021-11-19T17:05:28+00:00
 @UkoeHB continuing the offline-tx discussion from gitlab: 
 
 so Serpahis view-only wallets would eliminate the need to import key images and cut the process down to 3 steps?
@@ -163,7 +163,7 @@ so Serpahis view-only wallets would eliminate the need to import key images and 
 ## UkoeHB | 2021-11-19T17:09:17+00:00
 @r4v3r23 yes that sounds right to me. 1 -> 2 and 2 -> 3 require communication passes to and then from the offline device.
 
-## r4v3r23 | 2021-11-19T17:14:37+00:00
+## ghost | 2021-11-19T17:14:37+00:00
 > @r4v3r23 yes that sounds right to me. 1 -> 2 and 2 -> 3 require communication passes to and then from the offline device.
 
 yes Seraphis simplifies the process so that it can be done easily between mobile devices via QR codes

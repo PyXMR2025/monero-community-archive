@@ -135,7 +135,7 @@ thanks @Gingeropolous. I guess the relevant data is buried in /raw_log_dumps. it
 
 he basically said the risk of a reorg will increase unpredictably by reducing the lock period. years of experience show that 10 is safe, but reducing even just to 9 may cause catastrophic failures. it's like you're standing blindfolded near a precipice, and you know that the edge is at most 10 steps away, but you can't see where exactly. any step forward may cause your downfall.
 
-## r4v3r23 | 2023-12-22T19:22:40+00:00
+## ghost | 2023-12-22T19:22:40+00:00
 has [https://github.com/monero-project/research-lab/issues/95#issuecomment-1197336438](url) been looked into? 
 
 ## chaserene | 2024-01-01T03:07:50+00:00

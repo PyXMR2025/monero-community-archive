@@ -2020,13 +2020,13 @@ You could say `outputs 0-99 in the chain = bin 0`, `outputs 100-199 in the chain
 ## UkoeHB | 2021-10-08T00:16:41+00:00
 I think that can be applied here. Just define the binning upper bound, pre-define bins relative to the binning upper bound (`(upper_bound - BIN_RADIUS) - (2*BIN_RADIUS + 1)*bin_selector`). Then instead of defining bin centers directly, you deterministically select a bin member, then find which bin it belongs to. For the real spend's bin, you'd randomly select a bin member from its bin to map into the uniform distribution.
 
-## r4v3r23 | 2021-12-03T14:31:11+00:00
+## ghost | 2021-12-03T14:31:11+00:00
 so transaction chaining is out? is this something that Seraphis can allow?
 
 ## UkoeHB | 2021-12-03T15:12:57+00:00
 @r4v3r23 yes, Seraphis allows transaction chaining. The current RingCT protocol could technically do tx chaining with a LOT of code work and protocol changes, but the real spends in chained tx would always be the 'newest' ring member, which is an unpleasant and perhaps not-worthwhile heuristic.
 
-## r4v3r23 | 2021-12-07T23:37:01+00:00
+## ghost | 2021-12-07T23:37:01+00:00
 > @r4v3r23 yes, Seraphis allows transaction chaining. The current RingCT protocol could technically do tx chaining with a LOT of code work and protocol changes, but the real spends in chained tx would always be the 'newest' ring member, which is an unpleasant and perhaps not-worthwhile heuristic.
 
 would tx chaining allow for spending unconfirmed outputs and remove the 10-block confirmation lock when receiving funds?
@@ -2050,7 +2050,7 @@ In the example given by @UkoeHB Alice could draw some decoys from block X, so Bo
 
 This is basically the floating output idea this issue originally proposed. I think it is [too flawed to pursue](https://github.com/monero-project/research-lab/issues/84#issuecomment-877873623).
 
-## r4v3r23 | 2021-12-25T17:51:11+00:00
+## ghost | 2021-12-25T17:51:11+00:00
 @tevador @UkoeHB from the latest getmonero.org Seraphis write-up:
 
 >> Ignore 10-block lock time when transacting with a trusted party (i.e. allow them to make your tx's membership proofs and submit the tx to the network on your behalf).
@@ -2064,7 +2064,7 @@ just trying to get a feel for how this would change UX when transacting
 ## tevador | 2021-12-25T18:34:37+00:00
 Publicly revealing the spent output weakens all rings that have used that output as a decoy, so that would be a significant hit to the overall privacy of Monero.
 
-## r4v3r23 | 2021-12-25T20:05:04+00:00
+## ghost | 2021-12-25T20:05:04+00:00
 right so in practice the 10-block limit stays
 
 ## tevador | 2022-08-16T19:51:19+00:00

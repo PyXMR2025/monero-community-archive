@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2025-12-13T11:14:53+00:00'
+updated_at: '2026-04-09T17:18:39+00:00'
 type: issue
 status: open
 closed_at: null
@@ -505,6 +505,38 @@ Note that the attack doesn't *need* that much memory, but the runtime increases 
 After reading [Low Memory Attacks on Small Key CSIDH](https://eprint.iacr.org/2023/507), I'm not anymore convinced that $K = 2^{220}$ is viable. Their technique reduces the time complexity to about $K^{0.52}$ with $M = K^{0.36}$ (Fig. 5b with m = 3), which would imply only 114 bits of security for $K = 2^{220}$.
 
 I updated my proposal to use the conservative key space of $K = 2^{256}$. This comes with a ~30% performance penalty, but provides 128 bits of security regardless of memory, which makes things easier for a future audit.
+
+## tevador | 2026-04-09T05:09:44+00:00
+### Optimized key spaces
+
+The previous comment recommends to use a 256-bit key space for all CSIDH private keys.
+
+The CSIDH shared secret of an e-note is constructed as:
+
+<code>X4 = z<sub>a</sub><sup>j</sup> * z<sub>ur</sub> * Z<sub>e</sub></code>
+
+so it requires 2 isogeny actions with 2 different private keys:
+
+1. <code>z<sub>a</sub><sup>j</sup></code> is the address-specific private key known to the address generator wallet tier. The purpose of this key is to make addresses unlinkable.
+2. <code>z<sub>ur</sub></code> is the wallet-specific private key known to the payment validator wallet tier. The purpose of this key is to provide forward secrecy in case the address generator wallet tier is compromised.
+
+However, I think we can get away with using a reduced key space for <code>z<sub>a</sub><sup>j</sup></code>, which would speed up e-note decryption by around 25%. This works under the assumption that the public key <code>Z<sub>ur</sub> = z<sub>ur</sub> * E</code> is only revealed to the address generator wallet tier and it's never published separately.
+
+The meet-in-the-middle attack on CSIDH finds the private key `x` such that `A = x * B`, given both `A` and `B`. Protection from this attack requires `x` to be selected from a 256-bit space. However, if `B` is unknown, the attack cannot be used.
+
+The CSIDH public key in each address is constructed as:
+
+<code>Z<sub>5</sub><sup>j</sup> = z<sub>a</sub><sup>j</sup> * Z<sub>ur</sub></code>
+
+If an attacker has 2 different keys <code>Z<sub>5</sub><sup>j1</sup></code> and <code>Z<sub>5</sub><sup>j2</sup></code>, then linking those two addresses to the same wallet boils down to finding <code>Z<sub>ur</sub></code>.
+
+Assuming the keys belong to the same wallet, we have the following relation:
+
+<code>Z<sub>5</sub><sup>j2</sup> = (z<sub>a</sub><sup>j2</sup> - z<sub>a</sub><sup>j1</sup>) * Z<sub>5</sub><sup>j1</sup></code>
+
+(Note: the CSIDH private keys form an additive group, so negating a private key inverts it.)
+
+The attacker can mount a meet in the middle attack on the previous equation. To get 128 bits of security, we only need the combined key space of <code>(z<sub>a</sub><sup>j2</sup> - z<sub>a</sub><sup>j1</sup>)</code> to be 2<sup>256</sup>, so we only need about half the number of isogenies for each <code>z<sub>a</sub><sup>j</sup></code>, which can be achieved by using the same batch sizes, but reduced batch bounds of 1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,2, which is a total of 56 isogenies rather than 111.
 
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00
