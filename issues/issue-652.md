@@ -52,7 +52,7 @@ Do we really need to get lost in fighting over what X, Y, Z said, did or posted 
 
 Let's get to work and leave the personal grudges behind, shall we? This network upgrade is much more important than any other fluff between anyone of us.
 
-## r4v3r23 | 2022-01-27T01:31:53+00:00
+## ghost | 2022-01-27T01:31:53+00:00
 lmao wannabe influencer
 
 ## SamsungGalaxyPlayer | 2022-01-27T15:54:11+00:00
@@ -63,7 +63,7 @@ Please use: https://github.com/monero-project/meta/issues/655
 
 I've been waiting and excited for this meeting since it was first published in Revuo. I'm not sure why personal grduges are factoring in to why this issue was cancelled and a second issue opened? This kind of weird, last minute changes from within the community for what seems to be silly reasoning is making it harder for plebs like me who are genuinely interested to be able to readily jump in and participate. But cool. Gatekeepers gonna gatekeep, I guess.
 
-## r4v3r23 | 2022-01-28T23:46:29+00:00
+## ghost | 2022-01-28T23:46:29+00:00
 > > Please use: #655
 > 
 > I've been waiting and excited for this meeting since it was first published in Revuo. I'm not sure why personal grduges are factoring in to why this issue was cancelled and a second issue opened? This kind of weird, last minute changes from within the community for what seems to be silly reasoning is making it harder for plebs like me who are genuinely interested to be able to readily jump in and participate. But cool. Gatekeepers gonna gatekeep, I guess.

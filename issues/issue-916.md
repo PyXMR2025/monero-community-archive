@@ -426,7 +426,7 @@ So i throw there another question i think it's very important to answer to:
 ## ghost | 2023-11-03T11:10:30+00:00
 @SamsungGalaxyPlayer How you were able to track monero?
 
-## r4v3r23 | 2023-11-03T11:34:34+00:00
+## ghost | 2023-11-03T11:34:34+00:00
 > ### CCS Wallet Opsec 2.0
 > * Seed should be generated on the "offline" device
 > * Only the wallets view key is given to "hot" devices - such that they can generate & broadcast transactions but not sign them
@@ -837,7 +837,7 @@ Come on man . AVI
 
 I see you didn't get the fish in the ocean analogy, in case of hardware wallets you're being easier to target.
 
-## r4v3r23 | 2023-11-08T09:02:33+00:00
+## ghost | 2023-11-08T09:02:33+00:00
 > > Am I correct to assume that a hack like this is not possible if you have a hardware wallet? (like ledger, trezor, ..) Because your private keys are never exposed to a network attached computer (ubuntu, windows, ..)?
 > 
 > Hardware wallet is just another third-party you have to trust and if we are into trustless money then instead of buying and trusting some company we should invest some time in learning how to use air-gaped machine with it's cold wallet.

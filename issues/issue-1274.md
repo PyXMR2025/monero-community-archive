@@ -6,7 +6,7 @@ assignees: []
 labels:
 - proposal
 created_at: '2025-09-30T15:02:31+00:00'
-updated_at: '2025-09-30T15:12:51+00:00'
+updated_at: '2026-04-10T15:20:58+00:00'
 type: issue
 status: open
 closed_at: null
@@ -60,5 +60,20 @@ Current Monero displays (0.0130 XMR for a 3 CHF bread) are impractical for daily
 **Note:** This is a UX/nomenclature proposal, not a protocol change. It aims to make Monero more accessible for real-world transactions.
 
 # Discussion History
+## PPPDUD | 2026-04-10T14:14:54+00:00
+What about decinero and centinero instead, because those are decently-sized but still use the SI prefix system?
+
+## nahuhh | 2026-04-10T15:19:51+00:00
+> What about decinero and centinero instead, because those are decently-sized but still use the SI prefix system?
+
+https://www.getmonero.org/resources/moneropedia/denominations.html
+
+## PPPDUD | 2026-04-10T15:20:58+00:00
+> > What about decinero and centinero instead, because those are decently-sized but still use the SI prefix system?
+> 
+> https://www.getmonero.org/resources/moneropedia/denominations.html
+
+Nevermind.
+
 # Action History
 - Created by: ElioDonato | 2025-09-30T15:02:31+00:00

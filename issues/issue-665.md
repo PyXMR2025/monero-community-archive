@@ -58,7 +58,7 @@ Previous meeting agenda/logs:
 #662 
 
 # Discussion History
-## r4v3r23 | 2022-02-16T04:49:57+00:00
+## ghost | 2022-02-16T04:49:57+00:00
 i'd like to suggest taking a look at moneromooo's [output size reduction PR #8179](https://github.com/monero-project/monero/pull/8179) which greatly reduces the output file size by at least 2/3s to be able to fit on animated QRs for offline tx signing 
 
 

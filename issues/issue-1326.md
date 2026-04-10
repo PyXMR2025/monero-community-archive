@@ -5,7 +5,7 @@ author: geonic1
 assignees: []
 labels: []
 created_at: '2026-01-18T02:15:58+00:00'
-updated_at: '2026-03-30T20:01:04+00:00'
+updated_at: '2026-04-10T16:04:31+00:00'
 type: issue
 status: open
 closed_at: null
@@ -126,12 +126,324 @@ Right:
 ## PPPDUD | 2026-03-05T16:45:25+00:00
 Related thread on Reddit: https://www.reddit.com/r/Monero/comments/1rhcz7c/fluffy_pony_stole_867_xmr_and_refuses_to/
 
-## authorisation | 2026-03-30T19:59:17+00:00
-Can anyone get a statement from @fluffypony? Is someone in contact with them?
+## geonic1 | 2026-04-08T20:23:56+00:00
+@fluffypony has finally responded (in a way): https://x.com/fluffypony/status/2041955172302147910
 
-Haven't seen a response anywhere yet. Concerning as these are over $200,000 USD (as of now) and could classify as embezzlement or fraud under US law. <- Don't quote me on this, I am not a lawyer.
+If I'm understanding him correctly, judging by the post he quoted in his reply, he is saying that the money and time he spent on Monero in the early years means that he is owed at least 867 XMR, if not more. Is this correct, @fluffypony ?
 
-Judging by their git activity they are active and surely aware of this, and refuse to resolve this.
+<img width="1193" height="1412" alt="Image" src="https://github.com/user-attachments/assets/95d627c5-4f25-4148-bb83-55575069dac4" />
+
+## PPPDUD | 2026-04-08T22:37:10+00:00
+For those of you who don't know the current Monero prices, 867 XMR in USD is $285,797 as of writing.
+
+## pompompur1nn | 2026-04-09T00:45:42+00:00
+if he allegedly stole the 2700+ XMR that was stolen in 2023, he would have stolen over a million US dollars of XMR as of writing this comment
+
+## phonegobrr | 2026-04-09T06:41:58+00:00
+You're all idiots.
+
+<img width="817" height="700" alt="Image" src="https://github.com/user-attachments/assets/ec78e26e-7c14-475d-bd97-cfa5a5810b1e" />
+
+If his post on X is correct, and I have no reason to believe it isn't, he spent 246 BTC on Monero's development in 2014 and 2015, worth $17.5m at today's prices. There is no evidence that the 867 XMR wasn't spent on Monero development or returned to the general fund (BTC or XMR) or whatever.
+
+If you have actual evidence then present it, otherwise **shut the absolute fuck up**.
+
+Same for the 2023 theft, the current person in charge of that wallet had bad key management. They could have used a hardware wallet or multisig, but they didn't, and that's a fuck up that is now fixed.
+
+This thread really is full of fucking retards.
+
+## PPPDUD | 2026-04-09T14:37:38+00:00
+> You're all idiots.
+> 
+> <img alt="Image" width="817" height="700" src="https://private-user-images.githubusercontent.com/130765230/575747196-ec78e26e-7c14-475d-bd97-cfa5a5810b1e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzU3NDU2OTMsIm5iZiI6MTc3NTc0NTM5MywicGF0aCI6Ii8xMzA3NjUyMzAvNTc1NzQ3MTk2LWVjNzhlMjZlLTdjMTQtNDc1ZC1iZDk3LWNmYTVhNTgxMGIxZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNDA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDQwOVQxNDM2MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZjNkZDAxYWM4NWJkMmYzN2Q3MjIwMmYxYWU5NGY2MzFjZTg4YzFlODMxYjlkZDFlMDZkOGI3NTUwZjMyMDkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7ozurjznY3Q2xrx18RqeEapfj9SSQvjqgn02-zCduvY">
+> If his post on X is correct, and I have no reason to believe it isn't, he spent 246 BTC on Monero's development in 2014 and 2015, worth $17.5m at today's prices. There is no evidence that the 867 XMR wasn't spent on Monero development or returned to the general fund (BTC or XMR) or whatever.
+> 
+> If you have actual evidence then present it, otherwise **shut the absolute fuck up**.
+> 
+> Same for the 2023 theft, the current person in charge of that wallet had bad key management. They could have used a hardware wallet or multisig, but they didn't, and that's a fuck up that is now fixed.
+> 
+> This thread really is full of fucking retards.
+
+I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
+
+## phonegobrr | 2026-04-09T14:52:22+00:00
+> I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
+
+You're an inferior person because you're providing pricing data from today for something from 2017. The 246 BTC he spent wasn't worth $17.5m in 2015 and the 867 XMR wasn't worth $285k, maybe that shit paid for some Monero server for 2 months.
+
+Just stop being retarded even if its hard for you.
+
+## PPPDUD | 2026-04-09T15:04:36+00:00
+> > I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
+> 
+> You're an inferior person because you're providing pricing data from today for something from 2017. The 246 BTC he spent wasn't worth $17.5m in 2015 and the 867 XMR wasn't worth $285k, maybe that shit paid for some Monero server for 2 months.
+> 
+> Just stop being retarded even if its hard for you.
+
+ Hey, listen. You don't know my mental state and I don't know yours. I make no claim that the Monero was worth many thousands of dollars in 2017. For your information, I have [developed](https://mojavesoft.net/) [multiple](https://github.com/pppdud/homemade_yes) [software](https://github.com/Mojavesoft-Group/snap-parser) [projects](https://github.com/pppdud/minutils) with minimal assistance from others, and all of them are relatively coherent as far as I can tell.
+
+Also, I know this makes me seem obnoxious, but can we please stop using the R-word to describe people? I don't believe that I've ever been diagnosed with _any_ mental illnesses, let alone anything that would impair me from proving helpful in this discussion, so it makes no sense to insist that I'm mentally ill or substandard in any way.
+
+Edit: Also, your screenshot depicts Claude performing arithmetic on certain cells of an image of a spreadsheet using only machine learning techniques, a task that most humans would probably have trouble with, let alone LLMs. Why should I trust your output? Perhaps you should write a two-column proof to show that I'm wrong in saying that Claude was incorrect.
+
+## pompompur1nn | 2026-04-09T23:02:51+00:00
+multisig is still experimental, even in 2026. i know this as ive personally pentested moneros implementation of it. please shut the fuck up and stop being arrogant thx
+
+## phonegobrr | 2026-04-10T11:49:09+00:00
+> Hey, listen. You don't know my mental state and I don't know yours.
+
+Oh shit does this mean you're part of Canada's MMIWG2SLGBTQQIA+
+
+> I make no claim that the Monero was worth many thousands of dollars in 2017
+
+You said `For those of you who don't know the current Monero prices`, creating a false equivalency
+
+> For your information, I have [developed](https://mojavesoft.net/) [multiple](https://github.com/pppdud/homemade_yes) [software](https://github.com/Mojavesoft-Group/snap-parser) [projects](https://github.com/pppdud/minutils) with minimal assistance from others, and all of them are relatively coherent as far as I can tell.
+
+Who gives a fuck
+
+> Also, I know this makes me seem obnoxious, but can we please stop using the R-word to describe people? I don't believe that I've ever been diagnosed with _any_ mental illnesses, let alone anything that would impair me from proving helpful in this discussion, so it makes no sense to insist that I'm mentally ill or substandard in any way.
+
+Get fucked woke glowie, we can see your radiation from here
+
+> Edit: Also, your screenshot depicts Claude performing arithmetic on certain cells of an image of a spreadsheet using only machine learning techniques, a task that most humans would probably have trouble with, let alone LLMs. Why should I trust your output? Perhaps you should write a two-column proof to show that I'm wrong in saying that Claude was incorrect.
+
+Why I gotta do your homework?
+
+```
+Source,Date,Amount
+Riccardo from 1F,7/10/2014,
+Dev donation address,7/11/2014,1.1071
+Dev donation address,7/12/2014,0.9177
+Dev donation address,7/12/2014,1.8987
+Dev donation address,7/14/2014,0.44
+Dev donation address,7/14/2014,1.363375
+Dev donation address,7/14/2014,1.6163
+Dev donation address,7/21/2014,1.91935
+Dev donation address,7/21/2014,0.6405
+Dev donation address,7/22/2014,1.6123
+Dev donation address,7/22/2014,1.0802
+Dev donation address,7/24/2014,1.087
+Dev donation address,7/24/2014,1.6739
+Dev donation address,7/26/2014,2.02306
+Dev donation address,7/26/2014,0.90315
+Dev donation address,7/28/2014,
+Riccardo from 1F,7/28/2014,1.6935
+Riccardo from 1F,7/29/2014,
+Riccardo from 1F,7/30/2014,1.7478
+Riccardo from 1F,7/29/2014,0.1721
+Riccardo from 1F,7/30/2014,1.562
+Riccardo from 1F,7/31/2014,0.7494
+Riccardo from 1F,8/1/2014,
+Dev donation address,8/2/2014,
+Riccardo from 1F,8/4/2014,
+Riccardo from 1F,8/4/2014,2.0742
+Dev donation address,8/4/2014,2.7067
+Riccardo from 1F,8/5/2014,
+Riccardo from 1F,8/11/2014,0.1701
+Riccardo from 1F,8/11/2014,1.0529
+Riccardo from 1F,8/11/2014,0.484
+Riccardo from 1F,8/11/2014,0.068
+Riccardo from 1F,8/11/2014,1.2244
+Riccardo from 1F,8/11/2014,2.1156
+Riccardo from 1F,8/14/2014,3.6716
+Dev donation address,8/14/2014,1.9871
+Dev donation address,8/14/2014,
+NoodleDoodle from 1K,8/19/2014,2.676
+NoodleDoodle from 1K,8/19/2014,2.0474
+Riccardo from 1F,8/19/2014,0.1576
+Riccardo from 1F,8/24/2014,1.07305
+Riccardo from 1F,8/24/2014,0.08
+Riccardo from 1F,8/24/2014,2.3762
+Riccardo from 1F,8/25/2014,3.327
+Riccardo from 1F,8/25/2014,0.5027
+Riccardo from 1F,8/25/2014,1.5543
+Riccardo from 1F,8/27/2014,1.7901
+Riccardo from 1F,8/27/2014,1.1685
+Riccardo from 1F,8/27/2014,
+Riccardo from 1F,9/1/2014,
+Riccardo from 1F,9/1/2014,4.4301
+Riccardo from 1F,9/3/2014,1.6856
+Riccardo from 1F,9/3/2014,
+NoodleDoodle from 1K,9/3/2014,
+Riccardo from 1F,9/6/2014,
+Riccardo from 1F,9/7/2014,1.4553
+Riccardo from 1F,9/7/2014,1.6722
+Riccardo from 1F,9/8/2014,1.5991
+Riccardo from 1F,9/8/2014,1.1237
+Riccardo from 1F,9/10/2014,3.825
+Riccardo from 1F,9/15/2014,0.2969
+Riccardo from 1F,9/16/2014,1.78595
+Riccardo from 1F,9/18/2014,2.419
+Riccardo from 1F,9/19/2014,
+Riccardo from 1F,9/21/2014,2.4804
+Riccardo from 1F,9/23/2014,1.15
+Riccardo from 1F,9/23/2014,0.3976
+Riccardo from 1F,9/23/2014,0.07
+Riccardo from 1F,9/23/2014,1.3841
+Riccardo from 1F,9/23/2014,0.403
+Riccardo from 1F,9/23/2014,1.2989
+Riccardo from 1F,9/23/2014,0.25
+Riccardo from 1F,9/30/2014,11.1632
+Riccardo from 1F,10/1/2014,
+Riccardo from 1F,10/1/2014,
+Riccardo from 1F,10/1/2014,1.4784
+Riccardo from 1F,10/1/2014,1.5835
+Riccardo from 1F,10/1/2014,0.21
+Riccardo from 1F,10/1/2014,
+Riccardo from 1F,10/5/2014,0.6153
+Riccardo from 1F,10/6/2014,
+Riccardo from 1F,10/6/2014,1.4988
+Riccardo from 1F,10/6/2014,7.1468
+Riccardo from 1F,10/6/2014,0.5733
+Riccardo from 1F,10/6/2014,1.6025
+Riccardo from 1F,10/7/2014,1.2319
+Riccardo from 1F,10/10/2014,5.8337
+Riccardo from 1F,10/11/2014,2.8153
+Riccardo from 1F,10/14/2014,
+Riccardo from 1F,10/15/2014,1.7403
+Riccardo from 1F,10/24/2014,1.1299
+Riccardo from 1F,10/24/2014,
+Riccardo from 1F,10/25/2014,0.08372
+Riccardo from 1F,10/25/2014,1.4536
+Riccardo from 1F,11/4/2014,4.12377
+Riccardo from 1F,11/4/2014,3.0472
+Riccardo from 1F,11/5/2014,5.0308
+Riccardo from 1F,11/5/2014,1.9152
+Riccardo from 1F,11/5/2014,
+Riccardo from 1F,11/5/2014,
+Riccardo from 1F,10/6/2014,
+Riccardo from 1F,11/13/2014,1.733029
+Riccardo from 1F,11/24/2014,
+Riccardo from 1F,11/25/2015,0.815229
+Riccardo from 1F,11/26/2014,1.30434
+Riccardo from 1F,11/26/2014,1.0603
+Riccardo from 1F,11/26/2014,5.46507
+Riccardo from 1F,12/1/2014,
+Riccardo from 1F,12/1/2014,
+Riccardo from 1F,12/8/2014,2.7301
+Riccardo from 1F,12/10/2014,0.907419
+Riccardo from 1F,12/15/2014,
+Riccardo from 1F,12/16/2014,1.02786
+Riccardo from 1F,12/16/2014,
+Riccardo from 1F,12/22/2014,2.5558
+Riccardo from 1F,12/23/2014,1.7958
+Riccardo from 1F,1/1/2015,
+Riccardo from 1F,1/1/2015,
+Riccardo from 1F,1/1/2015,
+Riccardo from 1F,1/3/2015,0.1908
+Riccardo from 1F,1/19/2015,1.2616
+Riccardo from 1F,1/19/2015,0.2562
+Riccardo from 1F,1/19/2015,1.0514
+Riccardo from 1F,1/19/2015,0.4906
+Riccardo from 1F,1/20/2015,4.8
+Riccardo from 1F,2/4/2015,4.92624
+Riccardo from 1F,1/23/2015,2.16285
+Riccardo from 1F,3/2/2015,3.26251
+Riccardo from 1F,3/16/2015,3.4137
+Riccardo from 1F,3/18/2015,0.7777777
+Riccardo from 1F,3/18/2015,1.5
+Riccardo from 1F,3/18/2015,1.222
+Riccardo from 1F,3/18/2015,1
+Riccardo from 1F,3/23/2015,20.56628
+Riccardo from 1F,3/23/2015,14.800281
+Riccardo from 1F,3/31/2015,4.9745
+Riccardo from 1F,3/18/2015,1.87
+Riccardo from 1F,3/23/2015,0.37174721
+Riccardo from 1F,1/13/2015,2.10137
+Riccardo from 1F,4/1/2015,2.8917
+Riccardo from 1F,4/7/2015,2.752363
+Riccardo from 1F,4/13/2015,4.88986
+Riccardo from 1F,4/26/2015,1.6363
+Riccardo from 1F,4/26/2015,1.3636
+Riccardo from 1F,4/26/2015,1.2272
+Riccardo from 1F,4/26/2015,3.398363
+Riccardo from 1F,4/27/2015,4.33855
+Riccardo from 1F,5/6/2015,4.2192
+Riccardo from 1F,5/23/2015,3.7509
+Riccardo from 1F,6/14/2015,3.2096
+Riccardo from 1F,6/13/2015,3.828742
+Riccardo from 1F,7/14/2015,2.7995
+Riccardo from 1F,7/14/2015,0.5184
+Riccardo from 1F,7/14/2015,0.5184
+Riccardo from 1F,7/14/2015,1.2442
+Riccardo from 1F,7/14/2015,2.424862
+```
+
+`awk -F',' '$1=="Riccardo from 1F" && $3!="" {sum+=$3} END {printf "Riccardo from 1F total: %.8f\n", sum}' data.csv`
+
+Total is 246.22563291 BTC
+
+## phonegobrr | 2026-04-10T11:49:37+00:00
+> multisig is still experimental, even in 2026. i know this as ive personally pentested moneros implementation of it. please shut the fuck up and stop being arrogant thx
+
+Are hardware wallets also experimental fuckboi?
+
+## PPPDUD | 2026-04-10T14:10:57+00:00
+@phonegobrr I'm "woke" in the sense that I don't think that we should make assumptions about people's mental state. I'm "woke" in the sense that I think that equality and being nice are virtues worth upholding, but I'm not "woke" in the sense that Disney is. Those people are obnoxious to the both of us.
+
+I don't believe myself to be a glowie, but the purpose of Monero is that you don't need to trust that about me anyway.
+
+You might have noticed that I have not used even one insult in this discussion. That's because I'm being tolerant of you, even though you're doing things that are quite objectionable from my perspective. I never sought to cause harm to you, only to have a civil discussion.
+
+I don't know how to read `awk` code, and I can't verify that you aren't writing something that will produce a false answer. Therefore, I assume that you're lying because I have not observed any counterexamples showing that you're correct.
+
+As for your false equivalence argument, it seems that you have misinterpreted my initial statement. I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially, not to provide its value at time of loss, which would understate the problem today, because in August 2020, gold cost less than $2000 per ounce (as oposed to the present day, where it hovers around $5000).
+
+## phonegobrr | 2026-04-10T15:01:46+00:00
+> but I'm not "woke" in the sense that Disney is
+
+And yet pronouns in your github bio
+
+> I don't believe myself to be a glowie, but the purpose of Monero is that you don't need to trust that about me anyway.
+
+Glowies are always clever and insidious. You're using this to build credibility and trust
+
+> I don't know how to read `awk` code
+
+So you `developed multiple software projects with minimal assistance from others` but you don't know how to run a shell command?
+
+> I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially
+
+Great so we agree that your statement was fucking stupid. If the funds were stolen (and remember that nobody has presented any evidence they were) then their value at the time would have been relevant. It's very clear that the funds were either sent back to the GF in XMR or BTC, or it was used to pay Monero's costs. Otherwise he would just have said at the time that he's taking the funds to recover the 246 BTC he spent on Monero's development.
+
+## PPPDUD | 2026-04-10T15:28:46+00:00
+> > but I'm not "woke" in the sense that Disney is
+> 
+> And yet pronouns in your github bio
+>
+
+Those pronouns are there so that people don't need to make assumptions about who I am. He/him is the standard format of indicating that you are a male.
+
+> > I don't believe myself to be a glowie, but the purpose of Monero is that you don't need to trust that about me anyway.
+> 
+> Glowies are always clever and insidious. You're using this to build credibility and trust
+>
+
+Okay, then, don't trust me. Also, I'll point out that you're refusing to trust me, _as I advised you_. So you're following my advice, even though you insist that I'm a glowie. Why are you following a suspected glowie's advice? Because it's smart?
+
+> > I don't know how to read `awk` code
+> 
+> So you `developed multiple software projects with minimal assistance from others` but you don't know how to run a shell command?
+>
+
+I know how to run a shell command, but I don't understand the format that awk uses and I'm not in the mood to learn  it right now.
+
+> > I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially
+> 
+> Great so we agree that your statement was fucking stupid. If the funds were stolen (and remember that nobody has presented any evidence they were) then their value at the time would have been relevant. It's very clear that the funds were either sent back to the GF in XMR or BTC, or it was used to pay Monero's costs. Otherwise he would just have said at the time that he's taking the funds to recover the 246 BTC he spent on Monero's development.
+
+I disagree. It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
+
+## nahuhh | 2026-04-10T15:45:08+00:00
+> It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
+
+it's also possible that they were spent on blow n hookers. Open up your imagination a little bit
+
+## phonegobrr | 2026-04-10T16:04:31+00:00
+> it's also possible that they were spent on blow n hookers. Open up your imagination a little bit
+
+Fuck yes
 
 # Action History
 - Created by: geonic1 | 2026-01-18T02:15:58+00:00

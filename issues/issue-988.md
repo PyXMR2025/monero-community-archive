@@ -64,7 +64,7 @@ Meeting logs will be posted here afterwards.
 
 
 # Discussion History
-## r4v3r23 | 2024-04-12T18:15:06+00:00
+## ghost | 2024-04-12T18:15:06+00:00
 @plowsof add this new CCS proposal to the agenda please: https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/447
 
 ## plowsof | 2024-04-27T20:22:35+00:00

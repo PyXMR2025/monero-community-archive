@@ -55,7 +55,7 @@ Please comment on GitHub in advance of the meeting if you would like to propose 
 
 
 # Discussion History
-## r4v3r23 | 2021-08-14T16:16:04+00:00
+## ghost | 2021-08-14T16:16:04+00:00
 Monerujo's SideKick CCS Proposal
 
 # Action History
