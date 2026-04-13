@@ -6,7 +6,7 @@ assignees: []
 labels:
 - need feedback
 created_at: '2021-04-01T23:18:12+00:00'
-updated_at: '2026-04-08T21:03:33+00:00'
+updated_at: '2026-04-11T02:59:49+00:00'
 type: issue
 status: open
 closed_at: null
@@ -215,10 +215,10 @@ IMO, the code should be refactored to move platform-specific code into their own
 ## cyrozap | 2026-04-08T21:03:33+00:00
 I have a work-in-progress port of xmrig to Power ISA [here](https://github.com/cyrozap/xmrig/tree/wip-power-support). This code is downstream of [my PR to RandomX](https://github.com/tevador/RandomX/pull/320), and while it does work it's not yet in a state where I'd feel comfortable submitting an MR to xmrig. The main issues are:
 
-- I had to add a lot of stub code for CryptoNight to get xmrig to build, and I'd really prefer for that to be configurable so that I don't need to include all that stub code and so that users won't be surprised if they try and fail to mine CryptoNight on a Power system. Plus, it generates a lot of ugly warnings about unused variables during the build.
+- ~I had to add a lot of stub code for CryptoNight to get xmrig to build, and I'd really prefer for that to be configurable so that I don't need to include all that stub code and so that users won't be surprised if they try and fail to mine CryptoNight on a Power system. Plus, it generates a lot of ugly warnings about unused variables during the build.~ **Edit**: This specific issue will be fixed by #3799 if it gets merged.
 - I'm still not super confident all the CMake code I wrote is correct.
-- I want to test xmrig on big-endian Power, and if I can get that working I'll need to do a bit of cleanup to make sure the architecture is handled and reported correctly in various places.
-- Some results for `--bench=10M` are getting rejected and I don't know why. I've also seen some runs (both of benchmarks and of normal mining) end in segfaults, and a very small number of runs of the upstream RandomX code is resulting in segfaults as well. This is very concerning to me as these issues all point to there being memory or pointer corruption happening somewhere in my code, and the intermittent nature of it means the root cause could be very difficult to track down.
+- ~I want to test xmrig on big-endian Power, and if I can get that working I'll need to do a bit of cleanup to make sure the architecture is handled and reported correctly in various places.~ **Edit**: I've tested xmrig on (emulated) big-endian power, and it seems to work fine.
+- ~Some results for `--bench=10M` are getting rejected and I don't know why. I've also seen some runs (both of benchmarks and of normal mining) end in segfaults, and a very small number of runs of the upstream RandomX code is resulting in segfaults as well. This is very concerning to me as these issues all point to there being memory or pointer corruption happening somewhere in my code, and the intermittent nature of it means the root cause could be very difficult to track down.~ **Edit**: The memory corruption bug has now been fixed.
 
 So with all this in mind, please feel free to try it out, but do manage your expectations for the moment. I'll open a PR once I believe the code is ready to be merged.
 
