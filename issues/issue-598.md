@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-proposal
 created_at: '2026-04-09T16:35:07+00:00'
-updated_at: '2026-04-09T16:35:28+00:00'
+updated_at: '2026-04-11T17:35:01+00:00'
 type: issue
 status: open
 closed_at: null
@@ -45,5 +45,14 @@ Describe how the proposal could be implemented.
 
 
 # Discussion History
+## redsh4de | 2026-04-10T21:48:50+00:00
+Soome ways i can think of to handle the whitespace stuff:
+1. on load, warn the user that their config values have whitespaces, trim, and proceed. goal: user knows that their config has mistakes, but Cuprate can understand it so it launches anyway. hopefully the messages would be enough that they'd fix it by themselves
+2. Tell the user that they borked up a whitespace at this line, and exit.
+2. be nicer, and just trim every time and user doesn't know any better. not really a fan of this, because i think the user should know if they made a mistake, but if the mistake is recoverable (whitespace in this case), we should warn and proceed, instead of quitting
+
+## SyntheticBird45 | 2026-04-11T17:35:01+00:00
+These are great ideas. That's a fair point on 3. I agree this should be either 1. or 2. but honestly I have no idea which one I prefer.
+
 # Action History
 - Created by: SyntheticBird45 | 2026-04-09T16:35:07+00:00
