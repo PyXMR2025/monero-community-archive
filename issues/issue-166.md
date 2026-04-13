@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-11T18:45:10+00:00'
-updated_at: '2026-04-03T19:54:46+00:00'
+updated_at: '2026-04-13T01:13:57+00:00'
 type: issue
 status: open
 closed_at: null
@@ -34,8 +34,11 @@ closed_at: null
    - [ ] #224
    - [x] #228
 - [ ] FCMP++ lib with fast proof size
+  - [x] https://github.com/monero-oxide/monero-oxide/commit/a5cc436d43750ae4c58a808719da2ee25143ed6a
 - [ ] Solution for https://github.com/kayabaNerve/monero-oxide/pull/5
+  - [x] https://github.com/monero-oxide/monero-oxide/commit/756851892eb2d5a82b01e43f63b268127143ad62
 - [ ] Changes to GBP's in FCMP++ lib from Cypher Stack audit
+  - [ ] In progress: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
 - [x] #307
 - [x] https://github.com/seraphis-migration/monero/pull/296
 - [x] Change p2p connection limit per IP to 10
@@ -44,7 +47,8 @@ closed_at: null
 - [ ] xmrchat issues
    - [x] https://github.com/seraphis-migration/monero/pull/297
    - [ ] Needs https://github.com/monero-project/monero/pull/10352
-   - [ ] first node detecting stem loop never reported via zmq (separate issue from 10352) 
+   - [ ] first node detecting stem loop never reported via zmq (separate issue from 10352)
+- [ ] #314
 - [ ] HF table and checkpoint update
 - [ ] GUI binaries
   - Working here: https://github.com/j-berman/monero-gui/commit/fe687dc3b9adb245beb55d130e6dcb78ad9d2202
