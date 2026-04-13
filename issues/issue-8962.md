@@ -37,7 +37,7 @@ With this optimization, when hot wallets call `export_outputs(all=false)`, and t
 
 
 # Discussion History
-## r4v3r23 | 2023-08-11T04:57:37+00:00
+## ghost | 2023-08-11T04:57:37+00:00
 these types of optimizations are essential for building great UX around advanced features like airgapped transactions - the smaller/more efficient we can get monero's cold-signing payloads to be, the better
 
 # Action History

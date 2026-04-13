@@ -99,7 +99,7 @@ Additionally, this view tag private key has the interesting property that *any* 
 
 
 
-## r4v3r23 | 2022-01-01T17:48:55+00:00
+## ghost | 2022-01-01T17:48:55+00:00
 is this necessary with the upcoming view-tag PR? 
 
 also wallet scan times aren't really an issue, unless you haven't used your wallet in a few months.
