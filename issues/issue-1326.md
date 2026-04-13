@@ -5,7 +5,7 @@ author: geonic1
 assignees: []
 labels: []
 created_at: '2026-01-18T02:15:58+00:00'
-updated_at: '2026-04-10T16:04:31+00:00'
+updated_at: '2026-04-12T13:11:53+00:00'
 type: issue
 status: open
 closed_at: null
@@ -444,6 +444,100 @@ it's also possible that they were spent on blow n hookers. Open up your imaginat
 > it's also possible that they were spent on blow n hookers. Open up your imagination a little bit
 
 Fuck yes
+
+## pompompur1nn | 2026-04-10T19:50:06+00:00
+hey dweeb, heres a exact quote from a developer on the monero implentation of multisig in a (undisclosed) hackerone report (this probably is bad but its not particularly sensitive).
+"multisig is an experimental feature."
+get a life bud
+
+## phonegobrr | 2026-04-10T20:12:19+00:00
+> hey dweeb, heres a exact quote from a developer on the monero implentation of multisig in a (undisclosed) hackerone report (this probably is bad but its not particularly sensitive). "multisig is an experimental feature." get a life bud
+
+Found a picture of you
+
+<img width="458" height="553" alt="Image" src="https://github.com/user-attachments/assets/9270cd30-8f4f-4d30-ae23-04b251f53244" />
+
+Because you have a room temperature IQ I'll just repeat what I said earlier: Are hardware wallets also experimental fuckboi?
+
+Also `dweeb` lol fucking boomer
+
+## pompompur1nn | 2026-04-10T20:33:47+00:00
+<img width="1105" height="337" alt="Image" src="https://github.com/user-attachments/assets/5b4673ae-9783-487b-8273-85fab19d0c48" /> you got no clue what ur talking about bro
+
+## phonegobrr | 2026-04-10T20:37:35+00:00
+> you got no clue what ur talking about bro
+
+Are hardware wallets also experimental fuckboi?
+
+## PPPDUD | 2026-04-10T20:38:38+00:00
+> > It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
+> 
+> it's also possible that they were spent on blow n hookers. Open up your imagination a little bit
+
+Well, that's possible too, but I would expect that a former Monero dev would at least try to profit from it before spending it all on selfish pleasures.
+
+## PPPDUD | 2026-04-10T20:39:45+00:00
+@pompompur1nn Hold on... are you _the_ pompompurinn that everyone's talking about?
+
+## b4n6-b4n6 | 2026-04-11T02:31:09+00:00
+Can all of you act like adults. Stay on topic. Stay constructive. You all look like great devs. Perhaps you can discuss about multisig, blow and hookers, and pronouns in private. Thanks
+
+@nahuhh maybe close thread?
+
+FYI: I worked with MS. It IS _technically_ experimental
+
+## PPPDUD | 2026-04-11T12:30:36+00:00
+> Can all of you act like adults. Stay on topic. Stay constructive. You all look like great devs. Perhaps you can discuss about multisig, blow and hookers, and pronouns in private. Thanks
+> 
+> [@nahuhh](https://github.com/nahuhh) maybe close thread?
+> 
+> FYI: I worked with MS. It IS _technically_ experimental
+
+While I don't think that the thread should be locked, I do agree that more civility is warranted here.
+
+## phonegobrr | 2026-04-11T12:35:17+00:00
+> FYI: I worked with MS. It IS _technically_ experimental
+
+Absolutely nobody said it wasn't so the argument about it has been a waste of time
+
+> While I don't think that the thread should be locked, I do agree that more civility is warranted here.
+
+Why must people be civil but you're allowed to be a fucking moron? You can't have it both ways. Either you present rational and logical claims or you have to deal with being called the fuck out
+
+## PPPDUD | 2026-04-11T12:39:51+00:00
+> > FYI: I worked with MS. It IS _technically_ experimental
+> 
+> Absolutely nobody said it wasn't so the argument about it has been a waste of time
+> 
+> > While I don't think that the thread should be locked, I do agree that more civility is warranted here.
+> 
+> Why must people be civil but you're allowed to be a fucking moron? You can't have it both ways. Either you present rational and logical claims or you have to deal with being called the fuck out
+
+See, this is what I'm talking about. In a civil discussion, we do not usually call people morons and launch profanities at them <strike>unless they did so first, and I didn't</strike>. Also, you have a major hole in your argument: civility does not require being a non-moron, and being a moron does not require incivility. As you have described, I am calling you out for irrational, illogical claims.
+
+## phonegobrr | 2026-04-11T12:49:57+00:00
+<img width="458" height="411" alt="Image" src="https://github.com/user-attachments/assets/e2602d87-9961-4a25-a5ef-85fb2d3d3528" />
+
+## PPPDUD | 2026-04-11T12:54:33+00:00
+> <img alt="Image" width="458" height="411" src="https://private-user-images.githubusercontent.com/130765230/576954978-e2602d87-9961-4a25-a5ef-85fb2d3d3528.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzU5MTIzNDcsIm5iZiI6MTc3NTkxMjA0NywicGF0aCI6Ii8xMzA3NjUyMzAvNTc2OTU0OTc4LWUyNjAyZDg3LTk5NjEtNGEyNS1hNWVmLTg1ZmIyZDNkMzUyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNDExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDQxMVQxMjU0MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iNmJlODIzYjg4NjE5Y2NiNTgwOTk0ZTU5Mzk4ZjJkMDI5Njk2MWVlOGYwNDlmOTg2NjU5NWEyYTQxZjVlMjZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.T1haZECIb6xNkG_MWI6SaSOcNVvIpBv1sMG8E3Eb6Ow">
+
+Okay, then, do you have a logical counterargument?
+
+## plowsof | 2026-04-11T13:27:21+00:00
+In my experience, If an alt starts saying boomer and posting memes its best to not engage 🐱 
+
+## PPPDUD | 2026-04-11T14:09:55+00:00
+> In my experience, If an alt starts saying boomer and posting memes its best to not engage 🐱
+
+Eh, it's fine. They're not responding to my question, so I assume that they don't really have a solid argument against me anyway.
+
+## pompompur1nn | 2026-04-12T01:13:15+00:00
+nope @PPPDUD im just asian and all asians have to love a sanrio character
+
+## PPPDUD | 2026-04-12T13:11:53+00:00
+> nope [@PPPDUD](https://github.com/PPPDUD) im just asian and all asians have to love a sanrio character
+
+Is this sarcasm? I am having trouble figuring it out, because I'm not really immersed in Asian culture(s).
 
 # Action History
 - Created by: geonic1 | 2026-01-18T02:15:58+00:00
