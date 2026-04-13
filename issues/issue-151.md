@@ -5,10 +5,10 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-04-09T17:18:39+00:00'
+updated_at: '2026-04-13T17:20:44+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-13T17:20:44+00:00'
 ---
 
 # Original Description
@@ -538,5 +538,9 @@ Assuming the keys belong to the same wallet, we have the following relation:
 
 The attacker can mount a meet in the middle attack on the previous equation. To get 128 bits of security, we only need the combined key space of <code>(z<sub>a</sub><sup>j2</sup> - z<sub>a</sub><sup>j1</sup>)</code> to be 2<sup>256</sup>, so we only need about half the number of isogenies for each <code>z<sub>a</sub><sup>j</sup></code>, which can be achieved by using the same batch sizes, but reduced batch bounds of 1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,3,3,2, which is a total of 56 isogenies rather than 111.
 
+## tevador | 2026-04-13T17:20:44+00:00
+The selected algoritm (CSIDH) with the proposed parameters has been included in the [Jamtis specification](https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832).
+
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00
+- Closed at: 2026-04-13T17:20:44+00:00
