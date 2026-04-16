@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-02-18T01:47:14+00:00'
-updated_at: '2026-03-27T00:27:33+00:00'
+updated_at: '2026-04-15T21:03:31+00:00'
 type: issue
 status: open
 closed_at: null
@@ -13,6 +13,8 @@ closed_at: null
 
 # Original Description
 I'm proposing a multi-phase audit, where each subsequent phase builds off the blocks of the prior.
+
+CCS proposal: https://ccs.getmonero.org/proposals/fcmp++-integration-audit.html
 
 ## Audit 1a: Crypto
 

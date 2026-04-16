@@ -5,19 +5,21 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-11T18:45:10+00:00'
-updated_at: '2026-04-13T01:13:57+00:00'
+updated_at: '2026-04-16T00:29:15+00:00'
 type: issue
 status: open
 closed_at: null
 ---
 
 # Original Description
-- [x] Fees and scaling
+- [ ] Fees and scaling
   - [x] [Fees and weights updated for FCMP++](https://github.com/seraphis-migration/monero/issues/44)
     - #232
   - [x] #282
     - [x] https://github.com/jeffro256/monero/pull/4
   - [x] Stressnet-specific 2w long term window https://github.com/seraphis-migration/monero/pull/301
+  - [ ] #314
+  - [ ] Need #321
 - [x] Tx relay v2 11731ff86cd0d9cbaac72d7c8d5528086a8ffd18
 - [x] https://github.com/monero-project/monero/pull/10157
 - [ ] Carrot-derived wallets #199 
@@ -39,16 +41,16 @@ closed_at: null
   - [x] https://github.com/monero-oxide/monero-oxide/commit/756851892eb2d5a82b01e43f63b268127143ad62
 - [ ] Changes to GBP's in FCMP++ lib from Cypher Stack audit
   - [ ] In progress: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
+  - [ ] #319
 - [x] #307
 - [x] https://github.com/seraphis-migration/monero/pull/296
 - [x] Change p2p connection limit per IP to 10
   - [x] https://github.com/seraphis-migration/monero/pull/298 
 - [x] https://github.com/seraphis-migration/monero/pull/300
 - [ ] xmrchat issues
-   - [x] https://github.com/seraphis-migration/monero/pull/297
+   - [x] https://github.com/seraphis-migration/monero/pull/297 ([source](https://github.com/seraphis-migration/monero/blob/ca8d443e964fb16682bae0e927bd3b1a303d9494/src/cryptonote_protocol/cryptonote_protocol_handler.inl#L1003))
    - [ ] Needs https://github.com/monero-project/monero/pull/10352
-   - [ ] first node detecting stem loop never reported via zmq (separate issue from 10352)
-- [ ] #314
+   - [ ] Needs https://github.com/monero-project/monero/pull/10415
 - [ ] HF table and checkpoint update
 - [ ] GUI binaries
   - Working here: https://github.com/j-berman/monero-gui/commit/fe687dc3b9adb245beb55d130e6dcb78ad9d2202

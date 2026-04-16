@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-03-30T19:57:28+00:00'
+updated_at: '2026-04-16T01:21:00+00:00'
 type: issue
 status: open
 closed_at: null
@@ -118,6 +118,9 @@ closed_at: null
 
 ## Misc.
 
+- [ ] Complete the beta stressnet
+- [ ] Complete all FCMP++ research audit tasks
+- [ ] Complete the FCMP++ integration audit
 - [x] Use new unbiased hash to point for Carrot outputs
   - https://github.com/seraphis-migration/monero/blob/64190feb26151e186b86c27bcd7c08e2ca09db6b/src/crypto/crypto.cpp#L650-L653
   - Set the tree up here: https://github.com/j-berman/monero/commits/unbiased-hash-curve-trees/
@@ -156,6 +159,8 @@ closed_at: null
 - [x] https://github.com/seraphis-migration/monero/pull/93
 - [ ] Remove static proof len table and use the latest fast proof len size calc from the FCMP++ lib instead
   - Move the static proof len table into a test just to sanity check the proof len size calc
+  - https://github.com/j-berman/monero/commit/a371c476b785dd052b6d3df59d0a8c57b7a9dfb7
+
 
 ## On hold
 
