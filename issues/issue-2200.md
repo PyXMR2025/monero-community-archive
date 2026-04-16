@@ -31,7 +31,7 @@ The best way to do this is probably through the web server. I'll ping pigeons.
 ## erciccione | 2023-10-17T07:29:08+00:00
 Maybe this should be discussed first. Verifying the flatpak from getmonero will mean that an effort completely run by a volunteer is "guaranteed" by the core team as trusted. Not sure if this should be the case, as nothing in the community is "official". Might be better to leave the flatpak "unverified". Asking for an input from core.
 
-## Victor239 | 2023-10-17T07:50:28+00:00
+## VictorVow | 2023-10-17T07:50:28+00:00
 Agreed, only do this if you're given commit control over the repo and the current maintainer has to instead submit PRs for any changes so that core can review them for malicious changes first. 
 
 ## plowsof | 2023-10-17T07:56:37+00:00
