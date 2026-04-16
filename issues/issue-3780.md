@@ -5,7 +5,7 @@ author: CooperWaNg-py
 assignees: []
 labels: []
 created_at: '2026-02-06T09:14:52+00:00'
-updated_at: '2026-02-06T23:13:46+00:00'
+updated_at: '2026-04-13T19:06:59+00:00'
 type: issue
 status: open
 closed_at: null
@@ -38,5 +38,26 @@ on armhf6 architecture
 
 
 # Discussion History
+## im10furry | 2026-04-13T19:06:59+00:00
+## Root Cause
+
+The XMRig build system enables AES‑NI acceleration by default, adding the `-maes` compiler flag. However, ARMv6 CPUs (like the one in the Pi Zero W) do not support this flag, causing the compiler to abort.
+
+---
+
+## Solution 1: Disable AES via CMake (Recommended)
+
+Pass the `-DWITH_AES=OFF` flag to CMake to explicitly turn off AES optimisations.
+
+```bash
+rm -rf build
+mkdir build && cd build
+cmake .. -DWITH_AES=OFF
+make -j$(nproc)
+
+This prevents the -maes flag from ever being added to the compiler command line.
+
+
+
 # Action History
 - Created by: CooperWaNg-py | 2026-02-06T09:14:52+00:00
