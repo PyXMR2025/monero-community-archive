@@ -25,7 +25,7 @@ Moneros CCS [funded this](https://ccs.getmonero.org/proposals/maintaining-flatpa
 ## adrelanos | 2023-08-13T11:24:10+00:00
 flathub has a verified blue checkmark similar to Twitter. It shows that a flathub project is official and not by random third-party. Please consider applying for it.
 
-## Victor239 | 2023-10-17T06:51:09+00:00
+## VictorVow | 2023-10-17T06:51:09+00:00
 https://github.com/monero-project/monero-gui/pull/4151 is complete, what remaining steps are there for verification?
 
 ## plowsof | 2023-10-17T07:25:13+00:00
