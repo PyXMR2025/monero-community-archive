@@ -5,7 +5,7 @@ author: luigi1111
 assignees: []
 labels: []
 created_at: '2023-11-02T15:57:53+00:00'
-updated_at: '2026-02-25T03:47:35+00:00'
+updated_at: '2026-04-16T16:02:08+00:00'
 type: issue
 status: open
 closed_at: null
@@ -1062,6 +1062,16 @@ There is ~no way to tell with XMR where the funds went. Someone did donate an id
 
 
 The investigation fizzled out as no hack was found. The current state of things is that the CCS wallet is held strictly offline on an airgapped computer.
+
+## geonic1 | 2026-04-14T12:54:23+00:00
+It has recently come to light that one of the two people who had access to the drained CCS wallet, @fluffypony, has decided to [appropriate the remaining funds](https://github.com/monero-project/meta/issues/1326#issuecomment-4240654322) in the FFS wallet (the precursor to the CCS). The reasoning appears to be that he believes he is owed that money in exchange for his earlier contributions.
+
+I would also emphasize that only the "cold wallet" in this case was drained while the "hot wallet" remained untouched, suggesting that the perpetrator had access to the keys and this was not a hack. As mentioned in this thread, "fluffypony never had access to the private keys to the hot wallet, but did have the private keys to the main CCS wallet".
+
+edit: It is also worth noting that fluffypony has been accused by a former employer of [committing invoice fraud](https://decrypt.co/77503/fluffypony-monero-cookies-fraud) to the tune of $100,000.
+
+## PPPDUD | 2026-04-16T15:59:55+00:00
+Perhaps this is a good time to encourage private entities to start their own funding systems and begin phasing out the centralized CCS fund altogether? That way, the people managing funding will be much higher-profile and can be sued if they defraud their investors, as opposed to the current system where the thief has not been held accountable for their actions and still possesses thousands of XMR stolen from donors.
 
 # Action History
 - Created by: luigi1111 | 2023-11-02T15:57:53+00:00

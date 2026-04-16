@@ -5,10 +5,10 @@ author: geonic1
 assignees: []
 labels: []
 created_at: '2026-01-18T02:15:58+00:00'
-updated_at: '2026-04-12T13:11:53+00:00'
+updated_at: '2026-04-14T01:24:23+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-14T01:24:23+00:00'
 ---
 
 # Original Description
@@ -539,5 +539,20 @@ nope @PPPDUD im just asian and all asians have to love a sanrio character
 
 Is this sarcasm? I am having trouble figuring it out, because I'm not really immersed in Asian culture(s).
 
+## geonic1 | 2026-04-14T01:24:23+00:00
+Please take your offtopic discussion elsewhere, unless the goal is to distract from the issue at hand.
+
+To summarize:
+
+1. Fluffypony has not denied that he controls the keys to the deprecated FFS wallet(s) or that he has appropriated the funds.
+2. In fact, his comment indicates that he feels _he is owed_ at least that much for his prior contributions.
+3. It is worth emphasizing that fluffypony did not make any such statement proactively nor did he notify the core team that he has decided to pay himself back using community funds. It appears that he chose to appropriate funds that were in his care without notifying anyone.
+4. Since he has refused to provide the keys to those wallets, we are unclear about the total amount in question. For example, in addition to the 867 XMR mentioned in this issue, there is also an [overfunding of 865 XMR](https://web.archive.org/web/20250421164804/https://forum.getmonero.org/9/work-in-progress/88459/globee-s-secret-project-fundraiser) for another fundraiser that is unaccounted for. Historically, any overfunding is supposed to go to the General Fund, which did not happen here. **This brings the total amount fluffypony has paid himself for his services to at least 1732 XMR.**
+5. Fluffypony's attitude of "you owe me" is troublesome and raises questions about his access to other community wallets. Notably, he was one of two people with access to the CCS wallet that was drained of 2,675 XMR (#916).
+6. There are indications that the core team is aware of the risks associated with fluffypony. The general fund XMR wallet and BTC wallet are periodically swept to a different wallet as they are considered insecure. FP has the keys to these wallets.
+
+I am closing this issue as I do not expect further cooperation from fluffypony. The facts have been documented above for the community's reference. It is important that we take some lessons away from this and seek ways to prevent stewards of community funds from developing a feeling of ownership over the funds that are entrusted in their care.
+
 # Action History
 - Created by: geonic1 | 2026-01-18T02:15:58+00:00
+- Closed at: 2026-04-14T01:24:23+00:00
