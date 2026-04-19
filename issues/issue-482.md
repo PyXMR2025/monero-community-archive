@@ -110,7 +110,7 @@ I have a Ryzen 1700 Cpu. Tried on Sumokoin and works only on 4 threads ~230 H/s 
 
 For reference i7-4770 original hashrate 300 H/s (4 threads) new is 136 H/s (2 threads). New algorithm specially designed to hurt CPUs hashrate. CPU vs GPU balance changed to prefer GPU mining. Scratchpad size is not main reason for such low hashrate, main loop length reduced twice, main reason is thing named `half-step` with additional memory access in main loop. If simple remove this `half-step` for test, hashrate is 237 H/s, but of course it make invalid hashes.
 
-## Sayyiditow | 2018-04-06T17:08:12+00:00
+## sayyiditow | 2018-04-06T17:08:12+00:00
 haven protocol did not work for me, i keep getting rejected share, even with @cryptonight-heavy change on config.json. @xmrig 
 
 ## ipbc-dev | 2018-04-06T17:09:14+00:00
@@ -173,7 +173,7 @@ how changed algo to cryptonight-heavy? i use cpu
 @Sajo811 Thank you I updated info.
 @pejuangbitco change [this line](https://github.com/xmrig/xmrig/blob/master/src/config.json#L2) in your config to `"algo": "cryptonight-heavy", ` and use miner v2.6.0-beta1
 
-## Sayyiditow | 2018-04-09T02:28:02+00:00
+## sayyiditow | 2018-04-09T02:28:02+00:00
 @ipbc-dev any idea when you will fork?
 
 ## 2010phenix | 2018-04-09T16:30:48+00:00
