@@ -1,0 +1,25 @@
+---
+title: Reduction of FCMP Proof Size via Linear Aggregation of Vector Commitments
+source_url: https://github.com/monero-project/research-lab/issues/158
+author: kayabaNerve
+assignees: []
+labels: []
+created_at: '2026-04-19T19:38:28+00:00'
+updated_at: '2026-04-19T19:38:28+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+The FCMP includes several vector commitments where some are the branches of the Curve Tree yet some are solely there to commit to data in general. For the ones solely there to commit to data in general, for a subset we denote as $C$, we may have the prover and verifier do the following:
+
+$C' = \sum^n_{i = 0} w_i \cdot C_i$ where $w_i = H(C_0,~ \dots,~ C_n,~ i) \mod q$
+
+This would allow the GBP to not open as many commitments, reducing the size of the GBP itself.
+
+This only works so long as the values in the commitments can also have their constraints also so aggregated, them being linear and with constant coefficients, hence why $C$ is a subset of the commitments used to commit to data. To implement this would require the FCMP library, which includes a layout engine for its commitments, be updated to track such linear constraints and produce a new commitment layout accordingly.
+
+# Discussion History
+# Action History
+- Created by: kayabaNerve | 2026-04-19T19:38:28+00:00
