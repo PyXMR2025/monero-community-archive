@@ -5,7 +5,7 @@ author: luigi1111
 assignees: []
 labels: []
 created_at: '2023-11-02T15:57:53+00:00'
-updated_at: '2026-04-16T16:02:08+00:00'
+updated_at: '2026-04-17T02:53:42+00:00'
 type: issue
 status: open
 closed_at: null
@@ -1072,6 +1072,67 @@ edit: It is also worth noting that fluffypony has been accused by a former emplo
 
 ## PPPDUD | 2026-04-16T15:59:55+00:00
 Perhaps this is a good time to encourage private entities to start their own funding systems and begin phasing out the centralized CCS fund altogether? That way, the people managing funding will be much higher-profile and can be sued if they defraud their investors, as opposed to the current system where the thief has not been held accountable for their actions and still possesses thousands of XMR stolen from donors.
+
+## nahuhh | 2026-04-16T20:18:53+00:00
+> Perhaps this is a good time to encourage private entities to start their own funding systems and begin phasing out the centralized CCS fund altogether? That way, the people managing funding will be much higher-profile and can be sued if they defraud their investors
+
+Never heard of MAGIC?
+
+> as opposed to the current system where the thief has not been held accountable for their actions and still **possesses thousands of XMR stolen from donors.** 
+
+what?
+
+## PPPDUD | 2026-04-16T23:00:47+00:00
+> > Perhaps this is a good time to encourage private entities to start their own funding systems and begin phasing out the centralized CCS fund altogether? That way, the people managing funding will be much higher-profile and can be sued if they defraud their investors
+> 
+> Never heard of MAGIC?
+>
+
+No, but I looked it up and it sounds pretty cool! Yet another reason to decommission the CCS wallet.
+
+> > as opposed to the current system where the thief has not been held accountable for their actions and still **possesses thousands of XMR stolen from donors.**
+> 
+> what?
+
+According to the person who opened this issue (@luigi1111):
+
+> _The CCS Wallet was drained of 2,675.73 XMR (the entire balance) on September 1, 2023, just before midnight._
+
+Unless someone has evidence to the contrary, I believe that the thief still possesses that money to this very day.
+
+## preland | 2026-04-17T00:00:31+00:00
+> Unless someone has evidence to the contrary, I believe that the thief still possesses that money to this very day
+
+I think you are going to need to be a _little_ more clear about what you are implying exactly, because the way this is written leaves too much up to interpretation.
+
+## PPPDUD | 2026-04-17T00:02:13+00:00
+> > Unless someone has evidence to the contrary, I believe that the thief still possesses that money to this very day
+> 
+> I think you are going to need to be a _little_ more clear about what you are implying exactly, because the way this is written leaves too much up to interpretation.
+
+What specifically is unclear to you?
+
+## nahuhh | 2026-04-17T00:04:40+00:00
+> What specifically is unclear to you?
+
+who you are accusing of being in posession of the stolen funds
+
+> No, but I looked it up and it sounds pretty cool! Yet another reason to decommission the CCS wallet.
+
+being a registered, legal entity, based in USA; MAGIC cannot fund anonymous contributors. It exists as an option for any/all who don't mind going through a KYC process. 
+
+- Monero has many anonymous contributors.
+- CCS funds some MAGIC proposals. Example: FCMP audits by veridise.
+
+## PPPDUD | 2026-04-17T00:07:25+00:00
+> > What specifically is unclear to you?
+> 
+> who you are accusing of being in posession of the stolen funds
+
+Someone. I don't know the specifics.
+
+## luigi1111 | 2026-04-17T02:53:42+00:00
+It would be expected, unless they subsequently acquired a conscience and forwarded the stolen funds to the General Fund (as there exists an exact match), that the thief is either: A. in possession of; or B. sold the funds.
 
 # Action History
 - Created by: luigi1111 | 2023-11-02T15:57:53+00:00
