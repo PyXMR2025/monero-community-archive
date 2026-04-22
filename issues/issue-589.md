@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-tracking-issue
 created_at: '2026-02-26T23:37:09+00:00'
-updated_at: '2026-02-26T23:37:36+00:00'
+updated_at: '2026-04-21T20:33:10+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-21T20:33:10+00:00'
 ---
 
 # Original Description
@@ -28,31 +28,32 @@ Last release: https://github.com/Cuprate/cuprate/issues/569.
 
 ### Steps
 - Changelog
-  - [ ] Relevant changes added to `misc/changelogs/cuprated/$VERSION.md`
+  - [x] Relevant changes added to `misc/changelogs/cuprated/$VERSION.md`
 - Fast sync
-  - [ ] Update hashes, see `misc/FAST_SYNC_HASHES.md`
+  - [x] Update hashes, see `misc/FAST_SYNC_HASHES.md`
 - User Book
-  - [ ] Update necessary documentation
-  - [ ] Book title reflects `cuprated`'s version
+  - [x] Update necessary documentation
+  - [x] Book title reflects `cuprated`'s version
 - Repository
-  - [ ] Decide specific commit
-  - [ ] Create draft release
-  - [ ] Create version tag
-  - [ ] Build CI binaries
+  - [x] Decide specific commit: bc059f047651a743565330e8fe533e4f5a81d388
+  - [x] Create draft release
+  - [x] Create version tag
+  - [x] Build CI binaries: https://github.com/Cuprate/cuprate/actions/runs/24743661283
 - `cuprated` testing
   - Full-sync from scratch
     - [ ] x64 Windows
-    - [ ] x64 Linux
-    - [ ] ARM64 macOS
-    - [ ] ARM64 Linux
+    - [x] x64 Linux
+    - [x] ARM64 macOS
+    - [x] ARM64 Linux
 - Release
-    - [ ] Add binaries to release
-    - [ ] Publish `Cuprate/user-book`
-    - [ ] Release: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.8
+    - [x] Add binaries to release
+    - [x] Publish `Cuprate/user-book`: https://github.com/Cuprate/user-book/actions/runs/24744053796
+    - [x] Release: https://github.com/Cuprate/cuprate/releases/tag/cuprated-0.0.9
 - Release announcements
-  - [ ] Reddit
-  - [ ] Matrix
+  - [x] Reddit: https://www.reddit.com/r/Monero/comments/1srzuzg/cuprate_v009_released/
+  - [x] Matrix
 
 # Discussion History
 # Action History
 - Created by: hinto-janai | 2026-02-26T23:37:09+00:00
+- Closed at: 2026-04-21T20:33:10+00:00
