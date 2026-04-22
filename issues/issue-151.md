@@ -5,10 +5,10 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-04-13T17:20:44+00:00'
+updated_at: '2026-04-22T21:37:02+00:00'
 type: issue
-status: closed
-closed_at: '2026-04-13T17:20:44+00:00'
+status: open
+closed_at: null
 ---
 
 # Original Description
@@ -541,6 +541,196 @@ The attacker can mount a meet in the middle attack on the previous equation. To 
 ## tevador | 2026-04-13T17:20:44+00:00
 The selected algoritm (CSIDH) with the proposed parameters has been included in the [Jamtis specification](https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832).
 
+## tevador | 2026-04-20T15:01:04+00:00
+It turned out that this issue is not quite settled yet.
+
+There are 2 possible PQ encryption options and 4 possible PQ encryption algorithms, giving a total of 7 choices (1 combination is incompatible). For details, see the Details section below.
+
+## Summary
+
+This table ranks the 7 possible choices based on practicality (includes address length, pruned blockchain size and scanning/decryption speed), PQ privacy (privacy against a quantum attacker capable of breaking Curve25519) and PQ security (difficulty of eventually being broken by a hypothetical quantum attack beyond the break of Curve25519).
+
+| Choice    | Practicality | PQ privacy | PQ security |
+|-----------|--------------|------------|-------------|
+| **AC512** |   :star::star::star::star: |   :star::star: |     :star:     |
+| **AC1024**|    :star::star::star: |   :star::star: |   :star::star: |
+| **AC2048**|    :star::star: |   :star::star: |    :star::star::star: |
+| **AN509** |     :star: |   :star::star: |  :star::star::star::star: |
+| **BC512** |    :star::star::star: |    :star::star::star:|     :star: |
+| **BC1024**|    :star::star: |    :star::star::star: |   :star::star: |
+| **BC2048**|     :star: |    :star::star::star: |    :star::star::star: |
+
+Notes:
+
+* There is no ideal choice, it's about trade-offs.
+* No option reaches a 4-star PQ privacy score because all of them suffer a certain privacy loss in a post-quantum setting.
+* I personally think that the options with a 1-star practicality score should not be used. Having an addressing protocol that's good on paper but practically unusable is not very helpful.
+* When excluding the 1-star practicality options, the best contenders are **AC2048** and **BC1024**. The choice between them depends on the priority of PQ privacy vs PQ security.
+* In my opinion, a 2-star PQ security level should be sufficient for an interim protocol like Jamtis, so my personal preference is **BC1024**.
+
+## Details
+
+### Option A: PQ encryption for the amount
+
+The transaction amount and the spend key extensions use PQ encryption. This approach only needs 1 PQ public key per address.
+
+If Curve25519 is broken, a quantum attacker can locate enotes received to a known address, but can't decrypt the amount and can't track the spending transaction. If Curve25519 is not broken, this option offers the same privacy properties as legacy addresses (i.e. enotes cannot be located). The privacy regression only applies to the post-quantum scenario.
+
+Possible encryption algorithms: CSIDH-512, CSIDH-1024, CSIDH-2048 and NTRU-509.
+
+### Option B: PQ encryption for everything except the primary view tag
+
+The secondary view tag, address tag, transaction amount and the spend key extensions use PQ encryption. This approach needs 2 PQ public keys per address and 1 PQ public key per transaction output (except for 2-out transactions).
+
+If Curve25519 is broken, a quantum attacker can find a 1/256 subset of the blockchain that contains enotes received to a known address.
+
+Possible encryption algorithms: CSIDH-512, CSIDH-1024 and CSIDH-2048.
+
+NTRU-509 is not compatible with this option because it doesn't support O(1) balance recovery with respect to the number of wallet addresses.
+
+### Details table
+
+This table details the 7 possible choices:
+
+| Choice    | PQ am | PQ vt | Algorithm  | Address | 2/2 tran. | 2/16 tran. | Scan time/day | PQ security  |
+|-----------|-----------|-------------|------------|---------|-----------|------------|---------------|--------------|
+|  -        | :x:       | :x:         | Curve25519 |  260    |   278     |    2021    |      4 s      |2<sup>26</sup>|
+| **AC512** | :white_check_mark: | :x: | CSIDH-512 |  362    |   342     |    2085    |      4 s      |2<sup>60</sup>|
+| **AC1024**| :white_check_mark: | :x: |CSIDH-1024 |  464    |   406     |    2149    |      4 s      |2<sup>72</sup>|
+| **AC2048**| :white_check_mark: | :x: |CSIDH-2048 |  668    |   534     |    2277    |      4 s      |2<sup>86</sup>|
+| **AN509** | :white_check_mark: | :x: | NTRU-509  |  1379   |   977     |   13205    |      4 s      |2<sup>106</sup>|
+| **BC512** | :white_check_mark: | :white_check_mark:|CSIDH-512|417|342  |    3056    |     21 s      |2<sup>60</sup>|
+| **BC1024**| :white_check_mark: | :white_check_mark:|CSIDH-1024|621|406 |    4080    |     71 s      |2<sup>72</sup>|
+| **BC2048**| :white_check_mark: | :white_check_mark:|CSIDH-2048|1031|534|    6128    |    5 min      |2<sup>86</sup>|
+
+* PQ am - if the amount is PQ-encrypted
+* PQ vt - if the secondary view tag is PQ-encrypted
+* Algorithm - the encryption algorithm
+* Address - address length in base32
+* 2/2 tran. - approximate pruned size of a 2/2 transaction
+* 2/16 tran. - approximate pruned size of a 2/16 transaction
+* Scan time/day - approximate time to scan 100 000 enotes using 1 core of a desktop CPU @ 3 GHz, assuming an optimized x86 assembly implementation (further major optimizations are unlikely)
+* PQ security - the approximate number of quantum T-gates to break a key
+
+### Post-quantum security
+
+The table below lists the number of T-gates (a measure of algorithmic complexity) and an example of resources and the attack time needed to break a single key.
+
+| Algorithm    | T-gates  | Resources and attack time |
+|--------------|----------|---------------------------|
+| Curve25519   |2<sup>26</sup> | a quantum computer running for 11 minutes
+| CSIDH-512    |2<sup>60</sup> | 65 thousand quantum computers running for 5 years
+| CSIDH-1024   |2<sup>72</sup> | 67 million quantum computers running for 22 years
+| CSIDH-2048   |2<sup>86</sup>  | 260 billion quantum computers running for 90 years
+| NTRU-509     |2<sup>106</sup>| a trillion quantum computers running for 2 million years
+
+"Quantum computer" here means a fast-cycle quantum cluster (e.g. based on superconductivity or photonics) with a sufficient number of logical qubits to execute the algorithm and sufficiently low qubit error rate for the run time of the attack. For CSIDH, it would likely be a building-sized object with a lot of cryogenic equipment. Note that the attack times for CSIDH cannot be reduced by more parallelism, they are based on the estimated quantum circuit depth. For Curve25519 and NTRU-509, the attack time can be shortened with more parallelism, but it's irrelevant.
+
+## kayabaNerve | 2026-04-20T20:06:55+00:00
+https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832?permalink_comment_id=6110120#gistcomment-6110120 was my comment on a gist discussing this, for which I effectively advocated for BC2048, with additional commentary including the agreement that optimal should not be the enemy of better.
+
+## tevador | 2026-04-21T05:25:31+00:00
+My personal preference is ~~BC512 (for best performance) or~~ BC1024 (for extra security margin). I think BC2048 is beyond the acceptable UX threshold in terms of scanning performance, pruned blockchain size and address length. If we decide that CSIDH-2048 is a must, then AC2048 is a more acceptable choice.
+
+## tevador | 2026-04-21T05:34:24+00:00
+### The PQ security of CSIDH
+
+It should be noted that the technological jump from running Shor's on Curve25519 to running Kuperberg's on CSIDH-512 is quite significant even if we assume the former is quite likely to become feasible before 2035.
+
+Ideally, we would not have to guess what is and what isn't possible, but unfortunately, there is no perfect solution and any choice we make will be a trade-off.
+
+Here is a short summary of the technological differences between a quantum computer usable to break Curve25519 and one usable to break CSIDH-512:
+
+| Resource       | Curve25519 |  CSIDH-512  |
+|----------------|------------|-------------|
+| Logical qubits |  1200      |  40 000  |
+| Error rate     | < 10<sup>-10</sup>| < 10<sup>-15</sup>|
+| Code cycle     |  < 10 ms   |   < 10 μs   |
+| QRACM size     |    0       | 2<sup>30</sup> - 2<sup>40</sup>   |
+
+#### Logical qubits
+
+The minimum number of fault-tolerant qubits to run the algorithm [1, 7]. Note that the CSIDH-512 oracle from ref. [7] has a much higher complexity than the optimized oracle from ref [2], which needs 1 000 000 logical qubits.
+
+#### Error rate
+
+This is the required logical error rate. Lower error rates imply more quantum error correction. This determines the number of physical qubits needed to represent a logical qubit [3]. CSIDH-512 might need up to 1 billion physical qubits.
+
+#### Code cycle
+
+The cycle time depends on the physical realization of the quantum computer. Slow-cycle technologies like trapped ions and neutral atoms have code cycles measured in milliseconds. These are still fast enough to break Curve25519 in a couple hours, but too slow to break CSIDH-512 in less than a few hundred years. CSIDH needs a fast-cycle quantum computer based on superconducting qubits or photonics. [4]
+
+#### QRACM
+
+The fastest quantum algorithm to break CSIDH-512 from ref. [5] additionally needs a certain amount of quantum random-access memory (QRACM). This is classical memory that can be read in a quantum superposition using a quantum address register. Unlike typical RAM, it needs to access all data stored in the memory simultaneously and return a quantum superposition. While theoretical algorithms use it as a "cheap alternative" to quantum memory, QRACM is very hard to build in practice and the required capacity for CSIDH-512 might not be feasible to achieve. [6]
+
+The T-gate estimates for CSIDH are based on 2<sup>40</sup> bits of QRACM. The amount can be somewhat reduced at the cost of increasing the complexity of the attack.
+
+Ref. [7] presents 3 quantum attacks that don't need QRACM but have much higher gate counts than the optimized attack from ref [5].
+
+### Summary
+
+Based on my understanding of physics and the current technological progress in quantum computing, I think CSIDH-512 is very unlikely to be broken before 2100, if at all. CSIDH-1024 should offer a comfortable security margin for an intermediate hybrid protocol.
+
+### References
+
+[1] "Securing Elliptic Curve Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and Mitigations", Babbush et al. (2026), https://arxiv.org/abs/2603.28846
+
+[2] "Quantum circuits for the CSIDH: optimizing quantum evaluation of isogenies", Bernstein et al. (2018), https://eprint.iacr.org/2018/1059
+
+[3] "How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits", Gidney, Ekerå (2021), https://arxiv.org/abs/1905.09749
+
+[4] "How to compute a 256-bit elliptic curve private key with only 50 million Toffoli gates", D. Litinski (2023), https://arxiv.org/abs/2306.08585
+
+[5] "He Gives C-Sieves on the CSIDH", C. Peikert (2019), https://eprint.iacr.org/2019/725
+
+[6] "QRAM: A Survey and Critique", S. Jaques, A. G. Rattew (2023), https://arxiv.org/abs/2305.10310
+
+[7] "Quantum Security Analysis of CSIDH", X. Bonnetain and A. Schrottenloher (2020), https://eprint.iacr.org/2018/537
+
+
+## timmonpq | 2026-04-22T03:57:39+00:00
+After closely following this discussion, I endorse Option B.
+
+While the mathematical details are beyond the scope of this message, it's important to remember that Monero's purpose is to serve as an anonymous currency. Therefore, preserving anonymity should be the primary goal, with performance enhancements addressed afterward. Even the fastest version of Monero is useless if it does not protect privacy.
+
+I would also like to add that the legacy version of Monero currently hides outputs. Upgrading to post-quantum security (Option A) would reduce the level of anonymity compared to the current cryptographic setup. I don't want to sacrifice anonymity for security. It is better to pay for it with overhead.
+
+One of Monero’s key strengths is that its blockchain hides all data, shielding users from the uncertainty that arises when an attacker can correlate blockchain activity with real-world actions. Adding the risk of such correlation would be counterproductive and a poor design choice, especially since users in the legacy system have already been given these guarantees. Therefore, outputs need robust protection, making Option B the only sensible choice.
+
+A hard fork in a decentralized project is always challenging. Adding additional security is wise because it guards against future speed-ups and provides a fallback if the community fails to reach consensus in the future.
+
+I endorse at least BC1024 and, ideally, BC2048.
+
+Optimizations must follow the nature of the project.
+
+
+## tevador | 2026-04-22T07:28:59+00:00
+> I would also like to add that the legacy version of Monero currently hides outputs. Upgrading to post-quantum security (Option A) would reduce the level of anonymity compared to the current cryptographic setup. I don't want to sacrifice anonymity for security. It is better to pay for it with overhead.
+
+I have to correct you here. Option A has the same classical privacy as legacy addresses. Against a quantum attacker, legacy addresses offer zero privacy, while Option A offers a reduced level of privacy compared to the classical case.
+
+> with performance enhancements addressed afterward
+
+> Optimizations must follow the nature of the project.
+
+One thing I didn't mention is that all performance numbers in this issue are based on an already optimized x86 assembly implementation using mulx/adox instructions. **Portable code will be significantly slower.**
+
+Further software optimizations are unlikely without hardware upgrades, e.g. AVX512 or GPU acceleration.
+
+## timmonpq | 2026-04-22T21:37:02+00:00
+> I have to correct you here. Option A has the same classical privacy as legacy addresses. Against a quantum attacker, legacy addresses offer zero privacy, while Option A offers a reduced level of privacy compared to the classical case.
+
+You are right that Option A for Monero improves privacy compared to legacy ECC in the quantum world, as you stated. I was not clear enough.
+
+What I meant is that the post-quantum security upgrade is only necessary for maintaining security. In a world without quantum computers, Monero's legacy ECC protects outputs. The unfortunate problem is that quantum computers might become feasible, bringing us to the realistic scenario of choosing between Options A and B.
+
+In this regard, both options would provide more privacy than legacy ECC in a world with quantum adversaries. However, if quantum risk weren't a factor, one could argue that upgrading from the legacy ECC scenario, which does not involve a quantum adversary, to Option A, which does, feels like a downgrade of the protocol. This is because the expectations learned from the legacy ECC version should closely resemble those of the quantum scenario. In other words, although the threat landscape has changed and cryptography must adapt, user expectations have not.
+
+Not everyone is as up to date on the project as we are. Imagine using Monero with output privacy, then disappearing into the woods for five years, only to return and find that Monero no longer has output privacy. That would feel wrong. I hope that makes sense.
+
+TL;DR: If option B is close to realistic, please let us go with it. People have a high tolerance for pain for the sake of privacy.
+
+
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00
-- Closed at: 2026-04-13T17:20:44+00:00
