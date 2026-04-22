@@ -1,7 +1,7 @@
 ---
 title: How do I correct low hash rate in config file?
 source_url: https://github.com/xmrig/xmrig/issues/128
-author: quinnman2017
+author: ghost
 assignees: []
 labels:
 - question
@@ -21,5 +21,5 @@ You can manually specify threads count, and see difference. Some people reports 
 Also it mobile CPU, with low TDP and specs looks like desktop i3.
 
 # Action History
-- Created by: quinnman2017 | 2017-09-28T15:25:07+00:00
+- Created by: ghost | 2017-09-28T15:25:07+00:00
 - Closed at: 2017-10-15T09:24:32+00:00

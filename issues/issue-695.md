@@ -1,7 +1,7 @@
 ---
 title: Build Error
 source_url: https://github.com/xmrig/xmrig/issues/695
-author: CorrM
+author: corrm
 assignees: []
 labels:
 - libuv
@@ -25,10 +25,10 @@ Call Stack (most recent call first):
 Specify paths to libuv or use xmrig-deps https://github.com/xmrig/xmrig/wiki/Windows-Build
 Thank you.
 
-## CorrM | 2018-06-17T19:07:55+00:00
+## corrm | 2018-06-17T19:07:55+00:00
 can u give me example for VS2017 CMD Command
 libuv: C:\Users\CorrM\Downloads\Compressed\libuv-1.20.3\Debug\lib
 
 # Action History
-- Created by: CorrM | 2018-06-17T13:43:07+00:00
+- Created by: corrm | 2018-06-17T13:43:07+00:00
 - Closed at: 2018-06-17T17:51:44+00:00
