@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-12-08T18:37:23+00:00'
-updated_at: '2025-12-17T00:14:34+00:00'
+updated_at: '2026-04-21T04:25:29+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-21T04:25:29+00:00'
 ---
 
 # Original Description
@@ -20,5 +20,9 @@ Example:
 ## j-berman | 2025-12-17T00:14:34+00:00
 #224 does this, will just need to port that to fcmp++-stage once upstream monero-oxide is ready
 
+## j-berman | 2026-04-21T04:25:29+00:00
+Done in #319
+
 # Action History
 - Created by: j-berman | 2025-12-08T18:37:23+00:00
+- Closed at: 2026-04-21T04:25:29+00:00

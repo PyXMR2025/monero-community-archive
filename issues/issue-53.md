@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-04-16T01:21:00+00:00'
+updated_at: '2026-04-20T17:15:26+00:00'
 type: issue
 status: open
 closed_at: null
@@ -111,7 +111,7 @@ closed_at: null
   - #58 
 - [x] #70
 - [ ] Creating watch-only wallet from full wallet, `wallet2::import_blockchain` has a FIXME for tree
-- [ ] Blockchain import should add locked outputs and update FCMP++ tree
+- [x] Blockchain import should add locked outputs and update FCMP++ tree (#311)
 - [ ] Fix CLI/RPC displaying locked status of time-based locked outputs after FCMP++ fork 
 - [x] Fix `monero-blockchain-prune` utility
   - #196
@@ -120,6 +120,7 @@ closed_at: null
 
 - [ ] Complete the beta stressnet
 - [ ] Complete all FCMP++ research audit tasks
+  - Need @kayabaNerve signoff on GBP fix and completion of open issues: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
 - [ ] Complete the FCMP++ integration audit
 - [x] Use new unbiased hash to point for Carrot outputs
   - https://github.com/seraphis-migration/monero/blob/64190feb26151e186b86c27bcd7c08e2ca09db6b/src/crypto/crypto.cpp#L650-L653

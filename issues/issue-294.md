@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-02-18T01:47:14+00:00'
-updated_at: '2026-04-15T21:03:31+00:00'
+updated_at: '2026-04-21T19:48:38+00:00'
 type: issue
 status: open
 closed_at: null
@@ -143,6 +143,11 @@ Another goal is to verify that the C++ and Rust unbiased Hp() functions are equi
 > Verify the claim that no output or commitment detectable as a valid receive on the Monero blockchain today (or at any point in the past) would cause output_to_tuple to throw. This is critical because it means that an output that is detectable as a valid receive under existing/prior rules would not be spendable after FCMP++ goes into effect.
 
 Of note here is that onetime addresses are not required to be in the `l` subgroup, but out-of-subgroup points can still theoretically be signed by brute forcing a challenge that's a multiple of `h`. However, default Monero wallets shouldn't be able to detect such outputs because spendkey checks in scanning code use bytewise lookups. Similarly, it's unlikely that decompression failures can be detected as valid receives. But 'shouldn't' and 'unlikely' are just that - questions for the audit.
+
+## j-berman | 2026-04-21T19:48:38+00:00
+Below are the anonymized candidates for Phase 1 of the audit (includes 1a and 1b in scope). Note we are still waiting on Vendor 4 for an estimate of expected timeline to finish the work completely. Thank you to @SamsungGalaxyPlayer for putting this together.
+
+<img width="1169" height="646" alt="Image" src="https://github.com/user-attachments/assets/81573cdb-53be-4120-a574-ea54ca57f088" />
 
 # Action History
 - Created by: j-berman | 2026-02-18T01:47:14+00:00

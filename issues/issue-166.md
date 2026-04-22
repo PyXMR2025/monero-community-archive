@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-11T18:45:10+00:00'
-updated_at: '2026-04-16T00:29:15+00:00'
+updated_at: '2026-04-21T23:17:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -22,8 +22,6 @@ closed_at: null
   - [ ] Need #321
 - [x] Tx relay v2 11731ff86cd0d9cbaac72d7c8d5528086a8ffd18
 - [x] https://github.com/monero-project/monero/pull/10157
-- [ ] Carrot-derived wallets #199 
-- [ ] Hot/cold wallets #52
 - [x] Use new unbiased hash to point for Carrot outputs #279 
 - [x] #302
 - [x] #142 
@@ -41,7 +39,7 @@ closed_at: null
   - [x] https://github.com/monero-oxide/monero-oxide/commit/756851892eb2d5a82b01e43f63b268127143ad62
 - [ ] Changes to GBP's in FCMP++ lib from Cypher Stack audit
   - [ ] In progress: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
-  - [ ] #319
+  - [x] #319
 - [x] #307
 - [x] https://github.com/seraphis-migration/monero/pull/296
 - [x] Change p2p connection limit per IP to 10
@@ -54,6 +52,8 @@ closed_at: null
 - [ ] HF table and checkpoint update
 - [ ] GUI binaries
   - Working here: https://github.com/j-berman/monero-gui/commit/fe687dc3b9adb245beb55d130e6dcb78ad9d2202
+- [ ] Carrot-derived wallets #199 
+- [ ] Hot/cold wallets #52
 
 # Discussion History
 # Action History

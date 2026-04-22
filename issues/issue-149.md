@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-08T21:40:19+00:00'
-updated_at: '2025-10-08T21:40:19+00:00'
+updated_at: '2026-04-20T17:28:13+00:00'
 type: issue
 status: open
 closed_at: null
@@ -21,5 +21,8 @@ Reported by @nahuhh even after applying #128:
 ```
 
 # Discussion History
+## j-berman | 2026-04-20T17:28:13+00:00
+Want to re-test before closing this issue
+
 # Action History
 - Created by: j-berman | 2025-10-08T21:40:19+00:00
