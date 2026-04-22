@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2022-05-18T21:28:10+00:00'
-updated_at: '2025-12-24T20:38:41+00:00'
+updated_at: '2026-04-19T21:41:11+00:00'
 type: issue
 status: open
 closed_at: null
@@ -146,6 +146,9 @@ $ tail -n 10000 /var/log/monero/monero.log | grep -v 'stacktrace'
 
 ## selsta | 2025-12-24T20:38:41+00:00
 #7345 is unfortunately broken, there is a subtle bug that shows up after a week or so and crashes the node. We were not able to track it down yet.
+
+## e9x | 2026-04-19T21:41:11+00:00
+put a cronjob on it and continue ignoring the error!!!! issue closed as not planned!!!!!!!!!!
 
 # Action History
 - Created by: jeffro256 | 2022-05-18T21:28:10+00:00
