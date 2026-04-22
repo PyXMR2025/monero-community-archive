@@ -5,10 +5,10 @@ author: privacyOG
 assignees: []
 labels: []
 created_at: '2024-05-31T04:13:36+00:00'
-updated_at: '2024-06-01T19:36:18+00:00'
+updated_at: '2026-04-20T08:57:48+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-20T08:57:48+00:00'
 ---
 
 # Original Description
@@ -31,3 +31,4 @@ if you look at "https://haveno.exchange/" it's not something people can actually
 
 # Action History
 - Created by: privacyOG | 2024-05-31T04:13:36+00:00
+- Closed at: 2026-04-20T08:57:48+00:00
