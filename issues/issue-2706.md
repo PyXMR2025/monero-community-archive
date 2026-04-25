@@ -5,7 +5,7 @@ author: santoshbhor
 assignees: []
 labels: []
 created_at: '2021-11-18T16:02:14+00:00'
-updated_at: '2024-01-15T08:02:45+00:00'
+updated_at: '2026-04-24T05:49:55+00:00'
 type: issue
 status: open
 closed_at: null
@@ -209,6 +209,34 @@ I opened an issue on the project. Well see if I get answers
 Nice.. I couldn't get it working for KAWPOW with the settings I tried in the config.json but this worked. I tried 'MacMiner' which seemed to work but I was getting zero accepted shares on NH.
 
 Doing both randomx[6kH/s] and KAWPOW[9mH/s] on M1 Ultra Mac Studio simultaneously; dual mining CPU+GPU doesn't seem to affect hashrate or either. For comparison though, I'm getting 25mH/s for KAWPOW on both my 3060+2070S. Also for comparison, I get about the same 6kH/s w/32 threads on my 4s*8c/16t (32c/64t) Xeon E4640 0 (albeit running virtualized)
+
+## guyfischman | 2026-04-23T13:42:48+00:00
+Following up on this request — I've built a RandomX implementation on Apple Silicon via Metal. Current result on M4 Pro (20-core GPU): 515 H/s at 16W measured, 32.2 H/s/W. For context that's ~4× the best consumer GPU power efficiency number in sech1's RandomX_CUDA benchmark table (GTX 1660 Ti low-power at 8.1 H/s/W).
+
+Byte-exact vs the reference RandomX implementation on the standard test vectors.
+
+Absolute hashrate is still well below (I expect it will end up somewhere 10-20%) CPU xmrig on the same machine, so the use case is either running alongside CPU mining to recover otherwise-idle GPU power, or a reusable Metal RandomX primitive for verification/research tools.
+
+@SChernykh Would you be open to accepting a Metal backend PR in principle?
+
+## SChernykh | 2026-04-23T13:53:29+00:00
+Good question. Does it give better total hashrate when you mine both on CPU and GPU on your M4 Pro? Then it makes sense for people who don't care about power efficiency.
+
+## guyfischman | 2026-04-24T04:13:43+00:00
+Good that you asked, last I tested that was when I was at 50H/s and it was all incremental. Right now when I run GPU full-power total hashrate (GPU+CPU) is 30% lower than CPU-only, I believe a little for SoC power throttling and mostly because they're contending for SLC. If I throttle GPU I can get +100-200H/s incrementally GPU+CPU over CPU.
+
+So the answer is "yes provided it increases total hashrate"?
+
+## SChernykh | 2026-04-24T04:52:00+00:00
+Huh, interesting. That SoC must be power limited, so the fact that it achieved higher hashrate with the same power budget is interesting. Yes, I guess it makes sense to add that code. Did you implement RandomX v2 as well though?
+
+## guyfischman | 2026-04-24T05:37:50+00:00
+SoC power limit - my SoC uses 29W on CPU-only (with no core limit) and 33-34W for both, so I guess the budget is higher for SoC than CPU-block.
+
+No v2 yet, I wanted to first see if a custom kernel could beat prior art first. Is v2 design final?
+
+## SChernykh | 2026-04-24T05:49:55+00:00
+Yes, v2 is already released https://github.com/tevador/RandomX/releases/tag/v2.0
 
 # Action History
 - Created by: santoshbhor | 2021-11-18T16:02:14+00:00
