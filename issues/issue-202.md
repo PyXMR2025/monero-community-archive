@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-29T20:11:04+00:00'
-updated_at: '2025-11-04T20:25:54+00:00'
+updated_at: '2026-04-24T05:09:11+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-24T05:09:10+00:00'
 ---
 
 # Original Description
@@ -51,5 +51,9 @@ As one note, `mallopt` was added due to aggravating the present allocator. If `m
 
 It's still incredibly stupid that memory is growing without any leaks being detected, if we trust there aren't leaks. I'll leave that question alone for now however.
 
+## j-berman | 2026-04-24T05:09:11+00:00
+Should be solved
+
 # Action History
 - Created by: j-berman | 2025-10-29T20:11:04+00:00
+- Closed at: 2026-04-24T05:09:10+00:00

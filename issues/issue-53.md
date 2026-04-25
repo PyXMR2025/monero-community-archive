@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-04-20T17:15:26+00:00'
+updated_at: '2026-04-24T17:19:12+00:00'
 type: issue
 status: open
 closed_at: null
@@ -122,6 +122,7 @@ closed_at: null
 - [ ] Complete all FCMP++ research audit tasks
   - Need @kayabaNerve signoff on GBP fix and completion of open issues: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
 - [ ] Complete the FCMP++ integration audit
+- [ ] mx25519 lib audit
 - [x] Use new unbiased hash to point for Carrot outputs
   - https://github.com/seraphis-migration/monero/blob/64190feb26151e186b86c27bcd7c08e2ca09db6b/src/crypto/crypto.cpp#L650-L653
   - Set the tree up here: https://github.com/j-berman/monero/commits/unbiased-hash-curve-trees/
@@ -130,7 +131,7 @@ closed_at: null
   - #90
   - #91
 - [x] #43
-- [ ] #40 
+- [x] #40 
 - [x] Don't store output pubkeys and commitments in db twice
   - https://github.com/seraphis-migration/monero/pull/62
 - [x] Test pre-RCT to FCMP++
