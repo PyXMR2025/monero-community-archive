@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-04-17T09:52:28+00:00'
+updated_at: '2026-04-24T16:55:46+00:00'
 type: issue
 status: open
 closed_at: null
@@ -37,7 +37,7 @@ See also: #9684.
 | Package                                                           | Version        | Latest   | System | Desc      | CVEs                                                         | Split [0] | PR      |
 |:------------------------------------------------------------------|:---------------|:---------|--------|-----------|:-------------------------------------------------------------|----------:|:--------|
 | [android-ndk](https://developer.android.com/ndk/downloads)        | 27c (LTS)      | 27d      | -      | Toolchain | No                                                           |           |         |
-| [boost](https://github.com/boostorg/boost)                        | 1.89.0         | 1.90.0   | b2     | Daemon    | No                                                           |       Yes |         |
+| [boost](https://github.com/boostorg/boost)                        | 1.89.0         | 1.91.0-1   | b2     | Daemon    | No                                                           |       Yes |         |
 | [darwin_sdk](https://developer.apple.com/xcode/)                  | 12.2           | 26.1.1   | -      | Toolchain | ?                                                            |           |         |
 | [freebsd_base](https://archive.freebsd.org/old-releases/amd64/)   | 12.3           | 13.5 [2] | -      | Toolchain | ?                                                            |           | (#9667) |
 | [hidapi](https://github.com/libusb/hidapi)                        | 0.15.0         | -        | cmake  | Wallet    | No                                                           |        No |         |
@@ -60,10 +60,10 @@ See also: #10222
 
 | Submodule     | Version     | Latest | PR    |
 |---------------|-------------|--------|-------|
-| gtest | 1.15.2 | 1.17.0 | |
-| miniupnp      | 2.2.1       | 2.3.3  |  (#10012)     |
-| rapidjson     | Jul 3 2018  | ?      |       |
-| randomx       | 1.2.1       | -      |       |
+| [gtest](https://github.com/google/googletest) | 1.15.2 | 1.17.0 | |
+| [miniupnp](https://github.com/miniupnp/miniupnp)      | 2.2.1       | 2.3.3  |  (#10012)     |
+| [rapidjson](https://github.com/Tencent/rapidjson)     | Jul 3 2018  | ?      |       |
+| [randomx](https://github.com/tevador/RandomX)       | 1.2.1       | 2.0      |       |
 | supercop      | Aug 26 2020 | ?      |       |
 
 ## CMake

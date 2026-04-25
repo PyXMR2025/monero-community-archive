@@ -9,7 +9,7 @@ labels:
 - discussion
 - build system
 created_at: '2024-08-20T14:15:45+00:00'
-updated_at: '2026-04-02T19:18:31+00:00'
+updated_at: '2026-04-22T20:37:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -39,7 +39,7 @@ Users on distributions that don't package the minimum version of a required libr
 | Debian 10 (LTS)    | 30 Jun 2024 | 1.67          | No          |
 | Debian 11 (LTS)   | 31 Aug 2026 | 1.74          | Yes |
 
-With the proposed rule, we would currently guarantee support for Boost 1.71 at minimum.
+With the proposed rule, we would currently guarantee support for Boost 1.74 at minimum.
 
 #### A more complete list
 
