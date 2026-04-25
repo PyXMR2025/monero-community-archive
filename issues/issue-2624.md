@@ -5,7 +5,7 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2026-04-20T14:19:34+00:00'
-updated_at: '2026-04-21T17:27:52+00:00'
+updated_at: '2026-04-23T11:13:28+00:00'
 type: issue
 status: open
 closed_at: null
@@ -18,9 +18,9 @@ The workflow has created a PR on my branch successfully @ https://github.com/plo
 - [x] https://github.com/monero-project/monero-site/blob/35f88dae2777f35a0477f11bbd223c7dab1e2f54/.github/workflows/download-hashes.yml#L443
 - [x] pnpm/action-setup@v4 -> 6 breaks something
     - ERR_PNPM_BROKEN_LOCKFILE  The lockfile at "/home/runner/work/monero-site/monero-site/pnpm-lock.yaml" is broken: expected a single document in the stream, but found more
-- [ ] https://github.com/monero-project/monero-site/pull/2628
+- [x] https://github.com/monero-project/monero-site/pull/2628
 - [ ] https://github.com/monero-project/monero-site/pull/2617
-- [ ] bump to v5
+- [x] bump to v5
 - [ ] bump lints 
 
 # Discussion History
