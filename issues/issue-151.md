@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-04-22T21:37:02+00:00'
+updated_at: '2026-04-25T18:29:36+00:00'
 type: issue
 status: open
 closed_at: null
@@ -548,7 +548,7 @@ There are 2 possible PQ encryption options and 4 possible PQ encryption algorith
 
 ## Summary
 
-This table ranks the 7 possible choices based on practicality (includes address length, pruned blockchain size and scanning/decryption speed), PQ privacy (privacy against a quantum attacker capable of breaking Curve25519) and PQ security (difficulty of eventually being broken by a hypothetical quantum attack beyond the break of Curve25519).
+This table rates the 7 possible choices based on practicality (includes address length, pruned blockchain size and scanning/decryption speed), PQ privacy (privacy against a quantum attacker capable of breaking Curve25519) and PQ security (difficulty of eventually being broken by a hypothetical quantum attack beyond the break of Curve25519).
 
 | Choice    | Practicality | PQ privacy | PQ security |
 |-----------|--------------|------------|-------------|
@@ -563,8 +563,8 @@ This table ranks the 7 possible choices based on practicality (includes address 
 Notes:
 
 * There is no ideal choice, it's about trade-offs.
-* No option reaches a 4-star PQ privacy score because all of them suffer a certain privacy loss in a post-quantum setting.
-* I personally think that the options with a 1-star practicality score should not be used. Having an addressing protocol that's good on paper but practically unusable is not very helpful.
+* No option reaches a 4-star PQ privacy rating because all of them suffer a certain privacy loss in a post-quantum setting.
+* I personally think that the options with a 1-star practicality rating should not be used. Having an addressing protocol that's good on paper but practically unusable is not very helpful.
 * When excluding the 1-star practicality options, the best contenders are **AC2048** and **BC1024**. The choice between them depends on the priority of PQ privacy vs PQ security.
 * In my opinion, a 2-star PQ security level should be sufficient for an interim protocol like Jamtis, so my personal preference is **BC1024**.
 
@@ -594,19 +594,19 @@ This table details the 7 possible choices:
 
 | Choice    | PQ am | PQ vt | Algorithm  | Address | 2/2 tran. | 2/16 tran. | Scan time/day | PQ security  |
 |-----------|-----------|-------------|------------|---------|-----------|------------|---------------|--------------|
-|  -        | :x:       | :x:         | Curve25519 |  260    |   278     |    2021    |      4 s      |2<sup>26</sup>|
-| **AC512** | :white_check_mark: | :x: | CSIDH-512 |  362    |   342     |    2085    |      4 s      |2<sup>60</sup>|
-| **AC1024**| :white_check_mark: | :x: |CSIDH-1024 |  464    |   406     |    2149    |      4 s      |2<sup>72</sup>|
-| **AC2048**| :white_check_mark: | :x: |CSIDH-2048 |  668    |   534     |    2277    |      4 s      |2<sup>86</sup>|
-| **AN509** | :white_check_mark: | :x: | NTRU-509  |  1379   |   977     |   13205    |      4 s      |2<sup>106</sup>|
-| **BC512** | :white_check_mark: | :white_check_mark:|CSIDH-512|417|342  |    3056    |     21 s      |2<sup>60</sup>|
-| **BC1024**| :white_check_mark: | :white_check_mark:|CSIDH-1024|621|406 |    4080    |     71 s      |2<sup>72</sup>|
-| **BC2048**| :white_check_mark: | :white_check_mark:|CSIDH-2048|1031|534|    6128    |    5 min      |2<sup>86</sup>|
+|  -        | :x:       | :x:         | Curve25519 |  224    |   278     |    2021    |      4 s      |2<sup>26</sup>|
+| **AC512** | :white_check_mark: | :x: | CSIDH-512 |  310    |   342     |    2085    |      4 s      |2<sup>60</sup>|
+| **AC1024**| :white_check_mark: | :x: |CSIDH-1024 |  396    |   406     |    2149    |      4 s      |2<sup>72</sup>|
+| **AC2048**| :white_check_mark: | :x: |CSIDH-2048 |  568    |   534     |    2277    |      4 s      |2<sup>86</sup>|
+| **AN509** | :white_check_mark: | :x: | NTRU-509  |  1163   |   977     |   13205    |      4 s      |2<sup>106</sup>|
+| **BC512** | :white_check_mark: | :white_check_mark:|CSIDH-512|396|342  |    3056    |     21 s      |2<sup>60</sup>|
+| **BC1024**| :white_check_mark: | :white_check_mark:|CSIDH-1024|568|406 |    4080    |     71 s      |2<sup>72</sup>|
+| **BC2048**| :white_check_mark: | :white_check_mark:|CSIDH-2048|912|534|    6128    |    5 min      |2<sup>86</sup>|
 
 * PQ am - if the amount is PQ-encrypted
 * PQ vt - if the secondary view tag is PQ-encrypted
 * Algorithm - the encryption algorithm
-* Address - address length in base32
+* Address - address length in a base32+base62 hybrid encoding
 * 2/2 tran. - approximate pruned size of a 2/2 transaction
 * 2/16 tran. - approximate pruned size of a 2/16 transaction
 * Scan time/day - approximate time to scan 100 000 enotes using 1 core of a desktop CPU @ 3 GHz, assuming an optimized x86 assembly implementation (further major optimizations are unlikely)
@@ -689,23 +689,9 @@ Based on my understanding of physics and the current technological progress in q
 [7] "Quantum Security Analysis of CSIDH", X. Bonnetain and A. Schrottenloher (2020), https://eprint.iacr.org/2018/537
 
 
-## timmonpq | 2026-04-22T03:57:39+00:00
-After closely following this discussion, I endorse Option B.
-
-While the mathematical details are beyond the scope of this message, it's important to remember that Monero's purpose is to serve as an anonymous currency. Therefore, preserving anonymity should be the primary goal, with performance enhancements addressed afterward. Even the fastest version of Monero is useless if it does not protect privacy.
-
-I would also like to add that the legacy version of Monero currently hides outputs. Upgrading to post-quantum security (Option A) would reduce the level of anonymity compared to the current cryptographic setup. I don't want to sacrifice anonymity for security. It is better to pay for it with overhead.
-
-One of Monero’s key strengths is that its blockchain hides all data, shielding users from the uncertainty that arises when an attacker can correlate blockchain activity with real-world actions. Adding the risk of such correlation would be counterproductive and a poor design choice, especially since users in the legacy system have already been given these guarantees. Therefore, outputs need robust protection, making Option B the only sensible choice.
-
-A hard fork in a decentralized project is always challenging. Adding additional security is wise because it guards against future speed-ups and provides a fallback if the community fails to reach consensus in the future.
-
-I endorse at least BC1024 and, ideally, BC2048.
-
-Optimizations must follow the nature of the project.
-
-
 ## tevador | 2026-04-22T07:28:59+00:00
+Edit: The comment I was replying to has been deleted.
+
 > I would also like to add that the legacy version of Monero currently hides outputs. Upgrading to post-quantum security (Option A) would reduce the level of anonymity compared to the current cryptographic setup. I don't want to sacrifice anonymity for security. It is better to pay for it with overhead.
 
 I have to correct you here. Option A has the same classical privacy as legacy addresses. Against a quantum attacker, legacy addresses offer zero privacy, while Option A offers a reduced level of privacy compared to the classical case.
@@ -718,19 +704,32 @@ One thing I didn't mention is that all performance numbers in this issue are bas
 
 Further software optimizations are unlikely without hardware upgrades, e.g. AVX512 or GPU acceleration.
 
-## timmonpq | 2026-04-22T21:37:02+00:00
-> I have to correct you here. Option A has the same classical privacy as legacy addresses. Against a quantum attacker, legacy addresses offer zero privacy, while Option A offers a reduced level of privacy compared to the classical case.
+## j-berman | 2026-04-24T17:56:37+00:00
+A follow-up on @kayabaNerve 's question regarding if the scheme is a hybrid one. Just to confirm, does hybrid here mean that if there is some vulnerability in CSIDH, that the scheme falls back to Curve25519, and vice versa? E.g. [X-Wing](https://eprint.iacr.org/2024/039) claims "X-Wing is secure if either X25519 or ML-KEM-768 is secure"
 
-You are right that Option A for Monero improves privacy compared to legacy ECC in the quantum world, as you stated. I was not clear enough.
+## tevador | 2026-04-24T18:49:04+00:00
+Yes, it's a type of hybrid encryption. The final sender-receiver shared secret <code>s<sub>sr</sub><sup>ctx</sup></code> is calculated from all the individual shared secrets, which includes both X25519 and CSIDH. See [here](https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832#65-sender-receiver-shared-secrets) (note: the current version of specs uses AC1024, so it's subject to changes).
 
-What I meant is that the post-quantum security upgrade is only necessary for maintaining security. In a world without quantum computers, Monero's legacy ECC protects outputs. The unfortunate problem is that quantum computers might become feasible, bringing us to the realistic scenario of choosing between Options A and B.
+## te-mpe-st | 2026-04-25T11:37:29+00:00
+> NTRU (and other lattice-based cryptosystems) would require addresses longer than 1300 characters and would significantly increase the pruned sizes of all transactions (up to 6x for 16 outputs). If there were no alternatives, I think these costs might be acceptable, but it would have a negative impact on the uptake of Jamtis and willingness of users to run Monero nodes.
 
-In this regard, both options would provide more privacy than legacy ECC in a world with quantum adversaries. However, if quantum risk weren't a factor, one could argue that upgrading from the legacy ECC scenario, which does not involve a quantum adversary, to Option A, which does, feels like a downgrade of the protocol. This is because the expectations learned from the legacy ECC version should closely resemble those of the quantum scenario. In other words, although the threat landscape has changed and cryptography must adapt, user expectations have not.
+Recently, SWOOSH(EPRINT 2023/271) [1] proved lattice NIKEs are possible. Would there be consideration for using them if the overhead dropped below a certain threshold via optimisation or otherwise?
 
-Not everyone is as up to date on the project as we are. Imagine using Monero with output privacy, then disappearing into the woods for five years, only to return and find that Monero no longer has output privacy. That would feel wrong. I hope that makes sense.
+Also, I wanted to ask about the Jamtis spec in regards to a paper by Dunman et. al, (EPRINT 2022/1230) [2]. It showed the natural GA-HDH NIKE requires strong assumptions for active security in the QROM. ssrctx seems to mitigate this by not exposing the raw CSIDH secret and binding to the classical components, has this composition been analysed in this context or one similar? (Or was the twinning from the paper considered an alternative?) Sorry for the proof-theoretic stuff.
 
-TL;DR: If option B is close to realistic, please let us go with it. People have a high tolerance for pain for the sake of privacy.
+[1] https://eprint.iacr.org/2023/271.pdf
+[2] https://eprint.iacr.org/2022/1230.pdf
 
+## tevador | 2026-04-25T15:44:55+00:00
+@te-mpe-st 
+
+> Recently, SWOOSH(EPRINT 2023/271) [1] proved lattice NIKEs are possible. Would there be consideration for using them if the overhead dropped below a certain threshold via optimisation or otherwise?
+
+Yes, I'm aware of Swoosh. However, the public key size (>200 KB) makes it completely impractical for an addressing protocol and there is little hope of major improvements in that area (see eprint 2020/1555 for the relevant arguments).
+
+> Also, I wanted to ask about the Jamtis spec in regards to a paper by Dunman et. al, (EPRINT 2022/1230) [2]. It showed the natural GA-HDH NIKE requires strong assumptions for active security in the QROM. ssrctx seems to mitigate this by not exposing the raw CSIDH secret and binding to the classical components, has this composition been analysed in this context or one similar? (Or was the twinning from the paper considered an alternative?) Sorry for the proof-theoretic stuff.
+
+I haven't analyzed this specifically, but IIUIC it concerns a chosen ciphertext attack, which Jamtis thwarts with `input_context` included in the shared secret calculation. The classical components are irrelevant for post-quantum security.
 
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00

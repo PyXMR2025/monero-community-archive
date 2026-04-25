@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-09-25T06:22:27+00:00'
-updated_at: '2025-12-06T17:15:25+00:00'
+updated_at: '2026-04-25T12:27:09+00:00'
 type: issue
 status: open
 closed_at: null
@@ -106,7 +106,7 @@ The lateness factors are then defined as follows:
 
 | Condition | <code>l<sub>w</sub></code> |
 |------------------------|----------------------------------------|
-| if <code>h<sub>0</sub> < h<sub>f</sub> && n<sub>f</sub> < k*w && block_seen - share_seen <= d</code>                | `0` |
+| if <code>h<sub>0</sub> < h<sub>f</sub> && n<sub>f</sub> < k*w && main_seen - share_seen <= d</code>                | `0` |
 | else               | `1` |
 
 (Table 5)
@@ -115,7 +115,7 @@ The lateness factors can be distinct from `1` only if the node was online before
 
 By Table 4, a block is considered to be late if it's seen more than `d` seconds after the main chain block of the same height.
 
-By Table 5, a share is considered to be late if it's not seen more than `d` seconds before its containing block.
+By Table 5, a share is considered to be late if it's not seen more than `d` seconds before the main chain block of the same height.
 
 Note that the lateness factors are subjective; different nodes can calculate different values of <code>l<sub>b</sub></code> and <code>l<sub>w</sub></code> for the same block, which can lead to different chain weights.
 
