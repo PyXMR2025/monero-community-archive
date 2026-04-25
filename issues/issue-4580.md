@@ -5,7 +5,7 @@ author: eth0fox
 assignees: []
 labels: []
 created_at: '2026-04-22T05:20:59+00:00'
-updated_at: '2026-04-22T05:20:59+00:00'
+updated_at: '2026-04-23T17:05:33+00:00'
 type: issue
 status: open
 closed_at: null
@@ -25,5 +25,11 @@ Graphics mode: OpenGL
 ```
 
 # Discussion History
+## selsta | 2026-04-22T17:20:41+00:00
+Could you go to Settings -> Interface and disable custom decorations? Does it make it difference?
+
+## eth0fox | 2026-04-23T03:37:34+00:00
+Yes, if you disable custom decorations its allowed to move. If you switch them back on it snaps back to the original monitor
+
 # Action History
 - Created by: eth0fox | 2026-04-22T05:20:59+00:00
