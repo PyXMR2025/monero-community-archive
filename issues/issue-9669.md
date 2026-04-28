@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-04-24T16:55:46+00:00'
+updated_at: '2026-04-26T15:25:29+00:00'
 type: issue
 status: open
 closed_at: null
@@ -61,7 +61,6 @@ See also: #10222
 | Submodule     | Version     | Latest | PR    |
 |---------------|-------------|--------|-------|
 | [gtest](https://github.com/google/googletest) | 1.15.2 | 1.17.0 | |
-| [miniupnp](https://github.com/miniupnp/miniupnp)      | 2.2.1       | 2.3.3  |  (#10012)     |
 | [rapidjson](https://github.com/Tencent/rapidjson)     | Jul 3 2018  | ?      |       |
 | [randomx](https://github.com/tevador/RandomX)       | 1.2.1       | 2.0      |       |
 | supercop      | Aug 26 2020 | ?      |       |

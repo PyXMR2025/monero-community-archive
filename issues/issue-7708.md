@@ -3,9 +3,10 @@ title: notify::send_txs provided message exceeding covert fragment size
 source_url: https://github.com/monero-project/monero/issues/7708
 author: selsta
 assignees: []
-labels: []
+labels:
+- daemon
 created_at: '2021-05-06T23:00:03+00:00'
-updated_at: '2021-05-16T08:13:50+00:00'
+updated_at: '2026-04-25T18:00:06+00:00'
 type: issue
 status: open
 closed_at: null

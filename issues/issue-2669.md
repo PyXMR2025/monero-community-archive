@@ -5,10 +5,10 @@ author: avfedorov
 assignees: []
 labels: []
 created_at: '2017-10-16T12:38:29+00:00'
-updated_at: '2019-12-01T16:02:45+00:00'
+updated_at: '2026-04-26T17:34:26+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T17:34:26+00:00'
 ---
 
 # Original Description
@@ -193,5 +193,9 @@ Though in my case, `mdb_dump` fails too with the same error.
 ## moneromooo-monero | 2019-12-01T16:02:45+00:00
 Did you copy the blockchain while monerod was running ? Do the two computers have the same endianness ?
 
+## selsta | 2026-04-26T17:34:26+00:00
+Closing due to inactivity and lots of code changes in the meantime.
+
 # Action History
 - Created by: avfedorov | 2017-10-16T12:38:29+00:00
+- Closed at: 2026-04-26T17:34:26+00:00

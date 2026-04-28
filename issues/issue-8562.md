@@ -5,10 +5,10 @@ author: vdo
 assignees: []
 labels: []
 created_at: '2022-09-12T11:17:17+00:00'
-updated_at: '2022-09-28T21:02:46+00:00'
+updated_at: '2026-04-26T17:29:39+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T17:29:38+00:00'
 ---
 
 # Original Description
@@ -95,5 +95,9 @@ These network suffixes always get routed to the corresponding `--tx-proxy`, and 
 
 The shortened version is, Socks5 (unless other changes are made) will provide Nym access with `--proxy` but not `--tx-proxy`. The latter is interesting because only outgoing transactions are pushed over those connections.
 
+## selsta | 2026-04-26T17:29:38+00:00
+Resolved in #9443
+
 # Action History
 - Created by: vdo | 2022-09-12T11:17:17+00:00
+- Closed at: 2026-04-26T17:29:38+00:00

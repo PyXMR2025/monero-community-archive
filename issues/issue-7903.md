@@ -5,10 +5,10 @@ author: eduardobcastro
 assignees: []
 labels: []
 created_at: '2021-08-28T14:34:03+00:00'
-updated_at: '2022-05-25T10:02:25+00:00'
+updated_at: '2026-04-26T17:40:48+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T17:40:48+00:00'
 ---
 
 # Original Description
@@ -36,3 +36,4 @@ Its a good sign of intelligence for humans without prior security background to 
 
 # Action History
 - Created by: eduardobcastro | 2021-08-28T14:34:03+00:00
+- Closed at: 2026-04-26T17:40:48+00:00

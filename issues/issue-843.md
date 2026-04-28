@@ -6,10 +6,10 @@ assignees: []
 labels:
 - enhancement
 created_at: '2016-05-16T03:07:23+00:00'
-updated_at: '2018-01-08T12:48:39+00:00'
+updated_at: '2026-04-26T17:42:18+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T17:42:18+00:00'
 ---
 
 # Original Description
@@ -45,3 +45,4 @@ Partially addressed by #840
 
 # Action History
 - Created by: iamsmooth | 2016-05-16T03:07:23+00:00
+- Closed at: 2026-04-26T17:42:18+00:00

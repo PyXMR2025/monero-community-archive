@@ -5,10 +5,10 @@ author: ruslan-y
 assignees: []
 labels: []
 created_at: '2025-07-15T14:50:30+00:00'
-updated_at: '2025-12-19T01:03:21+00:00'
+updated_at: '2026-04-26T15:24:45+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T15:24:45+00:00'
 ---
 
 # Original Description
@@ -295,3 +295,4 @@ Close this issue, as you created one on OpenMonero.
 
 # Action History
 - Created by: ruslan-y | 2025-07-15T14:50:30+00:00
+- Closed at: 2026-04-26T15:24:45+00:00

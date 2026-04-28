@@ -5,10 +5,10 @@ author: Adreik
 assignees: []
 labels: []
 created_at: '2019-05-14T10:35:28+00:00'
-updated_at: '2019-05-15T07:34:58+00:00'
+updated_at: '2026-04-26T17:37:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-26T17:37:56+00:00'
 ---
 
 # Original Description
@@ -40,5 +40,9 @@ https://drive.google.com/open?id=1I5nDalKZdnl3Sg5Ji-sPl5C19NaHKtQj
 
 
 # Discussion History
+## selsta | 2026-04-26T17:37:56+00:00
+This should be expected, sweeping in view-only wallets can display incorrect values if no outputs and key images are imported.
+
 # Action History
 - Created by: Adreik | 2019-05-14T10:35:28+00:00
+- Closed at: 2026-04-26T17:37:56+00:00
