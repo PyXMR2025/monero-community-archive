@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-04-24T17:19:12+00:00'
+updated_at: '2026-04-28T00:42:53+00:00'
 type: issue
 status: open
 closed_at: null
@@ -161,7 +161,7 @@ closed_at: null
 - [x] https://github.com/seraphis-migration/monero/pull/93
 - [ ] Remove static proof len table and use the latest fast proof len size calc from the FCMP++ lib instead
   - Move the static proof len table into a test just to sanity check the proof len size calc
-  - https://github.com/j-berman/monero/commit/a371c476b785dd052b6d3df59d0a8c57b7a9dfb7
+  - #339
 
 
 ## On hold

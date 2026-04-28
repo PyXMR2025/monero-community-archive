@@ -1,12 +1,11 @@
 ---
-title: Increased FCMP++ membership proof size, marginally slower 1-input verification
-  time
+title: Increased FCMP++ membership proof size, marginally slower verification time
 source_url: https://github.com/seraphis-migration/monero/issues/317
 author: j-berman
 assignees: []
 labels: []
 created_at: '2026-04-14T15:11:24+00:00'
-updated_at: '2026-04-23T00:13:27+00:00'
+updated_at: '2026-04-27T17:35:20+00:00'
 type: issue
 status: open
 closed_at: null

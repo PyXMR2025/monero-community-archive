@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-11T18:45:10+00:00'
-updated_at: '2026-04-24T22:13:27+00:00'
+updated_at: '2026-04-25T17:21:42+00:00'
 type: issue
 status: open
 closed_at: null
@@ -50,9 +50,9 @@ closed_at: null
    - [x] https://github.com/seraphis-migration/monero/pull/297 ([source](https://github.com/seraphis-migration/monero/blob/ca8d443e964fb16682bae0e927bd3b1a303d9494/src/cryptonote_protocol/cryptonote_protocol_handler.inl#L1003))
    - [x] Needs https://github.com/monero-project/monero/pull/10352
    - [x] Needs https://github.com/monero-project/monero/pull/10415
-- [ ] HF table and checkpoint update
 - [x] GUI binaries
   - https://github.com/j-berman/monero-gui/commits/refs/heads/fcmp%2B%2B-beta-stressnet/
+- [ ] HF table and checkpoint update
 
 Nice to have
 - [ ] Carrot-derived wallets #199 

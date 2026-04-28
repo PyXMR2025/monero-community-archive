@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-04-25T00:38:26+00:00'
-updated_at: '2026-04-25T01:40:11+00:00'
+updated_at: '2026-04-27T20:34:02+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-27T20:34:02+00:00'
 ---
 
 # Original Description
@@ -43,5 +43,12 @@ Reported by @nahuhh:
 ## j-berman | 2026-04-25T01:40:11+00:00
 Looks related to #315
 
+## jeffro256 | 2026-04-27T18:15:19+00:00
+Yes, it is a duplicate of #315 AFAICT 
+
+## jeffro256 | 2026-04-27T20:34:02+00:00
+Resolved by #336 
+
 # Action History
 - Created by: j-berman | 2026-04-25T00:38:26+00:00
+- Closed at: 2026-04-27T20:34:02+00:00

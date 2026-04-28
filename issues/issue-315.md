@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-04-13T01:52:02+00:00'
-updated_at: '2026-04-13T01:52:02+00:00'
+updated_at: '2026-04-27T20:34:32+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-27T20:34:18+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ Would be nice to not log that error in this instance.
 I also think we (myself included) should probably aim to avoid exceptions for expected errors, and go with boolean returns instead (exceptions can break the program when not careful to manage them properly).
 
 # Discussion History
+## jeffro256 | 2026-04-27T20:34:18+00:00
+Resolved by #336 
+
 # Action History
 - Created by: j-berman | 2026-04-13T01:52:02+00:00
+- Closed at: 2026-04-27T20:34:18+00:00
