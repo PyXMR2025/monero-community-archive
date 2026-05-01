@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-10-08T21:40:19+00:00'
-updated_at: '2026-04-20T17:28:13+00:00'
+updated_at: '2026-04-28T22:14:31+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-04-28T22:14:31+00:00'
 ---
 
 # Original Description
@@ -24,5 +24,12 @@ Reported by @nahuhh even after applying #128:
 ## j-berman | 2026-04-20T17:28:13+00:00
 Want to re-test before closing this issue
 
+## nahuhh | 2026-04-28T22:09:53+00:00
+I don't see this on beta
+
+## j-berman | 2026-04-28T22:14:31+00:00
+Looked good during beta migration on my end too -- nice work @jeetrex17 
+
 # Action History
 - Created by: j-berman | 2025-10-08T21:40:19+00:00
+- Closed at: 2026-04-28T22:14:31+00:00
