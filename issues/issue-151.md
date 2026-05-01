@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-04-27T20:24:24+00:00'
+updated_at: '2026-04-29T16:59:22+00:00'
 type: issue
 status: open
 closed_at: null
@@ -544,77 +544,71 @@ The selected algoritm (CSIDH) with the proposed parameters has been included in 
 ## tevador | 2026-04-20T15:01:04+00:00
 It turned out that this issue is not quite settled yet.
 
-There are 3 possible PQ encryption options and 4 possible PQ encryption algorithms, giving a total of 9 choices (some combinations are incompatible). For details, see the Details section below.
+There are 3 possible PQ encryption options and the only viable PQ encryption algorithm is CSIDH (details below).
 
 ## Summary
 
-This table rates the 9 possible choices based on practicality (includes address length, pruned blockchain size and scanning/decryption speed), PQ privacy (privacy against a quantum attacker capable of breaking Curve25519) and PQ security (difficulty of eventually being broken by a hypothetical quantum attack beyond the break of Curve25519).
+This table rates the 4 possible choices based on practicality (includes address length, pruned blockchain size and scanning/decryption speed), PQ privacy (privacy against a quantum attacker capable of breaking Curve25519) and PQ security (difficulty of eventually being broken by a hypothetical quantum attack beyond the break of Curve25519).
 
 | Choice    | Practicality | PQ privacy | PQ security |
 |-----------|--------------|------------|-------------|
-| **AC512** |   :star::star::star::star: |   :star::star: |     :star:     |
-| **AC1024**|    :star::star::star: |   :star::star: |   :star::star: |
-| **AC2048**|    :star::star: |   :star::star: |    :star::star::star: |
-| **AN509** |     :star: |   :star::star: |  :star::star::star::star: |
-| **BC512** |    :star::star::star: |    :star::star::star:|     :star: |
-| **BC1024**|    :star::star: |    :star::star::star: |   :star::star: |
-| **BC2048**|     :star: |    :star::star::star: |    :star::star::star: |
-| **CC512**|    :star::star: |    :star::star::star::star: |    :star: |
-| **CC1024**|    :star: |    :star::star::star::star: |    :star::star: |
+| **X25519** |   :star::star::star::star: |   :star: |      |
+| **AC1152**|    :star::star::star: |    :star::star: |    :star::star::star: |
+| **BC704**|    :star::star::star: |    :star::star::star: |    :star::star: |
+| **CC832**|    :star::star: |    :star::star::star::star: |    :star::star: |
 
-Notes:
-
-* There is no ideal choice, it's about trade-offs.
-* I personally think that the options with a 1-star practicality rating should not be used. Having an addressing protocol that's good on paper but practically unusable is not very helpful.
-* When excluding the 1-star practicality options, the best contenders are **AC2048** and **BC1024**. The choice between them depends on the priority of PQ privacy vs PQ security.
-* In my opinion, a 2-star PQ security level should be sufficient for an interim protocol like Jamtis, so my personal preference is **BC1024**.
+For each of the PQ options A/B/C, the table lists the most secure CSIDH size that results in an address length not exceeding 420 characters.
 
 ## Details
 
 ### Option A: PQ encryption for the amount
 
-The transaction amount and the spend key extensions use PQ encryption. This approach only needs 1 PQ public key per address.
+The transaction amount and the spend key extensions use PQ encryption. This approach uses 4 classical public keys and 1 PQ public key per address.
 
 If Curve25519 is broken, a quantum attacker can locate enotes received to a known address, but can't decrypt the amount and can't track the spending transaction. If Curve25519 is not broken, this option offers the same privacy properties as legacy addresses (i.e. enotes cannot be located). The privacy regression only applies to the post-quantum scenario.
 
-Possible encryption algorithms: CSIDH-512, CSIDH-1024, CSIDH-2048 and NTRU-509.
+Possible encryption algorithms: CSIDH, NTRU.
 
 ### Option B: PQ encryption for everything except the primary view tag
 
-The secondary view tag, address tag, transaction amount and the spend key extensions use PQ encryption. This approach needs 2 PQ public keys per address and 1 PQ public key per transaction output (except for 2-out transactions).
+The secondary view tag, address tag, transaction amount and the spend key extensions use PQ encryption. This uses 3 classical public keys 2 PQ public keys per address and 1 PQ public key per transaction output (except for 2-out transactions).
 
 If Curve25519 is broken, a quantum attacker can find a 1/256 subset of the blockchain that contains enotes received to a known address.
 
-Possible encryption algorithms: CSIDH-512, CSIDH-1024 and CSIDH-2048.
+Possible encryption algorithms: CSIDH.
 
-NTRU-509 is not compatible with this option because it doesn't support O(1) balance recovery with respect to the number of wallet addresses.
+NTRU is not compatible with this option because it doesn't support O(1) balance recovery with respect to the number of wallet addresses.
 
 ### Option C: PQ encryption for everything + PQ-unlinkable addresses
 
-Everything, including the primary view tag, uses PQ encryption and addresses stay unlinkable even if Curve25519 is broken. This is the most private option, but comes with severe performance drawbacks.
+Everything, including the primary view tag, uses PQ encryption and addresses stay unlinkable even if Curve25519 is broken. This is the most private option, but comes with severe performance drawbacks. Option C addresses include 2 classical public keys and 2 PQ public keys.
 
-Possible encryption algorithms: CSIDH-512 and CSIDH-1024.
+Possible encryption algorithms: CSIDH.
 
 ### Details table
 
-This table details the 9 possible choices:
+Crossed out choices exceed the address length limit of 420 characters.
 
-| Choice    | PQ am | PQ vt | PQ unlink | Algorithm  | Address | 2/2 tran. | 2/16 tran. | Scan time/day | PQ security  |
-|-----------|-----------|------|-------|------------|---------|-----------|------------|---------------|--------------|
-|  -        | :x:       | :x:         | :x: | Curve25519 |  224    |   278     |    2021    |      4 s      |2<sup>26</sup>|
-| **AC512** | :white_check_mark: | :x: | :x: | CSIDH-512 |  310    |   342     |    2085    |      4 s      |2<sup>60</sup>|
-| **AC1024**| :white_check_mark: | :x: | :x: |CSIDH-1024 |  396    |   406     |    2149    |      4 s      |2<sup>72</sup>|
-| **AC2048**| :white_check_mark: | :x: | :x: |CSIDH-2048 |  568    |   534     |    2277    |      4 s      |2<sup>86</sup>|
-| **AN509** | :white_check_mark: | :x: | :x: | NTRU-509  |  1163   |   977     |   13205    |      4 s      |2<sup>106</sup>|
-| **BC512** | :white_check_mark: | :warning: | :x: |CSIDH-512|396|342  |    3056    |     21 s      |2<sup>60</sup>|
-| **BC1024**| :white_check_mark: | :warning: | :x: |CSIDH-1024|568|406 |    4080    |     71 s      |2<sup>72</sup>|
-| **BC2048**| :white_check_mark: | :warning: | :x: |CSIDH-2048|912|534|    6128    |    5 min      |2<sup>86</sup>|
-| **CC512**| :white_check_mark: | :white_check_mark:| :white_check_mark:|CSIDH-512|396|342|    3056    |    1 hour      |2<sup>60</sup>|
-| **CC1024**| :white_check_mark: | :white_check_mark:| :white_check_mark:|CSIDH-1024|654|406|    4080    |    5 hours      |2<sup>72</sup>|
+| Choice    | PQ am | PQ vt | PQ unlink | LWS priv | Algorithm  | Address | 2/2 tran. | 2/16 tran. | Scan time/day | PQ security  |
+|-----------|-----------|------|-------|----------|------------|---------|-----------|------------|---------------|--------------|
+|  **X25519**        | :x:       | :x:         | :x: |:white_check_mark: | Curve25519 |  223    |   278     |    2021    |      4 s      |2<sup>26</sup>|
+| AC512| :white_check_mark: | :x: | :x: |:white_check_mark: | CSIDH-512 |  309    |   342     |    2085    |      4 s      |2<sup>60</sup>|
+| AC1024 | :white_check_mark: | :x: | :x: |:white_check_mark: |CSIDH-1024 |  395    |   406     |    2149    |      4 s      |2<sup>72</sup>|
+| **AC1152**| :white_check_mark: | :x: | :x: |:white_check_mark: |CSIDH-1152 |  416    |   422     |    2165    |      4 s      |2<sup>74</sup>|
+| ~~AC2048~~| :white_check_mark: | :x: | :x: |:white_check_mark: |CSIDH-2048 |  567    |   534     |    2277    |      4 s      |2<sup>86</sup>|
+| ~~AN509~~ | :white_check_mark: | :x: | :x: |:white_check_mark: | NTRU-509  |  1162   |   977     |   13205    |      4 s      |2<sup>106</sup>|
+| BC512 | :white_check_mark: | :warning: | :x: | :warning: |CSIDH-512|352|342  |    3056    |     21 s      |2<sup>60</sup>|
+| **BC704** | :white_check_mark: | :warning: | :x: | :warning: |CSIDH-704|416|366  |    3429    |     40 s      |2<sup>63</sup>|
+| ~~BC1024~~| :white_check_mark: | :warning: | :x: | :warning: |CSIDH-1024|524|406 |    4069    |     71 s      |2<sup>72</sup>|
+| ~~BC2048~~| :white_check_mark: | :warning: | :x: | :warning: |CSIDH-2048|868|534|    6117    |    5 min      |2<sup>86</sup>|
+| CC512 | :white_check_mark: | :white_check_mark:| :white_check_mark:| :warning: |CSIDH-512|309|342|    3056    |    1 hour      |2<sup>60</sup>|
+| **CC832**| :white_check_mark: | :white_check_mark:| :white_check_mark:| :warning: |CSIDH-832|416|382|    3685    |    3 hours      |2<sup>67</sup>|
+| ~~CC1024~~| :white_check_mark: | :white_check_mark:| :white_check_mark:| :warning: |CSIDH-1024|481|406|    4080    |    5 hours      |2<sup>72</sup>|
 
 * PQ am - if the amount is PQ-encrypted
 * PQ vt - if the view tag is PQ-encrypted; :warning: means only the secondary view tag is PQ-encrypted
 * PQ unlink - if addresses stay unlinkable even if Curve25519 is broken
+* LWS priv - if using LWS hides users' enotes among false positives
 * Algorithm - the encryption algorithm
 * Address - address length in a base32+base62 hybrid encoding
 * 2/2 tran. - approximate pruned size of a 2/2 transaction
