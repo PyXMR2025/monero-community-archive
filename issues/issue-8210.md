@@ -3,9 +3,10 @@ title: FreeBSD "Listen queue overflow" issues
 source_url: https://github.com/monero-project/monero/issues/8210
 author: camberkenpas
 assignees: []
-labels: []
+labels:
+- bsd
 created_at: '2022-03-07T18:02:07+00:00'
-updated_at: '2022-05-29T15:33:52+00:00'
+updated_at: '2026-04-30T16:31:02+00:00'
 type: issue
 status: open
 closed_at: null

@@ -6,7 +6,7 @@ author: blacklion
 assignees: []
 labels: []
 created_at: '2022-01-06T08:51:37+00:00'
-updated_at: '2023-11-05T22:54:28+00:00'
+updated_at: '2026-04-30T18:35:57+00:00'
 type: issue
 status: open
 closed_at: null
@@ -232,6 +232,117 @@ Try running my #7345 patch. This changes the raw pointer usage to `weak_ptr` (wi
 
 ## vtnerd | 2023-11-05T22:54:28+00:00
 Actually, I'm not certain the code I was referencing could be responsible. It's almost certainly coming from the TCP server, just not certain where at the moment. However, if you could run #7345 and provide feedback, it would narrow things down somewhat.
+
+## emyfops | 2026-04-30T16:00:39+00:00
+Blockchain synchronization is painfully slow on FreeBSD despite having all the optimizations flags and ports. I've been synchronizing for 3 weeks now and I'm at 96%. I also have lots of exceptions being thrown.
+
+Version
+```
+➜  ~ uname -r
+15.0-RELEASE-p4
+```
+
+Flags:
+```
+sysrc monerod_extra_args='--sync-pruned-blocks --prune-blockchain --db-sync-mode=safe:sync --p2p-bind-port-ipv6=18080 --p2p-use-ipv6 --ban-list=/var/db/monero/ban.txt --no-igd --out-peers=64 --in-peers=128 --rpc-restricted-bind-port=18089 --rpc-restricted-bind-ip=0.0.0.0 --rpc-restricted-bind-ipv6-address=:: --rpc-use-ipv6 --confirm-external-bind'
+```
+
+Stacktrace
+```
+026-04-30 15:27:06.608	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:134	Exception: boost::wrapexcept<boost::bad_weak_ptr>
+2026-04-30 15:27:06.608	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:135	Unwound call stack:
+2026-04-30 15:27:06.899	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:163	    1                  0x9a86dc __cxa_throw + 0xcc
+2026-04-30 15:27:07.142	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    2                  0x5266bd
+2026-04-30 15:27:07.387	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    3                  0x7f2c68
+2026-04-30 15:27:07.606	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    4                  0x7ecc3d
+2026-04-30 15:27:07.823	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    5                  0x798832
+2026-04-30 15:27:08.039	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    6                  0x798aac
+2026-04-30 15:27:08.256	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    7                  0x780ed8
+2026-04-30 15:27:08.473	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    8                  0x7ee422
+2026-04-30 15:27:08.691	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    9                  0x7eec8c
+2026-04-30 15:27:08.908	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    a                  0x7eea10
+2026-04-30 15:27:09.126	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    b                  0x50b800
+2026-04-30 15:27:09.344	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    c                  0x50b105
+2026-04-30 15:27:09.561	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    d                  0x7ef445
+2026-04-30 15:27:09.772	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:163	    e                  0x82f37f91d boost::(anonymous namespace)::thread_proxy(void*) + 0x9d
+2026-04-30 15:27:09.990	[P2P5]	INFO	stacktrace	src/common/stack_trace.cpp:159	    f                  0x832520d21
+```
+
+## selsta | 2026-04-30T16:07:17+00:00
+@emyfops did you self compile or use binaries from getmonero.org ? ` --db-sync-mode=safe:sync` is also significantly slower than just keeping the default sync mode, better to just make backups if you are worried about corruption.
+
+## selsta | 2026-04-30T16:23:17+00:00
+`freebsd` support in monero is mostly untested unfortunately, it's possible that there are major sync issues even if everything is correct from your side
+
+## lev-serebryakov-jetbrains | 2026-04-30T16:28:41+00:00
+@selsta Problem is, that stack unwinding is very slow, and I don't understand why, but `weak_ptr` throws a lot of exceptions which go to log file.
+I don't understand, why these exceptions are not caught specifically, as they are should be expected: they signal that object is gone, it is normal for `weak_ptr`. These exceptions must not be reported in first place.
+
+FreeBSD doesn't need special support, it is POSIX compatible system.
+
+## selsta | 2026-04-30T16:30:13+00:00
+You can compile without libunwind support.
+
+## selsta | 2026-04-30T16:32:17+00:00
+Also does this OpenBSD issue also apply to FreeBSD? https://github.com/monero-project/monero/issues/7027
+
+## lev-serebryakov-jetbrains | 2026-04-30T16:34:58+00:00
+@selsta I don't know about #7027, as now I don't use monero daemon on *BSD, due to external (not monero- or freebsd-related) reasons.
+
+## emyfops | 2026-04-30T16:37:54+00:00
+> [@emyfops](https://github.com/emyfops) did you self compile or use binaries from getmonero.org ? ` --db-sync-mode=safe:sync` is also significantly slower than just keeping the default sync mode, better to just make backups if you are worried about corruption.
+
+The speed is barely different with async. I got the binaries from the package manager.
+
+## selsta | 2026-04-30T16:39:06+00:00
+@emyfops could you try from getmonero? it comes without stack traces, if unwind is slow it should make a difference
+
+## emyfops | 2026-04-30T18:05:36+00:00
+> [@emyfops](https://github.com/emyfops) could you try from getmonero? it comes without stack traces, if unwind is slow it should make a difference
+
+I have patched `net-p2p/monero-cli` with the following:
+```
+diff --git a/net-p2p/monero-cli/Makefile b/net-p2p/monero-cli/Makefile
+index 4c841cc65..a6a8b3c86 100644
+--- a/net-p2p/monero-cli/Makefile
++++ b/net-p2p/monero-cli/Makefile
+@@ -63,11 +63,11 @@ LD_EMULATION=       ${ARCH:S|aarch64|aarch64elf|:S|amd64|elf_amd64|:C|armv[67]|armelf|
+ CMAKE_ARGS+=   -DLD_RAW_FLAGS:STRING=-m${LD_EMULATION}
+ 
+ # keep in sync with all platforms where libunwind is available
+-.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH:Marmv?} || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH:Mpowerpc64*}
+-LIB_DEPENDS+=  libunwind.so:devel/libunwind
+-.else
++#.if ${ARCH} == aarch64 || ${ARCH} == amd64 || ${ARCH:Marmv?} || ${ARCH} == i386 || ${ARCH} == powerpc || ${ARCH:Mpowerpc64*}
++#LIB_DEPENDS+= libunwind.so:devel/libunwind
++#.else
+ CMAKE_ARGS+=   -DSTACK_TRACE:BOOL=OFF
+-.endif
++#.endif
+ 
+ CMAKE_ARGS+=   -DMANUAL_SUBMODULES:BOOL=ON
+ 
+```
+
+and while I don't seem to see any stacktraces anymore, the synchronization still takes a long time.
+I should add that the LMDB lives on an NFS share mounted on the host and then that mount is mounted using nullfs in a freebsd jail.
+
+```
+2026-04-30 18:02:41.234	[P2P6]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:1618	Synced 3530316/3663937 (96%, 133621 left, 0% of total synced, estimated 5.4 days left)
+2026-04-30 18:03:50.248	[P2P6]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:1618	Synced 3530336/3663938 (96%, 133602 left)
+2026-04-30 18:05:19.345	[P2P6]	INFO	global	src/cryptonote_protocol/cryptonote_protocol_handler.inl:1618	Synced 3530356/3663938 (96%, 133582 left, 0% of total synced, estimated 5.6 days left)
+```
+
+## emyfops | 2026-04-30T18:23:40+00:00
+Switching over to linux fixed the slowness, I might be forced to use linux for my node.
+
+## selsta | 2026-04-30T18:26:18+00:00
+LMDB does not support network-mounted storage, but I don't know if that's the reason for the slowdown. 
+
+## emyfops | 2026-04-30T18:35:57+00:00
+> LMDB does not support network-mounted storage, but I don't know if that's the reason for the slowdown.
+
+I will attempt a synchronization without a network mounted storage and I will get back to you in a few days.
 
 # Action History
 - Created by: blacklion | 2022-01-06T08:51:37+00:00
