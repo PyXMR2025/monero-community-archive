@@ -1,7 +1,7 @@
 ---
 title: 100% Failure on GRFT coin
 source_url: https://github.com/xmrig/xmrig/issues/481
-author: cmdematos
+author: ghost
 assignees: []
 labels:
 - duplicate
@@ -27,5 +27,5 @@ try options: variant
 Duplicate #475 
 
 # Action History
-- Created by: cmdematos | 2018-03-28T19:50:11+00:00
+- Created by: ghost | 2018-03-28T19:50:11+00:00
 - Closed at: 2018-03-29T03:45:28+00:00
