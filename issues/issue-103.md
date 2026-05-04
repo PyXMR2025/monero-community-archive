@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-03-06T23:33:54+00:00'
+updated_at: '2026-05-01T17:02:10+00:00'
 type: issue
 status: open
 closed_at: null
@@ -40,7 +40,7 @@ closed_at: null
 | V  | Daemon RPC path by output ID | rpc, wallet | | U | ❌ |
 | W  | Daemon RPC getblocks.bin init tree sync data | rpc | | U | ❌ |
 | X   | Daemon RPC return false on get hash by too high block | rpc | https://github.com/monero-project/monero/pull/10109 | | ✅️ |
-| Y   | Daemon RPC allow skipping common block in getblocks.bin by block_ids | rpc | https://github.com/monero-project/monero/pull/10143 | | ❌ |
+| Y   | Daemon RPC allow skipping common block in getblocks.bin by block_ids | rpc | https://github.com/monero-project/monero/pull/10143 | | ✅️ |
 | Z  | FCMP++ wallet2 scanning integration | wallet | | K, N, S, T, W, X, Y | ❌ |
 | AA  | FCMP++ wallet2 `scan_tx` integration | wallet | | Z, V| ❌ |
 | AB  | Require wallets point to updated daemon | wallet | | V, W, X, Y | ❌ |
