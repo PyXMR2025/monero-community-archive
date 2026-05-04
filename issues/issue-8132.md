@@ -6,7 +6,7 @@ author: blacklion
 assignees: []
 labels: []
 created_at: '2022-01-06T08:51:37+00:00'
-updated_at: '2026-04-30T18:35:57+00:00'
+updated_at: '2026-05-01T17:02:46+00:00'
 type: issue
 status: open
 closed_at: null
@@ -343,6 +343,12 @@ LMDB does not support network-mounted storage, but I don't know if that's the re
 > LMDB does not support network-mounted storage, but I don't know if that's the reason for the slowdown.
 
 I will attempt a synchronization without a network mounted storage and I will get back to you in a few days.
+
+## emyfops | 2026-05-01T17:02:41+00:00
+> LMDB does not support network-mounted storage, but I don't know if that's the reason for the slowdown.
+
+@selsta 
+I've been running the synchronization in a jail for about 16 hours now and I am at 38%. Not using NFS makes it much faster, however, I have noticed extreme I/O performance degradation. Saving files can take multiple seconds when monerod is synchronizing.
 
 # Action History
 - Created by: blacklion | 2022-01-06T08:51:37+00:00
