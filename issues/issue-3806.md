@@ -5,10 +5,10 @@ author: Motophan
 assignees: []
 labels: []
 created_at: '2026-04-28T08:55:54+00:00'
-updated_at: '2026-05-01T09:41:11+00:00'
+updated_at: '2026-05-02T08:09:06+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-02T08:09:06+00:00'
 ---
 
 # Original Description
@@ -481,5 +481,9 @@ Forcing max cpu max power
 ```
 These numbers are in line with some other CPUs. 78-84% of rx/0 hashrate, but rx/2 hashes are 1.5x more heavy, so your CPU still gets efficiency boost on rx/2.
 
+## Motophan | 2026-05-02T08:09:06+00:00
+I th8ink I am suppose to close this since this is a me issue, thanks for checking. 
+
 # Action History
 - Created by: Motophan | 2026-04-28T08:55:54+00:00
+- Closed at: 2026-05-02T08:09:06+00:00
