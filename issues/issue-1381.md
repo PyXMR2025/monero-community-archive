@@ -5,7 +5,7 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-04-30T12:09:42+00:00'
-updated_at: '2026-04-30T12:10:23+00:00'
+updated_at: '2026-05-01T20:05:15+00:00'
 type: issue
 status: open
 closed_at: null
@@ -24,7 +24,7 @@ Moderator: ofrnxmr
 Please reach out in advance of the meeting if you would like to propose an agenda item.
 
 
-**_Note: The GitLab that hosts the [CCS repo](https://repo.getmonero.org/monero-project/ccs-proposals) is inaccessible and/or unusable at this time. Proposals likely cannot be merged, closed, or modified. Funding Required totals can be seen [here](https://getwishlisted.xyz/proposals.json)._**
+**_Note: The GitLab that hosts the [CCS repo](https://repo.getmonero.org/monero-project/ccs-proposals) may be inaccessible and/or unusable at this time. It may not be possible to merge, close, modify, or comment directly on proposals. Funding Required totals can be seen [here](https://getwishlisted.xyz/proposals.json)._**
 
 Proposed Meeting Items:
 
@@ -40,8 +40,9 @@ News: [Monero Observer](https://www.monero.observer/) - [Revuo Monero](https://r
   e. r4v3r23 - [ANONERO Continued development](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/671)  
   f. redsh4de - [CCS Frontend Redesign & Backend Upgrade](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/641)       
   g. SyntheticBird - [Site and CCS UI/UX, Transitions & Animations work (4 months)](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/644)  
-  h. [MRL] CjS77 - [Grease Payment Channels -- production implementation and SDK](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/651)    
-  i. [Events] - [39C3 Support](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/622)    
+  h. jberman - [full-time development (4 months)](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/674)  
+  i. [MRL] CjS77 - [Grease Payment Channels -- production implementation and SDK](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/651)    
+  j. [Events] - [39C3 Support](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/622)    
 5. Workgroup reports    
   a. Dev workgroup  
   b. Localization workgroup  
