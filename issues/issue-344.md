@@ -5,10 +5,10 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-04-29T13:00:03+00:00'
-updated_at: '2026-04-29T13:11:14+00:00'
+updated_at: '2026-05-04T16:40:59+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-04T16:40:59+00:00'
 ---
 
 # Original Description
@@ -36,3 +36,4 @@ it seems to be trying to rewind the wallet, as even starting with a synced maste
 # Discussion History
 # Action History
 - Created by: nahuhh | 2026-04-29T13:00:03+00:00
+- Closed at: 2026-05-04T16:40:59+00:00
