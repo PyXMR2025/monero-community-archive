@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-proposal
 created_at: '2025-08-30T16:29:35+00:00'
-updated_at: '2025-08-30T16:29:35+00:00'
+updated_at: '2026-05-05T13:16:20+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-05T13:16:20+00:00'
 ---
 
 # Original Description
@@ -29,3 +29,4 @@ cuprated
 # Discussion History
 # Action History
 - Created by: Boog900 | 2025-08-30T16:29:35+00:00
+- Closed at: 2026-05-05T13:16:20+00:00
