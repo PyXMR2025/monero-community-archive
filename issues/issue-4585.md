@@ -6,7 +6,7 @@ author: RamsDark
 assignees: []
 labels: []
 created_at: '2026-05-03T21:09:01+00:00'
-updated_at: '2026-05-03T21:36:49+00:00'
+updated_at: '2026-05-04T19:56:11+00:00'
 type: issue
 status: open
 closed_at: null
@@ -42,6 +42,15 @@ Can you try having Ledger Live closed
 
 ## RamsDark | 2026-05-03T21:36:49+00:00
 Still same, have to relaunch the app to access the wallet, but always fails on first restoring -> click on relaunch the app on the error report window it restart the app with access to the wallet
+
+## selsta | 2026-05-04T19:56:11+00:00
+So far I haven't been able to reproduce the issue with the following steps
+
+- Connect Ledger to Mac
+- Open Ledger monero app
+- Open monero-wallet-gui
+- Restore wallet from device
+- Export view key twice
 
 # Action History
 - Created by: RamsDark | 2026-05-03T21:09:01+00:00
