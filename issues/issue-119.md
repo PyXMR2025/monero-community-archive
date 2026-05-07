@@ -5,10 +5,10 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2025-01-01T13:14:01+00:00'
-updated_at: '2025-04-22T02:19:45+00:00'
+updated_at: '2026-05-05T07:40:34+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-05T07:40:34+00:00'
 ---
 
 # Original Description
@@ -34,5 +34,9 @@ https://libera.monerologs.net/monero-dev/20240922#c432858
 ## nahuhh | 2025-04-22T02:19:44+00:00
 fwiw, I tested this on a few runs and had the sync crash a few times, and didn't notice any difference in performance
 
+## nahuhh | 2026-05-05T05:44:02+00:00
+Added to docs in #221, can close?
+
 # Action History
 - Created by: plowsof | 2025-01-01T13:14:01+00:00
+- Closed at: 2026-05-05T07:40:34+00:00
