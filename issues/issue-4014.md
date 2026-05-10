@@ -5,7 +5,7 @@ author: Froggy232
 assignees: []
 labels: []
 created_at: '2022-08-23T14:04:15+00:00'
-updated_at: '2025-12-23T16:00:10+00:00'
+updated_at: '2026-05-07T19:00:18+00:00'
 type: issue
 status: closed
 closed_at: '2022-08-23T17:37:52+00:00'
@@ -43,6 +43,9 @@ Closing this as the question seems answered by using the env var.
 ## q7nm | 2025-12-23T15:59:49+00:00
 @selsta 
 In a pure Wayland session (like in flatpak with --socket=fallback-x11 on Wayland), the application simply [crashes](https://github.com/flathub/org.getmonero.Monero/issues/208). Maybe it's worth making it so that Wayland is used at least when X11 isn't available, or making it the default (it works quite well now)? Of course, in an X11 session, everything should remain the same.
+
+## selsta | 2026-05-07T19:00:18+00:00
+@q7nm we plan to make it default in the next release following v0.18.5.0
 
 # Action History
 - Created by: Froggy232 | 2022-08-23T14:04:15+00:00
