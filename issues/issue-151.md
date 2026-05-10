@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-04-29T16:59:22+00:00'
+updated_at: '2026-05-09T15:35:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -737,6 +737,33 @@ I haven't analyzed this specifically, but IIUIC it concerns a chosen ciphertext 
 
 ## te-mpe-st | 2026-04-26T04:01:46+00:00
 Alright cool. Thanks.
+
+## te-mpe-st | 2026-05-08T08:55:50+00:00
+Is there a similar thread on what DSA will be used? I saw the Gist written by @tevador, however, I'm wondering if there is a thread dedicated to the topic. Not exactly on topic, but it would hopefully help others looking.
+
+## tevador | 2026-05-08T11:43:19+00:00
+While PQ encryption is comparatively "easy", PQ signatures are quite hard due to Monero's privacy requirements. AFAIK there is no dedicated research issue yet for signatures. @kayabaNerve wrote this some time ago: https://github.com/kayabaNerve/monero-pq
+
+## te-mpe-st | 2026-05-08T21:41:12+00:00
+I figured as much. Thanks for the repo.
+
+## tevador | 2026-05-09T11:30:36+00:00
+For the next MRL meeting, I have shortlisted a few Jamtis PQ encryption variants, with the 2 options in bold being the most practical candidates.
+
+| Variant        | Algorithm| Address len.  | Pruned tran. size | PQ sec. | Scan time | QA can see
+|----------------|----------------|---------------|-------------------|---------|-----------|------------
+| Jamtis-X25519  |  Curve25519    | 228           |    1.00x          | 2<sup>26</sup>|   1x      | Alice received an enote in tran. X with amount Y and spent it in tran. Z.
+| **Jamtis-AC1024**  |  CSIDH-1024    | 400           |    1.35x          | 2<sup>72</sup>|  1x      | Alice received an enote in tran. X.
+| **Jamtis-BC512**   |  CSIDH-512     | 400           |    1.31x          | 2<sup>60</sup>|  5x      | Alice might have received an enote in tran. X.
+| Jamtis-BC1024  |  CSIDH-1024    | 568           |    1.61x          | 2<sup>72</sup>|  18x     | Alice might have received an enote in tran. X.
+| Jamtis-AM3488  |  McEliece 3488 | 351 062       |    1.46x          | >2<sup>100</sup>|  1x      | Alice received an enote in tran. X.
+| Jamtis-AN509   |  NTRU-509      | 1162          |    4.35x          | >2<sup>100</sup>|  1x      | Alice received an enote in tran. X.
+
+* Address length assumes base62 encoding.
+* Pruned transaction size is calculated from 2/2 and 2/16 transaction sizes with the weights of 0.95 and 0.05.
+* Post-quantum security is expressed in terms of the estimated number of quantum T-gates to break a key.
+* Scan time is the relative average time to scan an enote for ownership, assuming an optimized x86 assembly implementation.
+* "QA can see" assumes the quantum attacker knows Alice's Jamtis address and the address has received at least 2 enotes.
 
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00

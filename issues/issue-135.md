@@ -329,7 +329,7 @@ The whole finality layer idea sounds like an overly complicated solution to a pr
 ## PPPDUD | 2025-08-22T16:30:41+00:00
 Stakes? Second token? Layer‽ Is this some Tari jargon I'm not grasping?
 
-## WrinklyEarpieceDiagram | 2025-08-24T00:41:53+00:00
+## ghost | 2025-08-24T00:41:53+00:00
 cc: @reubenyap @QuantumExplorer
 
 $FIRO and $DASH both have implemented masternodes of some kind of hybrid system with masternodes seems like maybe a good idea for Monero?
