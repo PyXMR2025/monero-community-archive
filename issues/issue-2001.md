@@ -105,7 +105,7 @@ My exact thought, I don't trust a miner to be run by the root user. And I realiz
 ## SChernykh | 2023-12-09T21:56:38+00:00
 You can run https://github.com/xmrig/xmrig/blob/master/scripts/randomx_boost.sh with `sudo` and then run XMRig without `sudo`, and MSR will work.
 
-## AyoubCoding21 | 2025-08-05T17:18:44+00:00
+## deadbeef7 | 2025-08-05T17:18:44+00:00
 it didnt work
 
 # Action History

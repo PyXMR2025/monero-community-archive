@@ -5,7 +5,7 @@ author: dan1338
 assignees: []
 labels: []
 created_at: '2025-08-09T10:35:18+00:00'
-updated_at: '2025-10-01T01:47:35+00:00'
+updated_at: '2026-05-08T17:15:24+00:00'
 type: issue
 status: open
 closed_at: null
@@ -67,6 +67,9 @@ By running it via strace I noticed the "network unreachable" errors when it was 
 
 Running it with -4 to force IPv4 seems to be a simple workaround that works reliably for me.
 It seems there is no error handling for connection errors in [xmrig::fetch](https://github.com/xmrig/xmrig/blob/6e4a5a6d94b33d6ed93890126c699b62f9553f50/src/base/net/http/Fetch.cpp#L97) or exceptions thrown in the underlying code hence failure to connect to the server goes unnoticed and causes the benchmark to run forever.
+
+## Azim | 2026-05-08T17:15:24+00:00
+just had that happen on 10M run, not fun
 
 # Action History
 - Created by: dan1338 | 2025-08-09T10:35:18+00:00
