@@ -66,7 +66,7 @@ Fixed by editing makefile MSYS2_FOLDER=c:/msys64 to my actual installation locat
 
 Perhaps readme should be updated to suggest this lol
 
-## shalinn79 | 2021-09-19T04:38:42+00:00
+## ghost | 2021-09-19T04:38:42+00:00
 
 
 
@@ -80,7 +80,7 @@ Perhaps readme should be updated to suggest this lol
 ## ryannathans | 2021-09-19T04:55:35+00:00
 Seems like makefile might be different now, don't know. No idea, maybe search for files containing c: or something
 
-## shalinn79 | 2021-09-19T04:59:07+00:00
+## ghost | 2021-09-19T04:59:07+00:00
 > Seems like makefile might be different now, don't know. No idea, maybe search for files containing c: or something
 
 I got it.  Modified the file monero\cmake\64-bit-toolchain.cmake. 
