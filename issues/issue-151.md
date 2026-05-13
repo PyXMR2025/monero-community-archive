@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-05-09T15:35:06+00:00'
+updated_at: '2026-05-13T08:02:34+00:00'
 type: issue
 status: open
 closed_at: null
@@ -650,31 +650,41 @@ Here is a short summary of the technological differences between a quantum compu
 | Logical qubits |  1200      |  40 000  |
 | Error rate     | < 10<sup>-10</sup>| < 10<sup>-15</sup>|
 | Code cycle     |  < 10 ms   |   < 10 μs   |
-| QRACM size     |    0       | 2<sup>30</sup> - 2<sup>40</sup>   |
+| QRACM size     |    0       | 2<sup>40</sup>   |
+| T-gates          | 2<sup>26</sup>| 2<sup>60</sup> |
+| Circuit depth | < 2<sup>26</sup>| > 2<sup>40</sup> |
 
 #### Logical qubits
 
-The minimum number of fault-tolerant qubits to run the algorithm [1, 7]. Note that the CSIDH-512 oracle from ref. [7] has a much higher complexity than the optimized oracle from ref [2], which needs 1 000 000 logical qubits.
+The minimum number of fault-tolerant qubits to run the algorithm [1, 7]. Note that the CSIDH-512 literature gives two possible quantum oracle implementations: ref. [2] optimized for gate count and needs 1 000 000 logical qubits, while ref. [7] optimized for qubit count and needs 40 000 logical qubits. My estimates pessimistically assume the gate count from ref. [2] and the qubit count from ref. [7].
 
 #### Error rate
 
-This is the required logical error rate. Lower error rates imply more quantum error correction. This determines the number of physical qubits needed to represent a logical qubit [3]. CSIDH-512 might need up to 1 billion physical qubits.
+This is the required logical error rate. Lower error rates imply more quantum error correction. This determines the number of physical qubits needed to represent a logical qubit [3]. CSIDH-512 might need up to 1000 physical qubits per logical qubit to reach the required error rate due to the much longer run time of the attack.
 
 #### Code cycle
 
-The cycle time depends on the physical realization of the quantum computer. Slow-cycle technologies like trapped ions and neutral atoms have code cycles measured in milliseconds. These are still fast enough to break Curve25519 in a couple hours, but too slow to break CSIDH-512 in less than a few hundred years. CSIDH needs a fast-cycle quantum computer based on superconducting qubits or photonics. [4]
+The cycle time depends on the physical realization of the quantum computer. Slow-cycle technologies like trapped ions and neutral atoms have code cycles measured in milliseconds. These are still fast enough to break Curve25519 in a couple hours or days, but too slow to break CSIDH-512 in less than a few hundred years. CSIDH needs a fast-cycle quantum computer based on superconducting qubits or photonics. [4]
 
 #### QRACM
 
-The fastest quantum algorithm to break CSIDH-512 from ref. [5] additionally needs a certain amount of quantum random-access memory (QRACM). This is classical memory that can be read in a quantum superposition using a quantum address register. Unlike typical RAM, it needs to access all data stored in the memory simultaneously and return a quantum superposition. While theoretical algorithms use it as a "cheap alternative" to quantum memory, QRACM is very hard to build in practice and the required capacity for CSIDH-512 might not be feasible to achieve. [6]
+The fastest quantum algorithm to break CSIDH-512 from ref. [5] additionally needs a certain amount of quantum random-access memory (QRACM). This is classical memory that can be read in a quantum superposition using a quantum address register. Unlike typical RAM, it needs to access all data stored in the memory simultaneously and return a quantum superposition. While theoretical algorithms use it as a "cheap alternative" to quantum memory, QRACM is very hard to build in practice and the required capacity for CSIDH-512 might not be feasible to achieve cheaply. [6]
 
 The T-gate estimates for CSIDH are based on 2<sup>40</sup> bits of QRACM. The amount can be somewhat reduced at the cost of increasing the complexity of the attack.
 
-Ref. [7] presents 3 quantum attacks that don't need QRACM but have much higher gate counts than the optimized attack from ref [5].
+#### T-gates
+
+The number of T-gates is a measure of the algorithmic complexity. A rough estimate for the run time on a single quantum computer is the number of T-gates multiplied by the code cycle.
+
+Ref. [7] presents 3 quantum attacks that don't need QRACM but have much higher gate counts than the optimized attack from ref [5] (2<sup>71</sup> quantum T-gates and 2<sup>86</sup> classical work).
+
+#### Circuit depth
+
+Quantum circuit depth is the minimum number of sequential T-gates that must be executed regardless of parallelization. A rough estimate for the run time on an unlimited number quantum computers is the circuit depth multiplied by the code cycle.
 
 ### Summary
 
-Based on my understanding of physics and the current technological progress in quantum computing, I think CSIDH-512 is very unlikely to be broken before 2100, if at all. CSIDH-1024 should offer a comfortable security margin for an intermediate hybrid protocol.
+Based on my understanding of physics and the current technological progress in quantum computing, I think CSIDH-512 is very unlikely to be broken before 2050, if at all.
 
 ### References
 
@@ -764,6 +774,34 @@ For the next MRL meeting, I have shortlisted a few Jamtis PQ encryption variants
 * Post-quantum security is expressed in terms of the estimated number of quantum T-gates to break a key.
 * Scan time is the relative average time to scan an enote for ownership, assuming an optimized x86 assembly implementation.
 * "QA can see" assumes the quantum attacker knows Alice's Jamtis address and the address has received at least 2 enotes.
+
+## tevador | 2026-05-13T08:02:33+00:00
+Here are 3 possible scenarios for the 3 practical variants of Jamtis:
+
+### Scenario 1
+
+**2027** Jamtis-X25519 adopted
+**2035** Monero adopts a PQ protocol
+**203x** Q-Day, Curve25519 is broken, legacy and Jamtis addresses (2014-2035) are retroactively deanonymized
+
+### Scenario 2
+
+**2027** Jamtis-AC1024 adopted
+**2035** Monero adopts a PQ protocol
+**203x** Q-Day, Curve25519 is broken, legacy addresses (2014-2035) are retroactively deanonymized, Jamtis addresses (2027-2035) only lose enote privacy
+**208x** CSIDH-1024 broken quantumly, Jamtis addresses (2027-2035) are retroactively deanonymized
+
+### Scenario 3
+
+**2027** Jamtis-BC512 adopted
+**2035** Monero adopts a PQ protocol
+**203x** Q-Day, Curve25519 is broken, legacy addresses (2014-2035) are retroactively deanonymized, Jamtis addresses (2027-2035) retain most of their privacy
+**205x** CSIDH-512 broken quantumly, Jamtis addresses (2027-2035) are retroactively deanonymized
+
+The quantum timelines are *very* pessimistic (they assume a very fast progress in quantum computing). This would give a ~20 year lifetime for CSIDH-512 and ~50 year lifetime for CSIDH-1024 (measured from the break of Curve25519). Refer to [this comment](https://github.com/monero-project/research-lab/issues/151#issuecomment-4286149347) for some details on the PQ security of CSIDH. It's plausible that the quantum breaks of Curve25519 and CSIDH will be 15-100 years later than what is estimated above.
+
+These scenarios don't assume a classical break of CSIDH, which I find unlikely.
+
 
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00
