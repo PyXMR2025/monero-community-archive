@@ -5,10 +5,10 @@ author: sanderfoobar
 assignees: []
 labels: []
 created_at: '2018-12-07T07:33:24+00:00'
-updated_at: '2019-04-23T13:19:58+00:00'
+updated_at: '2026-05-13T10:44:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-13T10:44:43+00:00'
 ---
 
 # Original Description
@@ -146,3 +146,4 @@ qt.5.9.1 cannot build this am getting this error
 
 # Action History
 - Created by: sanderfoobar | 2018-12-07T07:33:24+00:00
+- Closed at: 2026-05-13T10:44:43+00:00
