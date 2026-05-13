@@ -5,7 +5,7 @@ author: redsh4de
 assignees: []
 labels: []
 created_at: '2026-05-09T02:10:49+00:00'
-updated_at: '2026-05-09T03:09:43+00:00'
+updated_at: '2026-05-10T14:44:01+00:00'
 type: issue
 status: open
 closed_at: null
@@ -60,6 +60,29 @@ Thread 19 Crashed:
 ```
 
 It seems like a memory issue, possibly with faulty serialization
+
+## redsh4de | 2026-05-10T14:44:01+00:00
+yeah, faulty serialization. comes down to libstdc++ (x86_64 daemon) and libc++ (ARM Mac wallet) storing `std::variant` differently - libstdc++ uses 1 byte for the variant's index, libc++ uses 4.
+
+x86_64 daemon writes 1 byte for the index and leaves the next 3 bytes uninitialized. macOS wallet's libc++ reads all 4 as the index -> out-of-range value -> `std::visit` calls into random memory -> crash. matches the `output_pubkey_cref` frame in the trace.
+
+I applied a local workaround on the Mac that zeroes those 3 bytes after receive in `wallet2::pull_and_parse_next_blocks`:
+
+```cpp
+const auto sanitize_variant_padding = [](fcmp_pp::UnifiedOutput &uo) {
+  auto *p = reinterpret_cast<unsigned char *>(&uo);
+  p[73] = p[74] = p[75] = 0;
+};
+for (auto &lo : init_tree_sync_data->locked_outputs)
+  for (auto &uo : lo.outputs)
+    sanitize_variant_padding(uo);
+for (auto &uo : init_tree_sync_data->last_path.leaves)
+  sanitize_variant_padding(uo);
+```
+
+i reckon this is the only `std::variant` bug because it's the only place we memcpy this type across the network - other variant usages are in-memory or go through serializers.
+
+Replacing `std::variant` in `OutputPair` with a plain struct with a type field should fix it since both libs would lay it out identically, but maybe there's a cleaner fix
 
 # Action History
 - Created by: redsh4de | 2026-05-09T02:10:49+00:00
