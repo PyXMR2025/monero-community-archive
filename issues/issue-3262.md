@@ -1,7 +1,7 @@
 ---
 title: I have this error
 source_url: https://github.com/xmrig/xmrig/issues/3262
-author: valoudd
+author: ghost
 assignees: []
 labels: []
 created_at: '2023-04-24T16:58:00+00:00'
@@ -23,5 +23,5 @@ Call Stack (most recent call first):
 
 # Discussion History
 # Action History
-- Created by: valoudd | 2023-04-24T16:58:00+00:00
+- Created by: ghost | 2023-04-24T16:58:00+00:00
 - Closed at: 2025-06-18T22:37:05+00:00
