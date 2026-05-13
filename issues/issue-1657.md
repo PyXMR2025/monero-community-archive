@@ -6,10 +6,10 @@ assignees: []
 labels:
 - proposal
 created_at: '2017-01-31T11:24:50+00:00'
-updated_at: '2021-11-24T09:56:49+00:00'
+updated_at: '2026-05-11T09:08:41+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-11T09:08:41+00:00'
 ---
 
 # Original Description
@@ -39,5 +39,9 @@ I cannot use nodejs request to connect JOSN RPC API with digest auth. Is that st
 ## saurabhprasadsah | 2021-11-24T09:56:49+00:00
 how to add basic authentication in xmr
 
+## x64x2 | 2026-05-11T02:29:04+00:00
+this is bug not a feature.
+
 # Action History
 - Created by: hamiltino | 2017-01-31T11:24:50+00:00
+- Closed at: 2026-05-11T09:08:41+00:00
