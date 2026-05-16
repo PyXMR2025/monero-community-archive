@@ -5,7 +5,7 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-02-11T18:11:08+00:00'
-updated_at: '2026-02-16T02:07:51+00:00'
+updated_at: '2026-05-14T17:11:27+00:00'
 type: issue
 status: open
 closed_at: null
@@ -193,6 +193,33 @@ Summarizing my view...
 **Medium term solution**: a rw lock that allows many concurrent readers (test that behavior and confirm it speeds up calls in this instance).
 
 **Long term solution**: store pool tx blobs in 2 distinct tables (`pool_txs_pruned` and `pool_txs_prunable`), then just fetch blobs from the db and serve to the client *without* parsing. This requires a db migration.
+
+## jeffro256 | 2026-05-13T19:00:34+00:00
+> Long term solution: store pool tx blobs in 2 distinct tables (pool_txs_pruned and pool_txs_prunable), then just fetch blobs from the db and serve to the client without parsing. This requires a db migration.
+
+We could also store the unprunable length in the tx meta and keep the blob in one piece. Then when reading an unprunable part of the tx from the mempool, simply copy only the number of bytes needed. 
+
+## j-berman | 2026-05-13T20:29:54+00:00
+That's a solid idea. We wouldn't want to read the whole tx blob from the db (that reading takes a significant amount of time too), and I'm not sure if LMDB lets you read partial records from the db, but if it does without hacky stuff, then I'd be pretty impartial to either approach. The migration should be fast since it's just the pool, so it wouldn't be a huge deal. Could save those meta bytes for something else.
+
+## vtnerd | 2026-05-14T00:52:59+00:00
+> 'm not sure if LMDB lets you read partial records from the db, but if it does without hacky stuff
+
+LMDB just returns a pointer and a length, and the pointer is to a mmap'ed region. The OS handles reading from disk on hard page faults when the pointer access occurs. Because LMDB has overhead, the start of the data is frequently in memory (since its closest to LMDB data structures), but given these larger txes, only the first ~4 KiB will be hot in memory.
+
+So yes, LMDB likely does what you want, you just have to not access/touch/read the bytes until you need it. Copying to `std::string` counts as access obviously.
+
+## vtnerd | 2026-05-14T00:56:00+00:00
+Sorry I said soft page fault but it is likely a hard page fault (although it could be a soft fault).
+
+## j-berman | 2026-05-14T01:12:50+00:00
+I wouldn't love relying on that behavior -- I feel the migration route would be cleaner. But I'd be ok with either route.
+
+## jeffro256 | 2026-05-14T17:05:41+00:00
+@j-berman I think that it is safe to rely on the fact that LMDB isn't explicitly reading file data inside a record, only returning those pointers, since it's a pretty critical to the whole "memory mapped" part of its design. 
+
+## jeffro256 | 2026-05-14T17:11:26+00:00
+I would prefer not splitting up the record for the prunable part of the tx inside the mempool since then the database has to do extra reads and writes when verifying.
 
 # Action History
 - Created by: nahuhh | 2026-02-11T18:11:08+00:00
