@@ -5,10 +5,10 @@ author: Boog900
 assignees: []
 labels: []
 created_at: '2026-02-10T14:23:28+00:00'
-updated_at: '2026-02-10T14:23:28+00:00'
+updated_at: '2026-05-13T12:58:11+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-13T12:58:11+00:00'
 ---
 
 # Original Description
@@ -20,3 +20,4 @@ _Originally posted by @Boog900 in https://github.com/Cuprate/cuprate/pull/549#pu
 # Discussion History
 # Action History
 - Created by: Boog900 | 2026-02-10T14:23:28+00:00
+- Closed at: 2026-05-13T12:58:11+00:00
