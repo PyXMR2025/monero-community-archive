@@ -6,10 +6,10 @@ assignees: []
 labels:
 - request
 created_at: '2024-06-30T12:47:18+00:00'
-updated_at: '2026-05-04T13:52:33+00:00'
+updated_at: '2026-05-13T20:32:17+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-13T20:32:17+00:00'
 ---
 
 # Original Description
@@ -62,5 +62,9 @@ Then Haveno aborts starting. But this should be fixed [now](https://github.com/h
 ## woodser | 2024-10-08T12:22:15+00:00
 There is a 2 XMR [bounty](https://github.com/haveno-dex/haveno/issues/1076) on this issue.
 
+## hhartzer | 2026-05-13T17:07:42+00:00
+Can you try this again now that SOCKS v5 support has landed?
+
 # Action History
 - Created by: woodser | 2024-06-30T12:47:18+00:00
+- Closed at: 2026-05-13T20:32:17+00:00

@@ -5,7 +5,7 @@ author: 86dd
 assignees: []
 labels: []
 created_at: '2023-04-04T13:46:41+00:00'
-updated_at: '2026-02-06T01:57:07+00:00'
+updated_at: '2026-05-13T17:10:42+00:00'
 type: issue
 status: open
 closed_at: null
@@ -413,6 +413,11 @@ And it would also be cool to support udp:// I guess.
 I've added @boldsuck's two peers as priority. I see with netstat that connection is established, but it won't sync. Has anyone else had this problem?
 
 Edit: It seems like this is a Monero+OpenBSD+IPv6 issue. On Linux I'm able to make this work.
+
+## hhartzer | 2026-05-13T17:10:42+00:00
+With #10549 I am able to sync OpenBSD over IPv6 only as well. So now I have a Debian node and a OpenBSD node working with just IPv6 (zero IPv4 connectivity at all.)
+
+I do think we should have some IPv6 peers and maybe enable IPv6 by default, but I'm wondering if it's time to close this issue and open more specific issues (if not already open) addressing other IPv6 concerns.
 
 # Action History
 - Created by: 86dd | 2023-04-04T13:46:41+00:00
