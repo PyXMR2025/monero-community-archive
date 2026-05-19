@@ -5,7 +5,7 @@ author: unrealumbreallaaaaa
 assignees: []
 labels: []
 created_at: '2023-05-22T05:00:15+00:00'
-updated_at: '2025-03-19T17:07:04+00:00'
+updated_at: '2026-05-17T09:18:42+00:00'
 type: issue
 status: closed
 closed_at: '2023-05-23T08:35:26+00:00'
@@ -80,6 +80,19 @@ It does not add `--check-updates disabled` to the daemon automatically, you have
 
 ## Antiwh0re | 2025-03-19T17:07:02+00:00
 Oh really? So everything's fine? Like hell! Your whole project is intended for privacy protection and you are are making a fake feature with fine print at the bottom which jeopardizes that privacy! In fact there's even no fine print - you didn't bother to describe this feature in the manual, although it's present on the screenshots there. You've thrown us under the bus - go and fix that shit now!
+
+## Weltolk | 2026-05-17T09:18:42+00:00
+> Oh really? So everything's fine? Like hell! Your whole project is intended for privacy protection and you are are making a fake feature with fine print at the bottom which jeopardizes that privacy! In fact there's even no fine print - you didn't bother to describe this feature in the manual, although it's present on the screenshots there. You've thrown us under the bus - go and fix that shit now!
+
+https://docs.getmonero.org/interacting/monerod-reference/#tori2p-and-proxies
+
+https://github.com/monero-project/monero/blob/master/docs/ANONYMITY_NETWORKS.md#blockchain-sync
+
+https://github.com/monero-project/monero/pull/9443
+
+https://github.com/monero-project/monero/pull/10411
+
+https://github.com/monero-project/monero-gui/issues/4027
 
 # Action History
 - Created by: unrealumbreallaaaaa | 2023-05-22T05:00:15+00:00
