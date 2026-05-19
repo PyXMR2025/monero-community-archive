@@ -5,7 +5,7 @@ author: ComputeryPony
 assignees: []
 labels: []
 created_at: '2026-05-16T00:41:20+00:00'
-updated_at: '2026-05-16T04:48:36+00:00'
+updated_at: '2026-05-16T05:35:59+00:00'
 type: issue
 status: open
 closed_at: null
@@ -207,9 +207,6 @@ print_height
 Sure enough after turning on log-level 2 I can see it's because of an invalid coinbase tx again. Curiously though after restarting the node, it syncs past the point it was previously stuck at.
 
 I was under the assumption the bug in the scaling code was somehow allowing invalid transactions to be accepted on chain but this seems to indicate that something is corrupting the tx before getting sent to a peer as otherwise I shouldn't be getting different coinbase txs from the same node for the same block height by just restarting my node.
-
-## nahuhh | 2026-05-16T04:48:27+00:00
-Very interesting that it blocks the exclusive node, but allows the sync to continue on a subsequent run. Sounds like a consensus issue? Hopefullybwe can reproduce this reliably and get it figured out
 
 ## nahuhh | 2026-05-16T04:48:36+00:00
 Very interesting that it blocks the exclusive node, but allows the sync to continue on a subsequent run. Sounds like a consensus issue? Hopefullybwe can reproduce this reliably and get it figured out
