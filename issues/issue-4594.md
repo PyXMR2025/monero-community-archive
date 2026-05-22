@@ -6,10 +6,10 @@ assignees: []
 labels:
 - question
 created_at: '2026-05-18T19:20:21+00:00'
-updated_at: '2026-05-18T22:49:24+00:00'
+updated_at: '2026-05-19T16:31:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-19T16:31:12+00:00'
 ---
 
 # Original Description
@@ -29,3 +29,4 @@ and, i guess, whitelist the website too
 
 # Action History
 - Created by: Just-In5 | 2026-05-18T19:20:21+00:00
+- Closed at: 2026-05-19T16:31:12+00:00
