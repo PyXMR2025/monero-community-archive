@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-04-26T15:25:29+00:00'
+updated_at: '2026-05-20T16:17:52+00:00'
 type: issue
 status: open
 closed_at: null
@@ -42,12 +42,12 @@ See also: #9684.
 | [freebsd_base](https://archive.freebsd.org/old-releases/amd64/)   | 12.3           | 13.5 [2] | -      | Toolchain | ?                                                            |           | (#9667) |
 | [hidapi](https://github.com/libusb/hidapi)                        | 0.15.0         | -        | cmake  | Wallet    | No                                                           |        No |         |
 | [libsodium](https://github.com/jedisct1/libsodium)                | 1.0.18         | 1.0.22   | auto   | Daemon    | No                                                           |       Yes |         |
-| [libusb](https://github.com/libusb/libusb)                        | 1.0.27         | 1.0.29   | auto   | Wallet    | No                                                           |        No |         |
+| [libusb](https://github.com/libusb/libusb)                        | 1.0.27         | 1.0.30   | auto   | Wallet    | No                                                           |        No | #10620        |
 | [ncurses](https://ftp.gnu.org/gnu/ncurses/)                       | 6.1            | 6.6      | auto   | Daemon    | [Yes](https://repology.org/project/ncurses/cves?version=6.1) |        No |         |     
 | [openssl](https://github.com/openssl/openssl)                     | 3.5.4 (LTS)    | 3.5.6    | perl   | Daemon    | No                                                           |    Maybe? |         |
-| [protobuf](https://github.com/protocolbuffers/protobuf)           | 21.12          | 34.1     | auto   | Wallet    | No                                                           |        No | (#9478) |
+| [protobuf](https://github.com/protocolbuffers/protobuf)           | 21.12          | 35.0     | auto   | Wallet    | No                                                           |        No | (#9478) |
 | [readline](https://ftp.gnu.org/gnu/readline/)                     | 8.0            | 8.3      | auto   | Daemon    | No                                                           |        No |         |
-| [unbound](https://github.com/NLnetLabs/unbound)                   | 1.22.0         | 1.24.2   | auto   | Daemon    | No                                                           |    Maybe? |         |
+| [unbound](https://github.com/NLnetLabs/unbound)                   | 1.22.0         | 1.25.1   | auto   | Daemon    | No                                                           |    Maybe? | #10621        |
 | [zeromq](https://github.com/zeromq/libzmq)                        | 4.3.5          | -        | auto   | Daemon    | No                                                           |        No |         |
 
 
@@ -65,13 +65,6 @@ See also: #10222
 | [randomx](https://github.com/tevador/RandomX)       | 1.2.1       | 2.0      |       |
 | supercop      | Aug 26 2020 | ?      |       |
 
-## CMake
-
-TBD
-
-## Documentation
-
-TBD
 
 
 # Discussion History
