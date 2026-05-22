@@ -1,7 +1,7 @@
 ---
 title: 'When I use -f config.json paramter that error occur '
 source_url: https://github.com/xmrig/xmrig/issues/2361
-author: Zhiyuancheng
+author: ttb267
 assignees: []
 labels: []
 created_at: '2021-05-10T01:41:01+00:00'
@@ -33,4 +33,4 @@ Also, have a look at the docs: https://xmrig.com/docs/miner
 Or, `./xmrig --help`
 
 # Action History
-- Created by: Zhiyuancheng | 2021-05-10T01:41:01+00:00
+- Created by: ttb267 | 2021-05-10T01:41:01+00:00
