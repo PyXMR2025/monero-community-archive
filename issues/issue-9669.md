@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-05-20T16:17:52+00:00'
+updated_at: '2026-05-24T16:36:53+00:00'
 type: issue
 status: open
 closed_at: null
@@ -62,7 +62,7 @@ See also: #10222
 |---------------|-------------|--------|-------|
 | [gtest](https://github.com/google/googletest) | 1.15.2 | 1.17.0 | |
 | [rapidjson](https://github.com/Tencent/rapidjson)     | Jul 3 2018  | ?      |       |
-| [randomx](https://github.com/tevador/RandomX)       | 1.2.1       | 2.0      |       |
+| [randomx](https://github.com/tevador/RandomX)       | 1.2.2       | 2.0      |       |
 | supercop      | Aug 26 2020 | ?      |       |
 
 
