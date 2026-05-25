@@ -6,7 +6,7 @@ assignees: []
 labels:
 - 🔔 Priority 🔔
 created_at: '2026-05-01T21:04:50+00:00'
-updated_at: '2026-05-11T17:01:49+00:00'
+updated_at: '2026-05-24T22:29:14+00:00'
 type: issue
 status: open
 closed_at: null
@@ -14,7 +14,7 @@ closed_at: null
 
 # Original Description
 - [x]  #2656 
-- [ ] rename files to current date https://github.com/monero-project/monero-site/pull/2650
+- [x] rename files to current date https://github.com/monero-project/monero-site/pull/2650
 - [x]  #2641 
 
 
