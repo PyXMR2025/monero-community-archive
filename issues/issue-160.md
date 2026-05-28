@@ -6,7 +6,7 @@ author: Boog900
 assignees: []
 labels: []
 created_at: '2026-05-23T14:08:12+00:00'
-updated_at: '2026-05-24T23:52:35+00:00'
+updated_at: '2026-05-28T16:34:36+00:00'
 type: issue
 status: open
 closed_at: null
@@ -138,6 +138,71 @@ I'm running a Monero node on a 14 year old dual core Intel CPU that can still do
 
 ## vtnerd | 2026-05-24T23:52:35+00:00
 The alternative proposed by @tevador seems like it would be easier to implement as well. At least at a quick high-level glance - the node only has to keep state per connection instead of some global thing.
+
+## Boog900 | 2026-05-27T13:45:57+00:00
+> Can you cite a proof of storage protocol that can prove one public key per copy of blockchain? The protocol must not allow multiple nodes to generate a valid proof using the same physical copy of the blockchain.
+
+Pretty sure all proof of storage schemes would work, but here is one from the original spy node issue: https://ieeexplore.ieee.org/document/10174897
+
+You would just replace the nodes address with the public key. The blockchain would then be "encoded" with the public key instead of the public address. 
+
+> Assuming the above mentioned proof of storage protocol exists, wouldn't it have the same issue? Meaning the attacker would need only 1 IP and a few 20 TB hard drives.
+
+True, we would still need to limit it to 1 IP.
+
+---
+
+I do worry about switching from IPs to PoW for limiting spy nodes. I think it is too easy to rent CPUs. We know our current adversary is paying thousands a month for their IPs. They have shown they are willing to do more as just last month they increased their node count. Switching to pure PoW is risky IMHO, it has been demonstrated on mainnet that our current pure PoW for block mining is inadequate to an adversary willing to rent CPUs. That was against miners as well, for this the adversary would be against normal nodes.
+
+I do appreciate the simplicity though.
+
+
+## tevador | 2026-05-27T16:55:40+00:00
+> here is one from the original spy node issue: https://ieeexplore.ieee.org/document/10174897
+
+The PDF is behind a paywall. Do you have another source?
+
+
+## Boog900 | 2026-05-27T18:49:25+00:00
+[PPoS_.pdf](https://github.com/user-attachments/files/28319631/PPoS_.pdf)
+
+## tevador | 2026-05-28T04:43:01+00:00
+I don't think the cited proof of storage is practical. The way it works is to encrypt the blockchain with an algorithm that has very slow encryption and a bit faster decryption. The cited encryption speed is 10 seconds per MB of data, which means nodes would spend up to several days to encrypt the blockchain (it's non-parallelizable by design).
+
+The proof of storage itself is not very cheap, being around 1 MB in size and taking 1 second to verify.
+
+The decryption speed is also quite slow (about 0.4 s per MB), so nodes would probably have to store a separate non-encrypted copy of the blockchain for RPC/P2P purposes and the encrypted blockchain would only be used for the storage proof. This would increase the storage requirements for honest nodes as well.
+
+Also binding PoW or proof of storage to the node's IP address is problematic (dynamic IPs etc.).
+
+We'll have to find a more practical solution that still requires the attacker to rent lots of IP addresses and also use a lot of CPU resources.
+
+## Boog900 | 2026-05-28T11:37:49+00:00
+Yeah, I agree. IMO the initial encryption time and proof size is probably bearable. However, Monero wallets sync by downloading blocks so wallet sync would be too expensive. Also needing to encrypt every new block at those speeds is not great.
+
+> We'll have to find a more practical solution that still requires the attacker to rent lots of IP addresses and also use a lot of CPU resources.
+
+I don't think this is possible without global state. We could modify the first step of my proposal so instead of PoW being used to link an IP and public key we have some trusted nodes. These nodes will sign messages and let the network know of what public key belongs to what IP. This way only nodes behind an IP can claim that IP.
+
+Although trusted nodes are not ideal, I think here they are not too bad, with the only impact of bad trusted nodes being that  unreachable nodes will not receive stem txs. 
+
+## tevador | 2026-05-28T16:34:36+00:00
+> I do worry about switching from IPs to PoW for limiting spy nodes. I think it is too easy to rent CPUs. We know our current adversary is paying thousands a month for their IPs. They have shown they are willing to do more as just last month they increased their node count. Switching to pure PoW is risky IMHO, it has been demonstrated on mainnet that our current pure PoW for block mining is inadequate to an adversary willing to rent CPUs. That was against miners as well, for this the adversary would be against normal nodes.
+
+Here is a slight improvement of my proposal:
+
+1. The PoW-based stemmability test is applied on incoming connections as proposed before.
+2. When selecting stem edges, the incoming stemmable connections are processed into a list of "virtual outgoing connections". I'm calling these connections as "virtual outgoing" because they are incoming connections with applied deduplication rules as if the node was selecting peers for outgoing connections. This means the connections will be bucketed based on /16 subnets and from each bucket, a random /24 subnet will be selected and then a random stemmable connection from the selected subnet will be chosen for that round. The maximum number of virtual outgoing connections will be limited to the maximum number of outgoing connections (12 by default) with similar rules as selecting addresses to connect to from a peer list,
+3. The first stem edge is only selected from real outgoing connections. The second stem edge is selected from the union of real outgoing connections and virtual outgoing connections, where deduplication is again done over /16 subnets (in case there is both an outgoing and incoming connection from the same subnet).
+4. Local transactions are always relayed via the first stem edge.
+
+If an attacker has a large number of CPUs but only 1 IP address, they will be able to get at most 1 virtual outgoing connection to every reachable node on the network and will have to compete with other stemmable incoming connections. At best, this will give them a 1/12 chance of being selected for the second stem edge if they are the only stemmable incoming connection.
+
+If an attacker has a large number of IP addresses but only a few CPU cores, each spy node will only be able to connect to a handful of honest nodes due to PoW limitations.
+
+So basically, global throttling is done via PoW and local throttling is done via subnet deduplication. This avoids the need to sync a global state.
+
+It would be interesting to run simulations and find what the optimal strategy for an eavesdropping adversary would be with this solution, considering that local transactions are not relayed to incoming connections. An attacker using only incoming connections would never see a stem transaction in its first hop.
 
 # Action History
 - Created by: Boog900 | 2026-05-23T14:08:12+00:00
