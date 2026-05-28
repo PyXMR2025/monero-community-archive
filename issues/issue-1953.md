@@ -175,7 +175,7 @@ But how do we know that's the actual uncompressed, unpruned monero block chain s
 ## zigomi | 2022-11-30T03:19:43+00:00
 @maltfield what's the muzzle on your face for? 
 
-## puppymati | 2023-04-11T23:42:40+00:00
+## rosymati | 2023-04-11T23:42:40+00:00
 I feel like the answers above are a bit overkill.
 Instead by using [jq](https://stedolan.github.io/jq/) it's as simple as using this oneliner
 ```bash
@@ -211,7 +211,7 @@ Above output in Debian 11.
 
 ...but afaict **this doesn't solve the question of "*how much space do I need if I'm syncing the monero blockchain for the first time*"** because the output is the compressed blockchain. First sync (before pruning) would be much larger, iirc.
 
-## puppymati | 2023-05-08T20:26:38+00:00
+## rosymati | 2023-05-08T20:26:38+00:00
 I am not expert so take this with a grain of salt, but due to the nature of the blokchain I do not think it is possible to have a proper "how much space do I need if I'm syncing the monero blockchain for the first time" size. There might be ways to extimate it but querying the database size is probably the closest thing to that we have right now.
 
 ## jermanuts | 2025-08-06T01:08:56+00:00

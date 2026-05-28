@@ -1,7 +1,7 @@
 ---
 title: Add Superswap.cx to the list of merchants
 source_url: https://github.com/monero-project/monero-site/issues/2616
-author: swapsuper
+author: ghost
 assignees: []
 labels: []
 created_at: '2026-04-07T17:48:49+00:00'
@@ -33,7 +33,7 @@ identity verification.
 ## plowsof | 2026-04-08T11:55:49+00:00
 Xmr address?
 
-## swapsuper | 2026-04-10T06:33:56+00:00
+## ghost | 2026-04-10T06:33:56+00:00
 45kfd2Yw3RRU9e4Ef2bRPGEm8DqRf6w1rddrBUXNthqjgub73VsRMfZGGAVXoMdNugEGyd8pyPiV19W7vMpKyX724cbNBcb
 
 ## plowsof | 2026-04-10T10:29:39+00:00
@@ -45,4 +45,4 @@ apple pie recipe?
 Sent. please confirm
 
 # Action History
-- Created by: swapsuper | 2026-04-07T17:48:49+00:00
+- Created by: ghost | 2026-04-07T17:48:49+00:00
