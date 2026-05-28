@@ -5,7 +5,7 @@ author: ZombB
 assignees: []
 labels: []
 created_at: '2023-10-22T10:41:28+00:00'
-updated_at: '2023-11-04T20:08:51+00:00'
+updated_at: '2026-05-26T16:16:42+00:00'
 type: issue
 status: closed
 closed_at: '2023-11-04T20:08:51+00:00'
@@ -48,6 +48,9 @@ Then from one day to another it stopped working. The daemon did not start. This 
 
 ## ZombB | 2023-11-04T20:08:51+00:00
 duplicate of #9055 https://github.com/monero-project/monero/issues/9055
+
+## rslay | 2026-05-26T16:16:41+00:00
+I ran it with the flag `monerod --db-salvage` and that saved me from having to resync from the start
 
 # Action History
 - Created by: ZombB | 2023-10-22T10:41:28+00:00
