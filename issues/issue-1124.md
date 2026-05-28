@@ -5,7 +5,7 @@ author: Rucknium
 assignees: []
 labels: []
 created_at: '2024-12-11T19:02:44+00:00'
-updated_at: '2026-01-29T11:51:37+00:00'
+updated_at: '2026-05-26T05:36:00+00:00'
 type: issue
 status: open
 closed_at: null
@@ -222,6 +222,9 @@ Thanks
 > I agree it's confusing when [@ditatompel](https://github.com/ditatompel) 's website says that no onion or I2P remote nodes have the ban list enabled. Maybe I can work with [@ditatompel](https://github.com/ditatompel) to write some brief explanation text about it.
 
 Thanks @Rucknium, I appreciate it! For now, I've [added a short explanation](https://github.com/ditatompel/xmr-remote-nodes/pull/219) and a link to my site explaining why there are no Tor or I2P nodes listed as having enabled the MRL and DNS ban lists. 
+
+## plowsof | 2026-05-26T05:36:00+00:00
+to remove the constraints from supplying IP's in DNS TXT records and ease the bandwidth requirements on the DNS servers, an alternative `hash;download_url` approach can be found here which is functional and under review https://github.com/monero-project/monero/pull/10595
 
 # Action History
 - Created by: Rucknium | 2024-12-11T19:02:44+00:00

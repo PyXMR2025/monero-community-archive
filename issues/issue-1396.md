@@ -1,14 +1,14 @@
 ---
-title: 'Cuprate Meeting #104 - Tuesday, 2026-05-26, UTC 18:00'
-source_url: https://github.com/monero-project/meta/issues/1392
+title: 'Cuprate Meeting #105 - Tuesday, 2026-06-02, UTC 18:00'
+source_url: https://github.com/monero-project/meta/issues/1396
 author: moo900
 assignees: []
 labels: []
-created_at: '2026-05-19T18:21:11+00:00'
+created_at: '2026-05-26T18:44:00+00:00'
 updated_at: '2026-05-26T18:44:00+00:00'
 type: issue
-status: closed
-closed_at: '2026-05-26T18:44:00+00:00'
+status: open
+closed_at: null
 ---
 
 # Original Description
@@ -31,24 +31,8 @@ Main discussion topics:
 3. Project: What is next for Cuprate?
 4. Any other business
 
-Previous meeting: #1386
+Previous meeting: #1392
 
 # Discussion History
-## moo900 | 2026-05-26T18:43:59+00:00
-## Meeting logs
-```
-boog900: My update is I worked on a protocol to prove nodes don't make too many connections 
-```
-```
-boog900: Also worked on rpc
-```
-```
-boog900: Should have the rest prd soon
-```
-```
-boog900: !meeting 
-```
-
 # Action History
-- Created by: moo900 | 2026-05-19T18:21:11+00:00
-- Closed at: 2026-05-26T18:44:00+00:00
+- Created by: moo900 | 2026-05-26T18:44:00+00:00
