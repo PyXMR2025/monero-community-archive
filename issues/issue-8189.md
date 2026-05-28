@@ -5,10 +5,10 @@ author: undeath
 assignees: []
 labels: []
 created_at: '2022-02-21T14:37:01+00:00'
-updated_at: '2022-03-27T16:01:04+00:00'
+updated_at: '2026-05-25T20:58:32+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-25T20:58:32+00:00'
 ---
 
 # Original Description
@@ -60,5 +60,9 @@ Shouldn't the default DB config be changed?
 ## hyc | 2022-03-27T16:01:04+00:00
 Have considered changing the default back for everything except Windows...
 
+## selsta | 2026-05-25T20:58:32+00:00
+Somewhat addressed by #9135 and #8839.
+
 # Action History
 - Created by: undeath | 2022-02-21T14:37:01+00:00
+- Closed at: 2026-05-25T20:58:32+00:00

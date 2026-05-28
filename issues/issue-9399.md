@@ -9,10 +9,10 @@ labels:
 - low priority
 - discussion
 created_at: '2024-07-15T15:49:41+00:00'
-updated_at: '2024-07-17T00:14:30+00:00'
+updated_at: '2026-05-26T00:38:26+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T00:38:26+00:00'
 ---
 
 # Original Description
@@ -33,3 +33,4 @@ I don't think this has a realistic chance of being implemented. It would require
 
 # Action History
 - Created by: milahu | 2024-07-15T15:49:41+00:00
+- Closed at: 2026-05-26T00:38:26+00:00

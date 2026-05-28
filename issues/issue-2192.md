@@ -6,10 +6,10 @@ assignees: []
 labels:
 - enhancement
 created_at: '2017-07-23T03:42:43+00:00'
-updated_at: '2018-01-08T12:48:34+00:00'
+updated_at: '2026-05-26T16:04:28+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T16:04:27+00:00'
 ---
 
 # Original Description
@@ -57,5 +57,9 @@ I hope it's useful!
 ## dEBRUYNE-1 | 2018-01-08T12:45:29+00:00
 +enhancement
 
+## selsta | 2026-05-26T16:04:27+00:00
+https://github.com/tevador/RandomX/pull/320
+
 # Action History
 - Created by: yuhong | 2017-07-23T03:42:43+00:00
+- Closed at: 2026-05-26T16:04:27+00:00

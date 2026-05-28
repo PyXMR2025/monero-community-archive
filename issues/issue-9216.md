@@ -8,10 +8,10 @@ labels:
 - low priority
 - more info needed
 created_at: '2024-03-07T13:58:39+00:00'
-updated_at: '2024-03-12T02:19:03+00:00'
+updated_at: '2026-05-25T21:58:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-25T21:58:04+00:00'
 ---
 
 # Original Description
@@ -55,3 +55,4 @@ The current behavior is working as intended.
 
 # Action History
 - Created by: Jessie-1 | 2024-03-07T13:58:39+00:00
+- Closed at: 2026-05-25T21:58:04+00:00

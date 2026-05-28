@@ -9,7 +9,7 @@ labels:
 - discussion
 - build system
 created_at: '2024-08-20T14:15:45+00:00'
-updated_at: '2026-04-22T20:37:06+00:00'
+updated_at: '2026-05-27T00:01:39+00:00'
 type: issue
 status: open
 closed_at: null
@@ -138,6 +138,19 @@ The next time we branch from `master` releases will be built with [Guix](https:/
 >why not drop support for 18.04? 
 
 As it stands, we don't support 18.04. (See table in OP.)
+
+## vtnerd | 2026-05-26T22:53:05+00:00
+I hate to be the one that asks but ...
+
+do we include Red Hat and OpenSuse into this mix? Do any users target these platforms? I have a AlmaLinux 9,10 build for LWS that appears to work with upstream Monero (with a min boost 1.70).
+
+## tobtoht | 2026-05-26T23:23:58+00:00
+OpenSuse releases have a [short lifecycle](https://endoflife.date/opensuse). Its packages will be more recent than Debian / Ubuntu.
+
+I'm not sure how relevant AlmaLinux is for Monero developers or users given its focus on enterprise environments. It has 5 years of standard support and another 5 years of security support. _If_ there is demand, it seems reasonable to use the end of "standard support" as our EOL date. This is more in line with the roughly 5 years of support Debian and Ubuntu get.
+
+## vtnerd | 2026-05-27T00:01:39+00:00
+Yes this is why I asked. There's likely few users trying direct compilation on RHEL/AlmaLinux. The standard support cycle looks to be Boost 1.75 at minimum (and therefore likely newer for all libs mentioned above).
 
 # Action History
 - Created by: tobtoht | 2024-08-20T14:15:45+00:00

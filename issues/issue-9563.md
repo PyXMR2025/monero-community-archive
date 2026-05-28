@@ -6,10 +6,10 @@ assignees: []
 labels:
 - question
 created_at: '2024-11-11T09:21:22+00:00'
-updated_at: '2024-12-13T23:35:03+00:00'
+updated_at: '2026-05-26T00:35:55+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T00:35:55+00:00'
 ---
 
 # Original Description
@@ -53,3 +53,4 @@ https://github.com/monero-project/monero?tab=readme-ov-file#cross-compiling
 
 # Action History
 - Created by: dtcomp | 2024-11-11T09:21:22+00:00
+- Closed at: 2026-05-26T00:35:55+00:00

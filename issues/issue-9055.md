@@ -5,7 +5,7 @@ author: ZombB
 assignees: []
 labels: []
 created_at: '2023-11-04T20:07:12+00:00'
-updated_at: '2023-11-11T14:22:04+00:00'
+updated_at: '2026-05-26T16:17:52+00:00'
 type: issue
 status: closed
 closed_at: '2023-11-11T14:20:55+00:00'
@@ -46,6 +46,9 @@ I have had this issue occur with a corrupted blockchain.
 
 ## ZombB | 2023-11-11T14:22:04+00:00
 Thank you for the hint. I synced up from scratch again and now everything works again. Closing this issue.
+
+## rslay | 2026-05-26T16:17:51+00:00
+`monerod --db-salvage` saved me from having to redo my whole blockchain, saves it if it is corrupted from a hard reboot or whatever else
 
 # Action History
 - Created by: ZombB | 2023-11-04T20:07:12+00:00

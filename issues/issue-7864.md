@@ -5,10 +5,10 @@ author: 9mido
 assignees: []
 labels: []
 created_at: '2021-08-16T04:33:49+00:00'
-updated_at: '2022-12-18T09:22:24+00:00'
+updated_at: '2026-05-26T16:00:13+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T15:58:42+00:00'
 ---
 
 # Original Description
@@ -37,5 +37,9 @@ Bitcoin will eventually have smart contracts with the taproot update. Maybe mone
 There are indeed many use cases for private and opt in public smart contracts. 
 The ecosystem would grow and options arise, so mostly legit DEX / liability loans etc and some scams.
 
+## selsta | 2026-05-26T15:58:42+00:00
+Closing this for now, as it's unlikely to be integrated in its current form. To move forward, this would require a formal proposal or specification with a concrete design submitted to the research-lab repository.
+
 # Action History
 - Created by: 9mido | 2021-08-16T04:33:49+00:00
+- Closed at: 2026-05-26T15:58:42+00:00

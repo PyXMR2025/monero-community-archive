@@ -7,10 +7,10 @@ labels:
 - question
 - low priority
 created_at: '2024-07-29T15:49:02+00:00'
-updated_at: '2024-08-17T14:49:58+00:00'
+updated_at: '2026-05-26T15:51:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T15:51:56+00:00'
 ---
 
 # Original Description
@@ -37,5 +37,9 @@ There is a monero fork that implements exactly this:
 https://git.townforge.net/townforge/townforge/commit/7c70d0ef6e4900434e54cb7cf071074d3d4da66b
 
 
+## selsta | 2026-05-26T15:51:56+00:00
+Closing as there are currently no plans to add this to monero itself.
+
 # Action History
 - Created by: developergames2d | 2024-07-29T15:49:02+00:00
+- Closed at: 2026-05-26T15:51:56+00:00

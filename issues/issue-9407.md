@@ -8,10 +8,10 @@ labels:
 - easy
 - build system
 created_at: '2024-07-27T08:44:07+00:00'
-updated_at: '2024-07-28T02:06:12+00:00'
+updated_at: '2026-05-26T00:37:16+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T00:37:16+00:00'
 ---
 
 # Original Description
@@ -29,5 +29,9 @@ https://github.com/monero-project/monero/blob/caa62bc9ea1c5f2ffe3ffa440ad230e1de
 ## SpaceSleuth | 2024-07-28T02:06:10+00:00
 Pull request: https://github.com/monero-project/monero/pull/9409
 
+## selsta | 2026-05-26T00:37:11+00:00
+#10312
+
 # Action History
 - Created by: 0xFFFC0000 | 2024-07-27T08:44:07+00:00
+- Closed at: 2026-05-26T00:37:16+00:00

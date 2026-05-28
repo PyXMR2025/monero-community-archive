@@ -6,10 +6,10 @@ assignees: []
 labels:
 - question
 created_at: '2025-02-23T19:49:39+00:00'
-updated_at: '2025-02-24T21:58:40+00:00'
+updated_at: '2026-05-26T00:35:10+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T00:35:10+00:00'
 ---
 
 # Original Description
@@ -156,3 +156,4 @@ https://github.com/monero-project/monero/actions/runs/13504907018/job/3773213370
 
 # Action History
 - Created by: batterhour | 2025-02-23T19:49:39+00:00
+- Closed at: 2026-05-26T00:35:10+00:00

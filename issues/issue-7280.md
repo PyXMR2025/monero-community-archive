@@ -5,10 +5,10 @@ author: lh1008
 assignees: []
 labels: []
 created_at: '2021-01-05T17:13:10+00:00'
-updated_at: '2022-05-25T10:04:01+00:00'
+updated_at: '2026-05-25T21:40:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-25T21:40:57+00:00'
 ---
 
 # Original Description
@@ -55,5 +55,9 @@ Okay, thank you for the clarification. Should this issue be closed?
 ## moneromooo-monero | 2021-01-20T15:41:06+00:00
 Not sure. I guess there's an argument for stopping it till next wallet restart too.
 
+## selsta | 2026-05-25T21:40:57+00:00
+Pay for RPC support was removed from simplewallet.
+
 # Action History
 - Created by: lh1008 | 2021-01-05T17:13:10+00:00
+- Closed at: 2026-05-25T21:40:57+00:00

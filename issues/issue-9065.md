@@ -8,10 +8,10 @@ labels:
 - low priority
 - proposal
 created_at: '2023-11-10T18:49:26+00:00'
-updated_at: '2023-12-07T20:05:02+00:00'
+updated_at: '2026-05-26T15:48:15+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T15:48:15+00:00'
 ---
 
 # Original Description
@@ -39,5 +39,9 @@ I've created this issue to track merging it into upstream
 ## jeffro256 | 2023-12-07T19:35:15+00:00
 Why should recurring payments be merged upstream?
 
+## selsta | 2026-05-26T15:48:15+00:00
+Closing this as it's unlikely this will be added upstream.
+
 # Action History
 - Created by: d4f5409d | 2023-11-10T18:49:26+00:00
+- Closed at: 2026-05-26T15:48:15+00:00
