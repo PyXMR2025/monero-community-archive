@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-05-11T23:39:39+00:00'
-updated_at: '2026-05-13T04:47:09+00:00'
+updated_at: '2026-05-27T16:28:16+00:00'
 type: issue
 status: open
 closed_at: null
@@ -76,6 +76,9 @@ That would be solved by avoiding relaying if the tx's `verID != calculated`.
 EDIT: ignore, I was reading the wrong code. #204 *is* applied to beta, and does not impact the above issues.
 
 ~~#204 is also not applied to beta :/ that would make this issue 2 a no-drop-offense.~~
+
+## j-berman | 2026-05-27T16:28:16+00:00
+#385 addresses issue 2
 
 # Action History
 - Created by: j-berman | 2026-05-11T23:39:39+00:00

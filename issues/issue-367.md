@@ -5,10 +5,10 @@ author: redsh4de
 assignees: []
 labels: []
 created_at: '2026-05-09T02:10:49+00:00'
-updated_at: '2026-05-10T14:44:01+00:00'
+updated_at: '2026-05-27T10:09:50+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-27T10:09:50+00:00'
 ---
 
 # Original Description
@@ -84,5 +84,9 @@ i reckon this is the only `std::variant` bug because it's the only place we memc
 
 Replacing `std::variant` in `OutputPair` with a plain struct with a type field should fix it since both libs would lay it out identically, but maybe there's a cleaner fix
 
+## redsh4de | 2026-05-27T10:09:50+00:00
+fixed by #370!
+
 # Action History
 - Created by: redsh4de | 2026-05-09T02:10:49+00:00
+- Closed at: 2026-05-27T10:09:50+00:00

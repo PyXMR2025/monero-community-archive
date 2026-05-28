@@ -5,10 +5,10 @@ author: ComputeryPony
 assignees: []
 labels: []
 created_at: '2026-05-16T16:25:07+00:00'
-updated_at: '2026-05-17T06:11:07+00:00'
+updated_at: '2026-05-27T16:24:10+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-27T16:24:10+00:00'
 ---
 
 # Original Description
@@ -114,5 +114,9 @@ You can cherry-pick #360
 
 this should fix the unrestricted rpc
 
+## j-berman | 2026-05-27T16:24:10+00:00
+#360 is now included in the latest
+
 # Action History
 - Created by: ComputeryPony | 2026-05-16T16:25:07+00:00
+- Closed at: 2026-05-27T16:24:10+00:00

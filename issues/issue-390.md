@@ -5,10 +5,10 @@ author: ComputeryPony
 assignees: []
 labels: []
 created_at: '2026-05-16T00:41:20+00:00'
-updated_at: '2026-05-16T05:35:59+00:00'
+updated_at: '2026-05-27T16:26:07+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-27T16:26:07+00:00'
 ---
 
 # Original Description
@@ -211,5 +211,9 @@ I was under the assumption the bug in the scaling code was somehow allowing inva
 ## nahuhh | 2026-05-16T04:48:36+00:00
 Very interesting that it blocks the exclusive node, but allows the sync to continue on a subsequent run. Sounds like a consensus issue? Hopefullybwe can reproduce this reliably and get it figured out
 
+## j-berman | 2026-05-27T16:26:07+00:00
+Should be resolved by v2.0 (#393)
+
 # Action History
 - Created by: ComputeryPony | 2026-05-16T00:41:20+00:00
+- Closed at: 2026-05-27T16:26:07+00:00
