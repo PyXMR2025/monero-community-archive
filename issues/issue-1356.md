@@ -23,7 +23,7 @@ when i set like this  "max-threads-hint": 50,  but the cpu also 100%
 ## xmrig | 2019-12-07T15:19:06+00:00
 Merge with #1385
 
-## GusevVasily | 2023-08-23T13:01:41+00:00
+## gusevvasily | 2023-08-23T13:01:41+00:00
 > Merge with #1385
 
 Not found #1385.

@@ -7,10 +7,10 @@ assignees: []
 labels:
 - arm
 created_at: '2026-05-25T08:06:32+00:00'
-updated_at: '2026-05-25T09:12:47+00:00'
+updated_at: '2026-05-26T07:50:01+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-26T07:45:04+00:00'
 ---
 
 # Original Description
@@ -64,5 +64,9 @@ index 51998e29..4b23b37d 100644
 Native ARM with MSVC for Windows is not supported; for native builds, you must use MSYS2 with clang.
 arm64ec has never been tested and, as a result, is not supported either.
 
+## KarenHuang2016 | 2026-05-26T07:45:00+00:00
+@SChernykh The error LNK2001 is still reported after applied the patch. As @xmrig mentioned arm64ec is not support with MSVC on Windows, we will stop testing it. 
+
 # Action History
 - Created by: KarenHuang2016 | 2026-05-25T08:06:32+00:00
+- Closed at: 2026-05-26T07:45:04+00:00
