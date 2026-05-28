@@ -5,10 +5,10 @@ author: redsh4de
 assignees: []
 labels: []
 created_at: '2026-05-20T13:30:36+00:00'
-updated_at: '2026-05-20T14:14:23+00:00'
+updated_at: '2026-05-27T14:04:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-05-27T14:04:43+00:00'
 ---
 
 # Original Description
@@ -26,3 +26,4 @@ currently `logging.rs` builds the stdout layer with ANSI on unconditionally, so 
 # Discussion History
 # Action History
 - Created by: redsh4de | 2026-05-20T13:30:36+00:00
+- Closed at: 2026-05-27T14:04:43+00:00
