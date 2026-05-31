@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-05-12T20:31:00+00:00'
-updated_at: '2026-05-14T14:55:10+00:00'
+updated_at: '2026-05-30T22:56:01+00:00'
 type: issue
 status: open
 closed_at: null
@@ -35,6 +35,9 @@ I'll update this comment with more clarity on step 4, but for now this doesn't l
 
 ## selsta | 2026-05-14T14:55:10+00:00
 [failed_switch.log.zip](https://github.com/user-attachments/files/27764697/failed_switch.log.zip)
+
+## j-berman | 2026-05-30T22:56:01+00:00
+Tbc, @selsta 's fail to switch error was caused by the v1 consensus issue (#393). @SNeedlewoods `Failed to switch` looks like [this is the cause](https://github.com/seraphis-migration/monero/issues/374#issuecomment-4443482031).
 
 # Action History
 - Created by: j-berman | 2026-05-12T20:31:00+00:00
