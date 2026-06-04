@@ -2,7 +2,7 @@
 title: 'Bug: start_height not being respected both in "refresh" RPC call and Wallet.cpp
   API.'
 source_url: https://github.com/monero-project/monero/issues/9362
-author: AlwaysCompile
+author: ghost
 assignees: []
 labels:
 - bug
@@ -204,4 +204,4 @@ And
 Apart from the current incorrect estimate of which you already proposed a possible solution (`estimate - thousands`) I think that apart from the Code fix. Docs need to be in sync with the idea, since `refresh` function has this unclear behavior of skipping blocks that it thinks it already scanned. 
 
 # Action History
-- Created by: AlwaysCompile | 2024-06-11T18:57:21+00:00
+- Created by: ghost | 2024-06-11T18:57:21+00:00

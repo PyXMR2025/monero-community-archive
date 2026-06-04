@@ -5,10 +5,10 @@ author: SamsungGalaxyPlayer
 assignees: []
 labels: []
 created_at: '2019-03-04T04:36:14+00:00'
-updated_at: '2020-07-10T17:05:50+00:00'
+updated_at: '2026-06-03T13:53:07+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-03T13:53:07+00:00'
 ---
 
 # Original Description
@@ -55,5 +55,9 @@ If large batched transactions are created where the outputs > ringsize, the sele
 ## moneromooo-monero | 2019-03-04T10:23:32+00:00
 That seems like a good idea at first glance.
 
+## selsta | 2026-06-03T13:53:07+00:00
+I think this can be closed as we are moving towards FCMP++.
+
 # Action History
 - Created by: SamsungGalaxyPlayer | 2019-03-04T04:36:14+00:00
+- Closed at: 2026-06-03T13:53:07+00:00

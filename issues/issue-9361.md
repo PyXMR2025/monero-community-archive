@@ -2,7 +2,7 @@
 title: 'Disucssion: FIRST_REFRESH_GRANULARITY set too high; causing excessive node
   bandwidth / processing'
 source_url: https://github.com/monero-project/monero/issues/9361
-author: AlwaysCompile
+author: ghost
 assignees: []
 labels:
 - discussion
@@ -64,4 +64,4 @@ And to be specific we use `FIRST_REFRESH_GRANULARITY` as a multiplier. Not the d
 2. https://github.com/monero-project/monero/blob/893916ad091a92e765ce3241b94e706ad012b62a/src/wallet/wallet2.cpp#L3012
 
 # Action History
-- Created by: AlwaysCompile | 2024-06-11T18:47:06+00:00
+- Created by: ghost | 2024-06-11T18:47:06+00:00

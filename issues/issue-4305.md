@@ -5,10 +5,10 @@ author: aeon1234
 assignees: []
 labels: []
 created_at: '2018-08-26T10:35:13+00:00'
-updated_at: '2018-09-03T05:53:01+00:00'
+updated_at: '2026-06-03T14:56:20+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-03T14:56:20+00:00'
 ---
 
 # Original Description
@@ -90,5 +90,9 @@ From a strict ring signature perspective, churning increases the number of possi
 
 In short, research is clearly pointing towards churning having potentially positive effects, but the best way to get these effects is not well-defined. As a result, we shouldn't incorporate this into the wallet yet, since we would need to have these definitions first. However, once we have a better idea, it should clearly be added.
 
+## selsta | 2026-06-03T14:56:20+00:00
+There are no plans to implement this feature at the moment, especially with the upcoming FCMP++ ugrade.
+
 # Action History
 - Created by: aeon1234 | 2018-08-26T10:35:13+00:00
+- Closed at: 2026-06-03T14:56:20+00:00

@@ -2,7 +2,7 @@
 title: '"Refresh" logic not resuming refresh from correct height causing excessive
   bandwidth / processing for nodes'
 source_url: https://github.com/monero-project/monero/issues/9358
-author: AlwaysCompile
+author: ghost
 assignees: []
 labels:
 - bug
@@ -46,4 +46,4 @@ Unfortunately I am not a programmer, so I cannot really follow the code base.  B
 
 # Discussion History
 # Action History
-- Created by: AlwaysCompile | 2024-06-11T01:14:14+00:00
+- Created by: ghost | 2024-06-11T01:14:14+00:00

@@ -2,7 +2,7 @@
 title: 'Privacy Issue: Unneccesarry merging of coins makes users more traceable (broken
   change management)'
 source_url: https://github.com/monero-project/monero/issues/9350
-author: AlwaysCompile
+author: ghost
 assignees: []
 labels:
 - low priority
@@ -70,7 +70,7 @@ Maybe I'm misunderstanding something but freeze / thaw is on an output level, no
 ## selsta | 2024-06-03T17:45:36+00:00
 What you are suggesting is similar to using subaccounts, change outputs won't be merged between different accounts.
 
-## AlwaysCompile | 2024-06-03T17:55:20+00:00
+## ghost | 2024-06-03T17:55:20+00:00
 You are right that freeze / thaw is based on keyimage I didn't really analyze it because output-level coin control is inherently broken due to dust attacking. Even though I used that terminology I actually meant the internal spending control used by wallet2.cpp. This is primary based on subaddress index. You can see this in the wallet RPC:
 
 > subaddr_indices - array of unsigned int; (Optional) Transfer from this set of subaddresses. (Defaults to empty - all indices)
@@ -93,4 +93,4 @@ So, my question is, **why not handle change in a more elegant manner so that per
 Did you try to use accounts instead of subaddresses? That should result in the behaviour you are asking for.
 
 # Action History
-- Created by: AlwaysCompile | 2024-06-03T17:24:44+00:00
+- Created by: ghost | 2024-06-03T17:24:44+00:00

@@ -2,7 +2,7 @@
 title: 'Privacy: Transaction uniformity and receiving address type -- practical statistical
   de-anonymization'
 source_url: https://github.com/monero-project/monero/issues/9351
-author: AlwaysCompile
+author: ghost
 assignees: []
 labels:
 - low priority
@@ -88,4 +88,4 @@ There is a new paper at this conference, but the PDF has not been released yet: 
 
 
 # Action History
-- Created by: AlwaysCompile | 2024-06-03T19:28:59+00:00
+- Created by: ghost | 2024-06-03T19:28:59+00:00
