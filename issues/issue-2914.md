@@ -1,7 +1,7 @@
 ---
 title: Cannot use POCL
 source_url: https://github.com/xmrig/xmrig/issues/2914
-author: kayshinonome
+author: ghost
 assignees: []
 labels: []
 created_at: '2022-01-31T21:15:00+00:00'
@@ -51,4 +51,4 @@ POCL should enable OpenCL for my cpu, but it cannot load the runtime (I checked 
 
 # Discussion History
 # Action History
-- Created by: kayshinonome | 2022-01-31T21:15:00+00:00
+- Created by: ghost | 2022-01-31T21:15:00+00:00

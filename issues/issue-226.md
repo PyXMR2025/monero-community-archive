@@ -1,7 +1,7 @@
 ---
 title: SSL/TLS support
 source_url: https://github.com/xmrig/xmrig/issues/226
-author: zDEATHz
+author: eapluzhnik
 assignees: []
 labels:
 - enhancement
@@ -132,5 +132,5 @@ SSL/TLS will be available in next v2.8 release #758.
 Thank you.
 
 # Action History
-- Created by: zDEATHz | 2017-11-28T10:36:11+00:00
+- Created by: eapluzhnik | 2017-11-28T10:36:11+00:00
 - Closed at: 2018-09-22T05:59:51+00:00
