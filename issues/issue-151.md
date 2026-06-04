@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2025-10-24T10:50:46+00:00'
-updated_at: '2026-05-13T08:02:34+00:00'
+updated_at: '2026-06-03T10:07:59+00:00'
 type: issue
 status: open
 closed_at: null
@@ -175,7 +175,7 @@ I've extrapolated the attack times from ref. [14] to the number of T-gates for C
 
 There is a variant of CSIDH called CSURF, which was published in 2019 [17]. CSURF requires `p = 7 mod 8` (CSIDH has `p = 3 mod 8`) and uses elliptic curves in the form of <code>y<sup>2</sup> = x<sup>3</sup> + Ax<sup>2</sup> - x</code>. It can use 2-isogenies to slightly speed up the calculation of the group action (the claimed speed-up is around 5%). Otherwise it's very similar to CSIDH. 
 
-A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [18]. Their main result is that a CSIDH private key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [19]). This means that CSURF has better resistance to side channel attacks (which might leak some private key bits) but also to quantum attacks. For example, the Kuperberg's sieve calculations from ref. [11] assume that all but the lowest 56 bits of the secret key need to be recovered by the quantum computer. Ref. [18] shows that only 139 bits of the 256-bit CSIDH-512 private key need to be recovered quantumly (the rest can be recovered classically in polynomial time).
+A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [18]. Their main result is that a CSIDH ~~private key~~ shared key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [19]). This means that CSURF has better resistance to side channel attacks (which might leak some ~~private key~~ shared key bits) ~~but also to quantum attacks. For example, the Kuperberg's sieve calculations from ref. [11] assume that all but the lowest 56 bits of the secret key need to be recovered by the quantum computer. Ref. [18] shows that only 139 bits of the 256-bit CSIDH-512 private key need to be recovered quantumly (the rest can be recovered classically in polynomial time).~~
 
 Further research shows that CSURF is not actually faster than CSIDH, despite the claims from ref. [17]. The problem is that elliptic curves <code>y<sup>2</sup> = x<sup>3</sup> + Ax<sup>2</sup> - x</code> have slower projective formulas than standard Montgomery curves. Specifically, the cost per ladder step is 11M + 5S vs 8M + 4S [20]. This makes CSURF practically slower than CSIDH because high performance implementations use projective formulas.
 
@@ -274,7 +274,7 @@ Futher CSIDH-related research:
 
 There is a variant of CSIDH called CSURF, which was published in 2019 [[17](https://eprint.iacr.org/2019/1404)]. CSURF requires `p = 7 mod 8` (CSIDH has `p = 3 mod 8`) and uses elliptic curves in the form of <code>y<sup>2</sup> = x<sup>3</sup> + Ax<sup>2</sup> - x</code>. It can use 2-isogenies to slightly speed up the calculation of the group action (the speed-up is around 5%). Otherwise it's very similar to CSIDH. 
 
-A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [[18](https://eprint.iacr.org/2023/1409)]. Their main result is that a CSIDH private key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [[19](https://eprint.iacr.org/2024/1330)]). This means that CSURF has better resistance to side channel attacks (which might leak some private key bits) but also to quantum attacks. For example, the Kuperberg's sieve calculations from ref. [11] assume that all but the lowest 56 bits of the secret key need to be recovered by the quantum computer. Ref. 18 shows that only 139 bits of the 256-bit CSIDH-512 private key need to be recovered quantumly (the rest can be recovered classically in polynomial time).
+A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [[18](https://eprint.iacr.org/2023/1409)]. Their main result is that a CSIDH ~~private~~ shared key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [[19](https://eprint.iacr.org/2024/1330)]). This means that CSURF has better resistance to side channel attacks (which might leak some ~~private~~ shared key bits) ~~but also to quantum attacks. For example, the Kuperberg's sieve calculations from ref. [11] assume that all but the lowest 56 bits of the secret key need to be recovered by the quantum computer. Ref. 18 shows that only 139 bits of the 256-bit CSIDH-512 private key need to be recovered quantumly (the rest can be recovered classically in polynomial time).~~
 
 The conclusion is that CSURF might be not only a faster but also a more secure variant of CSIDH.
 
@@ -352,7 +352,7 @@ Based on the above arguments, we select CSIDH-1024 as a good compromise between 
 
 While traditional CSIDH operates on the "floor" of the isogeny graph, there is a variant called CSURF that operates "on the surface" [6]. CSURF requires $p \equiv 7\ (mod\ 8)$, while CSIDH has $p \equiv 3\ (mod\ 8)$.
 
-A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [7]. Their main result is that a CSIDH private key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [8]). This means that CSURF has better resistance to side channel attacks (which might leak some private key bits) but also to quantum attacks.
+A 2023 paper analyzed the recovery of CSIDH/CSURF private keys if some bits are known [7]. Their main result is that a CSIDH ~~private~~ shared key can be quickly recovered if ~54% of the high bits are known. For CSURF, this raises to ~76% (improved to 74% in a later paper [8]). This means that CSURF has better resistance to side channel attacks (which might leak some ~~private~~ shared key bits) ~~but also to quantum attacks~~.
 
 The original CSURF paper recommeneded to use elliptic curves in the form of $y^2 = x^3 + Ax^2 - x$, but this comes with a significant performance penalty due to slower ladder formulas [9]. However, it is also possible to use standard Montgomery curves $y^2 = x^3 + Ax^2 + x$, but this requires keys to be selected from one of two orbits [7, Remark 3]. An advantage of this approach is that negating `A` produces a curve in the other orbit, which can be detected and prevents some key control attacks on CSIDH [10].
 
@@ -507,7 +507,7 @@ After reading [Low Memory Attacks on Small Key CSIDH](https://eprint.iacr.org/20
 I updated my proposal to use the conservative key space of $K = 2^{256}$. This comes with a ~30% performance penalty, but provides 128 bits of security regardless of memory, which makes things easier for a future audit.
 
 ## tevador | 2026-04-09T05:09:44+00:00
-### Optimized key spaces
+### Optimized key spaces [OBSOLETE]
 
 The previous comment recommends to use a 256-bit key space for all CSIDH private keys.
 
@@ -802,6 +802,58 @@ The quantum timelines are *very* pessimistic (they assume a very fast progress i
 
 These scenarios don't assume a classical break of CSIDH, which I find unlikely.
 
+
+## uwaterl00 | 2026-06-03T03:57:40+00:00
+> Here are 3 possible scenarios for the 3 practical variants of Jamtis:
+> 
+> ### Scenario 1
+> **2027** Jamtis-X25519 adopted **2035** Monero adopts a PQ protocol **203x** Q-Day, Curve25519 is broken, legacy and Jamtis addresses (2014-2035) are retroactively deanonymized
+> 
+> ### Scenario 2
+> **2027** Jamtis-AC1024 adopted **2035** Monero adopts a PQ protocol **203x** Q-Day, Curve25519 is broken, legacy addresses (2014-2035) are retroactively deanonymized, Jamtis addresses (2027-2035) only lose enote privacy **208x** CSIDH-1024 broken quantumly, Jamtis addresses (2027-2035) are retroactively deanonymized
+> 
+> ### Scenario 3
+> **2027** Jamtis-BC512 adopted **2035** Monero adopts a PQ protocol **203x** Q-Day, Curve25519 is broken, legacy addresses (2014-2035) are retroactively deanonymized, Jamtis addresses (2027-2035) retain most of their privacy **205x** CSIDH-512 broken quantumly, Jamtis addresses (2027-2035) are retroactively deanonymized
+> 
+> The quantum timelines are _very_ pessimistic (they assume a very fast progress in quantum computing). This would give a ~20 year lifetime for CSIDH-512 and ~50 year lifetime for CSIDH-1024 (measured from the break of Curve25519). Refer to [this comment](https://github.com/monero-project/research-lab/issues/151#issuecomment-4286149347) for some details on the PQ security of CSIDH. It's plausible that the quantum breaks of Curve25519 and CSIDH will be 15-100 years later than what is estimated above.
+> 
+> These scenarios don't assume a classical break of CSIDH, which I find unlikely.
+
+Scenario 4: Classical Break of CSIDH
+"These scenarios don't assume a classical break of CSIDH, which I find unlikely" presumably deserves more than a confidence claim — the SIKE precedent alone should give pause, since SIDH was equally "unlikely" to break classically until Castryck-Decru ran in hours on a laptop by exploiting structure the community had dismissed as irrelevant. CSIDH's attack surface is not well-characterized: no lower bound on group action complexity has been proven, the Hidden Number Problem results (Meers-Nowakowski 2023) already show that recovering ~54% of private key bits classically reduces the remainder to polynomial time via lattice methods — structurally the same warning sign that preceded SIKE — and the Apr 9 reduced key space optimization for `z_a^j` relies on CSIDH classical complexity staying at meet-in-the-middle; any sub-exponential classical improvement drops address unlinkability below the 128-bit target for that construction specifically. The deeper issue is that none of the scenarios engage with why HNDL is qualitatively more severe for Monero than for ephemeral protocols: TLS ciphertexts are unlogged at scale, whereas Monero's ledger is permanent, public, and globally replicated at zero cost to the adversary — Mimblewimble's cut-through at least inverts this by pruning spent outputs so there is nothing to harvest, but Monero's ring-signature construction requires output permanence for decoy selection and FCMP++ deepens that commitment by placing every historical output in the accumulator. Jamtis is consequently patching with a computational hardness layer a problem that is architectural. The question worth putting on the agenda before §A.4 is written is whether the correct security model for a permanent public ledger is computational hardness over a fixed mathematical structure at all — this is precisely the critique formalized in our preprint No Invariant Structure Target — Security Undermined by Clock-Keyed Successor Structures (NIST SUCKS), which proposes ephemeral formal security as an alternative model in which security is a property of how fast the underlying structure changes rather than how hard it is to invert, such that the attack surface does not persist long enough for a harvesting adversary to use it regardless of future algorithmic improvements.
+
+## tevador | 2026-06-03T08:29:42+00:00
+> Scenario 4: Classical Break of CSIDH
+
+This scenario applies to all encryption schemes.
+
+Since Jamtis uses hybrid encryption (ECDH + CSIDH), the break of CSIDH would not actually achieve much in the short term. It would "just" reduce the security to the level of current CryptoNote addresses.
+
+> "These scenarios don't assume a classical break of CSIDH, which I find unlikely" presumably deserves more than a confidence claim
+
+I'm not aware of any *provably* secure encryption algorithms besides the one-time pad. The security of all existing public key algorithms is confidence-based, even for elliptic curves. The same goes for factoring - nobody has ever proven that no polynomial-time classical factoring algorithms exist.
+
+> the SIKE precedent alone should give pause, since SIDH was equally "unlikely" to break classically until Castryck-Decru ran in hours on a laptop by exploiting structure the community had dismissed as irrelevant.
+
+I've mentioned the SIKE break both in this issue and in the Jamtis gist. The attack does not apply to CSIDH.
+
+CSIDH has no similar "structure" as SIKE. It's based on the purest form of the isogeny path finding problem.
+
+> CSIDH's attack surface is not well-characterized: no lower bound on group action complexity has been proven
+
+Can you cite a public key encryption algorithm that has a proven (superpolynomial) lower bound complexity?
+
+> the Hidden Number Problem results (Meers-Nowakowski 2023) already show that recovering ~54% of private key bits classically reduces the remainder to polynomial time via lattice methods — structurally the same warning sign that preceded SIKE —
+
+Actually, it's 54% of the *shared secret*, not 54% of the private key (I've made the same mistake before). No known method exists to extract missing private key bits in polynomial time. And I disagree with your SIKE comment.
+
+> and the Apr 9 reduced key space optimization for z_a^j relies on CSIDH classical complexity staying at meet-in-the-middle; any sub-exponential classical improvement drops address unlinkability below the 128-bit target for that construction specifically.
+
+This optimization is not part of the latest Jamtis draft. It has been removed.
+
+> The deeper issue is that none of the scenarios engage with why HNDL is qualitatively more severe for Monero than for ephemeral protocols: TLS ciphertexts are unlogged at scale, whereas Monero's ledger is permanent, public, and globally replicated at zero cost to the adversary — Mimblewimble's cut-through at least inverts this by pruning spent outputs so there is nothing to harvest, but Monero's ring-signature construction requires output permanence for decoy selection and FCMP++ deepens that commitment by placing every historical output in the accumulator. Jamtis is consequently patching with a computational hardness layer a problem that is architectural. The question worth putting on the agenda before §A.4 is written is whether the correct security model for a permanent public ledger is computational hardness over a fixed mathematical structure at all — this is precisely the critique formalized in our preprint No Invariant Structure Target — Security Undermined by Clock-Keyed Successor Structures (NIST SUCKS), which proposes ephemeral formal security as an alternative model in which security is a property of how fast the underlying structure changes rather than how hard it is to invert, such that the attack surface does not persist long enough for a harvesting adversary to use it regardless of future algorithmic improvements.
+
+Actually, the Jamtis interactive protocol, which will be published in Appendix B, does address this by not using an on-chain key exchange.
 
 # Action History
 - Created by: tevador | 2025-10-24T10:50:46+00:00
