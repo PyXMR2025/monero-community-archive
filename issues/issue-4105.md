@@ -1174,50 +1174,13 @@ I had this issue today, when I typed in my phrase on the device itself it actual
 ## ghost | 2023-05-29T21:06:09+00:00
 I was able to solve this issue by closing trezor suite, which was running at the same time as gui.
 
-## dement6d | 2024-04-17T06:53:14+00:00
-having this same issue on Archcraft x86_64 (6.8.2-arch2-1), tried a full system upgrade, tried using `monero-wallet-cli` and `monero-wallet-gui`, both unable to connect to my trezor. i dont have trezor suite open but trezor suite works fine. i tried with the built in trezord and i also built trezord-go, neither get any calls from the monero wallet but they do get calls from the trezor web app or when i just make a post call to it myself, so trezord is working. my trezor firmware is up to date and so are both `monero` and `monero-gui`
-here is my `.bitmonero/monero-wallet-gui.log`:
-```
-2024-04-17 06:19:43.645	   7a05db237000	INFO	logging	contrib/epee/src/mlog.cpp:273	New log categories: *:WARNING,net:FATAL,net.http:FATAL,net.ssl:FATAL,net.p2p:FATAL,net.cn:FATAL,daemon.rpc:FATAL,global:INFO,verify:FATAL,serialization:FATAL,daemon.rpc.payment:ERROR,stacktrace:INFO,logging:INFO,msgwriter:INFO
-2024-04-17 06:19:43.645	   7a05db237000	WARNING	frontend	src/wallet/api/wallet.cpp:411	Logging to "/home/demented/.bitmonero/monero-wallet-gui.log"
-2024-04-17 06:19:43.647	   7a05db237000	WARNING	frontend	src/wallet/api/wallet.cpp:411	file:///usr/lib/qt/qml/QtQuick/Controls/ApplicationWindow.qml:259:9: QML ContentItem: Binding loop detected for property "implicitWidth"
-2024-04-17 06:23:23.824	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:133	Exception: std::runtime_error
-2024-04-17 06:23:23.824	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:134	Unwound call stack:
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [1] monero-wallet-gui(+0x9287c) [0x59dfb87eb87c] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [2] monero-wallet-gui(+0x1eca84) [0x59dfb8945a84] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [3] monero-wallet-gui(+0x16fa97) [0x59dfb88c8a97] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [4] monero-wallet-gui(+0x16fdc0) [0x59dfb88c8dc0] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [5] monero-wallet-gui(+0x180766) [0x59dfb88d9766] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [6] /usr/lib/libQt5Core.so.5(+0xf0631) [0x7a05df4f0631] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [7] /usr/lib/libQt5Core.so.5(+0xeb88a) [0x7a05df4eb88a] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [8] /usr/lib/libc.so.6(+0x8b55a) [0x7a05de6a955a] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	   [9] /usr/lib/libc.so.6(+0x108a3c) [0x7a05de726a3c] 
-2024-04-17 06:23:23.825	   7a05d8c006c0	INFO	stacktrace	src/common/stack_trace.cpp:172	
-```
-i ended up having to use a feather wallet appimage, as exodus is currently having issues syncing XMR. ill note, i also had to type in my jumbled password from the trezor device itself for it to work. unfortunately though after synchronizing and loading my balance properly, im unable to make a transaction from feather wallet due to "Failed to construct transaction Device state not initialized"
-
 ## kpcyrd | 2024-04-17T15:36:41+00:00
 I've never heard of Archcraft and I'm not interested in troubleshooting downstreams, if there are still issues with the package patches can be sent here:
 
 https://gitlab.archlinux.org/archlinux/packaging/packages/monero-gui
 
-## dement6d | 2024-04-20T06:44:57+00:00
-> i ended up having to use a feather wallet appimage, as exodus is currently having issues syncing XMR. ill note, i also had to type in my jumbled password from the trezor device itself for it to work. unfortunately though after synchronizing and loading my balance properly, im unable to make a transaction from feather wallet due to "Failed to construct transaction Device state not initialized"
-
-an update on this, i managed to get into my feather wallet by typing the password normally through the feather prompt and make transactions successfully just by not having trezord or trezor suite run in the background
-unfortunately still not able to get monero-gui-wallet working
-
-> I've never heard of Archcraft
-
-its pretty much vanilla arch with some themes for bspwm and openbox, the kernel is not modified afaik
-
 ## selsta | 2024-04-20T11:23:55+00:00
 @dement6d did you try the monero-wallet-gui from getmonero.org instead of package manager?
-
-## dement6d | 2024-04-20T19:18:59+00:00
-> @dement6d did you try the monero-wallet-gui from getmonero.org instead of package manager?
-
-i just tried, `monero-wallet-gui` from getmonero.org **does** work
 
 ## selsta | 2024-04-21T01:32:12+00:00
 @dement6d the arch package appears to have been compiled without protobuf and libusb which disables Trezor support.
