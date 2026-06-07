@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-05-13T16:31:51+00:00'
+updated_at: '2026-06-05T23:12:16+00:00'
 type: issue
 status: open
 closed_at: null
@@ -63,6 +63,7 @@ closed_at: null
 | AS | common: fix `apply_permutation()` for `std::vector<bool>` | common | https://github.com/monero-project/monero/pull/10273 | | ❌ | 
 | AT | OOM fix for FCMP++ #228 | | | | ❌ |
 | AU | #359 | | | | ❌ |
+| AV | #385 | | | | ❌ |
 
 
 # Discussion History

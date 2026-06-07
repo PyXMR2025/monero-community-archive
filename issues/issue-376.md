@@ -3,9 +3,10 @@ title: Windows GUI binary crashing
 source_url: https://github.com/seraphis-migration/monero/issues/376
 author: j-berman
 assignees: []
-labels: []
+labels:
+- upstream
 created_at: '2026-05-12T20:38:07+00:00'
-updated_at: '2026-06-02T07:05:08+00:00'
+updated_at: '2026-06-05T17:51:53+00:00'
 type: issue
 status: open
 closed_at: null
@@ -193,6 +194,18 @@ FAILURE_ID_HASH:  {248e52a1-581a-b921-2423-ff898c192306}
 Followup:     MachineOwner
 ---------
 ```
+
+## j-berman | 2026-06-05T17:49:29+00:00
+beta uses boost v1.89 (master uses 1.89)
+alpha used boost v1.84 (release uses 1.69)
+
+Using boost v1.84 resolves the crash. @tobtoht also says using v1.91 resolves it too.
+
+After a whole lotta logging, I narrowed the crash down to when we call this [`set_verify_callback`](https://github.com/seraphis-migration/monero/blob/5b2e404fb1d253a1a4dded0c8b7a95238960bfb1/contrib/epee/src/net_ssl.cpp#L533). It doesn't crash *calling* the callback, it crashes when *setting* the callback.
+
+If I disable SSL in the client (and still use boost v1.89), it crashes elsewhere.
+
+I suspect it may be a bug in boost because I don't see anything wrong with how we're calling that `set_verify_callback` function.
 
 # Action History
 - Created by: j-berman | 2026-05-12T20:38:07+00:00

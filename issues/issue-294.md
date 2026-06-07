@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-02-18T01:47:14+00:00'
-updated_at: '2026-04-21T19:48:38+00:00'
+updated_at: '2026-06-05T10:36:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -106,12 +106,7 @@ The exact scope of this phase 2 may be adjusted, but the following is the genera
 - [Tower cycle implementation and `hash_grow` flow](https://github.com/monero-project/monero/pull/10361)
   - We want to make sure the functions highlighted in the PR description are implemented correctly, and the Rust FFI C structs are properly compatible with their respective Rust objects.
 - [`point_to_cycle_scalar`](https://github.com/monero-project/monero/pull/10362)
-- get_tree_extension
- - get_leaf_layer_grow_instructions
- - hash_children_chunks
- - set_next_layer_extension
- - get_grow_layer_instructions
- - get_next_layer_extension
+- [`get_tree_extension`](https://github.com/monero-project/monero/pull/10724)
 
 ## Audit 3: Consensus Integration
 
