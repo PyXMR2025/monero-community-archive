@@ -5,7 +5,7 @@ author: singsonn
 assignees: []
 labels: []
 created_at: '2021-01-25T11:24:42+00:00'
-updated_at: '2021-01-25T16:43:45+00:00'
+updated_at: '2026-06-06T10:55:02+00:00'
 type: issue
 status: closed
 closed_at: '2021-01-25T16:43:45+00:00'
@@ -48,6 +48,9 @@ I have made sure that I am running it with Admin rights (right-click, then "Run 
 However, this made me think that I have extracted XMrig in a network folder. I have moved it back to my local node, and now I don't have this error message anymore when launching the executable.
 
 Thanks again, the issue is now resolved. 
+
+## Rightys | 2026-06-06T10:55:02+00:00
+I had the same issue. In my case, i had Windows EFS enabled for the xmrig directory. I disabled it and decrypted the files and it fixed it.
 
 # Action History
 - Created by: singsonn | 2021-01-25T11:24:42+00:00
