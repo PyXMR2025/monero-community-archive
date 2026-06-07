@@ -6,7 +6,7 @@ assignees: []
 labels:
 - daemon
 created_at: '2024-05-01T04:59:33+00:00'
-updated_at: '2025-12-29T01:23:43+00:00'
+updated_at: '2026-06-04T18:00:24+00:00'
 type: issue
 status: closed
 closed_at: '2025-12-29T01:23:43+00:00'
@@ -62,6 +62,9 @@ What is real monero then?
 
 ## selsta | 2025-12-29T01:23:38+00:00
 Closing as it's not clear if there is a bug here and OP did not run into this again.
+
+## bgermann | 2026-06-04T18:00:24+00:00
+This was reported to Debian as well, so I suggest this still applies. The [Debian bug report](https://bugs.debian.org/1132940) has a patch.
 
 # Action History
 - Created by: zampano3 | 2024-05-01T04:59:33+00:00

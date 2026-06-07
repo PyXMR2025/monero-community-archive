@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-05-28T09:46:05+00:00'
+updated_at: '2026-06-05T12:26:36+00:00'
 type: issue
 status: open
 closed_at: null
@@ -61,7 +61,7 @@ See also: #10222
 | Submodule     | Version     | Latest | PR    |
 |---------------|-------------|--------|-------|
 | [gtest](https://github.com/google/googletest) | 1.15.2 | 1.17.0 | |
-| [rapidjson](https://github.com/Tencent/rapidjson)     | Jul 3 2018  | ?      | #10584      |
+| [rapidjson](https://github.com/Tencent/rapidjson)     | Feb 5 2025 | ?      |     |
 | [randomx](https://github.com/tevador/RandomX)       | 1.2.2       | 2.0      |       |
 | [supercop](https://github.com/monero-project/supercop/tree/monero)      | Aug 26 2020 | ?      |       |
 

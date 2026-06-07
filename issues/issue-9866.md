@@ -5,10 +5,10 @@ author: Tzadiko
 assignees: []
 labels: []
 created_at: '2025-03-25T22:19:50+00:00'
-updated_at: '2025-03-27T02:24:03+00:00'
+updated_at: '2026-06-04T17:05:05+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-04T17:05:05+00:00'
 ---
 
 # Original Description
@@ -48,5 +48,9 @@ From the issue I linked above, looks like people are in agreement that this part
 ## Tzadiko | 2025-03-27T02:24:01+00:00
 I updated the PR description showing that my change didn't break the GUI.
 
+## selsta | 2026-06-04T17:05:05+00:00
+Closing this as the linked PR was closed.
+
 # Action History
 - Created by: Tzadiko | 2025-03-25T22:19:50+00:00
+- Closed at: 2026-06-04T17:05:05+00:00

@@ -7,10 +7,10 @@ assignees: []
 labels:
 - wallet
 created_at: '2024-11-28T15:11:36+00:00'
-updated_at: '2025-03-18T01:03:59+00:00'
+updated_at: '2026-06-04T17:01:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-04T17:01:46+00:00'
 ---
 
 # Original Description
@@ -58,3 +58,4 @@ resolved on irc
 
 # Action History
 - Created by: ghost | 2024-11-28T15:11:36+00:00
+- Closed at: 2026-06-04T17:01:46+00:00
