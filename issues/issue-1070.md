@@ -5,10 +5,10 @@ author: ChristopherKing42
 assignees: []
 labels: []
 created_at: '2016-09-12T17:48:26+00:00'
-updated_at: '2022-02-10T21:37:06+00:00'
+updated_at: '2026-06-07T19:32:35+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-07T19:32:34+00:00'
 ---
 
 # Original Description
@@ -39,5 +39,9 @@ If the maths are corrected I am pro this change
 ## UkoeHB | 2022-02-10T21:36:45+00:00
 The [Jamtis](https://gist.github.com/tevador/50160d160d24cfc6c52ae02eb3d17024) addressing scheme for the WIP Seraphis tx protocol will have a wallet tier that can view outgoing txs.
 
+## selsta | 2026-06-07T19:32:34+00:00
+https://www.getmonero.org/2024/04/27/fcmps.html
+
 # Action History
 - Created by: ChristopherKing42 | 2016-09-12T17:48:26+00:00
+- Closed at: 2026-06-07T19:32:34+00:00
