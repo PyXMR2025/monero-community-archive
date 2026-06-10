@@ -37,9 +37,5 @@ Yes that's why you have to turn Safe Browsing off completely in Chrome, to allow
 
 Atempt the download again. Then goto your downloads section in Chrome (ctrl+j) it will give you an option to download anyway.
 
-## DeltaJuni0r | 2026-05-31T09:28:22+00:00
-@xmrig please auto detect chrome & brave browser at https://xmrig.com/download and give a info hint. 
-Please provide there a powershell cmd to copy with instruction to Win + R shortcut in order to download
-
 # Action History
 - Created by: Fanho27 | 2022-02-28T19:50:11+00:00
