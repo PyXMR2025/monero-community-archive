@@ -5,7 +5,7 @@ author: karelbilek
 assignees: []
 labels: []
 created_at: '2025-10-27T10:04:17+00:00'
-updated_at: '2026-03-15T22:42:33+00:00'
+updated_at: '2026-06-08T13:21:54+00:00'
 type: issue
 status: open
 closed_at: null
@@ -63,10 +63,13 @@ im sure that they will implement support in the near future. For now cake wallet
 Thanks for the tips. I will wait. I dont want another thirdparty wallet and risk hack or bug. I use Ledger for everything but wanted to move to Trezor but this is just holding me back. Actually Solana as well. I use Solflare for staking and split but Trezor is not supported there either. Its really a shame. Great HW wallet but very little support where it counts. Hope it can get more native app and support in the future. 
 
 ## mmilata | 2026-03-10T12:35:31+00:00
-If I understand correctly the major missing piece is a C++ library for Trezor-Host Protocol which Safe 7 uses. Trezor is currently working on a Rust library for that, with an API that should make it possible to write a C wrapper. So that would be one option, other options are to reimplement it from scratch ([spec](https://github.com/trezor/trezor-firmware/blob/f2b38c1acbe7dc2afc033ba250b4dfced556bb5b/docs/common/thp/specification.md)) or somehow wrap e.g. the python library.
+If I understand correctly the major missing piece is a C++ library for Trezor-Host Protocol which Safe 7 uses. Trezor is currently working on a Rust library for that, with an API that should make it possible to write a C wrapper. So that would be one option, other options are to reimplement it from scratch ([spec](https://docs.trezor.io/trezor-firmware/common/thp/specification.html)) or somehow wrap e.g. the python library.
 
 ## emailschaden | 2026-03-15T22:42:33+00:00
 [Related issue on monero-project/monero](https://github.com/monero-project/monero/issues/10368)
+
+## Hannsek | 2026-06-08T05:49:54+00:00
+Hello @selsta, I'd like to ask if the team plans to work on this or if anything else is needed to start the work. 🙏🏻
 
 # Action History
 - Created by: karelbilek | 2025-10-27T10:04:17+00:00
