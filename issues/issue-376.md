@@ -6,7 +6,7 @@ assignees: []
 labels:
 - upstream
 created_at: '2026-05-12T20:38:07+00:00'
-updated_at: '2026-06-05T17:51:53+00:00'
+updated_at: '2026-06-08T19:40:24+00:00'
 type: issue
 status: open
 closed_at: null
@@ -206,6 +206,9 @@ After a whole lotta logging, I narrowed the crash down to when we call this [`se
 If I disable SSL in the client (and still use boost v1.89), it crashes elsewhere.
 
 I suspect it may be a bug in boost because I don't see anything wrong with how we're calling that `set_verify_callback` function.
+
+## j-berman | 2026-06-08T19:40:24+00:00
+Upstream PR for reference: https://github.com/monero-project/monero/pull/10738
 
 # Action History
 - Created by: j-berman | 2026-05-12T20:38:07+00:00
