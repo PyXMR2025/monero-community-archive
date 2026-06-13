@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-proposal
 created_at: '2026-04-09T16:35:07+00:00'
-updated_at: '2026-04-11T17:35:01+00:00'
+updated_at: '2026-06-13T07:38:53+00:00'
 type: issue
 status: open
 closed_at: null
@@ -53,6 +53,9 @@ Soome ways i can think of to handle the whitespace stuff:
 
 ## SyntheticBird45 | 2026-04-11T17:35:01+00:00
 These are great ideas. That's a fair point on 3. I agree this should be either 1. or 2. but honestly I have no idea which one I prefer.
+
+## MavenRain | 2026-06-13T07:38:53+00:00
+I took a shot at this.  PR is incoming.  I went with option 1 from the discussion above (warn, trim, proceed), structured so that switching to option 2 (error and exit) is a one-line change if that ends up preferred.
 
 # Action History
 - Created by: SyntheticBird45 | 2026-04-09T16:35:07+00:00
