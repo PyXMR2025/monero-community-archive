@@ -1,7 +1,7 @@
 ---
 title: How to Fix this DNS Error '  No Addrees'
 source_url: https://github.com/xmrig/xmrig/issues/2779
-author: besskyy
+author: tryanal
 assignees: []
 labels:
 - bug
@@ -24,5 +24,5 @@ Either the URL is wrong or try using a different DNS resolver. You can change it
 You have a space at the beginning of the hostname in the `url`
 
 # Action History
-- Created by: besskyy | 2021-12-03T07:40:51+00:00
+- Created by: tryanal | 2021-12-03T07:40:51+00:00
 - Closed at: 2025-06-16T20:25:20+00:00

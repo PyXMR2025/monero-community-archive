@@ -6,7 +6,7 @@ author: WENDELL509
 assignees: []
 labels: []
 created_at: '2026-02-28T18:57:38+00:00'
-updated_at: '2026-03-17T17:23:47+00:00'
+updated_at: '2026-06-12T15:21:48+00:00'
 type: issue
 status: open
 closed_at: null
@@ -60,6 +60,34 @@ It looks like this malware is related to a piece of software called hone[.]gg, w
 
 ## PPPDUD | 2026-03-17T17:23:47+00:00
 @WENDELL509 @muhammedalibilgin Does the description that I wrote at https://github.com/PPPDUD/malware-taxonomy/blob/main/Trojan:WinNT/wsvcz/A.md match your observations?
+
+## QXIoa | 2026-06-11T01:44:12+00:00
+close this issue
+
+## PPPDUD | 2026-06-11T14:52:37+00:00
+> close this issue
+
+Why?
+
+## WENDELL509 | 2026-06-12T03:28:30+00:00
+Hello guys, the attack stopped from the post is posted until now, i didnt run any heavy application and for the momment the trojan didnt appear. So i cannot modify or track the file for now since it didnt appear yet.
+
+## QXIoa | 2026-06-12T10:46:02+00:00
+> > close this issue
+> 
+> Why?
+
+cause what are the devs meant to do? someone is misusing their software for a trojan, the devs cannot control that.
+
+## PPPDUD | 2026-06-12T15:21:48+00:00
+> > > close this issue
+> > 
+> > 
+> > Why?
+> 
+> cause what are the devs meant to do? someone is misusing their software for a trojan, the devs cannot control that.
+
+If it's not their official use-case, the devs aren't meant to do anything, but closing this issue will make it less visible to people who might be able to help fix it.
 
 # Action History
 - Created by: WENDELL509 | 2026-02-28T18:57:38+00:00

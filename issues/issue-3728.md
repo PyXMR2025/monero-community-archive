@@ -1,7 +1,7 @@
 ---
 title: CPU Core utilization on Intel CPU leads to lower hashrate
 source_url: https://github.com/xmrig/xmrig/issues/3728
-author: mathbreed
+author: ghost
 assignees: []
 labels: []
 created_at: '2025-11-01T15:36:50+00:00'
@@ -22,7 +22,7 @@ OS: Fedora
 ## SChernykh | 2025-11-01T16:47:48+00:00
 Can you run `./xmrig --export-topology` and attach the generated XML file here?
 
-## mathbreed | 2025-11-02T02:01:00+00:00
+## ghost | 2025-11-02T02:01:00+00:00
 Sure. Generic information about PC has been removed.
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -172,7 +172,7 @@ Sure. Generic information about PC has been removed.
 </topology>
 ```
 
-## mathbreed | 2025-11-02T06:01:28+00:00
+## ghost | 2025-11-02T06:01:28+00:00
 @SChernykh Additional Information:
 I am running `xmrig` on `secureblue`, a "linux distro" with hardened C memory allocator. So the hashrate is lower than that on vanilla fedora. I had 1.36kH/s with 9 threads on vanilla fedora, but I believe we will see the same hashrate boost after adjusting the cpu utilization on either platform.
 
@@ -181,10 +181,10 @@ On `secureblue`, I get 1.32kH/s with 5 threads (all threads on big cores plus on
 ## SChernykh | 2025-11-02T09:03:56+00:00
 It's very hard to get the optimal auto-config for this kind of mixed core CPU, especially when it's power limited and core performance per watt information is not available to XMRig. But the general idea is that 1 thread on a big core is better than 1 thread on an efficient core?
 
-## mathbreed | 2025-11-02T09:58:55+00:00
+## ghost | 2025-11-02T09:58:55+00:00
 I do understand. A good default for Intel laptop CPUs seems to be "all threads on big cores + 1 or 2 efficiency core(s)" (5 cores in this case). This would give the optimal result when `powersave` governor is used, and ~85% of optimal result (2.52kH/s) with `performance` governor (do note that, due to thermal restrictions, the frequency of the CPU will eventually be lowered). A simple mechanism that detects the postfix of the CPU and triggers this behaviour should do.
 
 Also, it would be nice to inform users that "cache size / 2MB = number of threads to use" is no longer true since so many just stick to the defaults.
 
 # Action History
-- Created by: mathbreed | 2025-11-01T15:36:50+00:00
+- Created by: ghost | 2025-11-01T15:36:50+00:00
