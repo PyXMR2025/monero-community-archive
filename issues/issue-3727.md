@@ -24,7 +24,7 @@ Both
 ## peepo5 | 2021-11-05T21:18:01+00:00
 For data, .local/share/ is the standard I am pretty sure. Any configs are normally stored in folders inside of .config/
 
-## HumanG33k | 2021-11-11T00:07:12+00:00
+## VoidScute | 2021-11-11T00:07:12+00:00
 All information are https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html 
 By the way MacOs and Windows have this kind of specification too.
 

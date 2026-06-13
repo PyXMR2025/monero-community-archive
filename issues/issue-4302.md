@@ -1,7 +1,7 @@
 ---
 title: Flathub verification
 source_url: https://github.com/monero-project/monero-gui/issues/4302
-author: Roman19S
+author: upriver4
 assignees: []
 labels: []
 created_at: '2024-04-05T02:55:51+00:00'
@@ -19,5 +19,5 @@ Can you verify the flatpak so people who find it through Flathub know it's safe?
 duplicate of #4206
 
 # Action History
-- Created by: Roman19S | 2024-04-05T02:55:51+00:00
+- Created by: upriver4 | 2024-04-05T02:55:51+00:00
 - Closed at: 2024-05-23T13:49:56+00:00

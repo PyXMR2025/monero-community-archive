@@ -51,7 +51,7 @@ Few suggestions:
 - Make sure Trezor bridge is installed
 - Try empty passphrase
 
-## HumanG33k | 2023-01-30T18:24:44+00:00
+## VoidScute | 2023-01-30T18:24:44+00:00
 Not sure it's related but on my macOs when i first updated to last version the app crash after password asking form. After i read the stacktrace i see it's try to open the previous version. So instead of replace current .app in software i delete existing one and install the new version (drag & drop). And it works. If dev need the stacktrace i made a backup. 
 
 ## thestinger | 2023-02-17T04:07:07+00:00
