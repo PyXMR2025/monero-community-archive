@@ -5,10 +5,10 @@ author: jbakosi
 assignees: []
 labels: []
 created_at: '2022-08-19T18:07:23+00:00'
-updated_at: '2022-08-19T18:07:23+00:00'
+updated_at: '2026-06-12T17:21:58+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-12T17:21:58+00:00'
 ---
 
 # Original Description
@@ -42,5 +42,9 @@ This is a good "user" install target, but to use monero as a library, I find tha
 I wonder if it makes sense to contribute this back as a "dev" install target. It could be done optionally, triggered by some cmake variable that's off by default.
 
 # Discussion History
+## selsta | 2026-06-12T17:21:58+00:00
+We don't support the `install` target, so I'm closing this issue here. If someone finds this issue via search they can still apply your patch if it's relevant to them.
+
 # Action History
 - Created by: jbakosi | 2022-08-19T18:07:23+00:00
+- Closed at: 2026-06-12T17:21:58+00:00

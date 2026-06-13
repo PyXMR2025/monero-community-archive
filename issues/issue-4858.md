@@ -5,7 +5,7 @@ author: eigenbrot
 assignees: []
 labels: []
 created_at: '2018-11-16T03:09:50+00:00'
-updated_at: '2019-06-28T06:18:02+00:00'
+updated_at: '2026-06-12T20:22:07+00:00'
 type: issue
 status: closed
 closed_at: '2019-06-26T17:49:47+00:00'
@@ -62,6 +62,9 @@ Just a note: this PR requires following PRs to be merged to monero-core (and mon
 
 - https://github.com/monero-project/monero/pull/5662
 - https://github.com/monero-project/monero/pull/5673
+
+## Paycho | 2026-06-12T20:09:18+00:00
+This issue appears to still exist for Ledger Nano S's - as I unfortunately found out today, while needing to prove a transaction. Highly recommend not using a Ledger until this is fixed.
 
 # Action History
 - Created by: eigenbrot | 2018-11-16T03:09:50+00:00

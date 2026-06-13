@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2022-04-17T14:58:46+00:00'
-updated_at: '2022-05-29T15:32:12+00:00'
+updated_at: '2026-06-12T17:13:41+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-12T17:13:41+00:00'
 ---
 
 # Original Description
@@ -24,3 +24,4 @@ One thing to consider is getting changes merged to Ledger's repo might be diffic
 
 # Action History
 - Created by: ghost | 2022-04-17T14:58:46+00:00
+- Closed at: 2026-06-12T17:13:41+00:00

@@ -5,10 +5,10 @@ author: Gingeropolous
 assignees: []
 labels: []
 created_at: '2022-12-18T12:33:37+00:00'
-updated_at: '2022-12-19T00:56:43+00:00'
+updated_at: '2026-06-12T17:20:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-12T17:20:04+00:00'
 ---
 
 # Original Description
@@ -84,5 +84,9 @@ There is already https://en.wikipedia.org/wiki/Distributed_hash_table for this, 
 ## Gingeropolous | 2022-12-19T00:56:43+00:00
 word. Well it seems there's not really an issue with having huge addresses if there are various ways to get these RID-Address pairs out there. 
 
+## selsta | 2026-06-12T17:20:04+00:00
+Closing this issue as the idea is already documented here and can be linked again in the future if it becomes relevant.
+
 # Action History
 - Created by: Gingeropolous | 2022-12-18T12:33:37+00:00
+- Closed at: 2026-06-12T17:20:04+00:00

@@ -6,10 +6,10 @@ assignees: []
 labels:
 - discussion
 created_at: '2023-03-03T00:30:44+00:00'
-updated_at: '2024-02-28T13:59:37+00:00'
+updated_at: '2026-06-11T20:39:48+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-11T20:39:48+00:00'
 ---
 
 # Original Description
@@ -59,3 +59,4 @@ Vijayakumaran, S. (2023), "Analysis of CryptoNote transaction graphs using the D
 
 # Action History
 - Created by: tobtoht | 2023-03-03T00:30:44+00:00
+- Closed at: 2026-06-11T20:39:48+00:00
