@@ -5,7 +5,7 @@ author: dan1338
 assignees: []
 labels: []
 created_at: '2025-08-09T10:35:18+00:00'
-updated_at: '2026-05-08T17:15:24+00:00'
+updated_at: '2026-06-15T22:07:20+00:00'
 type: issue
 status: open
 closed_at: null
@@ -70,6 +70,9 @@ It seems there is no error handling for connection errors in [xmrig::fetch](http
 
 ## Azim | 2026-05-08T17:15:24+00:00
 just had that happen on 10M run, not fun
+
+## alby6969 | 2026-06-15T22:07:20+00:00
+I just had this happen to me on a number of benchmark tests on different Ububtu servers. Sometimes the benchmarks stop, sometimes they keep going forever well beyond 100%, and then will never submit.
 
 # Action History
 - Created by: dan1338 | 2025-08-09T10:35:18+00:00

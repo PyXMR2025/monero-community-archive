@@ -5,7 +5,7 @@ author: craighammonds-sys
 assignees: []
 labels: []
 created_at: '2026-03-02T05:16:25+00:00'
-updated_at: '2026-03-03T02:10:04+00:00'
+updated_at: '2026-06-16T04:02:35+00:00'
 type: issue
 status: open
 closed_at: null
@@ -87,6 +87,14 @@ Can you run `./xmrig --export-topology` on that device and attach the generated 
 ## craighammonds-sys | 2026-03-03T02:10:04+00:00
 [topology.xml](https://github.com/user-attachments/files/25699768/topology.xml)
 Thankyou Here is the exported topology.xml from the device.
+
+## coffnix | 2026-06-16T04:02:35+00:00
+My maximum hashrate dropped after upgrading to XMRig 6.26.0 on this board, look: https://xmrig.com/benchmark/76FjCT
+
+6.25.0  = 1887.26 H/s
+6.26.0 = 1786.1 H/s
+
+
 
 # Action History
 - Created by: craighammonds-sys | 2026-03-02T05:16:25+00:00

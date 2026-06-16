@@ -5,7 +5,7 @@ author: adapt-L
 assignees: []
 labels: []
 created_at: '2026-06-12T13:42:16+00:00'
-updated_at: '2026-06-12T13:42:16+00:00'
+updated_at: '2026-06-15T22:05:28+00:00'
 type: issue
 status: open
 closed_at: null
@@ -19,5 +19,9 @@ Also perhaps the engineering sample CPUs could be renamed more clearly, for exam
 I was also thinking if users could submit notes alongside their benchmarks, that could also be useful. For example BIOS or overclock settings, or usage of 1GB pages. It would make it easier for new miners to assess price:performance, and thus could help improve the network hashrate.
 
 # Discussion History
+## alby6969 | 2026-06-15T22:05:28+00:00
+That would be pretty nice if you could add extra information like that.  Especially for bios tweaks and ram settings
+
+
 # Action History
 - Created by: adapt-L | 2026-06-12T13:42:16+00:00
