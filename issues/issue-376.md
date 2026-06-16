@@ -6,7 +6,7 @@ assignees: []
 labels:
 - upstream
 created_at: '2026-05-12T20:38:07+00:00'
-updated_at: '2026-06-08T19:40:24+00:00'
+updated_at: '2026-06-14T05:58:04+00:00'
 type: issue
 status: open
 closed_at: null
@@ -209,6 +209,9 @@ I suspect it may be a bug in boost because I don't see anything wrong with how w
 
 ## j-berman | 2026-06-08T19:40:24+00:00
 Upstream PR for reference: https://github.com/monero-project/monero/pull/10738
+
+## redsh4de | 2026-06-14T05:58:04+00:00
+Merged on upstream
 
 # Action History
 - Created by: j-berman | 2026-05-12T20:38:07+00:00

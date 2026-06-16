@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-05-08T22:13:13+00:00'
-updated_at: '2026-05-13T18:31:04+00:00'
+updated_at: '2026-06-15T20:33:44+00:00'
 type: issue
 status: open
 closed_at: null
@@ -28,6 +28,11 @@ Plus, `rescan_spent` *is* identifying some spends previously marked as unspent, 
 
 ## j-berman | 2026-05-13T18:31:03+00:00
 Multiple users have complained about sporadic double spend errors. May be a regression from #185
+
+## j-berman | 2026-06-15T20:33:44+00:00
+This should fix the issue of a wallet marking spent txs as unspent during normal refresh flow: https://github.com/monero-project/monero/pull/10781
+
+Still unsure as to cause of broken `rescan_spent`
 
 # Action History
 - Created by: j-berman | 2026-05-08T22:13:13+00:00
