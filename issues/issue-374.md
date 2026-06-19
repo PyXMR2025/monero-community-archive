@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-05-12T20:31:00+00:00'
-updated_at: '2026-05-30T22:56:01+00:00'
+updated_at: '2026-06-17T12:20:29+00:00'
 type: issue
 status: open
 closed_at: null
@@ -20,8 +20,7 @@ Log level 2 with this would be good to narrow it down.
 
 # Discussion History
 ## SNeedlewoods | 2026-05-13T16:40:26+00:00
-[bitmonero.log-2026-05-13-02-52-58.tar.gz](https://github.com/user-attachments/files/27719622/bitmonero.log-2026-05-13-02-52-58.tar.gz)
-[bitmonero.log-2026-05-13-02-55_09.tar.gz](https://github.com/user-attachments/files/27719623/bitmonero.log-2026-05-13-02-55_09.tar.gz)
+Edit: redacted
 
 ## j-berman | 2026-05-13T17:07:34+00:00
 What's happening:
