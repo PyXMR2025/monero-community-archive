@@ -5,7 +5,7 @@ author: mesvam
 assignees: []
 labels: []
 created_at: '2025-10-16T05:02:10+00:00'
-updated_at: '2025-10-16T05:02:36+00:00'
+updated_at: '2026-06-16T20:54:16+00:00'
 type: issue
 status: open
 closed_at: null
@@ -27,5 +27,8 @@ Symptoms
 Opening a wallet within a link still works
 
 # Discussion History
+## mialily1222-del | 2026-06-16T20:38:50+00:00
+@mesvam have you been able to resolve this issue?
+
 # Action History
 - Created by: mesvam | 2025-10-16T05:02:10+00:00
