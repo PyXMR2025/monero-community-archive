@@ -1,7 +1,7 @@
 ---
 title: When trying to run miner.
 source_url: https://github.com/xmrig/xmrig/issues/3187
-author: Canoidian
+author: Willidoit
 assignees: []
 labels: []
 created_at: '2023-01-02T19:54:35+00:00'
@@ -25,5 +25,5 @@ I would expected it to start producing hashes and working.
 
 # Discussion History
 # Action History
-- Created by: Canoidian | 2023-01-02T19:54:35+00:00
+- Created by: Willidoit | 2023-01-02T19:54:35+00:00
 - Closed at: 2023-01-02T21:36:18+00:00
