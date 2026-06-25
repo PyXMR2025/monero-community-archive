@@ -8,10 +8,10 @@ labels:
 - low priority
 - discussion
 created_at: '2024-06-03T19:28:59+00:00'
-updated_at: '2024-06-05T11:54:43+00:00'
+updated_at: '2026-06-24T18:25:50+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T18:24:31+00:00'
 ---
 
 # Original Description
@@ -87,5 +87,9 @@ There is a new paper at this conference, but the PDF has not been released yet: 
 
 
 
+## selsta | 2026-06-24T18:24:31+00:00
+Closing this as the issue becomes less relevant with the upcoming FCMP++ upgrade.
+
 # Action History
 - Created by: ghost | 2024-06-03T19:28:59+00:00
+- Closed at: 2026-06-24T18:24:31+00:00

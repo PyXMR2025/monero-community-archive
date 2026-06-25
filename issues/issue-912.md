@@ -6,10 +6,10 @@ assignees: []
 labels:
 - proposal
 created_at: '2016-07-13T22:00:49+00:00'
-updated_at: '2018-02-14T08:41:44+00:00'
+updated_at: '2026-06-23T18:27:25+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-23T18:27:25+00:00'
 ---
 
 # Original Description
@@ -70,3 +70,4 @@ Oh, then apparently coverity changed their guidelines / setup without sending an
 
 # Action History
 - Created by: anonimal | 2016-07-13T22:00:49+00:00
+- Closed at: 2026-06-23T18:27:25+00:00

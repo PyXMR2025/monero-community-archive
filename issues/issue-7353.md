@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2021-01-27T16:37:27+00:00'
-updated_at: '2022-09-11T21:50:49+00:00'
+updated_at: '2026-06-24T16:54:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T16:54:43+00:00'
 ---
 
 # Original Description
@@ -92,3 +92,4 @@ To clarify: `InProofV2` and `OutProofV2` are currently only 'indirectly' checkin
 
 # Action History
 - Created by: ghost | 2021-01-27T16:37:27+00:00
+- Closed at: 2026-06-24T16:54:43+00:00

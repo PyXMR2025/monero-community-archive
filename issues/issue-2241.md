@@ -5,10 +5,10 @@ author: dnaleor
 assignees: []
 labels: []
 created_at: '2017-08-02T20:34:10+00:00'
-updated_at: '2017-08-19T20:23:48+00:00'
+updated_at: '2026-06-24T17:10:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T17:10:12+00:00'
 ---
 
 # Original Description
@@ -54,5 +54,9 @@ Are there any better sources out there other than some sociopath's quips on stee
 ## panopolis | 2017-08-19T20:23:48+00:00
 As others pointed out the attacker in this scenario does not have to mine all of their own TX for it to be "free", and regardless, such an attacker would consider it cheap compared to the value of the information obtained, even if they do not recoup all tx fees. Also, correct me if I'm wrong, but just because a tx is not in your local mempool does not mean it was mined in secret. It may simply be that the tx had not propagated to your node before someone else mined the block. I think even if the described attack is feasible, in the worst case, the attacker would be able to analyse the block chain in a way comparable to bitcoin, but not more so. The privacy mechanics would still hold against everyone else besides the attacker. Those who are worried about this theoretical attack can still be anonymous by taking care not to leak IP address, or leaving a trail linking to bank account, etc
 
+## selsta | 2026-06-24T17:10:12+00:00
+I'm closing this as the idea becomes less relevant with the FCMP++ upgrade.
+
 # Action History
 - Created by: dnaleor | 2017-08-02T20:34:10+00:00
+- Closed at: 2026-06-24T17:10:12+00:00

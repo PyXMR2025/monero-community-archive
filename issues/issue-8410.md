@@ -5,10 +5,10 @@ author: Gingeropolous
 assignees: []
 labels: []
 created_at: '2022-06-28T20:54:58+00:00'
-updated_at: '2022-06-28T20:54:58+00:00'
+updated_at: '2026-06-24T17:13:59+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T17:13:59+00:00'
 ---
 
 # Original Description
@@ -19,5 +19,9 @@ https://termbin.com/dh2q
 
 
 # Discussion History
+## selsta | 2026-06-24T17:13:59+00:00
+Based on the attached logs, likely fixed by #10065.
+
 # Action History
 - Created by: Gingeropolous | 2022-06-28T20:54:58+00:00
+- Closed at: 2026-06-24T17:13:59+00:00

@@ -6,7 +6,7 @@ author: ForeverNooob
 assignees: []
 labels: []
 created_at: '2022-07-11T20:06:43+00:00'
-updated_at: '2022-07-11T20:06:43+00:00'
+updated_at: '2026-06-24T19:58:55+00:00'
 type: issue
 status: open
 closed_at: null
@@ -32,5 +32,8 @@ Flatpak version: `Monero 'Oxygen Orion' (v0.17.3.2-unknown)`
 OS version: Ubuntu 18.04
 
 # Discussion History
+## plowsof | 2026-06-24T19:58:55+00:00
+still exists. if i choose a dirr outside of the flatpak sandbox via the file browser , it will prevent me from clicking next with error `Wallet location is empty` - but if you put a manual dir `/home/human/Documents` it will let you click `next` - upon exit , there is no wallet in `Documents`
+
 # Action History
 - Created by: ForeverNooob | 2022-07-11T20:06:43+00:00

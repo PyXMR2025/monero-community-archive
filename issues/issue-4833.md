@@ -5,10 +5,10 @@ author: alextrezvy
 assignees: []
 labels: []
 created_at: '2018-11-09T17:23:40+00:00'
-updated_at: '2025-03-16T08:24:12+00:00'
+updated_at: '2026-06-24T00:57:58+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T00:57:58+00:00'
 ---
 
 # Original Description
@@ -421,3 +421,4 @@ Same issue here. Fresh node testing latest not-yet released v0.18.4.0-88a5d0768,
 
 # Action History
 - Created by: alextrezvy | 2018-11-09T17:23:40+00:00
+- Closed at: 2026-06-24T00:57:58+00:00

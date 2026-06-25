@@ -5,10 +5,10 @@ author: Mitchellpkt
 assignees: []
 labels: []
 created_at: '2019-04-12T20:15:40+00:00'
-updated_at: '2019-04-13T16:09:00+00:00'
+updated_at: '2026-06-24T18:24:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T18:24:57+00:00'
 ---
 
 # Original Description
@@ -35,5 +35,9 @@ Thanks,
 ## SamsungGalaxyPlayer | 2019-04-13T16:09:00+00:00
 Is it worth adding one exception? A small part of me is worried about legitimate transactions that use an input twice.
 
+## selsta | 2026-06-24T18:24:57+00:00
+Closing this as the issue becomes less relevant with the upcoming FCMP++ upgrade.
+
 # Action History
 - Created by: Mitchellpkt | 2019-04-12T20:15:40+00:00
+- Closed at: 2026-06-24T18:24:57+00:00

@@ -62,6 +62,52 @@ Then Haveno aborts starting. But this should be fixed [now](https://github.com/h
 ## woodser | 2024-10-08T12:22:15+00:00
 There is a 2 XMR [bounty](https://github.com/haveno-dex/haveno/issues/1076) on this issue.
 
+## harishn1408 | 2026-05-04T13:52:33+00:00
+### Proposed Solution
+**Analysis of the Root Cause**
+
+The issue arises from the fact that the Tor proxy does not support IPv6 destinations. This is likely due to the `tor` library used in `monero-wallet-rpc` not being able to handle IPv6 addresses. The `tor` library is responsible for establishing a connection to the Tor network, and it seems to be failing when trying to connect to IPv6 nodes.
+
+**Step-by-Step Implementation Plan**
+
+1. **Update `tor` library**: Upgrade the `tor` library to a version that supports IPv6 addresses. This can be done by updating the `tor` dependency in the `Cargo.toml` file.
+2. **Modify `tor` configuration**: Update the `tor` configuration to allow IPv6 connections. This can be done by adding the `AllowIPv6` option to the `torrc` file.
+3. **Update `monero-wallet-rpc` code**: Modify the `monero-wallet-rpc` code to handle IPv6 addresses when connecting to the Tor network. This can be done by updating the `connect_to_tor` function in `src/wallet/wallet.rs`.
+4. **Test IPv6 connections**: Test IPv6 connections to ensure that they are working correctly.
+
+**Actual Code Changes**
+
+* Update `Cargo.toml`:
+```toml
+[dependencies]
+tor = { version = "0.4.0", features = ["ipv6"] }
+```
+* Update `torrc` file:
+```bash
+AllowIPv6 1
+```
+* Update `src/wallet/wallet.rs`:
+```rust
+use tor::config::Config;
+
+// ...
+
+fn connect_to_tor(&self, addr: &str) -> Result<(), String> {
+    let mut config = Config::new();
+    config.set_allow_ipv6(true);
+    let tor = Tor::new(config)?;
+    // ...
+}
+```
+**Testing Suggestions**
+
+1. Test IPv6 connections to ensure that they are working correctly.
+2. Test connections to IPv6 nodes through the Tor proxy.
+3. Verify that the issue is resolved by checking the `no_connection_to_daemon` error message.
+
+---
+<sub>Happy to submit a PR implementing this approach if it looks good to the maintainers.</sub>
+
 ## hhartzer | 2026-05-13T17:07:42+00:00
 Can you try this again now that SOCKS v5 support has landed?
 

@@ -5,10 +5,10 @@ author: mj-xmr
 assignees: []
 labels: []
 created_at: '2021-03-06T10:08:03+00:00'
-updated_at: '2021-03-25T15:12:52+00:00'
+updated_at: '2026-06-24T19:21:15+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T19:21:14+00:00'
 ---
 
 # Original Description
@@ -25,5 +25,9 @@ Maybe you should consider using --generate_test_data and --play_test_data instea
 ## mj-xmr | 2021-03-06T16:03:33+00:00
 Yes, it makes sense. It was somehow broken, although not beyond repair. I'm on it.
 
+## selsta | 2026-06-24T19:21:14+00:00
+We solved slow core tests on CI with #10686.
+
 # Action History
 - Created by: mj-xmr | 2021-03-06T10:08:03+00:00
+- Closed at: 2026-06-24T19:21:14+00:00

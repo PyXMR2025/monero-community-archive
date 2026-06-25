@@ -3,9 +3,10 @@ title: Epee/ZMQ Serialization Future
 source_url: https://github.com/monero-project/monero/issues/6406
 author: vtnerd
 assignees: []
-labels: []
+labels:
+- proposal
 created_at: '2020-03-27T23:08:47+00:00'
-updated_at: '2020-03-27T23:09:36+00:00'
+updated_at: '2026-06-24T00:51:34+00:00'
 type: issue
 status: open
 closed_at: null

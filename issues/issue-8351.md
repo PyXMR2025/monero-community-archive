@@ -5,10 +5,10 @@ author: DangerousFreedom1984
 assignees: []
 labels: []
 created_at: '2022-05-23T16:51:47+00:00'
-updated_at: '2022-07-03T16:32:02+00:00'
+updated_at: '2026-06-24T18:25:20+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T18:25:20+00:00'
 ---
 
 # Original Description
@@ -94,3 +94,4 @@ Ah perfect! I didn't realize that column was block height. Thanks :pray:
 
 # Action History
 - Created by: DangerousFreedom1984 | 2022-05-23T16:51:47+00:00
+- Closed at: 2026-06-24T18:25:20+00:00

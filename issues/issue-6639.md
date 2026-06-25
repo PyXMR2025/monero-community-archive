@@ -5,10 +5,10 @@ author: dEBRUYNE-1
 assignees: []
 labels: []
 created_at: '2020-06-10T13:36:39+00:00'
-updated_at: '2022-11-02T05:49:22+00:00'
+updated_at: '2026-06-24T00:59:10+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T00:59:10+00:00'
 ---
 
 # Original Description
@@ -855,5 +855,9 @@ It's been nearly a near since we've seen any movement on this topic; do you have
 ## tevador | 2022-11-02T05:49:22+00:00
 I'm not aware of any issues with Polyseed. AFAIK it's still on the roadmap for Seraphis.
 
+## selsta | 2026-06-24T00:59:10+00:00
+Closing this as we are planning to add polyseed in v0.19.
+
 # Action History
 - Created by: dEBRUYNE-1 | 2020-06-10T13:36:39+00:00
+- Closed at: 2026-06-24T00:59:10+00:00

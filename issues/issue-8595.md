@@ -1,7 +1,7 @@
 ---
 title: estimateTransactionFee no longer takes fee priority into account?
 source_url: https://github.com/monero-project/monero/issues/8595
-author: pokkst
+author: ghost
 assignees: []
 labels: []
 created_at: '2022-09-25T04:46:22+00:00'
@@ -26,5 +26,5 @@ We have an issue for it open here: https://github.com/monero-project/monero-gui/
 https://github.com/monero-project/monero/pull/8610
 
 # Action History
-- Created by: pokkst | 2022-09-25T04:46:22+00:00
+- Created by: ghost | 2022-09-25T04:46:22+00:00
 - Closed at: 2022-10-13T01:38:59+00:00

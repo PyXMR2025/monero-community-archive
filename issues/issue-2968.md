@@ -5,10 +5,10 @@ author: yuhong
 assignees: []
 labels: []
 created_at: '2017-12-20T01:51:32+00:00'
-updated_at: '2026-02-18T21:51:11+00:00'
+updated_at: '2026-06-24T18:32:26+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T18:32:26+00:00'
 ---
 
 # Original Description
@@ -25,5 +25,9 @@ Keep in mind Monero is now going to use variant 2 from the 18th of october,
 
 +hacktoberfest
 
+## selsta | 2026-06-24T18:32:26+00:00
+RandomX uses ARM64 NEON for JIT.
+
 # Action History
 - Created by: yuhong | 2017-12-20T01:51:32+00:00
+- Closed at: 2026-06-24T18:32:26+00:00

@@ -5,10 +5,10 @@ author: who-biz
 assignees: []
 labels: []
 created_at: '2021-11-30T20:26:40+00:00'
-updated_at: '2021-12-03T18:24:33+00:00'
+updated_at: '2026-06-24T17:47:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T17:47:27+00:00'
 ---
 
 # Original Description
@@ -37,5 +37,9 @@ Porting EOS's archives into XMR's codebase did resolve the warnings, but obvious
 
 These files are not included in boost's compiled libraries, and as a result have *not been extensively tested*, according to their historical dev discussions. Since lowering optimization resolves compiler yelling, I am doubtful there is a serious issue here... but I'm really not sure what changes the compiler is making to generate the warning under different O levels.
 
+## selsta | 2026-06-24T17:47:27+00:00
+I do not see this warning with `gcc 16.1.1`.
+
 # Action History
 - Created by: who-biz | 2021-11-30T20:26:40+00:00
+- Closed at: 2026-06-24T17:47:27+00:00

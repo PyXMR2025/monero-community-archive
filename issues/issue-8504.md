@@ -6,10 +6,10 @@ assignees: []
 labels:
 - mac
 created_at: '2022-08-15T14:56:06+00:00'
-updated_at: '2024-01-03T05:05:35+00:00'
+updated_at: '2026-06-24T18:27:01+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-24T18:27:01+00:00'
 ---
 
 # Original Description
@@ -379,5 +379,9 @@ OK.  I'll try it.  Thanks.
 ## novice66 | 2022-12-03T11:06:28+00:00
 Update:  I've been running the daemon for well over six hours without a crash.  It would seem that running the x86-64 binary version(s) either fixes the bug or else renders it very infrequent.  So, my thanks to hyc for the suggestion.   
 
+## selsta | 2026-06-24T18:27:01+00:00
+We have received no such reports in the meantime and in the future we will require a higher min macOS version for release binaries so I'm closing this.
+
 # Action History
 - Created by: slurfius | 2022-08-15T14:56:06+00:00
+- Closed at: 2026-06-24T18:27:01+00:00
