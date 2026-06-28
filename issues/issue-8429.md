@@ -6,10 +6,10 @@ author: ForeverNooob
 assignees: []
 labels: []
 created_at: '2022-07-11T20:06:43+00:00'
-updated_at: '2026-06-24T19:58:55+00:00'
+updated_at: '2026-06-25T16:56:02+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-25T16:56:02+00:00'
 ---
 
 # Original Description
@@ -37,3 +37,4 @@ still exists. if i choose a dirr outside of the flatpak sandbox via the file bro
 
 # Action History
 - Created by: ForeverNooob | 2022-07-11T20:06:43+00:00
+- Closed at: 2026-06-25T16:56:02+00:00

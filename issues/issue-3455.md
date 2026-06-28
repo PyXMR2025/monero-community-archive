@@ -5,10 +5,10 @@ author: beenotung
 assignees: []
 labels: []
 created_at: '2018-03-20T23:32:41+00:00'
-updated_at: '2018-08-15T12:54:40+00:00'
+updated_at: '2026-06-27T14:59:49+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-27T14:59:49+00:00'
 ---
 
 # Original Description
@@ -42,5 +42,9 @@ So my request may be 'smart mining' similiar feature for block sync. (Smart sync
 You can use --max-concurrency N to set the max number of worker threads used in heavy workloads such as syncing.
 
 
+## selsta | 2026-06-27T14:59:49+00:00
+Closing this as it appears unlikely that this will be implemented in monerod.
+
 # Action History
 - Created by: beenotung | 2018-03-20T23:32:41+00:00
+- Closed at: 2026-06-27T14:59:49+00:00

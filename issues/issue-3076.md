@@ -6,10 +6,10 @@ assignees: []
 labels:
 - proposal
 created_at: '2018-01-07T14:15:27+00:00'
-updated_at: '2025-10-03T15:22:35+00:00'
+updated_at: '2026-06-26T16:47:55+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-26T16:47:55+00:00'
 ---
 
 # Original Description
@@ -34,5 +34,9 @@ is there a reason this hasn't happened yet? It's not that hard to have an image 
 ## SamsungGalaxyPlayer | 2025-10-03T15:22:35+00:00
 Personally, I think hosting Docker images [here on GitHub Packages](https://github.com/orgs/monero-project/packages) is a good idea. That way the existing organization account and its controls can be used. No Docker Hub account needed.
 
+## selsta | 2026-06-26T16:47:55+00:00
+Closing this proposal as no one stepped up to maintain this.
+
 # Action History
 - Created by: noonien | 2018-01-07T14:15:27+00:00
+- Closed at: 2026-06-26T16:47:55+00:00

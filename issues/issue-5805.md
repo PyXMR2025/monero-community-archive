@@ -5,10 +5,10 @@ author: kayront
 assignees: []
 labels: []
 created_at: '2019-08-11T08:10:09+00:00'
-updated_at: '2019-08-25T09:51:21+00:00'
+updated_at: '2026-06-25T17:06:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-25T17:06:27+00:00'
 ---
 
 # Original Description
@@ -41,5 +41,9 @@ But that is not the problem at all, third-party software from pkgsrc randomly in
 
 I have no idea what the problem might be, but it is clear from running the binary that something went horribly wrong at some point - see the typescript.
 
+## selsta | 2026-06-25T17:06:27+00:00
+Closing this as stale.
+
 # Action History
 - Created by: kayront | 2019-08-11T08:10:09+00:00
+- Closed at: 2026-06-25T17:06:27+00:00

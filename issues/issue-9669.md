@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-06-24T19:09:30+00:00'
+updated_at: '2026-06-26T16:33:42+00:00'
 type: issue
 status: open
 closed_at: null
@@ -20,7 +20,7 @@ Time machine: June 20 2026
 | Package  | Version | PR |
 |----------|---------|------|
 | gcc      | 15.2.0  |   |
-| clang | 21.1.8 | (#10797) |
+| clang | 22.1.8 |  |
 | glibc    | 2.27    | (#9207) |
 | binutils | 2.44    | |
 | cmake    | 3.31.8  | |

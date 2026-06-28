@@ -5,10 +5,10 @@ author: kayront
 assignees: []
 labels: []
 created_at: '2019-08-10T19:02:36+00:00'
-updated_at: '2022-04-08T16:29:49+00:00'
+updated_at: '2026-06-25T17:06:23+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-25T17:06:23+00:00'
 ---
 
 # Original Description
@@ -87,5 +87,9 @@ cd ../..
 ## selsta | 2022-04-08T16:29:40+00:00
 @kayront did you see @notmike-5 reply?  Did it help?
 
+## selsta | 2026-06-25T17:06:23+00:00
+Closing this as stale.
+
 # Action History
 - Created by: kayront | 2019-08-10T19:02:36+00:00
+- Closed at: 2026-06-25T17:06:23+00:00
