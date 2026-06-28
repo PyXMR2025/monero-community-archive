@@ -326,9 +326,6 @@ https://docs.decred.org/proof-of-stake/overview/
 ## yonder83 | 2025-08-19T20:21:36+00:00
 The whole finality layer idea sounds like an overly complicated solution to a problem that doesn’t really exist. The fear of a 51% attack turned out to be unfounded. The network’s hashrate has been steadily increasing, which indicates ongoing interest in mining. People genuinely trust Monero in its current, functioning form. Tweaks like this can easily cause more harm to the project than good. No PoS mechanisms or Finality Layers should be introduced.
 
-## PPPDUD | 2025-08-22T16:30:41+00:00
-Stakes? Second token? Layer‽ Is this some Tari jargon I'm not grasping?
-
 ## ghost | 2025-08-24T00:41:53+00:00
 cc: @reubenyap @QuantumExplorer
 
@@ -368,44 +365,6 @@ I have not looked at this in depth, however, any proposal to add an additional c
 - It will create a significant amount of complexity, especially PoS, which is insanely complicated compared to PoW
 - It will increase the attack surface on the network, as now it will be possible to attack either consensus mechanism to take down the entire chain. EDIT: so this proposal is strictly a worsening of security over the status quo.
 - PoS, specifically, suffers from the buyout attack, which PoW does not. If you do not know what the buyout attack is, you probably shouldn't be even suggesting this.
-
-## PPPDUD | 2025-08-27T22:05:21+00:00
-> Hi [@kayabaNerve](https://github.com/kayabaNerve) my understanding is that this are the methods mentioned by the proposal so far.
-> 
-> * Using XMR holdings directly (traditional staking)
-> * Assigning one stake to anyone who mines a block
-> * Using a secondary mined token
-> 
-> But what about instead, using locked mined XMR?
-> 
-> We could create a special public miner address for each miner where mining rewards are accumulated, if rewards are not withdrawn after a few months you gain validator status. If you sell rewards you loose validator status.
-> 
-> It helps to protect against:
-> 
-> * Rented hash attack
-> * Qubic-like sell + pump shitcoin scheme
-> * Big XMR holders taking over
-> 
-> We could call it locked miner reward validation or something different than PoS as it is not the same of the traditional PoS where you deposit funds which is also very contentious issue for the community.
-> 
-> The miners that haven't sold their mined XMR and become validators could also get increased rewards, to incentivize this long-term miner reward locking. Eventually they could withdraw certain percent of their rewards without loosing validator status and increased rewards.
-
-Interesting! This would also incentivize HODLing of mined XMR, which helps keep the price stable.
-
-Edit: Wouldn't this cause privacy issues for p2pool miners? On p2pool, all miners have to reveal their primary address where rewards are sent, and the amounts mined are publicly visible. In a system where withdrawals are disincentivized, this could bring us closer to a BTC level of privacy.
-
-## PPPDUD | 2025-08-27T22:10:52+00:00
-> > The daemon will encrypt the key in memory as password managers do.
-> 
-> > * The daemon have endpoints to sign staking related things (like block signing), but can't sign regular transactions. It protect at least the staker from having the private key in clear-text configuration files or in the `monerod` memory space (internet exposed).
-> 
-> If your threat profile includes the attacker being able to read keys from your RAM, you might aswell give up on this until you get a CPU that can read and decrypt straight inside the die (like AMD Secure Memory Encryption)
-> 
-> > This make the staking nodes an interesting target for attackers looking to steal XMR, which is the intended effect. Staking won't be a passive activity (especially for the delegated kind), but will require to actually work to secure your node.
-> 
-> Why should this be intended? Should it be intended that if I mine on my computer, I should be sleeping near it in case somebody breaks in and steals it?
-
-You expect to _sleep_ next to a cryptominer?
 
 ## runatyr1 | 2025-08-27T23:05:15+00:00
 @PPPDUD thanks for checking the idea
@@ -519,19 +478,6 @@ For the record, I'm largely not participating here as I find it too noisy. I'm h
 I want to clarify the introduction of a PoS finality layer would not be the worst of two security models. With the transition to a PoS finality layer, PoW's problem of unbounded reorganizations (its failure mode) is no longer defined. Instead, the discussion is on if finality stalls (preventing advancing the bound for which reorganizations are possible).
 
 A maximum reorg depth is a horrible finality layer. It'd requires a completely synchronous network to work, as in, blocks immediately propagate over the entire network _and_ nodes are never offline. Else, net splits would simply be explicitly possible _even if the adversary can only cause them intermittently_.
-
-## PPPDUD | 2025-08-29T14:37:12+00:00
-> [@PPPDUD](https://github.com/PPPDUD) thanks for checking the idea
-> 
-> _> Edit: Wouldn't this cause privacy issues for p2pool miners? On p2pool, all miners have to reveal their primary address where rewards are sent, and the amounts mined are publicly visible. In a system where withdrawals are disincentivized, this could bring us closer to a BTC level of privacy._
-> 
-> I think it could work like this: 1- input primary wallet address to miner software for withdrawals (same behavior) 2- p2pool miner software derives a special public address that has funds visible, to verify miner rewards are locked and earn validator status (new behaviour) 3 - mining happens and accumulates rewards in that public address and eventually become a validator 4- miner may trigger a withdrawal in the miner software which would be automatically made to the primary wallet address from step 1. If it doesn't leave enough locked funds, validator status is lost (and thus extra rewards).
-> 
-> Those funds held in public addresses can't really be used for transactions so it would not affect privacy. You could only leave them there, and people will know the miner is holding some funds, but that doesn't link to miner real identity or their physical location and if they decide to withdraw, funds return to the normal Monero privacy system
-> 
-> Also something about implementation it seems this change is easier for p2pool as you could track locked rewards without error using those side-chains. For centralized pools it could be acceptable to risk that the pool operator don't track locked rewards correctly, they could fail to pay locked rewards in the future. That would facilitate implementation as it doesn't seem possible to control centralized custom pool miners. It's also an incentive to use p2pool instead of centralized.
-
-Monero is currently having an influx of new miners, so we probably shouldn't try to change the way their favorite decentralized pool works on the outside.
 
 ## taoeffect | 2025-08-29T16:25:34+00:00
 > A maximum reorg depth is a horrible finality layer. It'd requires a completely synchronous network to work, as in, blocks immediately propagate over the entire network and nodes are never offline.
@@ -684,24 +630,10 @@ To make this proposal less contentious, I would suggest to make it a soft fork. 
 
 Technical details should be provided how to make it work under the current consensus rules. I'd imagine we could use tx_extra for the required metadata and it would be better to avoid using the legacy time locks, which are scheduled for removal.
 
-## PPPDUD | 2025-09-11T21:09:46+00:00
-> To make this proposal less contentious, I would suggest to make it a soft fork. It could then be viewed as a more decentralized alternative to [DNS checkpoints](https://github.com/monero-project/monero/issues/10064). A soft finality layer would be automatically accepted by the whole network (via the longest chain rule) if a mining majority starts enforcing it.
-> 
-> Technical details should be provided how to make it work under the current consensus rules. I'd imagine we could use tx_extra for the required metadata and it would be better to avoid using the legacy time locks, which are scheduled for removal.
-
-We should not rely on tx_extra, because it has already gotten a bad reputation with many people, and I don't want to see a perfectly-good proposal go to waste over something like that.
-
 ## tevador | 2025-09-11T22:36:25+00:00
 > We should not rely on tx_extra, because it has already gotten a bad reputation with many people, and I don't want to see a perfectly-good proposal go to waste over something like that.
 
 I don't agree with your argument. The protocol still allows tx_extra for non-consensus data associated with a transaction. It's been limited to 1060 bytes, but that should be enough for the required use case. All alternatives are even more ugly (embedding custom data in output keys etc.).
-
-## PPPDUD | 2025-09-12T15:40:23+00:00
-> > We should not rely on tx_extra, because it has already gotten a bad reputation with many people, and I don't want to see a perfectly-good proposal go to waste over something like that.
-> 
-> I don't agree with your argument. The protocol still allows tx_extra for non-consensus data associated with a transaction. It's been limited to 1060 bytes, but that should be enough for the required use case. All alternatives are even more ugly (embedding custom data in output keys etc.).
-
-I agree that using tx_extra would be a good idea _in theory_, but you might have trouble explaining how it isn't wasting space in the blockchain to people who just started running their own node.
 
 ## tevador | 2025-09-12T16:56:13+00:00
 > I agree that using tx_extra would be a good idea in theory, but you might have trouble explaining how it isn't wasting space in the blockchain to people who just started running their own node.
@@ -725,11 +657,6 @@ Specifically, could you please state:
 2. Given their hashrate, the likehood of them causing a 10+ deep reorg is quite high.
 3. The alternative, currently being discussed and implemented, are [rolling DNS checkpoints](https://github.com/monero-project/monero/issues/10064), which is a more centralized solution than a finality layer. Another alternative is [Publish or Perish](https://github.com/monero-project/research-lab/issues/144), which works against selfish mining, but can't prevent deep reorgs. Those are the 3 soft-forking solutions on the table.
 4. I can't answer that, but if we are going to deploy DNS checkpoints, a PoS checkpointing layer would be an improvement. I think it would be quite safe to deploy it as a soft fork. If the network doesn't accept it, it would simply never activate.
-
-## PPPDUD | 2025-09-12T21:46:59+00:00
-> 1. The malicious pool currently attacking Monero stated that they will attempt deep reorgs of up to 29 blocks. Source: https://xcancel.com/c___f___b/status/1962083649186062617#m
-
-And we should trust a crypto bro attempting to cause mass panic why?
 
 ## taoeffect | 2025-09-12T21:56:06+00:00
 > The malicious pool currently attacking Monero stated that they will attempt deep reorgs of up to 29 blocks. Source: https://xcancel.com/c___f___b/status/1962083649186062617#m
@@ -795,12 +722,6 @@ I suggest readers to look up the difference between a hard fork and a soft fork.
 ## taoeffect | 2025-09-12T22:37:26+00:00
 How about service providers just monitor the the weather on Monero and increase the amount of time they wait before considering transactions finalized during stormy conditions?
 
-## PPPDUD | 2025-09-12T23:21:26+00:00
-> This is obviously a deliberate lie on his part as we know that the [#1](https://github.com/monero-project/research-lab/pull/1) cryptocurrency does not use PoS and is not considering switching to it (for very good reason).
-> 
-
-Monero is great, but I don't think that there is any such thing as a superior cryptocurrency. We should avoid such bragging, for pride quickly devolves into tribalism (and has done so many times in the past).
-
 ## taoeffect | 2025-09-12T23:24:37+00:00
 > Monero is great, but I don't think that there is any such thing as a superior cryptocurrency. We should avoid such bragging, for pride quickly devolves into tribalism (and has done so many times in the past).
 
@@ -808,36 +729,12 @@ If that's a joke it's a good one. 😆
 
 (If not, I was referring to Bitcoin's market cap.)
 
-## PPPDUD | 2025-09-12T23:24:58+00:00
-Before anybody else panics, please read these ancient World War II posters from the UK:
-<a title="UK Government, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Keep-calm-and-carry-on-scan.jpg"><img width="256" alt="Keep-calm-and-carry-on-scan" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Keep-calm-and-carry-on-scan.jpg/256px-Keep-calm-and-carry-on-scan.jpg?20181007092500"></a>
-
-<a title="UK Ministry of Information, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Freedomisinperilposter.jpg"><img width="256" alt="Freedomisinperilposter" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Freedomisinperilposter.jpg?20150708002612"></a>
-
-## PPPDUD | 2025-09-12T23:27:24+00:00
-> > Monero is great, but I don't think that there is any such thing as a superior cryptocurrency. We should avoid such bragging, for pride quickly devolves into tribalism (and has done so many times in the past).
-> 
-> If that's a joke it's a good one. 😆
-> 
-> (If not, I was referring to Bitcoin's market cap.)
-
-I am not joking. I don't usually make jokes that are hard to figure out. This post is not sarcastic.
-
 ## tevador | 2025-09-13T09:07:35+00:00
 Please avoid off topic discussion. This is not a place for chatting.
 
 Especially, @PPPDUD - there is not a single comment from you here actually related to a finality layer.
 
 @Rucknium Can you please moderate the discussion?
-
-## PPPDUD | 2025-09-13T13:31:43+00:00
-> Please avoid off topic discussion. This is not a place for chatting.
-> 
-> Especially, [@PPPDUD](https://github.com/PPPDUD) - there is not a single comment from you here actually related to a finality layer.
-> 
-> [@Rucknium](https://github.com/Rucknium) Can you please moderate the discussion?
-
-I will leave now.
 
 ## tevador | 2025-09-14T10:29:45+00:00
 > Specifically, could you please state:

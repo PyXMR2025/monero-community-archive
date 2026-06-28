@@ -830,9 +830,6 @@ Requiring formal consensus changes makes the copy cat method look better. It's i
 ## dimagid | 2025-08-21T17:23:16+00:00
 Have we experienced a reorganization of 10 blocks or more since this attack began? The ongoing and sustained intention of the attack is to destroy Monero. What do we do if a selfish mining reorganization of 10 blocks or more occurs—do we just turn off the lights and go to sleep? Do you believe the lock-in period for XMR should be increased from 10 to 15 or 20 blocks under certain conditions? Additionally, while the proposal is aimed at the pool level, is there any way to implement it at the solo mining level as well? How can solo miners avoid validating chains produced through selfish mining? Thank you for your responses.
 
-## PPPDUD | 2025-08-21T20:46:53+00:00
-@fluffypony Has anybody actually agreed to implement this?
-
 ## AwfulCrawler | 2025-08-21T22:27:34+00:00
 @fluffypony I was mainly addressing the paper and what's in the paper but I flatly disagree that the presence of a detective block forces them to publish to maximise profit.  Basically: ignoring the detective blocks eventually orphans everything except the tip.  There's no interleaving or chance to build on top of the detective blocks when the attacker broadcasts their hidden chain.  In the parameter ranges the paper talked about, ignoring IS more profitable.  For lower parameter ranges this is entirely unknown until a simulation or some other calculations are done..
 
