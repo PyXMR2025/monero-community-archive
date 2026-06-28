@@ -46,10 +46,6 @@ Concur with FF6600 and 4C4C4C. All the options are barely distinguishable and ce
 
 Interesting to me that the old GUI used 4C4C4C and the new one release is slightly off (according to Leza89).
 
-## PPPDUD | 2025-03-30T21:38:14+00:00
-Can someone make a palette sampler so I can look at the different ideas?
-Hexcodes do not correspond to colors in my mind (not sure about you guys though). 
-
 ## codymadethis | 2025-07-28T20:36:32+00:00
 Current & proposed brand hex values that would help improve readability across surfaces!
 
@@ -69,13 +65,6 @@ Changing the grey to black may look worse on black backgrounds.
 I think Monero is mature enough to be shown in monochrome and still be recognizable, as long as we don't lose the 45º M and the extra serifs to the sides.
 
 That doesn't mean we cannot keep using the duotone version specially for in-person flags, stickers, etc; but in most UIs we can do it fully orange and it'll work, or white/black depending of the background.
-
-## PPPDUD | 2025-09-05T14:24:51+00:00
-> I think Monero is mature enough to be shown in monochrome and still be recognizable, as long as we don't lose the 45º M and the extra serifs to the sides.
-> 
-> That doesn't mean we cannot keep using the duotone version specially for in-person flags, stickers, etc; but in most UIs we can do it fully orange and it'll work, or white/black depending of the background.
-
-Orange and gray are the colors of Monero's people. We should not extinguish our identity and fade into the traps of modern design. Fully orange would just look weird.
 
 # Action History
 - Created by: SamsungGalaxyPlayer | 2022-11-09T16:38:03+00:00
