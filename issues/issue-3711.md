@@ -42,13 +42,5 @@ None of this really matters it's all about mining electricity or some form of da
 ## susgirl446 | 2025-09-27T19:24:57+00:00
 if it does 77 H/s how do you know that it can do 225 KH/s??
 
-## PPPDUD | 2025-10-24T14:20:36+00:00
-So you are making your own blockchain and writing your own blocks of text, but you can't build your own mining software?
-
-## PPPDUD | 2025-10-24T14:24:43+00:00
-> have you maybe considered taking your meds?
-
-How do you know that they _have_ medications? You also can't rule out the possibility of LLM-enhanced autocomplete text.
-
 # Action History
 - Created by: wm97artsociety | 2025-09-21T19:42:23+00:00

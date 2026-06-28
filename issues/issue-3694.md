@@ -36,16 +36,8 @@ Add any other context about the problem here.
 
 
 # Discussion History
-## PPPDUD | 2025-10-15T14:51:17+00:00
-The heck? You didn't need to write a whole novel about your situation. If you don't have enough money to fund cryptomining, you could try staking on Solana or Ethereum.
-
 ## wm97artsociety | 2025-11-17T04:19:10+00:00
 yes instead of mocking someone with a idea to make crypto better or pick apart grammar  staking on $1 is only a micro penny in value earned its not worth giving my money to someone to play with in hopes of getting a micro penny in a annual yearly return no offense but i learned to code to get better rates for binary currency which is what crypto is if crypto can only do 15 cents a day on a pc or a little more for standard pc then i build my own rig to sell binary hashpower which is what crypto is or kilowatts or megabytes or even a file 
-
-## PPPDUD | 2025-11-17T13:45:16+00:00
-> yes instead of mocking someone with a idea to make crypto better or pick apart grammar staking on $1 is only a micro penny in value earned its not worth giving my money to someone to play with in hopes of getting a micro penny in a annual yearly return no offense but i learned to code to get better rates for binary currency which is what crypto is if crypto can only do 15 cents a day on a pc or a little more for standard pc then i build my own rig to sell binary hashpower which is what crypto is or kilowatts or megabytes or even a file
-
-Might I kindly inquire as to what binary hashpower, grammar staking, and binary currency refer to? Are you attempting to say that you've found a cryptocurrency which is mined and operated by scripts?
 
 # Action History
 - Created by: wm97artsociety | 2025-08-19T03:45:12+00:00

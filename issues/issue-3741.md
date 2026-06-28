@@ -68,30 +68,6 @@ this will fix the issue of respawning and your server will be fully-cured from t
 
 follow this blog for more info: https://nextjs.org/blog/CVE-2025-66478
 
-## PPPDUD | 2025-12-08T22:16:46+00:00
-I would advise you to back up your data and nuke it out of orbit. There's a thousand places where a malicious cryptominer could hide and it's not a good idea to play whack-a-mole with this stuff.
-
->It's not anyone here's fault you don't know how to secure a server.
-
-You don't know that. They might have made an honest mistake, and being hostile to people with real problems will not get anyone very far. For all we know, they could have been affected by a supply-chain attack or a poorly-timed package update.
-
-> > > what the hell do you want us to do? we are not here to help you protect your server.
-> > 
-> > 
-> > Maybe any advise on how to get rid of it? Uninstall guide or something? Or you are clear only to type crap?
-> 
-> Properly clean your server from these type of `sex.sh`, `kal.tar.gz`, `system-update-service` also from your project base as well
-> 
-> if you're a next user install this package `fix-react2shell-next` to install the patched version
-> 
-> remove your project's .next, lock file, node_modules and re-install and re-build your app
-> 
-> this will fix the issue of respawning and your server will be fully-cured from the cryptominer malware
-> 
-> follow this blog for more info: https://nextjs.org/blog/CVE-2025-66478
-
-How do you know that they were developing software? They might have been self-hosting something.
-
 ## toverux | 2025-12-09T01:04:30+00:00
 Happened to me right now and this was made possible by the recent CVE 10.0 in Next.js: https://nextjs.org/blog/CVE-2025-66478
 This allows remote code execution. Given the timing of your post, chances are you're being injected xmrig the same way.
@@ -127,35 +103,6 @@ It was re-spawning, as there was a file at `usr/local/bin` path named as system
 
 I've completely removed the malicous malware from the server and cured my client's server, the structure is too complicated that most of the time it is a no go to nuke the whole server out and restart from scratch
 
-## PPPDUD | 2025-12-10T14:14:10+00:00
-> > I would advise you to back up your data and nuke it out of orbit. There's a thousand places where a malicious cryptominer could hide and it's not a good idea to play whack-a-mole with this stuff.
-> > > It's not anyone here's fault you don't know how to secure a server.
-> > 
-> > 
-> > You don't know that. They might have made an honest mistake, and being hostile to people with real problems will not get anyone very far. For all we know, they could have been affected by a supply-chain attack or a poorly-timed package update.
-> > > > > what the hell do you want us to do? we are not here to help you protect your server.
-> > > > 
-> > > > 
-> > > > Maybe any advise on how to get rid of it? Uninstall guide or something? Or you are clear only to type crap?
-> > > 
-> > > 
-> > > Properly clean your server from these type of `sex.sh`, `kal.tar.gz`, `system-update-service` also from your project base as well
-> > > if you're a next user install this package `fix-react2shell-next` to install the patched version
-> > > remove your project's .next, lock file, node_modules and re-install and re-build your app
-> > > this will fix the issue of respawning and your server will be fully-cured from the cryptominer malware
-> > > follow this blog for more info: https://nextjs.org/blog/CVE-2025-66478
-> > 
-> > 
-> > How do you know that they were developing software? They might have been self-hosting something.
-> 
-> I've found these files and disguised docker consuming more than 95% of my CPU they have the system named backdoor files in the root which trigger the shell script on every reboot and every hour
-> 
-> It was re-spawning, as there was a file at `usr/local/bin` path named as system
-> 
-> I've completely removed the malicous malware from the server and cured my client's server, the structure is too complicated that most of the time it is a no go to nuke the whole server out and restart from scratch
-
-Do you remember the name of the Docker container? It might be useful for fixing issues like this in the future.
-
 ## dong4j | 2025-12-12T13:12:45+00:00
 Today I happened to deal with a case where a server was maliciously used for crypto mining due to a Next.js vulnerability. Fortunately, my server is macOS — XMRig was only downloaded and never actually ran.
 
@@ -166,21 +113,6 @@ This isn’t XMRig’s fault. The problem lies with Next.js and the people who a
 ```
 
 This person is absolutely disgusting — they even refused to donate any of their earnings back to the project.
-
-## PPPDUD | 2025-12-12T14:02:00+00:00
-> Today I happened to deal with a case where a server was maliciously used for crypto mining due to a Next.js vulnerability. Fortunately, my server is macOS — XMRig was only downloaded and never actually ran.
-> 
-> This isn’t XMRig’s fault. The problem lies with Next.js and the people who abuse open-source projects like this. Still, I want to punish the person behind this malicious mining attempt. Below is some information about them — is it possible to get their wallet banned?
-> 
-> ```
-> --url pool.supportxmr.com:8080 --user 89Zr4vPaS8yTYRQE54tK1QGKRpsYZ6eJJYynfpfBf1zmLHECaskMPwd3wuTnQ4SYQ7QLkwVN8ur2QTQi9wkKMaCr2iXKa7j --pass sx --donate-level 0
-> ```
-> 
-> This person is absolutely disgusting — they even refused to donate any of their earnings back to the project.
-
-First of all, I don't think that banning them is a good idea. They seem to have already modified XMRig to disable donations; I wouldn't put it beyond them to just ignore your updates and refuse to compile them. If SupportXMR wanted to give them a hard time, they would just use another address.
-
-As for the donations, wouldn't you prefer that XMRig _doesn't_ take advantage of you to earn money? @SChernykh is certain to have profited massively by the use of their cryptominer, and I doubt that it's _harming them_ to continue maintaining it for the minority of people who don't donate.
 
 ## ghost | 2026-01-13T05:37:01+00:00
 See also https://github.com/xmrig/xmrig/issues/3754
@@ -198,11 +130,6 @@ You can misuse anything in this world that wasn't intended for a specific purpos
 ## UnixCro | 2026-01-13T18:45:15+00:00
 I don't understand at all what xmrig has to do with this? Their server is insecure; it can open all sorts of pornographic content or delete everything. Is xmrig also to blame here?
 
-## PPPDUD | 2026-01-13T19:23:34+00:00
-> I don't understand at all what xmrig has to do with this? Their server is insecure; it can open all sorts of pornographic content or delete everything. Is xmrig also to blame here?
-
-I think that the idea is that XMRig was used to cryptomine on their machine, which irked them, so they came here to ask for help.
-
 ## UnixCro | 2026-01-13T19:56:04+00:00
 > > I don't understand at all what xmrig has to do with this? Their server is insecure; it can open all sorts of pornographic content or delete everything. Is xmrig also to blame here?
 > 
@@ -212,27 +139,10 @@ Is he simply asking for help, or is he insulting us and blaming xmrig because hi
 
 
 
-## PPPDUD | 2026-01-13T20:25:54+00:00
-> > > I don't understand at all what xmrig has to do with this? Their server is insecure; it can open all sorts of pornographic content or delete everything. Is xmrig also to blame here?
-> > 
-> > 
-> > I think that the idea is that XMRig was used to cryptomine on their machine, which irked them, so they came here to ask for help.
-> 
-> Is he simply asking for help, or is he insulting us and blaming xmrig because his server is insecure due to xmrig?
-
-They might not be coming with the best attitude, but it's probably just because they got hacked. Imagine if your device had an unauthorized cryptominer on it; would you freak out? I certainly would.
-
 ## UnixCro | 2026-01-13T20:32:23+00:00
 And why are we now being blamed for the insecurity of his server and even insulted?
 
 If I get beaten up, are the doctors to blame?
-
-## PPPDUD | 2026-01-13T21:24:53+00:00
-> And why are we now being blamed for the insecurity of his server and even insulted?
-> 
-> If I get beaten up, are the doctors to blame?
-
-No, but it is reasonable for a doctor to expect a patient who is stressed and perhaps is not targeting their actions towards the correct people, so long as the patient doesn't inflict damage upon the doctor.
 
 ## UnixCro | 2026-01-13T22:36:32+00:00
 > > And why are we now being blamed for the insecurity of his server and even insulted?
@@ -319,42 +229,8 @@ The miner is open source, so anyone, with or without skills, can make many chang
 If we extend the malware logic to the absolute, then if XMRig is malware, Next.js is malware (a backdoor), and whatever "next" next is malware, including the underlying OS. If we do not stop here, bytes/bits is malware, we definitely should stop using "thinking machines".
 Thank you.
 
-## PPPDUD | 2026-01-14T14:16:55+00:00
-> [@un1ntend3d](https://github.com/un1ntend3d) you "solution" has several issues: a. be bypassed by removing the dialog from the code, and b. doesn't allow people to run the miner on devices which don't run an x server software
-> 
-> "banning" the user is impossible as well, as they can just patch xmrig to remove the ban
-
-You want to restrict user freedoms and destroy Monero's security? Sure, go ahead, write your own fork that wraps everything in disclaimers and gives X11 users an unfair advantage. But the stock XMRig is _free software_, meaning that it's the user's responsibility to create safeguards.
-
-## PPPDUD | 2026-01-14T14:19:38+00:00
-> Just wanted to share some quotes from professional;
-> 
-> ### "This is cryptomining malware"
-> and
-> 
-> ### "Yes, it is malware."
-> you can read full report at https://malwaresourcecode.com/home/my-projects/write-ups/r-piratedgames-drama.-is-it-malware-yes.-is-it-cool-malware-no
-
-That brief report is regarding a piece of malware that relies on XMRig, not XMRig itself. If I compiled a piece of malware that used glibc, would you call glibc malware too?
-
-## PPPDUD | 2026-01-14T14:20:44+00:00
-> > > And why are we now being blamed for the insecurity of his server and even insulted?
-> > > If I get beaten up, are the doctors to blame?
-> > 
-> > 
-> > No, but it is reasonable for a doctor to expect a patient who is stressed and perhaps is not targeting their actions towards the correct people, so long as the patient doesn't inflict damage upon the doctor.
-> 
-> You're absolutely right, doctors try to calm their patients. But xmrig isn't a hospital … And the developers of xmrig are not doctors …
-
-Then why are you applying that analogy if it starts to break down in this situation?
-
 ## allisonmeow | 2026-01-18T03:34:11+00:00
 lol laugh at this idiot
-
-## PPPDUD | 2026-01-18T19:42:02+00:00
-> lol laugh at this idiot
-
-What if that were you? You certainly wouldn't want other GitHub users to call _you_ an idiot, would you?
 
 ## allisonmeow | 2026-01-18T22:48:49+00:00
 > > lol laugh at this idiot
