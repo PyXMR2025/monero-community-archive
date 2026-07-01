@@ -1,7 +1,7 @@
 ---
 title: centos arm don't use
 source_url: https://github.com/xmrig/xmrig/issues/3289
-author: weishangdashi
+author: rj-linrenjian
 assignees: []
 labels: []
 created_at: '2023-06-24T02:32:33+00:00'
@@ -16,5 +16,5 @@ No description
 
 # Discussion History
 # Action History
-- Created by: weishangdashi | 2023-06-24T02:32:33+00:00
+- Created by: rj-linrenjian | 2023-06-24T02:32:33+00:00
 - Closed at: 2025-06-18T22:47:02+00:00
