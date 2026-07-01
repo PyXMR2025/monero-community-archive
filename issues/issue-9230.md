@@ -7,10 +7,10 @@ labels:
 - question
 - more info needed
 created_at: '2024-03-10T08:01:08+00:00'
-updated_at: '2024-03-23T20:50:45+00:00'
+updated_at: '2026-06-28T11:12:55+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-06-28T11:12:55+00:00'
 ---
 
 # Original Description
@@ -26,5 +26,9 @@ This isn't from the shell though, this is the interactive prompt within the wall
 ## moneromooo-monero | 2024-03-23T20:50:45+00:00
 Works fine here. Double check ?
 
+## selsta | 2026-06-28T11:12:55+00:00
+Closing due to lack of reply.
+
 # Action History
 - Created by: tidux | 2024-03-10T08:01:08+00:00
+- Closed at: 2026-06-28T11:12:55+00:00
