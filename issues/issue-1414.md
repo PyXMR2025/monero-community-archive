@@ -1,14 +1,14 @@
 ---
-title: 'Cuprate Meeting #109 - Tuesday, 2026-06-30, UTC 18:00'
-source_url: https://github.com/monero-project/meta/issues/1409
+title: 'Cuprate Meeting #110 - Tuesday, 2026-07-07, UTC 18:00'
+source_url: https://github.com/monero-project/meta/issues/1414
 author: moo900
 assignees: []
 labels: []
-created_at: '2026-06-23T18:19:44+00:00'
+created_at: '2026-06-30T18:14:59+00:00'
 updated_at: '2026-06-30T18:14:59+00:00'
 type: issue
-status: closed
-closed_at: '2026-06-30T18:14:59+00:00'
+status: open
+closed_at: null
 ---
 
 # Original Description
@@ -31,30 +31,8 @@ Main discussion topics:
 3. Project: What is next for Cuprate?
 4. Any other business
 
-Previous meeting: #1405
+Previous meeting: #1409
 
 # Discussion History
-## moo900 | 2026-06-30T18:14:58+00:00
-## Meeting logs
-```
-boog900: 1) greetings
-```
-```
-boog900: lonely meeting today
-```
-```
-boog900: my update is I have been working on making my rpc comparison tool better to test cuprate against monerod
-```
-```
-boog900: also working on JSON tx types still
-```
-```
-boog900: I will end the meeting here
-```
-```
-boog900: !meeting 
-```
-
 # Action History
-- Created by: moo900 | 2026-06-23T18:19:44+00:00
-- Closed at: 2026-06-30T18:14:59+00:00
+- Created by: moo900 | 2026-06-30T18:14:59+00:00
