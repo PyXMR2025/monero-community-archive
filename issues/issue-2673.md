@@ -57,8 +57,5 @@ Will need some known community members to vouch for it before i can give my appr
 
 does your wallet have any fees? Is it an LWS wallet? If not, which nodes does default to? (feel free to link to relevant sections of the code)
 
-## brynakylie6-cpu | 2026-06-21T00:53:48+00:00
-@gades have you been able to resolve this issue?
-
 # Action History
 - Created by: gades | 2026-06-20T07:19:46+00:00
