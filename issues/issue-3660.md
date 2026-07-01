@@ -32,8 +32,5 @@ Which OS have an API for this?
 @selsta , macos does - https://developer.apple.com/documentation/appkit/nsapplication/2967171-effectiveappearance
  
 
-## PPPDUD | 2024-03-31T14:16:33+00:00
-+1 but the default theme should still be dark mode
-
 # Action History
 - Created by: sirjamesgray | 2021-08-06T23:59:14+00:00

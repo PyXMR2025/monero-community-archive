@@ -5,7 +5,7 @@ author: tobtoht
 assignees: []
 labels: []
 created_at: '2024-09-01T10:54:29+00:00'
-updated_at: '2024-09-02T07:17:45+00:00'
+updated_at: '2026-06-28T03:54:33+00:00'
 type: issue
 status: open
 closed_at: null
@@ -29,6 +29,9 @@ I had tried to compile Monero GUI with Qt6 and recognized that it depends on som
 
 ## tobtoht | 2024-09-01T13:21:43+00:00
 @aperechnev I think `find_package(Qt5XmlPatterns QUIET)` can simply be removed.
+
+## adapt-L | 2026-06-28T03:54:33+00:00
+I tried to package monero-gui for gentoo, but it doesn't even support qt5 anymore
 
 # Action History
 - Created by: tobtoht | 2024-09-01T10:54:29+00:00
