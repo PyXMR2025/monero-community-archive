@@ -6,10 +6,10 @@ author: CupofJavad
 assignees: []
 labels: []
 created_at: '2026-06-16T14:25:44+00:00'
-updated_at: '2026-06-29T18:24:31+00:00'
+updated_at: '2026-07-02T21:04:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-02T21:04:45+00:00'
 ---
 
 # Original Description
@@ -47,5 +47,24 @@ This occurs even though the GUI is fully up to date.
 <img width="976" height="796" alt="Image" src="https://github.com/user-attachments/assets/c4492003-e7ea-4067-a3b0-098ae4c67fc2" />
 
 # Discussion History
+## CupofJavad | 2026-07-01T17:36:41+00:00
+@r06293138-coder
+@e93276151-gif
+@kyliebryna45-prog
+
+I just noticed each you responded to this but then delete/removed your comments later so I’m guessing you all figured this out or resolved it? In response, to your questions, no I never actually attempted to resolve this...I’m am merely a pleb-end-user and do not work with the dev team. The only reason I went through the (surprisingly difficult) process of submitting a bug was because I was worried this was some sort attack on my device, couldn’t find much online about it, and wanted to support the project. 
+
+## selsta | 2026-07-01T17:37:40+00:00
+@CupofJavad they were support scam bots, that's why the comments were deleted
+
+## CupofJavad | 2026-07-01T17:44:05+00:00
+> @CupofJavad they were support scam bots, that's why the comments were deleted
+
+@selsta ahh that makes more sense now and appreciate you chiming in here... guess this means I'll just have to assume you're not a bot of some kind either 🤷🏽‍♂️
+
+## selsta | 2026-07-01T18:09:43+00:00
+You can see by the "collaborator" sign that I have elevated privilges in the repo. I did not have time to fix your report yet.
+
 # Action History
 - Created by: CupofJavad | 2026-06-16T14:25:44+00:00
+- Closed at: 2026-07-02T21:04:45+00:00
