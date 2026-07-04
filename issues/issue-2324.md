@@ -5,7 +5,7 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2024-07-17T20:51:58+00:00'
-updated_at: '2024-07-19T07:20:50+00:00'
+updated_at: '2026-07-04T04:06:12+00:00'
 type: issue
 status: open
 closed_at: null
@@ -17,5 +17,8 @@ closed_at: null
 These need to be fixed if we want to start.using SASS for css organisation. Tldr is instead of 1 massive confusing css file we have many smaller organised ones which during the build.process are combined/compressed into one css file 
 
 # Discussion History
+## luish-uk | 2026-07-04T04:06:12+00:00
+Hello, I have read this issue and understand what needs fixing regarding the W3C errors and warnings. I have run the validator myself and I would like to tackle the handful of errors and couple hundred warnings first as a pull request. @plowsof can you please let me know whether you would like one pull request covering the grouped fixes or rather split into smaller ones, also let me know if there's anything already in progress. 
+
 # Action History
 - Created by: plowsof | 2024-07-17T20:51:58+00:00

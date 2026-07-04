@@ -6,7 +6,7 @@ assignees: []
 labels:
 - bug
 created_at: '2021-08-05T10:02:02+00:00'
-updated_at: '2021-08-05T11:51:09+00:00'
+updated_at: '2026-07-04T06:17:36+00:00'
 type: issue
 status: open
 closed_at: null
@@ -28,6 +28,9 @@ Website in mobile width
 
 ## rating89us | 2021-08-05T11:51:09+00:00
 Changing `custom.css:4714` to `bottom: 100%` fixes for me on mobile width, but breaks the display on desktop width
+
+## luish-uk | 2026-07-04T06:17:36+00:00
+Hello, just wanted to add that the fix for this would be to add a bottom: 100% to the [data-tooltips]:after attribute selector. If you would like me to send a pull request I can however, I noticed on mobile it only displays the tool-tip very briefly before redirecting to a separate more detailed page. 
 
 # Action History
 - Created by: rating89us | 2021-08-05T10:02:02+00:00
