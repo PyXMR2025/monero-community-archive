@@ -5,10 +5,10 @@ author: ViktorShahter
 assignees: []
 labels: []
 created_at: '2026-05-23T19:15:44+00:00'
-updated_at: '2026-05-25T13:23:15+00:00'
+updated_at: '2026-07-03T19:44:22+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-03T19:44:22+00:00'
 ---
 
 # Original Description
@@ -152,5 +152,9 @@ That's definitely not the issue, I got binaries from GH releases and verified th
 
 I would try but after I'll reproduce it in VM. Few hours in, so far nothing was installed.
 
+## ViktorShahter | 2026-07-03T19:44:22+00:00
+After more or less thorough testing nothing like that happened again. I guess it was some irreproducible coincidence. Sorry for inconvenience.
+
 # Action History
 - Created by: ViktorShahter | 2026-05-23T19:15:44+00:00
+- Closed at: 2026-07-03T19:44:22+00:00
