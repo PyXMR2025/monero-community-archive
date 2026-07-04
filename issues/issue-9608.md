@@ -5,10 +5,10 @@ author: personnumber3377
 assignees: []
 labels: []
 created_at: '2024-12-10T01:47:16+00:00'
-updated_at: '2024-12-14T22:05:43+00:00'
+updated_at: '2026-07-01T18:15:50+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-01T18:15:50+00:00'
 ---
 
 # Original Description
@@ -167,3 +167,4 @@ It works if I change the afl compiler to the normal gcc and g++ so I think it ma
 
 # Action History
 - Created by: personnumber3377 | 2024-12-10T01:47:16+00:00
+- Closed at: 2026-07-01T18:15:50+00:00

@@ -9,10 +9,10 @@ labels:
 - important
 - discussion
 created_at: '2024-03-02T10:44:20+00:00'
-updated_at: '2026-05-04T13:53:45+00:00'
+updated_at: '2026-07-01T17:39:34+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-01T17:39:34+00:00'
 ---
 
 # Original Description
@@ -114,3 +114,4 @@ TEST(RctCoreTest, RaceCondition) {
 
 # Action History
 - Created by: 0xFFFC0000 | 2024-03-02T10:44:20+00:00
+- Closed at: 2026-07-01T17:39:34+00:00

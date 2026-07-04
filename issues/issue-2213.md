@@ -6,10 +6,10 @@ assignees: []
 labels:
 - proposal
 created_at: '2017-07-27T11:44:11+00:00'
-updated_at: '2018-01-19T16:36:48+00:00'
+updated_at: '2026-07-03T08:54:47+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-03T08:54:47+00:00'
 ---
 
 # Original Description
@@ -38,5 +38,9 @@ The mechanism is FINE - the issue is the specifics. Right now we use Gandi's API
 ## fluffypony | 2018-01-19T16:36:48+00:00
 @mrtass we don’t provide support for forks.
 
+## selsta | 2026-07-03T08:54:46+00:00
+Closing this as we don't currently maintain DNS seed nodes and if we would maintain them again likely we would need to figure out something from scratch.
+
 # Action History
 - Created by: medusadigital | 2017-07-27T11:44:11+00:00
+- Closed at: 2026-07-03T08:54:47+00:00
