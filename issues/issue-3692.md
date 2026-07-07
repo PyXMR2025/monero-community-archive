@@ -5,7 +5,7 @@ author: dan1338
 assignees: []
 labels: []
 created_at: '2025-08-09T10:35:18+00:00'
-updated_at: '2026-06-15T22:07:20+00:00'
+updated_at: '2026-07-06T07:00:57+00:00'
 type: issue
 status: open
 closed_at: null
@@ -73,6 +73,17 @@ just had that happen on 10M run, not fun
 
 ## alby6969 | 2026-06-15T22:07:20+00:00
 I just had this happen to me on a number of benchmark tests on different Ububtu servers. Sometimes the benchmarks stop, sometimes they keep going forever well beyond 100%, and then will never submit.
+
+## coffnix | 2026-07-06T06:48:55+00:00
+You could try running the benchmark with the -4 argument. It might be an IPv6 connectivity issue, since XMRig uses IPv6 by default if an AAAA record is available. Also, press the c key during the benchmark and check the pool address field to see whether it resolved to an IPv4 or IPv6 address.
+
+Take a look at this screenshot, it failed when using IPv6.
+
+<img width="1102" height="972" alt="Image" src="https://github.com/user-attachments/assets/2593e26f-5980-4987-ab9c-d1bd4c54f9b2" />
+
+When I ran it with the -4 argument, it worked perfectly. Notice that the pool address is now using IPv4.
+
+<img width="1622" height="1248" alt="Image" src="https://github.com/user-attachments/assets/cc0f2710-5ae1-4847-883b-c034f5871885" />
 
 # Action History
 - Created by: dan1338 | 2025-08-09T10:35:18+00:00

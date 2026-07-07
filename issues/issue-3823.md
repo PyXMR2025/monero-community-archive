@@ -5,7 +5,7 @@ author: adapt-L
 assignees: []
 labels: []
 created_at: '2026-06-12T13:42:16+00:00'
-updated_at: '2026-06-15T22:05:28+00:00'
+updated_at: '2026-07-06T06:50:14+00:00'
 type: issue
 status: open
 closed_at: null
@@ -22,6 +22,9 @@ I was also thinking if users could submit notes alongside their benchmarks, that
 ## alby6969 | 2026-06-15T22:05:28+00:00
 That would be pretty nice if you could add extra information like that.  Especially for bios tweaks and ram settings
 
+
+## coffnix | 2026-07-06T06:50:13+00:00
+We could improve XMRig by trying IPv4 or IPv6 based on a simple connectivity test, for example using netcat before starting the benchmark. This would avoid cases where IPv6 is selected by default even though it’s unreachable, causing the benchmark to never finish, as reported in bug https://github.com/xmrig/xmrig/issues/3692 
 
 # Action History
 - Created by: adapt-L | 2026-06-12T13:42:16+00:00
