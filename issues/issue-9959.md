@@ -6,7 +6,7 @@ author: godfuture
 assignees: []
 labels: []
 created_at: '2025-06-14T12:54:34+00:00'
-updated_at: '2025-06-14T12:54:34+00:00'
+updated_at: '2026-07-06T12:26:36+00:00'
 type: issue
 status: open
 closed_at: null
@@ -25,5 +25,11 @@ This way we have responsive sync and huge amounts of storage.
 Could the monero blockchain be split into those different data types as well?
 
 # Discussion History
+## godfuture | 2026-07-06T12:22:44+00:00
+Is there any update or news? I think this idea / feature would help a lot.
+
+## selsta | 2026-07-06T12:25:43+00:00
+It's a large change, I'm not aware of anyone working on such a change at the moment. Also what works in Bitcoin isn't necessarily ideal for Monero.
+
 # Action History
 - Created by: godfuture | 2025-06-14T12:54:34+00:00

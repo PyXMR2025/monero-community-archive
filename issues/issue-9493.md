@@ -1,7 +1,7 @@
 ---
 title: Failed to construct transaction
 source_url: https://github.com/monero-project/monero/issues/9493
-author: SystemVll
+author: sh4den
 assignees: []
 labels:
 - question
@@ -27,5 +27,5 @@ Do you have a lot of inputs from mining? If yes, you first have to consolidate y
 send your whole balance to your own address or subaddres , (caled a churn transaction) so that you have a single utxo to spend
 
 # Action History
-- Created by: SystemVll | 2024-09-28T14:21:54+00:00
+- Created by: sh4den | 2024-09-28T14:21:54+00:00
 - Closed at: 2024-09-28T18:13:38+00:00
