@@ -5,10 +5,10 @@ author: lkraider
 assignees: []
 labels: []
 created_at: '2023-12-06T19:54:20+00:00'
-updated_at: '2023-12-15T05:55:38+00:00'
+updated_at: '2026-07-09T09:35:47+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-09T00:26:45+00:00'
 ---
 
 # Original Description
@@ -41,5 +41,20 @@ Unfortuntelay I wasn't able to get access to a macOS 12 machine, so I won't be a
 
 You can use the latest Intel version, it will use Rosetta.
 
+## selsta | 2026-07-09T00:26:45+00:00
+Closing this, we *might* support macOS 12 in the future once we upgrade to Qt 6 but I can't gurantee it.
+
+## tobtoht | 2026-07-09T06:11:00+00:00
+https://doc.qt.io/qt-6/macos.html
+
+## selsta | 2026-07-09T09:06:02+00:00
+I plan to build with 6.8 LTS which should support macOS 12.
+
+## tobtoht | 2026-07-09T09:33:03+00:00
+Unsupported for OSS projects: https://endoflife.date/qt
+
+Edit: Seems like EOL releases still get some form of security support.
+
 # Action History
 - Created by: lkraider | 2023-12-06T19:54:20+00:00
+- Closed at: 2026-07-09T00:26:45+00:00

@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2022-12-07T18:34:28+00:00'
-updated_at: '2022-12-07T18:34:28+00:00'
+updated_at: '2026-07-09T23:33:05+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-09T23:33:05+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ Ideally, one would instead be able to enter the 24 word BIP-39 seed phrase direc
 Reference: https://github.com/LedgerHQ/app-monero/tree/master/tools/python
 
 # Discussion History
+## selsta | 2026-07-09T23:33:05+00:00
+This would require a separate word list, and there are no plans for that to be added.
+
 # Action History
 - Created by: ghost | 2022-12-07T18:34:28+00:00
+- Closed at: 2026-07-09T23:33:05+00:00

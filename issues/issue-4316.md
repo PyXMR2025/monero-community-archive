@@ -5,10 +5,10 @@ author: Kreyren
 assignees: []
 labels: []
 created_at: '2024-05-19T01:37:07+00:00'
-updated_at: '2024-05-19T01:40:00+00:00'
+updated_at: '2026-07-09T00:22:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-09T00:22:12+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ Proposal to implement Atomic Swaps directly from the app that automatically pick
 4. Privacy by avoiding cloudflare-gates etc..
 
 # Discussion History
+## selsta | 2026-07-09T00:22:12+00:00
+Such a feature is currently not planned.
+
 # Action History
 - Created by: Kreyren | 2024-05-19T01:37:07+00:00
+- Closed at: 2026-07-09T00:22:12+00:00

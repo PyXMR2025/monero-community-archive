@@ -5,10 +5,10 @@ author: paolosezart
 assignees: []
 labels: []
 created_at: '2024-11-06T08:38:35+00:00'
-updated_at: '2024-11-10T00:06:58+00:00'
+updated_at: '2026-07-09T00:21:50+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-09T00:21:50+00:00'
 ---
 
 # Original Description
@@ -20,3 +20,4 @@ Can you explain what you mean with "does not see the saved data"? Do you have po
 
 # Action History
 - Created by: paolosezart | 2024-11-06T08:38:35+00:00
+- Closed at: 2026-07-09T00:21:50+00:00

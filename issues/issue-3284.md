@@ -5,10 +5,10 @@ author: MoneroArbo
 assignees: []
 labels: []
 created_at: '2020-12-27T17:07:45+00:00'
-updated_at: '2025-11-15T20:10:45+00:00'
+updated_at: '2026-07-10T01:00:37+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T01:00:37+00:00'
 ---
 
 # Original Description
@@ -32,5 +32,9 @@ I repro this pretty consistently on freshly-sent transactions:
 
 It fixes itself after up to a minute. I suspect this happens because the transaction is timestamped in the future vs my local clock, so the relative date becomes negative, which doesn't work somehow.
 
+## jpk68 | 2026-07-10T00:57:54+00:00
+@selsta Should this be closed?
+
 # Action History
 - Created by: MoneroArbo | 2020-12-27T17:07:45+00:00
+- Closed at: 2026-07-10T01:00:37+00:00

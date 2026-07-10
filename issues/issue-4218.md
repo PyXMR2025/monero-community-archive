@@ -5,10 +5,10 @@ author: redelre
 assignees: []
 labels: []
 created_at: '2023-09-19T09:47:48+00:00'
-updated_at: '2023-09-19T15:59:19+00:00'
+updated_at: '2026-07-09T00:31:23+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-09T00:31:23+00:00'
 ---
 
 # Original Description
@@ -34,3 +34,4 @@ You have to wait until your wallet is fully synced, notice how it has Wallet blo
 
 # Action History
 - Created by: redelre | 2023-09-19T09:47:48+00:00
+- Closed at: 2026-07-09T00:31:23+00:00
