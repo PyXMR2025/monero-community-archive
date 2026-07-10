@@ -5,7 +5,7 @@ author: craighammonds-sys
 assignees: []
 labels: []
 created_at: '2026-03-02T05:16:25+00:00'
-updated_at: '2026-07-07T07:57:42+00:00'
+updated_at: '2026-07-07T20:00:11+00:00'
 type: issue
 status: open
 closed_at: null
@@ -184,6 +184,152 @@ randomx v2: https://xmrig.com/benchmark/6gZZZe
 > After upgrading to kernel 7.0.14 and booting with ACPI instead of DTB, the RandomX hashrate increased to about 2.1 KH/s.
 
 What about 6.25.0 with the same kernel version and settings?
+
+## coffnix | 2026-07-07T18:16:19+00:00
+> > After upgrading to kernel 7.0.14 and booting with ACPI instead of DTB, the RandomX hashrate increased to about 2.1 KH/s.
+> 
+> What about 6.25.0 with the same kernel version and settings?
+
+yo @SChernykh the problem is that with DTB boot, the CPU frequencies stay below normal. When using ACPI boot, the core frequencies are correct, even though the L2 and L3 caches are not detected. I have already reported this bug here: https://github.com/cixtech/cix-linux-main/issues/43
+
+With version 6.25.0, it stayed around the same average, between 1790 and 2015 H/s, and it keeps fluctuating, always staying below 1.9 KH/s. Look:
+
+```
+ * ABOUT        XMRig/6.25.0 gcc/14.3.0 (built for Linux ARMv8, 64 bit)
+ * LIBS         libuv/1.52.1 OpenSSL/3.0.21 hwloc/2.14.0
+ * HUGE PAGES   supported
+ * 1GB PAGES    supported
+ * CPU          ARM Cortex-A720 (1) 64-bit AES
+                L2:0.0 MB L3:0.0 MB 12C/12T NUMA:1
+ * MEMORY       11.1/31.1 GB (36%)
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+ * MOTHERBOARD  Cix Technology Group Co., Ltd. - CIX Phecda Board
+ * DONATE       0%
+ * POOL #1      192.168.200.145:4444 algo rx/0
+ * COMMANDS     'h' hashrate, 'p' pause, 'r' resume, 's' results, 'c' connection
+[2026-07-07 15:04:50.940]  net      use pool 192.168.200.145:4444  192.168.200.145
+[2026-07-07 15:04:50.940]  cpu      use argon2 implementation default
+[2026-07-07 15:04:50.940]  randomx  init dataset algo rx/0 (12 threads) seed 674b1510bffd8b3a...
+[2026-07-07 15:04:51.019]  randomx  allocated 3072 MB (2080+256) huge pages 100% 3/3 +JIT (79 ms)
+[2026-07-07 15:04:58.624]  randomx  dataset ready (7605 ms)
+[2026-07-07 15:04:58.625]  cpu      use profile  *  (12 threads) scratchpad 2048 KB
+[2026-07-07 15:04:58.631]  cpu      READY threads 12/12 (12) huge pages 100% 12/12 memory 24576 KB (6 ms)
+[2026-07-07 15:05:58.673]  miner    speed 10s/60s/15m 1970.1 n/a n/a H/s max 2015.3 H/s
+[2026-07-07 15:06:58.716]  miner    speed 10s/60s/15m 1971.9 1986.4 n/a H/s max 2015.3 H/s
+[2026-07-07 15:07:58.757]  miner    speed 10s/60s/15m 1982.2 1990.7 n/a H/s max 2015.3 H/s
+[2026-07-07 15:08:58.826]  miner    speed 10s/60s/15m 1834.0 1932.9 n/a H/s max 2015.3 H/s
+[2026-07-07 15:09:59.182]  miner    speed 10s/60s/15m 1790.8 1239.5 n/a H/s max 2015.3 H/s
+```
+
+With the dev branch version 6.26.1, commit 6dc014f, it already starts at 2.1 KH/s. Look:
+
+```
+ * ABOUT        XMRig/6.26.1-dev gcc/14.3.0 (built for Linux ARMv8, 64 bit)
+ * LIBS         libuv/1.52.1 OpenSSL/3.0.21 hwloc/2.14.0
+ * HUGE PAGES   supported
+ * 1GB PAGES    supported
+ * CPU          ARM Cortex-A720 (1) 64-bit AES
+                L2:0.0 MB L3:0.0 MB 12C/12T NUMA:1
+ * MEMORY       11.1/31.1 GB (36%)
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+                Top - on board: 8 GB LPDDR5 @ 6400 MHz Top - on board
+ * MOTHERBOARD  Cix Technology Group Co., Ltd. - CIX Phecda Board
+ * DONATE       0%
+ * POOL #1      192.168.200.145:4444 algo rx/0
+ * COMMANDS     'h' hashrate, 'p' pause, 'r' resume, 's' results, 'c' connection
+[2026-07-07 15:10:22.070]  net      use pool 192.168.200.145:4444  192.168.200.145
+[2026-07-07 15:10:22.070]  cpu      use argon2 implementation default
+[2026-07-07 15:10:22.071]  randomx  init dataset algo rx/0 (12 threads) seed 674b1510bffd8b3a...
+[2026-07-07 15:10:22.143]  randomx  allocated 3072 MB (2080+256) huge pages 100% 3/3 +JIT (73 ms)
+[2026-07-07 15:10:29.492]  randomx  dataset ready (7348 ms)
+[2026-07-07 15:10:29.492]  cpu      use profile  *  (12 threads) scratchpad 2048 KB
+[2026-07-07 15:10:29.498]  cpu      READY threads 12/12 (12) huge pages 100% 12/12 memory 24576 KB (6 ms)
+[2026-07-07 15:11:29.551]  miner    speed 10s/60s/15m 2039.4 n/a n/a H/s max 2095.5 H/s
+[2026-07-07 15:12:29.594]  miner    speed 10s/60s/15m 2032.7 2040.4 n/a H/s max 2095.5 H/s
+[2026-07-07 15:13:29.625]  miner    speed 10s/60s/15m 2026.0 2039.9 n/a H/s max 2095.5 H/s
+[2026-07-07 15:14:29.665]  miner    speed 10s/60s/15m 2025.5 2037.9 n/a H/s max 2095.5 H/s
+[2026-07-07 15:15:29.702]  miner    speed 10s/60s/15m 2028.9 2036.3 n/a H/s max 2095.5 H/s
+[2026-07-07 15:16:29.749]  miner    speed 10s/60s/15m 2034.2 2037.9 n/a H/s max 2095.5 H/s
+[2026-07-07 15:17:29.777]  miner    speed 10s/60s/15m 2041.4 2039.0 n/a H/s max 2095.5 H/s
+[2026-07-07 15:18:29.825]  miner    speed 10s/60s/15m 2038.3 2038.1 n/a H/s max 2095.5 H/s
+[2026-07-07 15:19:29.861]  miner    speed 10s/60s/15m 2042.8 2041.0 n/a H/s max 2095.5 H/s
+[2026-07-07 15:20:29.901]  miner    speed 10s/60s/15m 2043.8 2040.6 n/a H/s max 2095.5 H/s
+```
+
+On this machine, I run P2Pool, HAProxy, and Monerod alongside XMRig, and the total RAM usage of all the services is about 10 GB. I believe that if the machine were dedicated exclusively to XMRig, the hashrate would be even higher.
+
+We achieved real gains with version 6.26.0 from the development branch. Thank you for the ARM64 optimizations.
+
+The question is, do you think we can optimize it even further for ARMv9.2-A? I have two devices at home using this architecture, a Mac mini M4 and this Orange Pi 6 Plus.
+
+## coffnix | 2026-07-07T19:59:32+00:00
+I achieved better performance by forcing cpufreq.default_governor=performance at boot and running this script during startup:
+
+```
+opi6plus ~ # cat /etc/local.d/set-performance.start
+#!/bin/sh
+for p in /sys/devices/system/cpu/cpufreq/policy*; do
+    min=$(cat "$p/cpuinfo_min_freq")
+    max=$(cat "$p/cpuinfo_max_freq")
+    echo "$min" > "$p/scaling_min_freq"
+    echo "$max" > "$p/scaling_max_freq"
+    echo performance > "$p/scaling_governor"
+done
+
+for p in /sys/devices/system/cpu/cpufreq/policy*; do
+    max=$(cat "$p/scaling_max_freq")
+    echo "$max" > "$p/scaling_min_freq"
+done
+```
+
+Look:
+
+```
+watch -n1 '
+echo "CPU:";
+grep . /sys/devices/system/cpu/cpu*/cpufreq/scaling_cur_freq;
+echo;
+echo "TEMP:";
+for z in /sys/class/thermal/thermal_zone*; do
+    printf "%s " "$(cat $z/type)";
+    awk "{printf \"%.1f°C\n\", \$1/1000}" $z/temp;
+done ; echo -e "\nXMRIG:"; grep speed /var/log/xmr.log|tail -5'
+```
+
+results:
+```
+CPU:
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq:2600000
+/sys/devices/system/cpu/cpu10/cpufreq/scaling_cur_freq:2500000
+/sys/devices/system/cpu/cpu11/cpufreq/scaling_cur_freq:2500000
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq:2600000
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq:1800000
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq:1800000
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_cur_freq:1800000
+/sys/devices/system/cpu/cpu5/cpufreq/scaling_cur_freq:1800000
+/sys/devices/system/cpu/cpu6/cpufreq/scaling_cur_freq:2300000
+/sys/devices/system/cpu/cpu7/cpufreq/scaling_cur_freq:2300000
+/sys/devices/system/cpu/cpu8/cpufreq/scaling_cur_freq:2200000
+/sys/devices/system/cpu/cpu9/cpufreq/scaling_cur_freq:2200000
+
+TEMP:
+TZB0 60.0°C
+TZB1 61.0°C
+TZM0 60.0°C
+TZM1 56.0°C
+TZGT 49.0°C
+
+XMRIG:
+[2026-07-07 16:57:06.103]  miner    speed 10s/60s/15m 2096.5 n/a n/a H/s max 2102.5 H/s
+[2026-07-07 16:58:06.136]  miner    speed 10s/60s/15m 2050.2 2051.1 n/a H/s max 2102.5 H/s
+[2026-07-07 16:59:06.184]  miner    speed 10s/60s/15m 2045.3 2042.8 n/a H/s max 2102.5 H/s
+
+```
 
 # Action History
 - Created by: craighammonds-sys | 2026-03-02T05:16:25+00:00
