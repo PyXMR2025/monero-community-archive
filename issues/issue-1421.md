@@ -1,0 +1,47 @@
+---
+title: Monero Research Lab Meeting - Wed 15 July 2026, 17:00 UTC
+source_url: https://github.com/monero-project/meta/issues/1421
+author: Rucknium
+assignees: []
+labels: []
+created_at: '2026-07-09T19:28:40+00:00'
+updated_at: '2026-07-09T19:28:40+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+Location: [Libera.chat, #monero-research-lab](https://libera.chat/) | [Matrix](https://matrix.to/#/#monero-research-lab:monero.social?via=matrix.org&via=monero.social)
+
+Live log: https://libera.monerologs.net/monero-research-lab
+
+Time: 17:00 UTC [Check in your timezone](https://www.timeanddate.com/worldclock/meeting.html?p1=1440)
+
+Main discussion topics:
+
+1. Greetings
+
+2. Updates. What is everyone working on?
+
+3. FCMP++ to-do list status. [Programming tasks](https://github.com/seraphis-migration/monero/issues/53). [Reviews and audits](https://cryptpad.fr/sheet/#/2/sheet/view/yPVIUywwA9-deE9VF6GYm9bXbPdCerdST3UDEEfBxcM/embed/).
+
+4. [Post-quantum encryption](https://github.com/monero-project/research-lab/issues/151#issuecomment-4412416686). [Jamtis](https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832#appendix-c-instant-sync-protocol).
+
+5. [FCMP beta stressnet](https://github.com/seraphis-migration/monero/releases/).
+
+6. [`monerosim`](https://github.com/Fountain5405/monerosim).
+
+7. Any other business
+
+8. Please comment on GitHub in advance of the meeting if you would like to propose an agenda item.
+
+Logs will be posted here after the meeting.
+
+Meeting chairperson: Rucknium
+
+Previous meeting agenda/logs: #1420 
+
+# Discussion History
+# Action History
+- Created by: Rucknium | 2026-07-09T19:28:40+00:00

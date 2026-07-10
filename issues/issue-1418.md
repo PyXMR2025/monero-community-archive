@@ -5,7 +5,7 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-07-06T21:33:05+00:00'
-updated_at: '2026-07-06T21:53:01+00:00'
+updated_at: '2026-07-10T16:28:31+00:00'
 type: issue
 status: open
 closed_at: null
@@ -59,5 +59,16 @@ tldr: regardless of whether MK is hosted by an LLC, a non-profit, or neither, it
 [Previous meeting including logs](https://github.com/monero-project/meta/issues/1411)
 
 # Discussion History
+## vtnerd | 2026-07-09T18:43:21+00:00
+Hopefully it's not too late to incorporate another CCS? Or do people need more review time?
+
+repo.getmonero.org is down anyway, so I can't publish what I have.
+
+## nahuhh | 2026-07-09T18:54:14+00:00
+Not too late 🗞️
+
+## vtnerd | 2026-07-10T16:28:31+00:00
+See [new proposal](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/687)
+
 # Action History
 - Created by: nahuhh | 2026-07-06T21:33:05+00:00
