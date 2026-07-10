@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2026-06-01T19:39:17+00:00'
-updated_at: '2026-06-01T22:24:04+00:00'
+updated_at: '2026-07-08T21:26:06+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-08T21:26:06+00:00'
 ---
 
 # Original Description
@@ -26,5 +26,14 @@ Actually, we probably need to match wallet2's behavior here at least for legacy 
 
 FWIW, we received a vuln report for this behavior in wallet2 that I personally think is not worth changing in wallet2 / not a vuln. The vuln report indicated that such an output would be detectable as a receive by anyone with the receiver's address. I don't think it's a vuln because it requires sender to do something malicious (use malformed tx pub key), and the sender can already use some publicly known randomness and we can't stop that to achieve the same thing.
 
+## jeffro256 | 2026-07-07T22:23:44+00:00
+To be very pedantic, this isn't undefined behavior, just that the value of `deriv` is indeterminate.
+
+> Actually, we probably need to match wallet2's behavior here at least for legacy receives. Because wallet2 could identify these outputs as receives before, and such outputs would be spendable.
+
+This is a good point, implemented in #425
+
+
 # Action History
 - Created by: j-berman | 2026-06-01T19:39:17+00:00
+- Closed at: 2026-07-08T21:26:06+00:00
