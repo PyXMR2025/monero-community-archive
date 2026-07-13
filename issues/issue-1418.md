@@ -5,7 +5,7 @@ author: nahuhh
 assignees: []
 labels: []
 created_at: '2026-07-06T21:33:05+00:00'
-updated_at: '2026-07-10T16:28:31+00:00'
+updated_at: '2026-07-11T15:58:26+00:00'
 type: issue
 status: open
 closed_at: null
@@ -34,14 +34,22 @@ News: [Revuo Monero](https://revuo-xmr.com/) - [This week in Monero TWIM](https:
   a. Koe - [Research and Development, hardfork](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/681)  
   b. [MRL] Dennis Trautwein - [ProbeLab P2P Network Metrics Proposal](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/667)    
   c. Sneedlewoods - [part-time dev, q3](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/685)  
-  d. v1docq47 - [monero konferenco 2026 voice-over and working on xmr.ru](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/683)  
-  e. r4v3r23 - [ANONERO Continued development](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/671)  
+  d. Vtnerd - [full time dev, q3](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/687)  
+  e. panagot12 [Monero LWS Observatory — Public LWS Health](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/686)  
+  f. v1docq47 - [monero konferenco 2026 voice-over and working on xmr.ru](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/683)  
+  g. r4v3r23 - [ANONERO Continued development](https://repo.getmonero.org/monero-project/ccs-proposals/-/merge_requests/671)  
 5. Workgroup reports    
   a. Dev workgroup  
   b. Localization workgroup  
   c. Outreach workgroup  
   d. Events workgroup  
-    - MoneroKon vote [drama](https://github.com/monero-project/meta/issues/1417)¹
+    - MoneroKon vote [drama](https://github.com/monero-project/meta/issues/1417)¹  
+    Voters must vote on all matters
+    1. Change of custody for MoneroKon and Community properties currently controlled by ajs, to a 2 party system. 1 active, 1 backup. (@MoneroKon [Twitter/X], Monero Community Workgroup [YouTube], MoneroKon.com+org [domains], MoneroKon [GitHub], and any others). [Yes | No | Abstain]
+    2. Current Nominees for the 2 positions are: Ceetee, ComradeBlin, tuxsudo. Does anyone wish to nominate themselves or someone else for the roles of delegating access to the aforementioned properties and acting as a backup. Note: nominees should be willing to accept the nomination and be willing to serve in either role.
+    3. Vote on nominees. Ranked voting. List in order of preference.
+    4. Does community wish to continue @OrangeFren's nonexclusive access to use the necessary properties (X, YouTube, server) to organize a MoneroKon in 2027? [Yes | No | Abstain]
+    5. Should access to socials/infra be immediately restored to a pre-lockdown state? [Yes | No | Abstain]
 
 
     e. Website workgroup  

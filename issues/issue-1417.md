@@ -6,10 +6,10 @@ author: ajs-xmr
 assignees: []
 labels: []
 created_at: '2026-07-06T20:18:34+00:00'
-updated_at: '2026-07-10T14:30:02+00:00'
+updated_at: '2026-07-11T19:17:51+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-11T19:17:51+00:00'
 ---
 
 # Original Description
@@ -731,5 +731,51 @@ Moreover, since MK6 was run by a private LLC that took on the full entrepreneuri
 
 Oh and btw, ajs consented to Orange handling MK6 in this manner.
 
+## hbs | 2026-07-11T06:25:27+00:00
+Murphy's law struck once again and MK drama unfolded as I was AFK, leaving hundreds, if not thousands (I haven't counted) of backlog messages to catch up on....
+
+Having done so I feel the urge to write a short comment detailing how, as a staff member of MK3-MK5, I feel about the situation.
+
+I joined the MK3 orga during an infamous Majestic Bank ousting vote, my first encounter with the MoneroKon crowd led to me being called a Majestic Bank sock puppet by @ajs-xmr as I voted in favour of retaining MB because I felt it was the decision which was the more balanced and just.
+
+Over the following months I remained involved in MK3 organization, attending all meetings and finally going to Prague where I and other members of the organization, MsVB, @ajs-xmr and others finally got to meet, ending the suspicion that I was anybody's sock puppet. Initial perception of my appearance in the MK3 universe was obviously wrong, but perception is what matters, more on this later.
+
+MK3 went rather well, and I decided to stick to contributing to helping further MK happen as the overall experience had been really great in terms of vibes, spirit, and, shall I dare call them friends, people met along the way.
+
+@ajs-xmr did a great job organizing MK3 and MK4 and decided to take a well deserved break for MK5 while still being always available to answer questions or give advices to the newb team who picked up the baton. Franciscom stepped forward as the lead organizer and put all his passion, heart and energy into making sure MK5 would be a success. I cannot describe the level of engagement and associated stress he has demonstrated during the whole journey leading to MK5. He was working countless hours on top of regular day job to make sure MK5 not only happens, but be the best MK for everyone attending. His, and other staff members' work was done entirely as volunteers and no member of the team got any compensation whatsoever apart from the reimbursement of our expenses for traveling and staying in Prague 5 days around the conference (including set up and tear down days).
+
+Following MK5, the organizing team felt it had done a good job as the feedbacks were rather positive. Franciscom though felt exhausted and needed a break from the demanding pace MK5 imposed.
+
+After a few weeks, we went back to having more discussions about the next MK. Fatigue was the most perceivable trait among the organizing team, as we all, franciscom first, underestimated how much work organizing a successful MK requires.
+
+This is about the time when @ajs-xmr came up with his proposal to step back into the game to organize the next MK but on a different basis than the previous ones, i.e. as a paid organizer. This event was not perceived very well among the MK5 organizing team, not so much because of the idea of being paid to organize MK6, but rather because of the amount asked to organize the event. Perception again is all that matters, and for people who had just worked their ass out to bring MK5 to the Monero community, seeing a proposal coming out of the blue to organize MK6 as a paid part time organizer with a level of compensation above what some earn yearly in their day job was just too much. Not to mention that the level of compensation based on US rates when the proposer lives in a region where such rates are 3 to 4x lower was felt (again, perception) as a betrayal and a brutal attempt to personally benefit from the Monero community. This left many disgusted, feeling their hard work was being dismissed, ignored and violated. Ultimately the damage was done and that annihilated the passion that had moved people forward until then. That cut, added to those from operational constraints related to organizing a MK in another country in an environment where banks (or lack thereof) are not helping smoothing things, led to the team decide it was not in a situation where it could organize MK6 in good conditions and we all know the rest of the story.
+
+My personal take away from that episode is that I don't think anyone from the organizing team was opposed to having paid contributors to the organization, quite the contrary, given the level of engagement we had experienced, it was evident that finding people willing to endure that much with absolutely no compensation would be a challenge, so at least being able to be compensated for the hassle seemed quite smart. Compensated, but not in a way which feels like an abuse of the Monero community, so, irrational rates form a red line that should not be crossed but had unfortunately been.
+
+I participated in MK6 as a speaker and attendee and the experience was enjoyable. Having organized MK3-5, I am fully aware of the work involved and @orangefren did a great job in a shorter time than all previous MKs, kudos.
+
+Has @orangefren benefited directly from the organization of MK6, probably. Is that to the detriment of the Monero community, I would say no, at least not yet. Should the same set up be used for future MKs, I would say no, because then, and we start to see it through the current discussion, it could fragment and hurt the Monero community. When I say "same set up", I mean an entity organizing MK in a completely autonomous and independent manner from the Monero community. My personal preference would be to have any party organize MK as long as the financial benefit of such organization benefits the Monero community also and not solely the organizer. This could be done in multiple ways, have the organizer *buy the right to the MoneroKon brand* by donating a certain amount to either the GF or a MK specific entity such as TE, any profit would then be for the organizer to keep. Or operate as a supplier, providing organization invoiced to TE or whatever entity at pre-approved rates, but having sponsorships and ticket sales paid to a MoneroKon related entity. This would be fair to the Monero community while still allowing organizers to benefit financially from organizing MK, only not as the only beneficiary.
+
+These were just my 2 piconeros following a long and tedious catch up of both #monerokon and #monero-community.
+
+If there should be a TL;DR it would all come down to perception and the damage that it can induce.
+
+Have a great week-end.
+
+## nahuhh | 2026-07-11T07:01:00+00:00
+> @ajs-xmr did a great job organizing MK3
+
+A single staff member walked away with 18000 of the gross 70000 revenue
+
+of that 70000: 42000 came from CCS, 9k from cake, 9k from rino, 6k from firo, 4k from other sources.
+
+(just noticed, but if majestic donated 9k, im not sure where that fits into the ~70k)
+
+i would not only say that funds were used irresponsibly, but that barely any work was done to raise funds, yet plenty was done to pay friends and family.
+
+
+TE was created in te aftermath of this sham
+
 # Action History
 - Created by: ajs-xmr | 2026-07-06T20:18:34+00:00
+- Closed at: 2026-07-11T19:17:51+00:00
