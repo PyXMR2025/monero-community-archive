@@ -5,7 +5,7 @@ author: mesvam
 assignees: []
 labels: []
 created_at: '2025-10-16T05:02:10+00:00'
-updated_at: '2026-07-03T20:48:19+00:00'
+updated_at: '2026-07-11T13:58:44+00:00'
 type: issue
 status: open
 closed_at: null
@@ -32,6 +32,11 @@ Opening a wallet within a link still works
 
 ## mesvam | 2026-07-03T20:48:19+00:00
 Workaround is to create wallet somewhere else, then move it to desired location
+
+## Noisetteer | 2026-07-11T12:55:15+00:00
+i got the same error at the end but i only have 1 drive so does i just make a other files and tries on it? cuz its still on same the drive (windows)
+
+edit : works on the same drive so you just need to make the wallet somewhere else and then it works
 
 # Action History
 - Created by: mesvam | 2025-10-16T05:02:10+00:00

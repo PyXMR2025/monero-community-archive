@@ -652,7 +652,7 @@ https://build.getmonero.org/builders/monero-gui-linux-qt57/builds/4
 ./monero-wallet-gui: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5: version `Qt_5.7' not found (required by ./monero-wallet-gui)
 ./monero-wallet-gui: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5: version `Qt_5' not found (required by ./monero-wallet-gui)
 
-## DamnTele | 2018-04-12T20:02:48+00:00
+## ghost | 2018-04-12T20:02:48+00:00
 I was having this issue on Ubuntu 16.04 then I upgraded to the 18.04 beta and now I'm have an intermediate connection to the daemon that fails every couple of minutes and then reconnects.
 
 When I run the build you linked I get this.
@@ -680,7 +680,7 @@ Failed on MINT 18
 ## pazos | 2018-04-12T20:56:42+00:00
 @DamnTele: what happens if you run the application with `./monero-wallet-gui -platform xcb`
 
-## DamnTele | 2018-04-12T21:19:42+00:00
+## ghost | 2018-04-12T21:19:42+00:00
 @pazos that got it running but i still have the intermediate connection issue, this is what it says in the console
 ```
 Checking connection status
@@ -733,7 +733,7 @@ qt5-default | 5.9.1+dfsg-10ubuntu1 | http://it.archive.ubuntu.com/ubuntu artful/
 
 ```
 
-## DamnTele | 2018-04-13T05:57:48+00:00
+## ghost | 2018-04-13T05:57:48+00:00
 @dEBRUYNE-1 there's only one monerod running, the disconnecting seems to only happen when the daemon is still syncing, once it reaches 100% the gui stays connected.
 
 also i noticed this in the daemon log 

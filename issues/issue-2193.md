@@ -1,7 +1,7 @@
 ---
 title: monerod.exe/Windows GUI sync very slow, almost no CPU usage
 source_url: https://github.com/monero-project/monero-gui/issues/2193
-author: lunaoe
+author: ghost
 assignees: []
 labels: []
 created_at: '2019-06-03T17:19:30+00:00'
@@ -23,7 +23,7 @@ Run "sync-info" in monerod (if it was started by the GUI, you'll have to stop it
 Do this after it's been running for a minute, so it has the time to connect to peers first.
 Also add "--log-level 1" to monerod, and paste the logs to paste.debian.net or similar.
 
-## lunaoe | 2019-06-03T17:47:19+00:00
+## ghost | 2019-06-03T17:47:19+00:00
 I have found some kind of solution
 I made a shortcut to monerod.exe and added "--max-concurrency 12" as an option and now CPU averages 70% and SSD 40% usage wich is much better. The thing is, I can't put the "max-concurrency" option in the GUI (Settings->Node->Startup flags), when I try that, the daemon window flashes and dissapears, but I could read the first line: 
 "Failed to parse arguments: option 'max-concurrency' cannot be specified more than once"
@@ -41,7 +41,7 @@ GUI uses half of the available cores.
 
 This will be fixed in the next version.
 
-## lunaoe | 2019-06-03T17:59:55+00:00
+## ghost | 2019-06-03T17:59:55+00:00
 ```
 2019-06-03 17:50:40.983 [P2P5]  INFO    global  src/cryptonote_protocol/cryptonote_protocol_handler.inl:1182    [82.17.53.156:18080 OUT]  Synced 1842288/1849007
 2019-06-03 17:56:59.993 [P2P9]  INFO    global  src/cryptonote_protocol/cryptonote_protocol_handler.inl:1182    [188.165.192.153:18080 OUT]  Synced 1842317/1849012
@@ -56,7 +56,7 @@ Then wait 10 minutes, then:
 set_log 0
 Then paste the resulting log to paste.debian.net. It'll be a fair amount of logs, if it's too big you could also push it to a github repo.
 
-## lunaoe | 2019-06-03T18:42:40+00:00
+## ghost | 2019-06-03T18:42:40+00:00
 Some screenshots
 
 ![2019-06-03](https://user-images.githubusercontent.com/45894616/58825989-e7b57000-863f-11e9-812e-5303928eae28.png)
@@ -72,7 +72,7 @@ Some screenshots
 ## moneromooo-monero | 2019-06-03T19:29:47+00:00
 The "Got block with unknown parent"... messages are a bug which got fixed a while back IIRC. You're using 0.14.0.2, right ?
 
-## lunaoe | 2019-06-03T19:32:07+00:00
+## ghost | 2019-06-03T19:32:07+00:00
 wallet mode:
 I don't know about the wallet, I created one with the GUI with a password in 2018.
 
@@ -82,13 +82,13 @@ Monero 'Boron Butterfly' (v0.14.0.2-release)
 ## moneromooo-monero | 2019-06-04T00:27:03+00:00
 OK, so the sync bug should get fixed whenever you switch to 0.14.1.0, which should be released... soon.
 
-## lunaoe | 2019-06-05T16:35:56+00:00
+## ghost | 2019-06-05T16:35:56+00:00
 I redownloaded the blockchain again in an empty directory and it went well, but around 80-90% the sync is terribly slow, now its 98% (49 days behind) and seems almost stagnated
 
-## lunaoe | 2019-06-29T19:58:49+00:00
+## ghost | 2019-06-29T19:58:49+00:00
 ![2019-06-29 (2)](https://user-images.githubusercontent.com/45894616/60388911-d6ce1200-9ab8-11e9-99a9-18ab33266e80.png)
 v0.14.1.0 fixed the problem 👍 
 
 # Action History
-- Created by: lunaoe | 2019-06-03T17:19:30+00:00
+- Created by: ghost | 2019-06-03T17:19:30+00:00
 - Closed at: 2019-06-29T19:58:49+00:00

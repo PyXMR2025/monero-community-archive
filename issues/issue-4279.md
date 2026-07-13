@@ -5,10 +5,10 @@ author: dchmelik
 assignees: []
 labels: []
 created_at: '2024-02-26T04:33:42+00:00'
-updated_at: '2026-07-10T07:45:11+00:00'
+updated_at: '2026-07-10T13:10:36+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T13:10:36+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ I don't know why this happens, we don't have any file manager / web browser spec
 ## dchmelik | 2026-07-10T07:44:41+00:00
 It was certain situations, like maybe when launched from GUI menu, which I don't currently have monero-gui in (after upgrade and when XFCE hid 'other' menu intermittently) and monero-gui is no longer asking me if it should be added to that menu.
 
+## selsta | 2026-07-10T13:10:36+00:00
+I will close this for now, if someone reports a similar issue it can be reopened.
+
 # Action History
 - Created by: dchmelik | 2024-02-26T04:33:42+00:00
+- Closed at: 2026-07-10T13:10:36+00:00
