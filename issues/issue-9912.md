@@ -5,7 +5,7 @@ author: SyntheticBird45
 assignees: []
 labels: []
 created_at: '2025-04-24T13:31:45+00:00'
-updated_at: '2025-04-25T18:05:43+00:00'
+updated_at: '2026-07-10T23:18:46+00:00'
 type: issue
 status: open
 closed_at: null
@@ -130,6 +130,9 @@ To give an example from our neighbors: Bitcoin did most of the review for its Au
 This is similar to what we're doing with the `fcmp++-staging` branch on the `seraphis-migration/monero` repo. (https://github.com/seraphis-migration/monero/pulls).
 
 Keeps things de-cluttered during the development phase. For the sake of visibility and avoid the risk of losing discussion, we could create `monero-project/monero-hf-staging` where we give select devs write access (as a replacement for `seraphis-migration`).
+
+## selsta | 2026-07-10T23:18:45+00:00
+Can this be closed? I increased the frequency of releases since this issue was opened, and slow reviews won't be fixed by different branching.
 
 # Action History
 - Created by: SyntheticBird45 | 2025-04-24T13:31:45+00:00

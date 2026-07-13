@@ -5,10 +5,10 @@ author: garlicgambit
 assignees: []
 labels: []
 created_at: '2018-05-07T21:48:32+00:00'
-updated_at: '2018-08-29T10:37:13+00:00'
+updated_at: '2026-07-10T14:37:31+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:37:31+00:00'
 ---
 
 # Original Description
@@ -182,5 +182,9 @@ The actual stack trace would be helpful. It'll be in the log.
 ## moneromooo-monero | 2018-08-29T10:37:12+00:00
 Oh, you didn't back that one up while monerod was running, right ? Because if so, it's not monerod that's buggy, it's your backup script :)
 
+## selsta | 2026-07-10T14:37:31+00:00
+Closing since we have proper Tor tx-proxy support now.
+
 # Action History
 - Created by: garlicgambit | 2018-05-07T21:48:32+00:00
+- Closed at: 2026-07-10T14:37:31+00:00

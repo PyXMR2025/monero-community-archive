@@ -7,10 +7,10 @@ labels:
 - bug
 - tests
 created_at: '2023-01-31T07:46:01+00:00'
-updated_at: '2023-09-21T17:20:19+00:00'
+updated_at: '2026-07-10T14:53:21+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:53:21+00:00'
 ---
 
 # Original Description
@@ -57,5 +57,9 @@ I see this one fail occasionally on CI.
 ## 0xFFFC0000 | 2023-08-09T18:44:01+00:00
 I do see this occasionally too. 
 
+## selsta | 2026-07-10T14:53:21+00:00
+This was resolved in #10841
+
 # Action History
 - Created by: moneromooo-monero | 2023-01-31T07:46:01+00:00
+- Closed at: 2026-07-10T14:53:21+00:00

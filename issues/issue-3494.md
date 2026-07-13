@@ -5,10 +5,10 @@ author: iamsmooth
 assignees: []
 labels: []
 created_at: '2018-03-24T21:00:39+00:00'
-updated_at: '2018-03-24T21:08:40+00:00'
+updated_at: '2026-07-10T14:38:05+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:38:05+00:00'
 ---
 
 # Original Description
@@ -19,5 +19,9 @@ This is a problem because many of the improvements in output selection that help
 Therefore, we should implementing versioning and reject usage of the old wallet whenever there are significant improvements (as there have been in the past).
 
 # Discussion History
+## selsta | 2026-07-10T14:38:05+00:00
+This was fixed years ago.
+
 # Action History
 - Created by: iamsmooth | 2018-03-24T21:00:39+00:00
+- Closed at: 2026-07-10T14:38:05+00:00

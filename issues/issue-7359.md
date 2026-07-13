@@ -6,10 +6,10 @@ author: jnbarlow
 assignees: []
 labels: []
 created_at: '2021-02-01T03:10:45+00:00'
-updated_at: '2023-03-24T15:06:51+00:00'
+updated_at: '2026-07-10T14:48:24+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:48:24+00:00'
 ---
 
 # Original Description
@@ -60,5 +60,9 @@ however, there are use cases (which i personally like), such as https://repo.get
 ## reijerh | 2023-03-24T15:06:51+00:00
 Alright, thanks for the heads-up, and my sincere condolences to the original implementer. 🙃
 
+## selsta | 2026-07-10T14:48:24+00:00
+Closing as this was removed wallet / node side.
+
 # Action History
 - Created by: jnbarlow | 2021-02-01T03:10:45+00:00
+- Closed at: 2026-07-10T14:48:24+00:00

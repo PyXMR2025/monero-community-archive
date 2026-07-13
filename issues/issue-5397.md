@@ -5,10 +5,10 @@ author: ph4r05
 assignees: []
 labels: []
 created_at: '2019-04-04T01:54:54+00:00'
-updated_at: '2022-05-25T21:27:35+00:00'
+updated_at: '2026-07-10T14:59:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:59:42+00:00'
 ---
 
 # Original Description
@@ -341,5 +341,9 @@ C++ exception with description "RPC error - Get version" thrown in the test body
  1 FAILED TEST
 ```
 
+## selsta | 2026-07-10T14:59:43+00:00
+This should be fixed by https://github.com/monero-project/monero/pull/5917
+
 # Action History
 - Created by: ph4r05 | 2019-04-04T01:54:54+00:00
+- Closed at: 2026-07-10T14:59:42+00:00

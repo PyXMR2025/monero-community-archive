@@ -5,10 +5,10 @@ author: chaserene
 assignees: []
 labels: []
 created_at: '2021-09-15T13:59:32+00:00'
-updated_at: '2022-05-29T15:38:41+00:00'
+updated_at: '2026-07-10T16:12:10+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T16:12:09+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ my monero-wallet-cli.log contains no corresponding error.
 update: I'm still experiencing this with 0.17.3.
 
 # Discussion History
+## selsta | 2026-07-10T16:12:10+00:00
+There are not enough details to reproduce the issue but I assume this was fixed by https://github.com/monero-project/monero/pull/9977
+
 # Action History
 - Created by: chaserene | 2021-09-15T13:59:32+00:00
+- Closed at: 2026-07-10T16:12:09+00:00

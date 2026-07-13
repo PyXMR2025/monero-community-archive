@@ -5,10 +5,10 @@ author: roudaille
 assignees: []
 labels: []
 created_at: '2019-03-28T10:08:46+00:00'
-updated_at: '2019-04-02T10:01:15+00:00'
+updated_at: '2026-07-10T14:40:51+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-10T14:40:50+00:00'
 ---
 
 # Original Description
@@ -41,5 +41,9 @@ The logs show:
 ## cslashm | 2019-04-02T10:01:15+00:00
 I donot see the error i the log. Could you provide more details? 
 
+## selsta | 2026-07-10T14:40:51+00:00
+This is fixed by https://github.com/monero-project/monero/pull/10429
+
 # Action History
 - Created by: roudaille | 2019-03-28T10:08:46+00:00
+- Closed at: 2026-07-10T14:40:50+00:00

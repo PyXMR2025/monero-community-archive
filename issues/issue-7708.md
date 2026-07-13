@@ -6,7 +6,7 @@ assignees: []
 labels:
 - daemon
 created_at: '2021-05-06T23:00:03+00:00'
-updated_at: '2026-04-25T18:00:06+00:00'
+updated_at: '2026-07-09T17:35:25+00:00'
 type: issue
 status: open
 closed_at: null
@@ -33,6 +33,9 @@ I will submit a PR shortly that ups to the default policy to twice the current a
 So I was too quick to post that PR as the `static_assert` showed. I'm not sure this can be fixed easily due to the design. Your transaction can still be sent, but not over the most private method. Use `--tx-proxy ...,disable_noise` to send over I2P/Tor without the white noise feature, which is currently the limiting factor. 
 
 The issue is that its unlikely that the entire transaction will be sent before switching to another node for white noise.
+
+## jpk68 | 2026-07-09T17:35:25+00:00
+I have also been running into this issue on occasion while testing I2P SAM integration, especially over slow connections.
 
 # Action History
 - Created by: selsta | 2021-05-06T23:00:03+00:00

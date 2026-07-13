@@ -5,7 +5,7 @@ author: Gingeropolous
 assignees: []
 labels: []
 created_at: '2022-03-28T19:49:13+00:00'
-updated_at: '2022-05-29T21:25:50+00:00'
+updated_at: '2026-07-10T20:18:37+00:00'
 type: issue
 status: open
 closed_at: null
@@ -42,6 +42,9 @@ Yes. The real problem is whatever went wrong in the first place, to make it thin
 ## trasherdk | 2022-04-02T21:31:27+00:00
 So, even if you know you get bad information, just roll with it?
 Maybe the banning thingy need a review.
+
+## selsta | 2026-07-10T20:18:37+00:00
+@Gingeropolous do you have log level 2 of this happening on both nodes?
 
 # Action History
 - Created by: Gingeropolous | 2022-03-28T19:49:13+00:00

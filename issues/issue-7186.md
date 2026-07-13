@@ -154,7 +154,7 @@ has the list been updated, or can I use the same one I downloaded last week?
 ## selsta | 2020-12-31T14:21:39+00:00
 Same list.
 
-## guedressel | 2021-01-08T19:35:15+00:00
+## gdressel | 2021-01-08T19:35:15+00:00
 v0.17.1.9 is out: https://github.com/monero-project/monero/releases/tag/v0.17.1.9
 
 ## moneromooo-monero | 2021-01-09T01:35:06+00:00
