@@ -5,10 +5,10 @@ author: redsh4de
 assignees: []
 labels: []
 created_at: '2026-06-10T18:46:14+00:00'
-updated_at: '2026-06-10T18:46:14+00:00'
+updated_at: '2026-07-11T14:51:48+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-11T14:51:48+00:00'
 ---
 
 # Original Description
@@ -20,3 +20,4 @@ _Originally posted by @redsh4de in https://github.com/Cuprate/cuprate/pull/634#p
 # Discussion History
 # Action History
 - Created by: redsh4de | 2026-06-10T18:46:14+00:00
+- Closed at: 2026-07-11T14:51:48+00:00

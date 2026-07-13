@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-proposal
 created_at: '2026-05-28T22:11:46+00:00'
-updated_at: '2026-05-28T22:11:46+00:00'
+updated_at: '2026-07-11T19:07:38+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-11T19:07:38+00:00'
 ---
 
 # Original Description
@@ -36,5 +36,9 @@ From the options i looked at, [rustyline](https://github.com/kkawakam/rustyline)
 Should probably be feature-flagged the same way Arti currently is
 
 # Discussion History
+## redsh4de | 2026-07-11T19:07:38+00:00
+Not planned, in favor of a full fledged TUI as a seperate binary, embedding the cuprate lib.
+
 # Action History
 - Created by: redsh4de | 2026-05-28T22:11:46+00:00
+- Closed at: 2026-07-11T19:07:38+00:00
