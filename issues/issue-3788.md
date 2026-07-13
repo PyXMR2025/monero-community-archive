@@ -5,7 +5,7 @@ author: craighammonds-sys
 assignees: []
 labels: []
 created_at: '2026-03-02T05:16:25+00:00'
-updated_at: '2026-07-07T20:00:11+00:00'
+updated_at: '2026-07-11T01:54:04+00:00'
 type: issue
 status: open
 closed_at: null
@@ -330,6 +330,21 @@ XMRIG:
 [2026-07-07 16:59:06.184]  miner    speed 10s/60s/15m 2045.3 2042.8 n/a H/s max 2102.5 H/s
 
 ```
+
+## coffnix | 2026-07-11T01:54:04+00:00
+yo @craighammonds-sys I resolved i2c2 and i2c3 issue with the new 7.1.x patches and Linux kernel 7.1.3. I re-enabled I2C2 and I2C3, and the system now boots normally without requiring any GRUB modifications.
+
+ I have also created a new ACPI override CPIO that fixes both the incorrect CPU topology and the incorrect PPTT cache hierarchy. It corrects the CPU layout and allows Linux to properly detect the shared L2 and L3 caches.
+
+If you would like to test the ready-to-use file, you can simply download the acpi_override.cpio from my pull request:
+
+https://github.com/cixtech/cix-linux-main/pull/44/changes
+
+If you prefer to recreate the CPIO yourself, all the Python code, scripts and commands I used are documented here:
+
+https://github.com/cixtech/cix-linux-main/issues/43#issuecomment-4938956978
+
+please make tests.
 
 # Action History
 - Created by: craighammonds-sys | 2026-03-02T05:16:25+00:00
