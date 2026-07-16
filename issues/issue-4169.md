@@ -7,10 +7,10 @@ assignees: []
 labels:
 - bug
 created_at: '2023-05-03T20:59:50+00:00'
-updated_at: '2023-05-11T20:31:16+00:00'
+updated_at: '2026-07-15T17:55:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-15T17:55:04+00:00'
 ---
 
 # Original Description
@@ -28,3 +28,4 @@ That description is a bit of "word soup", so please don't hesitate to ask if you
 # Discussion History
 # Action History
 - Created by: recursivenomad | 2023-05-03T20:59:50+00:00
+- Closed at: 2026-07-15T17:55:04+00:00

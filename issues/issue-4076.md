@@ -5,10 +5,10 @@ author: russoj88
 assignees: []
 labels: []
 created_at: '2022-12-01T06:56:15+00:00'
-updated_at: '2022-12-01T16:52:42+00:00'
+updated_at: '2026-07-14T16:08:49+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-14T16:08:49+00:00'
 ---
 
 # Original Description
@@ -36,3 +36,4 @@ Does not work unfortunately, to save something inside the wallet cache you first
 
 # Action History
 - Created by: russoj88 | 2022-12-01T06:56:15+00:00
+- Closed at: 2026-07-14T16:08:49+00:00
