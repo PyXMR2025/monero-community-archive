@@ -5,7 +5,7 @@ author: rbrunner7
 assignees: []
 labels: []
 created_at: '2026-07-10T15:23:49+00:00'
-updated_at: '2026-07-13T18:19:15+00:00'
+updated_at: '2026-07-13T20:08:39+00:00'
 type: issue
 status: closed
 closed_at: '2026-07-13T18:19:15+00:00'
@@ -51,6 +51,18 @@ You find the log of the last meeting [here](https://github.com/monero-project/me
 <jberman> selsta: nice
 <rbrunner7> Doesn't look like it. So thanks everybody for attending, read you again next week!
 <sneedlewoods> Thanks everyone, see you
+````
+
+
+## rbrunner7 | 2026-07-13T20:08:39+00:00
+````
+<jpk68> Whoops, somehow forgot this was happening today :))
+<jpk68> Me: minor patches and reviews, some more I2P stuff, writing docs
+<UkoeHB> Late update: got through all my pending reviews. Need to look at multisig again, get the test working.
+<vtnerd> I shouldve updated too: got a patch for stressnet for the d++ strand backlog issue
+<vtnerd> It's going to be more aggressive at closing connections, and may need another tweak
+<vtnerd> Specifically the soft limit for p2p isn't handled correctly 
+<vtnerd> Actually I'll just fix that now too
 ````
 
 
