@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-05-27T00:25:06+00:00'
+updated_at: '2026-07-15T12:25:54+00:00'
 type: issue
 status: open
 closed_at: null
@@ -122,8 +122,11 @@ closed_at: null
 
 - [ ] Complete the beta stressnet
 - [ ] Complete all FCMP++ research audit tasks
-  - Need @kayabaNerve signoff on GBP fix and completion of open issues: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
+  -  [x] Need @kayabaNerve signoff on GBP fix and completion of open issues: https://github.com/monero-oxide/monero-oxide/commit/cba7117d2cb4a45444c54005604b2a943a8517f1
+   - [ ] helioselene completed review by Least Authority
+   - [ ] Circuit + gadgets impl re-review
 - [ ] Complete the FCMP++ integration audit
+    - [x] Phase 1
 - [ ] mx25519 lib audit
 - [x] Use new unbiased hash to point for Carrot outputs
   - https://github.com/seraphis-migration/monero/blob/64190feb26151e186b86c27bcd7c08e2ca09db6b/src/crypto/crypto.cpp#L650-L653
@@ -164,7 +167,8 @@ closed_at: null
 - [x] Remove static proof len table and use the latest fast proof len size calc from the FCMP++ lib instead
   - Move the static proof len table into a test just to sanity check the proof len size calc
   - #339
-- [ ] SAVE THIS FOR LAST: make sure the wallet's version compatibility check is testing for compatibility with the first FCMP++ compatible daemon [here](https://github.com/seraphis-migration/monero/blob/8e2009ad8e078ac03b6ca5409223246b30a42f49/src/wallet/wallet2.cpp#L6663)
+- [x] make sure the wallet's version compatibility check is testing for compatibility with the first FCMP++ compatible daemon [here](https://github.com/seraphis-migration/monero/blob/8e2009ad8e078ac03b6ca5409223246b30a42f49/src/wallet/wallet2.cpp#L6663)
+  - Handled via #350
 
 
 ## On hold
