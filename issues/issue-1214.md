@@ -7,10 +7,10 @@ assignees: []
 labels:
 - bug
 created_at: '2016-10-12T22:53:19+00:00'
-updated_at: '2018-01-08T12:32:34+00:00'
+updated_at: '2026-07-15T17:03:09+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-15T17:03:09+00:00'
 ---
 
 # Original Description
@@ -47,5 +47,17 @@ Also, see #759
 ## dEBRUYNE-1 | 2018-01-08T12:28:49+00:00
 +bug
 
+## munzzyy | 2026-07-15T03:36:55+00:00
+This looks like it was already fixed as a side effect of 60b35c91b ("Add --restore-date param", 2018-12-14).
+
+Current simplewallet.cpp checks `command_line::is_arg_defaulted(vm, arg_restore_height)` (in the `m_restoring` block around line 4327) instead of the old `!m_restore_height` truthiness check from 2016. `is_arg_defaulted` returns `vm[arg.name].defaulted()` (src/common/command_line.h:264), which boost sets to false whenever the user actually supplied the option on the command line, no matter what value they passed - so `--restore-height=0` is now correctly distinguished from not passing `--restore-height` at all.
+
+I traced the original repro (`--restore-deterministic-wallet ... --restore-height=0`) through the current code by hand and can't find a path that still hits the interactive prompt. Might be worth closing unless there's some other invocation still tripping the old behavior.
+
+
+## selsta | 2026-07-15T17:03:09+00:00
+@munzzyy thank you for looking into this
+
 # Action History
 - Created by: athanclark | 2016-10-12T22:53:19+00:00
+- Closed at: 2026-07-15T17:03:09+00:00
