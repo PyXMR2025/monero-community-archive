@@ -5,7 +5,7 @@ author: tobtoht
 assignees: []
 labels: []
 created_at: '2024-09-01T10:54:29+00:00'
-updated_at: '2026-06-28T03:54:33+00:00'
+updated_at: '2026-07-17T22:28:05+00:00'
 type: issue
 status: open
 closed_at: null
@@ -32,6 +32,12 @@ I had tried to compile Monero GUI with Qt6 and recognized that it depends on som
 
 ## adapt-L | 2026-06-28T03:54:33+00:00
 I tried to package monero-gui for gentoo, but it doesn't even support qt5 anymore
+
+## selsta | 2026-07-17T21:43:56+00:00
+@adapt-L please see https://github.com/monero-project/monero-gui/pull/4659
+
+## adapt-L | 2026-07-17T22:28:05+00:00
+@selsta NOICE
 
 # Action History
 - Created by: tobtoht | 2024-09-01T10:54:29+00:00

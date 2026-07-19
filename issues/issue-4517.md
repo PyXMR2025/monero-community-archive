@@ -5,7 +5,7 @@ author: karelbilek
 assignees: []
 labels: []
 created_at: '2025-10-27T10:04:17+00:00'
-updated_at: '2026-06-08T13:21:54+00:00'
+updated_at: '2026-07-19T08:06:09+00:00'
 type: issue
 status: open
 closed_at: null
@@ -70,6 +70,16 @@ If I understand correctly the major missing piece is a C++ library for Trezor-Ho
 
 ## Hannsek | 2026-06-08T05:49:54+00:00
 Hello @selsta, I'd like to ask if the team plans to work on this or if anything else is needed to start the work. 🙏🏻
+
+## wantedwriter | 2026-07-19T01:47:58+00:00
+> im sure that they will implement support in the near future. For now cake wallet seems to be the closest in terms of supporting the safe 7. You can already use it for btc, eth and some other coins, just not xmr yet.
+
+cake seemed to be a great option, but it doesn't look like it supports passphrases.
+
+## selsta | 2026-07-19T08:04:24+00:00
+@Hannsek so far I have not seen a good solution how we can implement the Trezor host protocol in our C++ codebase. That's the main blocker.
+
+A rust implementation might work depending on the amount of dependencies.
 
 # Action History
 - Created by: karelbilek | 2025-10-27T10:04:17+00:00

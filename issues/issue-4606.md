@@ -1,7 +1,7 @@
 ---
 title: Failed transaction will stay up in the transactions list.
 source_url: https://github.com/monero-project/monero-gui/issues/4606
-author: ModemNakata
+author: mxR88
 assignees: []
 labels: []
 created_at: '2026-06-15T11:02:17+00:00'
@@ -21,4 +21,4 @@ I had a failed transaction using some random remote node, it was 77 days ago, bu
 Unfortunately the only way to remove it is a full rescan, which would mean you lose other information like receiving address. I'll try to improve this in a future release.
 
 # Action History
-- Created by: ModemNakata | 2026-06-15T11:02:17+00:00
+- Created by: mxR88 | 2026-06-15T11:02:17+00:00

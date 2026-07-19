@@ -65,7 +65,7 @@ But even Windows itself can do port forwarding: https://stackoverflow.com/questi
 
 To remove: `netsh interface portproxy delete v4tov4 listenport=18081 listenaddress=127.0.0.1`
 
-## Javihache | 2018-07-02T00:32:17+00:00
+## javihache | 2018-07-02T00:32:17+00:00
 I have this problem too!
 
 ## dEBRUYNE-1 | 2018-07-02T21:00:21+00:00
