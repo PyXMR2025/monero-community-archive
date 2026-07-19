@@ -1,7 +1,7 @@
 ---
 title: 'GUI: Heap corruption on exit'
 source_url: https://github.com/seraphis-migration/monero/issues/368
-author: ModemNakata
+author: mxR88
 assignees: []
 labels: []
 created_at: '2026-05-09T17:25:01+00:00'
@@ -108,7 +108,7 @@ No symbol table info available.
 ## ComputeryPony | 2026-05-09T22:16:33+00:00
 Judging from the call stack this looks like another instance of #268 
 
-## ModemNakata | 2026-05-09T23:22:04+00:00
+## mxR88 | 2026-05-09T23:22:04+00:00
 Sorry, I should have checked it before submitting
 
 > Judging from the call stack this looks like another instance of [#268](https://github.com/seraphis-migration/monero/issues/268)
@@ -116,4 +116,4 @@ Sorry, I should have checked it before submitting
 
 
 # Action History
-- Created by: ModemNakata | 2026-05-09T17:25:01+00:00
+- Created by: mxR88 | 2026-05-09T17:25:01+00:00
