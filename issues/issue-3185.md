@@ -47,7 +47,7 @@ Homebrew dependencies are sometimes broken, build using "Advanced build" instruc
 ## walksonair | 2022-12-27T14:38:42+00:00
 Installing XMRIG through homebrew works. Don't know why the basic build doesn't now. 
 
-## Javihache | 2023-01-12T00:38:50+00:00
+## javihache | 2023-01-12T00:38:50+00:00
 basic build doesn't work on MacOS Ventura. I can confirm.
 
 ## walksonair | 2023-01-12T01:29:27+00:00
