@@ -10,10 +10,10 @@ labels:
 - reproduction needed
 - more info needed
 created_at: '2022-09-09T20:15:22+00:00'
-updated_at: '2024-01-07T04:35:28+00:00'
+updated_at: '2026-07-17T23:16:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-17T23:16:46+00:00'
 ---
 
 # Original Description
@@ -59,5 +59,9 @@ I have this exact issue right now and can provide images and video to support if
 ## 0xFFFC0000 | 2024-01-07T04:35:27+00:00
 The picture you posted just says the executable file is missing. Nothing more. 
 
+## selsta | 2026-07-17T23:16:46+00:00
+Should be resolved by #8697 and #10335 
+
 # Action History
 - Created by: zubair72 | 2022-09-09T20:15:22+00:00
+- Closed at: 2026-07-17T23:16:46+00:00

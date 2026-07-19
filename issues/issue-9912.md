@@ -5,10 +5,10 @@ author: SyntheticBird45
 assignees: []
 labels: []
 created_at: '2025-04-24T13:31:45+00:00'
-updated_at: '2026-07-10T23:18:46+00:00'
+updated_at: '2026-07-17T23:02:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-17T23:02:46+00:00'
 ---
 
 # Original Description
@@ -134,5 +134,9 @@ Keeps things de-cluttered during the development phase. For the sake of visibili
 ## selsta | 2026-07-10T23:18:45+00:00
 Can this be closed? I increased the frequency of releases since this issue was opened, and slow reviews won't be fixed by different branching.
 
+## selsta | 2026-07-17T23:02:46+00:00
+Closing this as I disagree with the proposed release process and the frequency of releases was increased since this issue was opened.
+
 # Action History
 - Created by: SyntheticBird45 | 2025-04-24T13:31:45+00:00
+- Closed at: 2026-07-17T23:02:46+00:00
