@@ -1,7 +1,7 @@
 ---
 title: Please verify your GitHub account
 source_url: https://github.com/monero-project/monero-site/issues/2674
-author: sidalsolgun62
+author: sidalsolgun
 assignees: []
 labels: []
 created_at: '2026-06-21T01:47:19+00:00'
@@ -27,4 +27,4 @@ reading https://docs.github.com/en/organizations/managing-organization-settings/
 thanks, requires some menu navigation and a DNS txt record to be added. will request
 
 # Action History
-- Created by: sidalsolgun62 | 2026-06-21T01:47:19+00:00
+- Created by: sidalsolgun | 2026-06-21T01:47:19+00:00
