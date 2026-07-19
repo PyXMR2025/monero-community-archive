@@ -80,7 +80,7 @@ One argument against raising minimum fees is that *if* Monero fiat value goes 10
 
 But simultaneously, *if* Monero goes 10x, it's a nice problem to have, and the community can probably manage the small tweak needed to make fees more affordable.
 
-## donttracemebruh | 2024-03-24T21:16:43+00:00
+## tibbar-etihw | 2024-03-24T21:16:43+00:00
 I support raising the minimum fee with plans to revert the fee raise during the FCMP fork. Cheap fees make sense in a FCMP protocol, but cheap fees are detrimental to privacy under a ring signature protocol as rings have this spam attack weakness. 
 
 I would also support a ring increase, although I think it would be better to aim for something like 50% (or less) of the tx size under FCMPs, in order not to increase the blockchain size any more than we have to. 
@@ -90,7 +90,7 @@ Increase ring signatures, leave fees at current level as the attacker surely won
 
 If the attacker is chainanalysis company, we would need to increase fees 100x to make a dent in their accounts.
 
-## donttracemebruh | 2024-03-27T12:39:50+00:00
+## tibbar-etihw | 2024-03-27T12:39:50+00:00
 Its about increasing the cost to attack. There will always be entities with seemingly unlimited resources that no amount of fees will ever deter. The goal should be to price out small to medium sized attackers while making miners more profitable and increasing network hashrate. Currently mining is very much not profitable to the point that a certain Monero fork is more profitable to mine and has surpassed Monero in hashrate. We shouldn't increase fees too drastically, but targeting fees of 1 cent to 5 cents for example would still be a negigible amount for most Monero users while drastically increasing miner's profits and the cost to spam the network.
 
 ## wallart1 | 2024-03-27T12:54:09+00:00

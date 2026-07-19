@@ -296,7 +296,7 @@ It could be a relay rule, which would only require a software update.
 
 I'd support this - raising the fees would also ensure that spamming attacks are more expensive.
 
-## donttracemebruh | 2025-08-10T17:44:16+00:00
+## tibbar-etihw | 2025-08-10T17:44:16+00:00
 What happens if/when Monero reaches a higher valuation and transacting is unnafordable to many people because fees have 10x'd? I think we should increase fees, but 10x seems excessive imo. 
 
 ## NotIshanSingh | 2025-08-10T18:16:10+00:00
