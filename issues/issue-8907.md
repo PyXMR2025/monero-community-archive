@@ -6,10 +6,10 @@ assignees: []
 labels:
 - arm
 created_at: '2023-06-15T02:57:33+00:00'
-updated_at: '2023-12-07T21:10:42+00:00'
+updated_at: '2026-07-20T09:01:19+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-20T09:01:19+00:00'
 ---
 
 # Original Description
@@ -142,3 +142,4 @@ See also https://github.com/monero-project/monero/issues/8790#issuecomment-14987
 
 # Action History
 - Created by: SnAFKe | 2023-06-15T02:57:33+00:00
+- Closed at: 2026-07-20T09:01:19+00:00

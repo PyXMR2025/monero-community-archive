@@ -5,10 +5,10 @@ author: anonimal
 assignees: []
 labels: []
 created_at: '2016-10-21T06:29:30+00:00'
-updated_at: '2018-01-08T13:02:57+00:00'
+updated_at: '2026-07-20T09:08:16+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-20T09:08:16+00:00'
 ---
 
 # Original Description
@@ -70,3 +70,4 @@ For example, see https://build.getmonero.org/builders/monero-tests-ubuntu-16.04-
 
 # Action History
 - Created by: anonimal | 2016-10-21T06:29:30+00:00
+- Closed at: 2026-07-20T09:08:16+00:00

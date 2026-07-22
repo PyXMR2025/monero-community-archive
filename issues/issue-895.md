@@ -6,10 +6,10 @@ assignees: []
 labels:
 - tests
 created_at: '2016-07-09T16:27:11+00:00'
-updated_at: '2019-03-21T09:45:37+00:00'
+updated_at: '2026-07-20T09:08:17+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-20T09:08:17+00:00'
 ---
 
 # Original Description
@@ -22,3 +22,4 @@ Wallets in /home/mbg003 needs to be replaced by temp ones generated properly. Ev
 
 # Action History
 - Created by: moneromooo-monero | 2016-07-09T16:27:11+00:00
+- Closed at: 2026-07-20T09:08:17+00:00
