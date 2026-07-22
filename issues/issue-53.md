@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-07-15T12:25:54+00:00'
+updated_at: '2026-07-21T17:23:04+00:00'
 type: issue
 status: open
 closed_at: null
@@ -40,6 +40,7 @@ closed_at: null
   - [ ] Trezor
   - [ ] Ledger
 - [ ] Clean up CLI references to rings in UI
+  - #308
 - [ ] Clean up GUI references to rings
 - [ ] Wallet RPC `describe_transfer` command for Carrot transaction proposals
   - Resolved by: https://github.com/seraphis-migration/monero/issues/52
@@ -112,11 +113,12 @@ closed_at: null
 - [x] Require new wallets point to updated daemon (required for building the tree from an arbitrary restore height)
   - #58 
 - [x] #70
-- [ ] Creating watch-only wallet from full wallet, `wallet2::import_blockchain` has a FIXME for tree
 - [x] Blockchain import should add locked outputs and update FCMP++ tree (#311)
-- [ ] Fix CLI/RPC displaying locked status of time-based locked outputs after FCMP++ fork 
 - [x] Fix `monero-blockchain-prune` utility
   - #196
+- [ ] Creating watch-only wallet from full wallet, `wallet2::import_blockchain` has a FIXME for tree
+- [ ] Fix CLI/RPC displaying locked status of time-based locked outputs after FCMP++ fork
+  - #353
 
 ## Misc.
 
