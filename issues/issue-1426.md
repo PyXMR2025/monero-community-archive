@@ -5,7 +5,7 @@ author: Rucknium
 assignees: []
 labels: []
 created_at: '2026-07-16T22:20:20+00:00'
-updated_at: '2026-07-16T22:20:20+00:00'
+updated_at: '2026-07-22T17:08:09+00:00'
 type: issue
 status: open
 closed_at: null
@@ -26,7 +26,7 @@ Main discussion topics:
 
 3. FCMP++ to-do list status. [Programming tasks](https://github.com/seraphis-migration/monero/issues/53). [Reviews and audits](https://cryptpad.fr/sheet/#/2/sheet/view/yPVIUywwA9-deE9VF6GYm9bXbPdCerdST3UDEEfBxcM/embed/).
 
-4. [Repurposing `unlock_time` for relative locks with FCMP++](https://github.com/monero-project/research-lab/issues/161).
+4. [Relative locks with FCMP++](https://github.com/monero-project/research-lab/issues/161).
 
 5. [Post-quantum encryption](https://github.com/monero-project/research-lab/issues/151#issuecomment-4412416686). [Jamtis](https://gist.github.com/tevador/639d083c994c1ef9401832c08e2b7832#appendix-c-instant-sync-protocol). 
 
