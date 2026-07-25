@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2026-07-15T16:57:50+00:00'
-updated_at: '2026-07-22T17:24:56+00:00'
+updated_at: '2026-07-23T21:22:25+00:00'
 type: issue
 status: open
 closed_at: null
@@ -27,25 +27,38 @@ Relative locks are useful for a variety of decentralized protocols. Notably, pay
 
 Note that Monero already enforces a relative 10-block lock. For FCMP++, it means the tree root <code>R</code> used for the membership proof must be at least 10 blocks old. This proposal adds the option to make the lock longer than 10 blocks.
 
+Let <code>R<sub>h</code> be the FCMP tree root at height `h` and `ref` be the explicit transaction reference height (the earliest height the transaction is mineable), which is specified in the membership proof.
+
 **This proposal completely changes the way locked transactions work after the FCMP++ hard fork. The lock is not applied to the transaction outputs. It's applied to transaction inclusion in the blockchain. Locked transactions cannot even enter the mempool until they unlock.**
+
+## Simple "leaky" locks
+
+The simplest way to implement a relative lock with virtually zero cost would be to disable the original Monero lock mechanism but allow `unlock_time` to have a value of 0 or 1. The relative lock would be enforced by the consensus layer by forcing a specific value for the FCMP tree root `R`:
+
+| `unlock_time` | `R` | Approx. lock duration |
+|---------------|-----|-----------------------|
+|      `0`      | <code>R<sub>ref-10</code> | 20 minutes |
+|      `1`      | <code>R<sub>ref-720</code> | 24 hours |
+
+Transactions with `unlock_time = 0` enforce only the default 10-block lock, while transactions with `unlock_time = 1` enforce a 720-block lock, which corresponds to a lock time of 24 hours, which is sufficient for the dispute mechanism in decentralized payment channel protocols.
+
+Because the `unlock_time` field is public, I'm proposing only 2 values for the lock time to limit the impact of the resulting anonymity puddles. Time-locked transactions would be easily identifiable in the blockchain. To avoid leaking the fact that the transaction was time-locked, wallets could randomly set `unlock_time` to 1 when spending an output older than the lock time with a small probability. The leakage would be limited to the fact that the age of the spent output was at least 24 hours.
 
 ## Hiding locks with a ring signature
 
-My original proposal was to use `unlock_time = 1` to publicly declare a time-locked transaction, which would be enforced at the consensus layer by checking that the age of the tree root `R` is older than a week.
-
-@UkoeHB suggested a more private solution based on a ring signature on the root hash comitment. Let <code>R<sub>h</code> be the FCMP tree root at height `h` and `ref` be the explicit transaction reference height (the earliest height the transaction is mineable).
+@UkoeHB suggested a more private solution based on a ring signature on the root hash comitment. 
 
 The protocol will support a few possible lock times, for example:
 
-| <code>i</code> | Approx. lock duration | <code>R<sub>i</sub></code> |
+| <code>i</code>| <code>R<sub>i</sub></code> | Approx. lock duration |
 |---------------|-------------|------------------------------|
-|    `0`        | 20 minutes  | <code>R<sub>ref-10</code>
-|    `1`        | 3 hours     | <code>R<sub>ref-90</code>
-|    `2`        | 1 day       | <code>R<sub>ref-720</code>
-|    `3`        | 1 week      | <code>R<sub>ref-5040</code>
-|    `4`        | 8 weeks     | <code>R<sub>ref-40320</code>
-|    `5`        | 1 year      | <code>R<sub>ref-262800</code>
-|    `6`        | 8 years     | <code>R<sub>ref-2102400</code>
+|    `0`        | <code>R<sub>ref-10</code> |  20 minutes  |
+|    `1`        | <code>R<sub>ref-90</code> | 3 hours     
+|    `2`        | <code>R<sub>ref-720</code> | 1 day       
+|    `3`        | <code>R<sub>ref-5040</code> | 1 week      
+|    `4`        | <code>R<sub>ref-40320</code> | 8 weeks     
+|    `5`        | <code>R<sub>ref-262800</code> | 1 year      
+|    `6`        | <code>R<sub>ref-2102400</code> | 8 years     
 
 Each transaction will include an additional commitment <code>L = j H + x G</code> with j equal to one of the i values from the table above (i.e. 0 <= j <= 6). The value j = 0 corresponds to the default 10-block lock. The commitment `L` is signed by the spend authorization proof.
 
@@ -299,6 +312,54 @@ If Alice and Bob disagree, they can present their case to Charlie, who will take
 Ok yeah that makes sense.
 
 Unrelated: this proposal should include sub-protocols for adding and removing funds (or comments that reconstructing the channel is required).
+
+## tevador | 2026-07-23T04:34:04+00:00
+Due to a push-back against the ring-signature based locks in the last MRL meeting, I added the simple "leaky" lock mechanism based on `unlock_time` back into the proposal. I think it should be fairly easy to implement the consensus changes before the next hard fork (wallet code can come later).
+
+## tevador | 2026-07-23T05:17:42+00:00
+In response to a question by @Rucknium, here is a quick summary of Monero-compatible payment channels in the literature:
+
+| Protocol | Reference | Unlimited lifetime | No trusted 3rd party | No HF required
+|--------------|----------|--------------------|-------------------|-------------------|
+| PayMo |  [[1](https://eprint.iacr.org/2020/1441)] | :x: | :white_check_mark: | :white_check_mark: |
+| Sleepy Channels | [[2](https://eprint.iacr.org/2021/1445)] | :x: | :white_check_mark: | :white_check_mark: |
+| AuxChannel | [[3](https://eprint.iacr.org/2022/117)] | :white_check_mark: | :x: | :white_check_mark: |
+| MoNet | [[4](https://eprint.iacr.org/2022/744)] | :white_check_mark: | :x: | :white_check_mark: |
+| Grease | [[5](https://github.com/grease-xmr/grease/blob/main/docs/grease_whitepaper.pdf)] | :white_check_mark: | :x: | :white_check_mark: |
+| **This proposal** | | :white_check_mark: |  :white_check_mark: | :x: |
+
+AFAIK, this proposal is the only one that enables bidirectional payment channels with unlimited lifetime without relying on a trusted 3rd party (key escrow service etc.) for disputes. However, it does require specific consensus protocol changes.
+
+## kayabaNerve | 2026-07-23T19:43:41+00:00
+I'm still working though all of the above, as it's become quite a flurry of updates. However, I don't want to stay out too long in case things consolidate before I am able to share my opinion.
+
+I am likely _against_ a ring signature for which tree root is being spent with. If we add an extra layer to top of the tree, of candidate roots, we can handle this within the FCMP itself (an already modular framework). While we would need a Pedersen commitment to lock-in the choice of tree root, that is a _single extra equality constraint_ and would be incredibly cheap.
+
+There is a practical issue however: tree roots are not represented in a consistent group $\hat{G}$ and instead alternate between Selene and Helios points. Accordingly, if the tree roots are in different groups, a padding structure will be needed, potentially adding a total of two layers of the resulting FCMP.
+
+All of this, _except_ for binding to a specific tree root, can be done without modifying the FCMP. The single extra wire in the circuit isn't a concern to me. We can also use a Pedersen commitment to `0` to represent the user's choice of root, to hide whether on not this scheme is being participated in, for just one or two extra multiplications.
+
+This issue arguably follows an issue I made in late 2024 on adding support for a PCN design: https://github.com/monero-project/research-lab/issues/129
+
+In that design, I proposed a timelock design at the cost of a range proof. While that would require more changes to the circuit itself, it avoids some of the clutter with this proposal (limited choices of lock times, the potential need for two layers if roots are at distinct tree depths, etc.). It likely should be reconsidered.
+
+I have yet to understand the full PCN design _but_ I'm unclear how well the requirement that spend-authority has to bind a tree root is, as that requirement is incompatible with transaction chaining in general. I understand we can presumably discuss further fallbacks and pathing, but it's yet another reason to question if we should simply allow timelocks specified by duration, not by roots.
+
+## UkoeHB | 2026-07-23T20:46:55+00:00
+> I have yet to understand the full PCN design but I'm unclear how well the requirement that spend-authority has to bind a tree root is, as that requirement is incompatible with transaction chaining in general. 
+
+SALs are signed against a commitment to the relative lock index, which is separately opened in parallel with opening the tree root commitment using commitments to zero (like how CLSAGs handle pseudo output commitments).
+
+So you'd specify and sign the relative lock index (indicating minimum age of spends relative to when membership proofs are constructed) w/ partial tx chained off another partial tx. Then you construct membership proofs as soon are your inputs are available on-chain.
+
+## tevador | 2026-07-23T21:17:36+00:00
+> I have yet to understand the full PCN design but I'm unclear how well the requirement that spend-authority has to bind a tree root is, as that requirement is incompatible with transaction chaining in general. I understand we can presumably discuss further fallbacks and pathing, but it's yet another reason to question if we should simply allow timelocks specified by duration, not by roots.
+
+None of the methods in this proposal bind the tree root with the SAL.
+
+The simple relative lock proposal signs `unlock_time = 1` with the SAL.
+
+For example, Alice decides to force close the channel. She submits the Close transaction as usual and it gets confirmed at height = 4000000. In order to spend from the Close transaction, she needs to use the tree root <code>R<sub>4000000</sub></code> or newer (older trees don't contain the enote). Since the Recover transaction is signed with `unlock_time = 1`, consensus will select the tree root <code>R<sub>ref-720</code> where `ref` is selected by Alice when constructing the FCMP for Recover. She must select `ref = 4000720` or greater. Since consensus requires that `ref` must not exceed the height of the containing block, her Recover transaction won't confirm before block 4000720, which in turn enforces the relative lock from the preceding Close transaction.
 
 # Action History
 - Created by: tevador | 2026-07-15T16:57:50+00:00

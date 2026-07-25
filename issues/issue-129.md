@@ -5,7 +5,7 @@ author: kayabaNerve
 assignees: []
 labels: []
 created_at: '2024-11-29T22:54:05+00:00'
-updated_at: '2025-05-24T10:48:46+00:00'
+updated_at: '2026-07-24T20:27:22+00:00'
 type: issue
 status: open
 closed_at: null
@@ -89,6 +89,19 @@ One thing they discuss in the bitcoin network is having a separate "uncongested 
 Monero, however, could take advantage of this idea due to the dynamic block size. You can just assume that blocks are congested when the block size is growing. So if you include block height as an input to transactions, then you may want to use this "uncongested block height" mechanism instead, or something like it instead of the actual block height.
 
 I agree with your stance on TEEs. In general, TEEs are only practical for securing a small amount of funds, and in the case of payment channels you want to have a lot of liquidity in each channel.
+
+## tevador | 2026-07-24T18:10:05+00:00
+This proposal seems to define an absolute lock (based on a specific unlock height), which is not very useful for payment channels. Non-expiring payment channels need relative locks.
+
+I also prefer off-chain locks because they avoid some undesirable properties of locked outputs (e.g. merchants failing to check that a received payment is locked). An off-chain absolute lock would also be much simpler, requiring only one commitment and a range proof, which could be batched with the standard output range proof.
+
+## kayabaNerve | 2026-07-24T19:05:42+00:00
+Every output can have its inclusion block number added in to the output to transform it into a relative lock.
+
+The complexity of this is left to its own discussion. As for the impacts to scanners though, scanners which simply ignore this additional term won't scan these outputs at all. This design still requires off-chain communication of the lock _or_ the wallet to solve a small DLP.
+
+## tevador | 2026-07-24T20:27:22+00:00
+Even if the lock becomes relative, the simple PC design I submitted [here](https://github.com/monero-project/research-lab/issues/161) doesn't work with output-based locks because you need a way for Bob to spend the locked output while Alice can't. In your design, the output is unconditionally locked no matter who is trying to spend it. Conditional spending could probably be simulated with some additional dummy outputs, but that's just a needless complication that offline locks don't have.
 
 # Action History
 - Created by: kayabaNerve | 2024-11-29T22:54:05+00:00
