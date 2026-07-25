@@ -5,7 +5,7 @@ author: woodser
 assignees: []
 labels: []
 created_at: '2020-05-27T16:03:51+00:00'
-updated_at: '2020-06-06T17:56:12+00:00'
+updated_at: '2026-07-24T12:12:12+00:00'
 type: issue
 status: open
 closed_at: null
@@ -99,6 +99,27 @@ Still seeing this issue with #6616.
 
 ## moneromooo-monero | 2020-06-06T17:56:12+00:00
 I'll try again with your wallet soon, in case I messed something up.
+
+## woodser | 2026-07-24T12:05:31+00:00
+Apparently `get_reserve_proof` validates against the account's strict balance, which counts pending spent outputs and can exceed a single account's reported balance when unconfirmed txs exist. It verifies correctly with an amount greater than the wallet's overall balance.
+
+## woodser | 2026-07-24T12:12:12+00:00
+AI's assessment of the core issue:
+
+Both the balance guard and output selection in `get_reserve_proof` (`wallet2.cpp`)
+use the **strict** spent-check:
+
+- guard: `balance(account, true) < requested`
+- selection: `!is_spent(td, true)`
+
+`is_spent(td, true)` only treats an output as spent once `m_spent_height > 0` (i.e.
+**confirmed** spent), so outputs already committed to a broadcast-but-unmined tx are
+still counted as available and can be included in the proof. Their key images aren't
+on-chain yet, so `check_reserve_proof` sees them as unspent — letting a wallet with
+pending outgoing txs prove reserves it has already committed to spending.
+
+**Fix direction:** guard/select against genuinely-unspent outputs (`!is_spent(td, false)`)
+instead of the confirmed-spent-only strict view.
 
 # Action History
 - Created by: woodser | 2020-05-27T16:03:51+00:00
