@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-07-21T17:23:04+00:00'
+updated_at: '2026-07-24T09:56:07+00:00'
 type: issue
 status: open
 closed_at: null
@@ -83,7 +83,7 @@ closed_at: null
   - https://github.com/monero-project/monero/pull/10038
 - [x] https://github.com/monero-project/monero/issues/10142
   - Resolved by cache input verification results
-- [ ] #388
+- [x] #388
 - [ ] #389
 
 ## Known bugs

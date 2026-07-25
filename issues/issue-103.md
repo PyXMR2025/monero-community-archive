@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-07-09T18:22:50+00:00'
+updated_at: '2026-07-23T00:32:45+00:00'
 type: issue
 status: open
 closed_at: null
@@ -27,7 +27,7 @@ closed_at: null
 | I    | Unclamped changes to `mx25519` | crypto | | | ❌ |
 | J    | Faster zero commit | blockchain_db, carrot_core, carrot_impl, cryptonote_core, ringct, wallet | https://github.com/monero-project/monero/pull/10108 | | ✅️ |
 | K   | Collect transparent amount commitments helper | blockchain_db, cryptonote_core, wallet | | J | ❌ |
-| L   | FCMP++ crypto | fcmp_pp, ringct | https://github.com/monero-project/monero/pull/10111, https://github.com/monero-project/monero/pull/10338, https://github.com/monero-project/monero/pull/10134, https://github.com/monero-project/monero/pull/10135, https://github.com/monero-project/monero/pull/10342, https://github.com/monero-project/monero/pull/10345 (there are more) | | ❌ |
+| L   | FCMP++ phase 1 crypto | fcmp_pp, ringct | https://github.com/monero-project/monero/pull/10111, https://github.com/monero-project/monero/pull/10338, https://github.com/monero-project/monero/pull/10135, https://github.com/monero-project/monero/pull/10342, https://github.com/monero-project/monero/pull/10345 (there are more) | | ✅️ |
 | M  | FCMP++ Rust FFI | | | | ❌ |
 | N  | FCMP++ format utils | blockchain_db, cryptonote_basic, cryptonote_core, wallet | | | ❌ |
 | O  | FCMP++ static proof len calculation| fcmp_pp, ringct, wallet, cryptonote_core | | M | ❌ |
@@ -35,7 +35,7 @@ closed_at: null
 | Q  | FCMP++ RingCT type | carrot_impl, cryptonote_basic, cryptonote_core, ringct, wallet | | P | ❌ |
 | R  | FCMP++ tower cycle | fcmp_pp, wallet | | M, P | ❌ |
 | S  | FCMP++ curve trees| blockchain_db, carrot_impl, cryptonote_basic, cryptonote_core, fcmp_pp, rpc, wallet |  | L, M, P, R | ❌ |
-| T  | FCMP++ tree cache | wallet | | F, P, S | ❌ |
+| T  | FCMP++ tree cache | wallet | | F, P, S, AW | ❌ |
 | U  | FCMP++ db integration | blockchain_db, cryptonote_core | | J, K, N, S | ❌ |
 | V  | Daemon RPC path by output ID | rpc, wallet | | U | ❌ |
 | W  | Daemon RPC getblocks.bin init tree sync data | rpc | | U | ❌ |
@@ -55,7 +55,7 @@ closed_at: null
 | AK | simplewallet: use passed decrypted payment ID from wallet2 for notifications | simplewallet, wallet | https://github.com/monero-project/monero/pull/10189 | | ✅️ |
 | AL | common: add std equivalent of hash_combine() | common | https://github.com/monero-project/monero/pull/10215 | | ✅️ |
 | AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827 | L | ❌ |
-| AN | crypto: add Ed25519->X25519 conversion functions | crypto | https://github.com/monero-project/monero/pull/9828 | L (partially) | ❌ |
+| AN | crypto: add Ed25519->X25519 conversion functions | crypto | https://github.com/monero-project/monero/pull/9828 | L (partially) | ✅️ |
 | AO | cryptonote_basic: add overload for `get_block_longhash()` | cryptonote_basic | https://github.com/monero-project/monero/pull/10039 | | ✅️ |
 | AP | less noisy perf logs #100 | wallet2 | | | ❌ |
 | AQ | #253 | cryptonote_core | | | ❌ |
@@ -64,6 +64,7 @@ closed_at: null
 | AT | OOM fix for FCMP++ #228 | | | | ❌ |
 | AU | #359 | | | | ❌ |
 | AV | #385 | | | | ❌ |
+| AW | FCMP++ wallet crypto | crypto | https://github.com/monero-project/monero/pull/10134 | | ❌ |
 
 
 # Discussion History
