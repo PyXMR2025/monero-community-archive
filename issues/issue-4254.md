@@ -5,7 +5,7 @@ author: tommyboy0
 assignees: []
 labels: []
 created_at: '2023-12-18T22:21:26+00:00'
-updated_at: '2024-12-11T10:17:58+00:00'
+updated_at: '2026-07-23T16:42:16+00:00'
 type: issue
 status: open
 closed_at: null
@@ -256,6 +256,13 @@ Embedded Monero version: 0.18.3.4-unknown
 Wallet restore height: 3280805
 Wallet mode: Advanced mode (Local node)
 Graphics mode: OpenGL
+
+## SChernykh | 2026-07-23T08:08:31+00:00
+This should be fixed in https://github.com/monero-project/monero/pull/10953 and https://github.com/monero-project/monero/pull/10954
+If you are able to build monerod from source, please try this fix.
+
+## 737simpilot | 2026-07-23T16:42:16+00:00
+Good to know, however I'm unable to build from source as I've never done that before.
 
 # Action History
 - Created by: tommyboy0 | 2023-12-18T22:21:26+00:00
