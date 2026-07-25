@@ -5,7 +5,7 @@ author: BigRigNoob
 assignees: []
 labels: []
 created_at: '2021-05-07T17:25:35+00:00'
-updated_at: '2021-05-08T22:06:09+00:00'
+updated_at: '2026-07-23T09:04:13+00:00'
 type: issue
 status: closed
 closed_at: '2021-05-07T22:56:51+00:00'
@@ -102,6 +102,9 @@ Both xmrig and lscpu show that you have 1 CPU with 28 cores/56 threads and 1 NUM
 
 ## Spudz76 | 2021-05-08T22:06:09+00:00
 Also you gave lscpu, not hwloc-ls which shows memory-to-node-and-cpu mappings
+
+## j3nnyzimmerman-art | 2026-07-23T09:04:13+00:00
+Dealing with massive currency conversion fees every time you deposit with a standard credit card is extremely annoying. Finding a localized platform like [Betvisa Bangladesh](https://vet-visa.com/) solves this issue completely. You can top up directly using local mobile financial services without losing a chunk of your balance to hidden bank rates.
 
 # Action History
 - Created by: BigRigNoob | 2021-05-07T17:25:35+00:00

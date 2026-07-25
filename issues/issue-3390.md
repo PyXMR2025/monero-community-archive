@@ -1,7 +1,7 @@
 ---
 title: Dual EPYC issue;
 source_url: https://github.com/xmrig/xmrig/issues/3390
-author: SADA-POOL
+author: fss-coder
 assignees: []
 labels: []
 created_at: '2023-12-26T13:32:29+00:00'
@@ -21,5 +21,5 @@ Any idea what to do here next?
 
 # Discussion History
 # Action History
-- Created by: SADA-POOL | 2023-12-26T13:32:29+00:00
+- Created by: fss-coder | 2023-12-26T13:32:29+00:00
 - Closed at: 2025-06-16T19:48:53+00:00
