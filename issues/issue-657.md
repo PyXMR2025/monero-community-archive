@@ -2,11 +2,12 @@
 title: Pruning for Cuprate
 source_url: https://github.com/Cuprate/cuprate/issues/657
 author: Boog900
-assignees: []
+assignees:
+- p4xxus
 labels:
 - C-proposal
 created_at: '2026-07-23T18:03:16+00:00'
-updated_at: '2026-07-24T20:02:03+00:00'
+updated_at: '2026-07-25T14:17:27+00:00'
 type: issue
 status: open
 closed_at: null
@@ -50,7 +51,7 @@ Where we currently use `prunable_blobs` we need to handle the case where data is
 monerod will store the top 5500 blocks unpruned, even if they are in a stripe we should prune, we need to handle this. 
 A way to handle this is to make a new fjall keyspace for the prunable blobs of the txs in the top 5500 blocks and then when a new block is added we look at the block 5501 from the top and remove its txs from the new keyspace. 
 
-All V2 prunable blobs should be added to this keyspace if we are pruning for simplicity. We should fill this table in before pruning.
+All V2 prunable blobs should be added to this keyspace, if we are pruning, for simplicity. We need to fill this table in before pruning a non-pruned node too.
 
 All places that look for prunable blobs will need to look in this new keyspace if they are close to the top of the chain.
 
@@ -61,7 +62,7 @@ All places that look for prunable blobs will need to look in this new keyspace i
 To fix this we need to pop some blocks from the tapes, up to where we have enough data. This probably looks like just always popping the top 5500 blocks from the tapes if we are pruned and the databases are out of sync. Then just having the tip prunable blob keyspace empty to repopulate with blocks once they are downloaded again.
 
 # Discussion History
-## paulhkz | 2026-07-24T20:02:03+00:00
+## p4xxus | 2026-07-24T20:02:03+00:00
 I am working on it btw, just to avoid duplicate work
 
 # Action History
