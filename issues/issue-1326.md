@@ -123,12 +123,18 @@ Please stop having off topic discussions unrelated to this issue
 Right:
 > This has absolutely nothing to do with the generalfund. This is exclusively about "what happened to the FFS wallet balance?
 
+## PPPDUD | 2026-03-05T16:45:25+00:00
+Related thread on Reddit: https://www.reddit.com/r/Monero/comments/1rhcz7c/fluffy_pony_stole_867_xmr_and_refuses_to/
+
 ## geonic1 | 2026-04-08T20:23:56+00:00
 @fluffypony has finally responded (in a way): https://x.com/fluffypony/status/2041955172302147910
 
 If I'm understanding him correctly, judging by the post he quoted in his reply, he is saying that the money and time he spent on Monero in the early years means that he is owed at least 867 XMR, if not more. Is this correct, @fluffypony ?
 
 <img width="1193" height="1412" alt="Image" src="https://github.com/user-attachments/assets/95d627c5-4f25-4148-bb83-55575069dac4" />
+
+## PPPDUD | 2026-04-08T22:37:10+00:00
+For those of you who don't know the current Monero prices, 867 XMR in USD is $285,797 as of writing.
 
 ## pompompur1nn | 2026-04-09T00:45:42+00:00
 if he allegedly stole the 2700+ XMR that was stolen in 2023, he would have stolen over a million US dollars of XMR as of writing this comment
@@ -146,12 +152,39 @@ Same for the 2023 theft, the current person in charge of that wallet had bad key
 
 This thread really is full of fucking retards.
 
+## PPPDUD | 2026-04-09T14:37:38+00:00
+> You're all idiots.
+> 
+> <img alt="Image" width="817" height="700" src="https://private-user-images.githubusercontent.com/130765230/575747196-ec78e26e-7c14-475d-bd97-cfa5a5810b1e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzU3NDU2OTMsIm5iZiI6MTc3NTc0NTM5MywicGF0aCI6Ii8xMzA3NjUyMzAvNTc1NzQ3MTk2LWVjNzhlMjZlLTdjMTQtNDc1ZC1iZDk3LWNmYTVhNTgxMGIxZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNDA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDQwOVQxNDM2MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZjNkZDAxYWM4NWJkMmYzN2Q3MjIwMmYxYWU5NGY2MzFjZTg4YzFlODMxYjlkZDFlMDZkOGI3NTUwZjMyMDkzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7ozurjznY3Q2xrx18RqeEapfj9SSQvjqgn02-zCduvY">
+> If his post on X is correct, and I have no reason to believe it isn't, he spent 246 BTC on Monero's development in 2014 and 2015, worth $17.5m at today's prices. There is no evidence that the 867 XMR wasn't spent on Monero development or returned to the general fund (BTC or XMR) or whatever.
+> 
+> If you have actual evidence then present it, otherwise **shut the absolute fuck up**.
+> 
+> Same for the 2023 theft, the current person in charge of that wallet had bad key management. They could have used a hardware wallet or multisig, but they didn't, and that's a fuck up that is now fixed.
+> 
+> This thread really is full of fucking retards.
+
+I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
+
 ## phonegobrr | 2026-04-09T14:52:22+00:00
 > I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
 
 You're an inferior person because you're providing pricing data from today for something from 2017. The 246 BTC he spent wasn't worth $17.5m in 2015 and the 867 XMR wasn't worth $285k, maybe that shit paid for some Monero server for 2 months.
 
 Just stop being retarded even if its hard for you.
+
+## PPPDUD | 2026-04-09T15:04:36+00:00
+> > I'm offended that you would treat me as an inferior person simply because I provided pricing data to aid the investigation.
+> 
+> You're an inferior person because you're providing pricing data from today for something from 2017. The 246 BTC he spent wasn't worth $17.5m in 2015 and the 867 XMR wasn't worth $285k, maybe that shit paid for some Monero server for 2 months.
+> 
+> Just stop being retarded even if its hard for you.
+
+ Hey, listen. You don't know my mental state and I don't know yours. I make no claim that the Monero was worth many thousands of dollars in 2017. For your information, I have [developed](https://mojavesoft.net/) [multiple](https://github.com/pppdud/homemade_yes) [software](https://github.com/Mojavesoft-Group/snap-parser) [projects](https://github.com/pppdud/minutils) with minimal assistance from others, and all of them are relatively coherent as far as I can tell.
+
+Also, I know this makes me seem obnoxious, but can we please stop using the R-word to describe people? I don't believe that I've ever been diagnosed with _any_ mental illnesses, let alone anything that would impair me from proving helpful in this discussion, so it makes no sense to insist that I'm mentally ill or substandard in any way.
+
+Edit: Also, your screenshot depicts Claude performing arithmetic on certain cells of an image of a spreadsheet using only machine learning techniques, a task that most humans would probably have trouble with, let alone LLMs. Why should I trust your output? Perhaps you should write a two-column proof to show that I'm wrong in saying that Claude was incorrect.
 
 ## pompompur1nn | 2026-04-09T23:02:51+00:00
 multisig is still experimental, even in 2026. i know this as ive personally pentested moneros implementation of it. please shut the fuck up and stop being arrogant thx
@@ -346,6 +379,17 @@ Total is 246.22563291 BTC
 
 Are hardware wallets also experimental fuckboi?
 
+## PPPDUD | 2026-04-10T14:10:57+00:00
+@phonegobrr I'm "woke" in the sense that I don't think that we should make assumptions about people's mental state. I'm "woke" in the sense that I think that equality and being nice are virtues worth upholding, but I'm not "woke" in the sense that Disney is. Those people are obnoxious to the both of us.
+
+I don't believe myself to be a glowie, but the purpose of Monero is that you don't need to trust that about me anyway.
+
+You might have noticed that I have not used even one insult in this discussion. That's because I'm being tolerant of you, even though you're doing things that are quite objectionable from my perspective. I never sought to cause harm to you, only to have a civil discussion.
+
+I don't know how to read `awk` code, and I can't verify that you aren't writing something that will produce a false answer. Therefore, I assume that you're lying because I have not observed any counterexamples showing that you're correct.
+
+As for your false equivalence argument, it seems that you have misinterpreted my initial statement. I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially, not to provide its value at time of loss, which would understate the problem today, because in August 2020, gold cost less than $2000 per ounce (as oposed to the present day, where it hovers around $5000).
+
 ## phonegobrr | 2026-04-10T15:01:46+00:00
 > but I'm not "woke" in the sense that Disney is
 
@@ -362,6 +406,34 @@ So you `developed multiple software projects with minimal assistance from others
 > I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially
 
 Great so we agree that your statement was fucking stupid. If the funds were stolen (and remember that nobody has presented any evidence they were) then their value at the time would have been relevant. It's very clear that the funds were either sent back to the GF in XMR or BTC, or it was used to pay Monero's costs. Otherwise he would just have said at the time that he's taking the funds to recover the 246 BTC he spent on Monero's development.
+
+## PPPDUD | 2026-04-10T15:28:46+00:00
+> > but I'm not "woke" in the sense that Disney is
+> 
+> And yet pronouns in your github bio
+>
+
+Those pronouns are there so that people don't need to make assumptions about who I am. He/him is the standard format of indicating that you are a male.
+
+> > I don't believe myself to be a glowie, but the purpose of Monero is that you don't need to trust that about me anyway.
+> 
+> Glowies are always clever and insidious. You're using this to build credibility and trust
+>
+
+Okay, then, don't trust me. Also, I'll point out that you're refusing to trust me, _as I advised you_. So you're following my advice, even though you insist that I'm a glowie. Why are you following a suspected glowie's advice? Because it's smart?
+
+> > I don't know how to read `awk` code
+> 
+> So you `developed multiple software projects with minimal assistance from others` but you don't know how to run a shell command?
+>
+
+I know how to run a shell command, but I don't understand the format that awk uses and I'm not in the mood to learn  it right now.
+
+> > I was hoping to demonstrate that the amount of missing XMR is presently quite valuable, so that people could understand how this situation is profiting the alleged thief substantially
+> 
+> Great so we agree that your statement was fucking stupid. If the funds were stolen (and remember that nobody has presented any evidence they were) then their value at the time would have been relevant. It's very clear that the funds were either sent back to the GF in XMR or BTC, or it was used to pay Monero's costs. Otherwise he would just have said at the time that he's taking the funds to recover the 246 BTC he spent on Monero's development.
+
+I disagree. It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
 
 ## nahuhh | 2026-04-10T15:45:08+00:00
 > It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
@@ -397,12 +469,31 @@ Also `dweeb` lol fucking boomer
 
 Are hardware wallets also experimental fuckboi?
 
+## PPPDUD | 2026-04-10T20:38:38+00:00
+> > It's possible that the funds were stolen so that they could be sold for a profit upon the next financial crisis, and presently, there is a financial crisis and Monero is much higher now than in August 2020.
+> 
+> it's also possible that they were spent on blow n hookers. Open up your imagination a little bit
+
+Well, that's possible too, but I would expect that a former Monero dev would at least try to profit from it before spending it all on selfish pleasures.
+
+## PPPDUD | 2026-04-10T20:39:45+00:00
+@pompompur1nn Hold on... are you _the_ pompompurinn that everyone's talking about?
+
 ## b4n6-b4n6 | 2026-04-11T02:31:09+00:00
 Can all of you act like adults. Stay on topic. Stay constructive. You all look like great devs. Perhaps you can discuss about multisig, blow and hookers, and pronouns in private. Thanks
 
 @nahuhh maybe close thread?
 
 FYI: I worked with MS. It IS _technically_ experimental
+
+## PPPDUD | 2026-04-11T12:30:36+00:00
+> Can all of you act like adults. Stay on topic. Stay constructive. You all look like great devs. Perhaps you can discuss about multisig, blow and hookers, and pronouns in private. Thanks
+> 
+> [@nahuhh](https://github.com/nahuhh) maybe close thread?
+> 
+> FYI: I worked with MS. It IS _technically_ experimental
+
+While I don't think that the thread should be locked, I do agree that more civility is warranted here.
 
 ## phonegobrr | 2026-04-11T12:35:17+00:00
 > FYI: I worked with MS. It IS _technically_ experimental
@@ -413,14 +504,40 @@ Absolutely nobody said it wasn't so the argument about it has been a waste of ti
 
 Why must people be civil but you're allowed to be a fucking moron? You can't have it both ways. Either you present rational and logical claims or you have to deal with being called the fuck out
 
+## PPPDUD | 2026-04-11T12:39:51+00:00
+> > FYI: I worked with MS. It IS _technically_ experimental
+> 
+> Absolutely nobody said it wasn't so the argument about it has been a waste of time
+> 
+> > While I don't think that the thread should be locked, I do agree that more civility is warranted here.
+> 
+> Why must people be civil but you're allowed to be a fucking moron? You can't have it both ways. Either you present rational and logical claims or you have to deal with being called the fuck out
+
+See, this is what I'm talking about. In a civil discussion, we do not usually call people morons and launch profanities at them <strike>unless they did so first, and I didn't</strike>. Also, you have a major hole in your argument: civility does not require being a non-moron, and being a moron does not require incivility. As you have described, I am calling you out for irrational, illogical claims.
+
 ## phonegobrr | 2026-04-11T12:49:57+00:00
 <img width="458" height="411" alt="Image" src="https://github.com/user-attachments/assets/e2602d87-9961-4a25-a5ef-85fb2d3d3528" />
+
+## PPPDUD | 2026-04-11T12:54:33+00:00
+> <img alt="Image" width="458" height="411" src="https://private-user-images.githubusercontent.com/130765230/576954978-e2602d87-9961-4a25-a5ef-85fb2d3d3528.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzU5MTIzNDcsIm5iZiI6MTc3NTkxMjA0NywicGF0aCI6Ii8xMzA3NjUyMzAvNTc2OTU0OTc4LWUyNjAyZDg3LTk5NjEtNGEyNS1hNWVmLTg1ZmIyZDNkMzUyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNDExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDQxMVQxMjU0MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iNmJlODIzYjg4NjE5Y2NiNTgwOTk0ZTU5Mzk4ZjJkMDI5Njk2MWVlOGYwNDlmOTg2NjU5NWEyYTQxZjVlMjZhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.T1haZECIb6xNkG_MWI6SaSOcNVvIpBv1sMG8E3Eb6Ow">
+
+Okay, then, do you have a logical counterargument?
 
 ## plowsof | 2026-04-11T13:27:21+00:00
 In my experience, If an alt starts saying boomer and posting memes its best to not engage 🐱 
 
+## PPPDUD | 2026-04-11T14:09:55+00:00
+> In my experience, If an alt starts saying boomer and posting memes its best to not engage 🐱
+
+Eh, it's fine. They're not responding to my question, so I assume that they don't really have a solid argument against me anyway.
+
 ## pompompur1nn | 2026-04-12T01:13:15+00:00
 nope @PPPDUD im just asian and all asians have to love a sanrio character
+
+## PPPDUD | 2026-04-12T13:11:53+00:00
+> nope [@PPPDUD](https://github.com/PPPDUD) im just asian and all asians have to love a sanrio character
+
+Is this sarcasm? I am having trouble figuring it out, because I'm not really immersed in Asian culture(s).
 
 ## geonic1 | 2026-04-14T01:24:23+00:00
 Please take your offtopic discussion elsewhere, unless the goal is to distract from the issue at hand.
