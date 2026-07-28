@@ -454,6 +454,24 @@ And let's be realistic.   It doesn't take much to maintain a full local node.
 
 Right, but imo an entity like qubic likely has no problem either running nodes or covering the bandwidth. I feel that this solves an old problem (botnets), but by doing so, would strengthen todays problem - selfish mining by a publuc entity. 51% etc would be easier _today_ if we dropped botnets w/o first addressing the attack
 
+## PPPDUD | 2025-08-27T22:21:06+00:00
+> > P2Pool and solo miners already have the data that will be required for mining.
+> 
+> AIUI, a large portion of p2pool miners are using remote nodes
+
+Most of those miners originate from botnets, so encouraging local node hosting would dramatically decrease the viability of cryptomining malware. I think that the vast majority of people who would install a cryptominer by mistake would be quite alarmed by ~100GB of space suddenly becoming unavailable.
+
+## PPPDUD | 2025-08-27T22:22:38+00:00
+> How would this effect
+> 
+> 1. Run monerod and p2pool on the vps
+> 2. Connect home miners to p2pool on the vps?
+> 
+
+Why would you pay for a VPS to run a node if you can run the mining software at home?
+
+If you can't afford a 500GB external hard drive, you probably can't afford a good computer anyway.
+
 ## breadvsrice | 2025-08-31T03:06:40+00:00
 Can't we just implement someway to reward miners for their work as part of the P2P node-node implementation? The only reason people join mining pools is to have a better chance of getting something vs nothing. If there was some implementation to reward miners for solving a lower difficulty or separate puzzle, without breaking the blockchain, nobody would join a pool. Maybe a lower-difficulty solution gets added to the transaction pool somehow, idk...it would need to be pulled into a block though, but still...?
 

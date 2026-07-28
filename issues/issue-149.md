@@ -83,5 +83,16 @@ This would be a significant change, but potentially realistic if miner and dev c
 
 that last one feels the cleanest to me. it keeps the process cpu-bound while making it storage-aware enough that botnets without full local chains couldn’t compete.
 
+## PPPDUD | 2026-02-25T14:18:13+00:00
+> Bitcoin did not exist until the byzantine general problem was solved.
+> 
+> Perhaps this is an analogous dilemma for Monero.
+> 
+> It seems impossible to solve until it isn't.
+> 
+> How could any ethical Monero user support the nonconsensual botting of computers?
+
+It's not like we're just mining for the sake of mining, we have a financial incentive and the botnets defend us from threats like Qubic.
+
 # Action History
 - Created by: MichaelTen | 2025-10-11T00:45:25+00:00

@@ -47,6 +47,15 @@ And BTW, saying "RandomX works well until it doesn't" is the stupidest thing a l
 
 Should we start packing ?
 
+## PPPDUD | 2025-08-22T16:27:57+00:00
+> RandomX works well until it doesn’t; a state actor could simply build a CPU farm (data center) or rent hash power, while malicious actors might exploit botnets. Qubic has demonstrated that the threat is real. Relying solely on RandomX could prove to be fatal.
+
+Qubic is falsifying self-reported statistics to lower the price of XMR. ~30% control (what they really achieved) did not give them absolute power and just freaked out new investors.
+
+Bad actors already mine XMR with powerful botnets, and they still haven't managed any meaningful attacks on the blockchain.
+
+What would you propose instead, proof-of-stake? Look at Ethereum and Solana, two major PoS chains. Both require powerful computers in order to participate as a validator. Both XMR nodes and miners have relatively low hardware requirements, though there is a much steeper decline in efficiency as hardware gets worse.
+
 ## Asbestos999 | 2025-08-23T08:05:20+00:00
 > > Creating a CPU mining farm capable of executing a 51% attack is currently financially out of reach for any government - it's not even worth considering.
 > 
@@ -168,6 +177,9 @@ And as I said before, double spending would need to be done on a large transacti
 Other than FUD, these attacks-even if successful-are totally worthless.
 
 
+## PPPDUD | 2025-08-23T15:08:56+00:00
+Offtopic, but can we please remain civil here? Qubic is spelled with a Q, and this is not the place for bad puns. If we judge Qubic, it should be on their merits, not the name.
+
 ## Asbestos999 | 2025-08-23T16:59:21+00:00
 > Offtopic, but can we please remain civil here? Qubic is spelled with a Q, and this is not the place for bad puns. If we judge Qubic, it should be on their merits, not the name.
 
@@ -275,6 +287,41 @@ You're talking about the LLM generated junk? (https://github.com/monero-project/
 **Botnets have already saved Monero.** You can easily check how much of the current hashrate comes from botnets - hint: Waves. And no - these are not legitimate servers spinning up, these are infected computers switching on and off. That’s why it’s gradually going down and up. If it weren’t botnets, it would be a square wave and it would be reversed (right now it's going down at night).
 
 https://miningpoolstats.stream/monero
+
+## PPPDUD | 2025-08-25T15:32:10+00:00
+> > > You simply don’t fix something that’s working
+> > 
+> > 
+> > its simply not working,
+> 
+> You're wrong - there was no successful 51% attack. So.... It works.
+> 
+> > They already proposed a hybrid model to keep miners happy
+> 
+> You're talking about the LLM generated junk? ([#138](https://github.com/monero-project/research-lab/issues/138))
+> 
+> > botnets have not been able to scale up when there is a attack
+> 
+> **Botnets have already saved Monero.** You can easily check how much of the current hashrate comes from botnets - hint: Waves. And no - these are not legitimate servers spinning up, these are infected computers switching on and off. That’s why it’s gradually going down and up. If it weren’t botnets, it would be a square wave and it would be reversed (right now it's going down at night).
+> 
+> https://miningpoolstats.stream/monero
+
+If you're saying LLM-generated junk because of me, you might find it useful to consider that I don't think it's junk.
+
+## PPPDUD | 2025-08-25T15:41:33+00:00
+> > 489,085,128 USD
+> 
+> Thanks, 320M was affordable but 489M? Unaffordable by governments. Nothing has ever costed a government more money...
+> 
+
+For context, the TSA has a budget of more than 11 billion dollars in the United States. The NSA has a budget of about 73 billion dollars. That means that under the $489M estimate, the NSA alone could orchestrate 150 attacks on XMR if they stopped everything else and did mass layoffs.
+
+## PPPDUD | 2025-08-25T17:56:52+00:00
+> [@PPPDUD](https://github.com/PPPDUD)
+> 
+> That comment I made was sarcastic. My whole point in the reply was that a government at least the US and probably most western governments can easily afford 480 Million in capital cost for CPU's, they probably already do own it. Though even that is not necessary to attack the network. And since it's CPU's it won't get bricked from an hardfork that changes the mining algorithm. Not that I'm for ASIC's.
+
+I was trying to add to your point a bit.
 
 ## Asbestos999 | 2025-08-25T18:01:08+00:00
 The truth is - if they could do it (NSA, TSA, or aliens from another f planet) - they would have attacked Monero ten years ago, when it was much easier.

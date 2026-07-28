@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2026-07-15T16:57:50+00:00'
-updated_at: '2026-07-23T21:22:25+00:00'
+updated_at: '2026-07-28T17:30:34+00:00'
 type: issue
 status: open
 closed_at: null
@@ -360,6 +360,63 @@ None of the methods in this proposal bind the tree root with the SAL.
 The simple relative lock proposal signs `unlock_time = 1` with the SAL.
 
 For example, Alice decides to force close the channel. She submits the Close transaction as usual and it gets confirmed at height = 4000000. In order to spend from the Close transaction, she needs to use the tree root <code>R<sub>4000000</sub></code> or newer (older trees don't contain the enote). Since the Recover transaction is signed with `unlock_time = 1`, consensus will select the tree root <code>R<sub>ref-720</code> where `ref` is selected by Alice when constructing the FCMP for Recover. She must select `ref = 4000720` or greater. Since consensus requires that `ref` must not exceed the height of the containing block, her Recover transaction won't confirm before block 4000720, which in turn enforces the relative lock from the preceding Close transaction.
+
+## tevador | 2026-07-27T19:12:14+00:00
+Summary of the options how to implement relative locks with FCMP:
+
+### Option 1 - `unlock_time` based relative locks
+
+Pros:
+- zero blockchain size cost
+- zero verification time cost
+- [only ~20 lines of code](https://github.com/seraphis-migration/monero/pull/445), so it can be easily shipped with the next HF
+
+Cons:
+- only a single lock duration (sufficient to implement payment channels)
+- locked transactions are visible in the blockchain (this could be mitigated by wallets randomly submitting seemingly locked transactions when spending outputs older than 24 hours)
+
+### Option 2 - ring-signature based relative locks
+
+Pros:
+- hides the fact that a transaction was time-locked
+- allows for multiple distinct time lock durations
+
+Cons:
+- transaction size increases by about 100-300 bytes
+- additional CPU cost to verify the ring signature
+- probably not feasible to implement in time for the next HF
+
+### Option 3 - handling relative locks inside the FCMP
+
+Pros:
+- hides the fact that a transaction was time-locked
+- allows for multiple distinct time lock durations
+- more efficient than ring-signature based locks
+
+Cons:
+- the FCMP circuit would need to be slightly modified
+- unknown (but nonzero) blockchain/verification cost
+- probably not feasible to implement in time for the next HF
+
+## tevador | 2026-07-28T04:47:39+00:00
+Concrete proposal for the FCMP HF: **Reserve `unlock_time = 1` but don't implement relative locks yet.**
+
+* Reserving `unlock_time = 1` means consensus will not reject transactions with this value.
+* Option 1 relative locks can be implemented later as a soft fork.
+* If we decide to implement Option 2 or Option 3 as a new hard fork, support for `unlock_time = 1` can be dropped.
+* The risk of allowing `unlock_time = 1` is very low. Some 3rd party wallets might decide to use it to encode 1 bit of information and form an anonymity puddle. However, they could easily do the same using tx_extra or other methods.
+
+
+
+## CjS77 | 2026-07-28T17:30:34+00:00
+> > I thought other major benefits were scaling and tx speed/throughput.
+> 
+> Those are general benefits of payment channels. This proposal is about relative time-locks. There are payment channel proposals for Monero that don't need relative time-locks (e.g. Grease), but I think trustless payment channels are significantly better.
+> 
+
+Historical note: We based Grease on Monet/Auxchannel on the predicate that timelocks were unlikely to be added into Monero due to the heterogeneity they would introduce. 
+
+But if they were to be implemented in FCMP in a ZK manner, then I agree, this approach is not only much better, it's basically a no-brainer.
 
 # Action History
 - Created by: tevador | 2026-07-15T16:57:50+00:00
