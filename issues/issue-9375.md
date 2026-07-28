@@ -4,9 +4,9 @@ source_url: https://github.com/monero-project/monero/issues/9375
 author: lobster-kerouac
 assignees: []
 labels:
-- bug
+- more info needed
 created_at: '2024-06-20T22:56:57+00:00'
-updated_at: '2024-11-26T12:03:50+00:00'
+updated_at: '2026-07-27T00:25:44+00:00'
 type: issue
 status: open
 closed_at: null
@@ -34,6 +34,9 @@ With Trezor Model T 10 a's works fine (both fine when entered on the device and 
 
 ## blob42 | 2024-11-26T12:03:48+00:00
 @plowsof I can confirm same issue with safe 3. Long passphrase fails with same error. Anyway I can help debug the issue ? I'm not a cpp guru but can find my ways around.
+
+## jpk68 | 2026-07-26T19:10:05+00:00
+I could not reproduce this bug using the CLI wallet with a Trezor Safe 3. This was using the latest release binaries on Linux (x86_64); everything seemed to work as it should with passphrases over 10 characters.
 
 # Action History
 - Created by: lobster-kerouac | 2024-06-20T22:56:57+00:00

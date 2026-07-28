@@ -7,10 +7,10 @@ assignees: []
 labels:
 - proposal
 created_at: '2017-11-27T19:15:11+00:00'
-updated_at: '2026-02-18T21:51:12+00:00'
+updated_at: '2026-07-27T01:16:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-27T01:16:04+00:00'
 ---
 
 # Original Description
@@ -52,5 +52,9 @@ I don't think this would materially improve the security of your monero. If some
 ## moneromooo-monero | 2018-10-09T11:47:50+00:00
 +hacktoberfest
 
+## selsta | 2026-07-27T01:15:58+00:00
+Closing, this doesn't appear like something we will implement.
+
 # Action History
 - Created by: nasaWelder | 2017-11-27T19:15:11+00:00
+- Closed at: 2026-07-27T01:16:04+00:00

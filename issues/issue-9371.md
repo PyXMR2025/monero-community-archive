@@ -10,10 +10,10 @@ labels:
 - critical
 - important
 created_at: '2024-06-19T18:40:36+00:00'
-updated_at: '2024-08-11T01:31:17+00:00'
+updated_at: '2026-07-26T20:35:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-26T20:35:43+00:00'
 ---
 
 # Original Description
@@ -130,3 +130,4 @@ debian 12 and ubuntu 24.04 ship >=12.2
 
 # Action History
 - Created by: woodser | 2024-06-19T18:40:36+00:00
+- Closed at: 2026-07-26T20:35:43+00:00

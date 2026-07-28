@@ -5,7 +5,7 @@ author: tryphe
 assignees: []
 labels: []
 created_at: '2022-02-27T03:29:12+00:00'
-updated_at: '2024-07-31T23:21:49+00:00'
+updated_at: '2026-07-28T05:11:02+00:00'
 type: issue
 status: closed
 closed_at: '2024-07-31T23:21:49+00:00'
@@ -735,6 +735,75 @@ I don't know why it failed at the first initial sync. But the 2nd initial sync w
 
 ## selsta | 2024-07-31T23:21:49+00:00
 Closing as there were no other reports about this in a while and I suspect the issue was hardware related.
+
+## JossieEtheridge | 2026-07-28T05:11:01+00:00
+Root cause found and patched for this exact symptom (healthy peers, height
+frozen, "SYNCHRONIZATION started" repeating, sometimes with `Next span is
+not empty` in the logs). Reproduced reliably on v0.18.5.0 and v0.18.5.1,
+under both `--db-sync-mode fast` and `--db-sync-mode safe`, syncing from a
+node ~630k blocks behind the tip. Confirmed via `data.mdb` mtime that zero
+blocks were being committed across multiple independent multi-minute test
+windows on the stock binary.
+
+Three distinct issues, all in `src/cryptonote_protocol/`:
+
+**1. Race condition in `block_queue.cpp`**
+
+`get_next_span_if_scheduled()` and `reset_next_span_time()` are called as
+two separate mutex-locked operations in `cryptonote_protocol_handler.inl`
+(around the `force_next_span` handling). A different connection's thread can
+fill the same span in the gap between the two calls, causing
+`reset_next_span_time()`'s `CHECK_AND_ASSERT_MES_NO_RET(i->blocks.empty(),
+"Next span is not empty")` to fail — which just logs and returns, silently
+leaving that span's scheduling clock never updated.
+
+Fix: added `get_next_span_if_scheduled_and_reset_time()`, doing both steps
+under one lock acquisition.
+
+**2. `LAST_ACTIVITY_STALL_THRESHOLD` (2.0f seconds) is far too aggressive**
+
+Measured real, successful 100-block span completions on this node taking
+2-26 seconds each. With a 2-second threshold, any peer that goes briefly
+quiet — completely normal under real network conditions — gets its
+in-progress span reassigned to a different peer. Verified live via debug
+logging (`--log-level 0,net.cn:DEBUG,cn.block_queue:DEBUG`) that the
+head-of-queue span (the one block range blocking all further commits, since
+blocks must be applied in strict order) was being reassigned to a new peer
+every 4-8 seconds, indefinitely, because every fresh peer also tripped the
+same 2-second check within a few seconds under normal jitter. Spans behind
+the head weren't subject to this competition and completed normally,
+producing the observed pattern: height frozen while queued (uncommitted)
+data grows into the hundreds of MB.
+
+Fix: widened to 20 seconds (and the related
+`REQUEST_NEXT_SCHEDULED_SPAN_THRESHOLD_STANDBY` from 5s to 15s).
+
+**3. Queue-cap logic uses `||` where `&&` was clearly intended**
+
+```cpp
+bool queue_proceed = nspans < BLOCK_QUEUE_NSPANS_THRESHOLD || size < block_queue_size_threshold;
+```
+
+This only pauses downloading once *both* the 10-span cap and the 100MB cap
+are exceeded, meaning the looser of the two constants is effectively the
+only one that ever applies. Observed the queue overshoot to 17 spans / 433MB
+in practice before pausing.
+
+Fix: changed to `&&`.
+
+**Verification**
+
+Applying all three fixes to a from-source build of v0.18.5.1, on the same
+node, in the same network conditions, that had shown zero progress across
+three separate stock-binary test runs: sustained 36-56 blocks/sec, syncing
+cleanly from the same stuck point. Full patch (67 lines across
+`block_queue.h`, `block_queue.cpp`, `cryptonote_protocol_handler.inl`)
+attached / linked in the PR.
+
+Happy to open a PR with these changes if useful — wanted to post the root
+cause here first since several people in this thread (and #2536, #3713,
+#2795, #8759) have hit the identical symptom going back to 2017.
+
 
 # Action History
 - Created by: tryphe | 2022-02-27T03:29:12+00:00

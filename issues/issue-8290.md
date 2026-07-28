@@ -5,10 +5,10 @@ author: michnovka
 assignees: []
 labels: []
 created_at: '2022-04-25T15:41:23+00:00'
-updated_at: '2022-10-08T15:01:55+00:00'
+updated_at: '2026-07-27T10:27:16+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-27T10:27:16+00:00'
 ---
 
 # Original Description
@@ -111,5 +111,12 @@ Hey yes I am sending to an integrated address and yes this is what I do as small
 
 Yes, middle of November.
 
+## jpk68 | 2026-07-26T18:43:44+00:00
+@prusnak Has this issue been fixed now?
+
+## prusnak | 2026-07-27T08:29:50+00:00
+Since no one replied in this issue since 4 years, I assume yes. 
+
 # Action History
 - Created by: michnovka | 2022-04-25T15:41:23+00:00
+- Closed at: 2026-07-27T10:27:16+00:00
