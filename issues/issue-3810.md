@@ -15,6 +15,9 @@ closed_at: '2026-06-12T00:03:17+00:00'
 Right near the beginning of install, the error comes up of: Error: name 'migrate_local_state' is not defined, not sure where it's coming from or it's benign but let's check it out.
 
 # Discussion History
+## PPPDUD | 2026-06-11T14:56:27+00:00
+I don't think that xmrig even _has_ an installer. Are you sure that you're not using an unofficial binary of some sort?
+
 ## geekwilliams | 2026-06-11T15:38:34+00:00
 Xmrig does not have an installer.
 

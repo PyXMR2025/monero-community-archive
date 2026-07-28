@@ -49,8 +49,25 @@ The most straightforward course of action you can take is to backup necessary fi
 Alright guys thanks, ive read all of the comments imma nuke my pc out for now, i think its a bad idea to play whack a mole on this 
 
 
+## PPPDUD | 2026-03-17T13:15:05+00:00
+Hold on. You should submit whatever you got to VirusTotal before wiping your PC. It would be helpful for researchers hoping to find a solution for your issue.
+
+## PPPDUD | 2026-03-17T13:17:25+00:00
+@muhammedalibilgin Hold on. Can you check and make sure that the executable is on the same path as it is on @WENDELL509's PC?
+
+## PPPDUD | 2026-03-17T13:23:55+00:00
+It looks like this malware is related to a piece of software called hone[.]gg, which is said to behave almost exactly the same as what @WENDELL509 reports. Source: https://cheatglobal.com/konu/hone-gg-virus-suphesi.111469/
+
+## PPPDUD | 2026-03-17T17:23:47+00:00
+@WENDELL509 @muhammedalibilgin Does the description that I wrote at https://github.com/PPPDUD/malware-taxonomy/blob/main/Trojan:WinNT/wsvcz/A.md match your observations?
+
 ## QXIoa | 2026-06-11T01:44:12+00:00
 close this issue
+
+## PPPDUD | 2026-06-11T14:52:37+00:00
+> close this issue
+
+Why?
 
 ## WENDELL509 | 2026-06-12T03:28:30+00:00
 Hello guys, the attack stopped from the post is posted until now, i didnt run any heavy application and for the momment the trojan didnt appear. So i cannot modify or track the file for now since it didnt appear yet.
@@ -61,6 +78,16 @@ Hello guys, the attack stopped from the post is posted until now, i didnt run an
 > Why?
 
 cause what are the devs meant to do? someone is misusing their software for a trojan, the devs cannot control that.
+
+## PPPDUD | 2026-06-12T15:21:48+00:00
+> > > close this issue
+> > 
+> > 
+> > Why?
+> 
+> cause what are the devs meant to do? someone is misusing their software for a trojan, the devs cannot control that.
+
+If it's not their official use-case, the devs aren't meant to do anything, but closing this issue will make it less visible to people who might be able to help fix it.
 
 # Action History
 - Created by: WENDELL509 | 2026-02-28T18:57:38+00:00
