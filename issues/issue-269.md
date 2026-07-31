@@ -50,7 +50,7 @@ Have you found out a way to remove it? I cant seem to find any entry nor task in
 ## ahmanPg | 2023-08-27T16:31:25+00:00
 I think you installed a software that incubated it. Mine was Cudos Etherium miner. Removed it and everything worked out 
 
-## brahimrizqHireme | 2025-12-15T19:26:11+00:00
+## brahimrizq | 2025-12-15T19:26:11+00:00
 If you're using docker check all containers that runs in background some images like Umami ghcr.io/umami-software/umami:postgresql-v2.15.0 uses xmrig
 
 run this to scan for any use

@@ -6,7 +6,7 @@ assignees: []
 labels:
 - av
 created_at: '2025-12-07T10:42:59+00:00'
-updated_at: '2026-01-19T20:19:34+00:00'
+updated_at: '2026-07-29T03:28:11+00:00'
 type: issue
 status: open
 closed_at: null
@@ -388,6 +388,13 @@ so improving on your answer here is a small list to follow:
 - abusing legit-looking names (kworker, dbus-daemon, CHECK TOP)
 
 If somehow its more advanced, check `dpkg -V` for hashes (assuming its ubuntu) and reinstall whatever is not of resemblance.
+
+## neonflux-io | 2026-07-29T03:28:11+00:00
+XMRig itself does not include persistence or automatically reinstall itself.
+If it keeps returning, another compromised process, service, cron job, container, or startup script is downloading and launching it.
+
+The safest response is to isolate the server, rotate all credentials and API keys, patch the original vulnerability, and rebuild from a clean OS image. Manually removing the miner may stop it temporarily, but it does not guarantee that the server is trustworthy again.
+
 
 # Action History
 - Created by: RyukoHQ | 2025-12-07T10:42:59+00:00
