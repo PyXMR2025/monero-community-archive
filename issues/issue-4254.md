@@ -5,10 +5,10 @@ author: tommyboy0
 assignees: []
 labels: []
 created_at: '2023-12-18T22:21:26+00:00'
-updated_at: '2026-07-23T16:42:16+00:00'
+updated_at: '2026-07-29T15:43:34+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-29T15:43:34+00:00'
 ---
 
 # Original Description
@@ -266,3 +266,4 @@ Good to know, however I'm unable to build from source as I've never done that be
 
 # Action History
 - Created by: tommyboy0 | 2023-12-18T22:21:26+00:00
+- Closed at: 2026-07-29T15:43:34+00:00
