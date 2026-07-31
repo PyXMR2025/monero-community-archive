@@ -6,7 +6,7 @@ assignees: []
 labels:
 - daemon
 created_at: '2021-05-06T23:00:03+00:00'
-updated_at: '2026-07-09T17:35:25+00:00'
+updated_at: '2026-07-29T18:24:40+00:00'
 type: issue
 status: open
 closed_at: null
@@ -36,6 +36,9 @@ The issue is that its unlikely that the entire transaction will be sent before s
 
 ## jpk68 | 2026-07-09T17:35:25+00:00
 I have also been running into this issue on occasion while testing I2P SAM integration, especially over slow connections.
+
+## vtnerd | 2026-07-29T18:24:26+00:00
+The speed of the connection is irrelevant. The limiting factor is that the tx size exceeded 60 KiB. This is _mostly_ a sender policy that can be fixed by bumping up the local config `CRYPTONOTE_MAX_FRAGMENTS` value. Additional `static_assert`s trigger if you exceed values that can be sent using the noise protocol.
 
 # Action History
 - Created by: selsta | 2021-05-06T23:00:03+00:00

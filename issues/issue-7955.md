@@ -5,10 +5,10 @@ author: Malinero
 assignees: []
 labels: []
 created_at: '2021-09-18T16:26:11+00:00'
-updated_at: '2021-09-18T16:26:11+00:00'
+updated_at: '2026-07-30T21:38:54+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-30T21:38:54+00:00'
 ---
 
 # Original Description
@@ -17,3 +17,4 @@ There's currently no peer grouping for IPv6 addresses that can't be mapped to IP
 # Discussion History
 # Action History
 - Created by: Malinero | 2021-09-18T16:26:11+00:00
+- Closed at: 2026-07-30T21:38:54+00:00
