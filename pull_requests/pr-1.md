@@ -5,10 +5,10 @@ author: Naia-love
 assignees: []
 labels: []
 created_at: '2024-12-26T13:49:15+00:00'
-updated_at: '2024-12-26T13:49:15+00:00'
+updated_at: '2026-07-29T14:18:23+00:00'
 type: pull_request
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-29T14:18:23+00:00'
 merged_at: null
 ---
 
@@ -23,3 +23,4 @@ Thank syntheticbird for the help tracing down that it could be the binding causi
 # Discussion History
 # Action History
 - Created by: Naia-love | 2024-12-26T13:49:15+00:00
+- Closed at: 2026-07-29T14:18:23+00:00
