@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-bug
 created_at: '2025-03-20T21:16:31+00:00'
-updated_at: '2025-03-20T21:27:17+00:00'
+updated_at: '2026-07-28T22:25:01+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-28T22:24:36+00:00'
 ---
 
 # Original Description
@@ -53,5 +53,9 @@ Aborted
 ``` 
 
 # Discussion History
+## SyntheticBird45 | 2026-07-28T22:24:37+00:00
+`heed` has been replaced with Tapes and Fjall
+
 # Action History
 - Created by: hinto-janai | 2025-03-20T21:16:31+00:00
+- Closed at: 2026-07-28T22:24:36+00:00

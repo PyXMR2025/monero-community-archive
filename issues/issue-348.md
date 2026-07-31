@@ -9,10 +9,10 @@ labels:
 - C-bug
 - P-high
 created_at: '2024-11-25T15:27:08+00:00'
-updated_at: '2024-11-27T23:01:06+00:00'
+updated_at: '2026-07-28T22:24:55+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-28T22:24:32+00:00'
 ---
 
 # Original Description
@@ -47,5 +47,9 @@ Yeah slightly embarrassing but I went too aggressive on trying to simplify the t
 ## Boog900 | 2024-11-27T23:01:05+00:00
 https://github.com/meilisearch/heed/pull/289
 
+## SyntheticBird45 | 2026-07-28T22:24:32+00:00
+`heed` has been replaced with Tapes and Fjall
+
 # Action History
 - Created by: Boog900 | 2024-11-25T15:27:08+00:00
+- Closed at: 2026-07-28T22:24:32+00:00

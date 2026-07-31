@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-tracking-issue
 created_at: '2025-05-12T22:34:30+00:00'
-updated_at: '2026-02-12T19:23:38+00:00'
+updated_at: '2026-07-28T21:59:45+00:00'
 type: issue
 status: open
 closed_at: null
@@ -23,15 +23,37 @@ Instead, open a dedicated issue for the specific matter.
 ### What
 This is a tracking issue for the first `cuprated` beta release (`v0.1.0`).
 
-The below are various issues/PRs that must be resolved before `cuprated v0.1.0` is released.
+The below are various issues/PRs that **must be resolved** before `cuprated v0.1.0` is released.
 
 - [x] https://github.com/Cuprate/cuprate/issues/468
-- [ ] Tapes + Fjall DB changes
-- [ ] RPC ready for core wallet functionality
-- [ ] https://github.com/Cuprate/cuprate/issues/470
+- [x] Tapes + Fjall DB changes
+https://github.com/Cuprate/cuprate/pull/587
+- [x] RPC wallet support completed 
+https://github.com/Cuprate/cuprate/pull/604
+https://github.com/Cuprate/cuprate/pull/613
+https://github.com/Cuprate/cuprate/pull/624
+https://github.com/Cuprate/cuprate/pull/625
+https://github.com/Cuprate/cuprate/pull/631
+https://github.com/Cuprate/cuprate/pull/634
+https://github.com/Cuprate/cuprate/pull/636
+https://github.com/Cuprate/cuprate/pull/637
+https://github.com/Cuprate/cuprate/pull/641
+https://github.com/Cuprate/cuprate/pull/647
+https://github.com/Cuprate/cuprate/pull/648
+https://github.com/Cuprate/cuprate/pull/654   
+- [ ] Cuprate as a library and Graceful shutdown
+https://github.com/Cuprate/cuprate/issues/616
+https://github.com/Cuprate/cuprate/pull/592
+https://github.com/Cuprate/cuprate/pull/585
+https://github.com/Cuprate/cuprate/pull/586
+https://github.com/Cuprate/cuprate/pull/590
+- [ ] Reproducible Build
+- [ ] RPC Timeout mitigation
+https://github.com/Cuprate/cuprate/pull/466
 
-Nice to have:
+**Nice to have**:
 
+- [ ] Pruning support https://github.com/Cuprate/cuprate/issues/657
 - [ ] https://github.com/Cuprate/cuprate/issues/469
 - [ ] https://github.com/Cuprate/cuprate/issues/432
 

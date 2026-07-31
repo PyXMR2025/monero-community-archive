@@ -7,10 +7,10 @@ labels:
 - A-p2p
 - C-request
 created_at: '2025-05-13T17:44:03+00:00'
-updated_at: '2025-05-13T17:44:03+00:00'
+updated_at: '2026-07-28T18:22:03+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-28T18:22:03+00:00'
 ---
 
 # Original Description
@@ -51,3 +51,4 @@ https://github.com/Cuprate/cuprate/blob/ce7a04f2d964875a95530b4cb2cb9522f6fce2f4
 # Discussion History
 # Action History
 - Created by: Boog900 | 2025-05-13T17:44:03+00:00
+- Closed at: 2026-07-28T18:22:03+00:00

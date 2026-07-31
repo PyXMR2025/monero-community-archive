@@ -7,10 +7,10 @@ labels:
 - C-discussion
 - A-binaries
 created_at: '2024-11-02T16:00:00+00:00'
-updated_at: '2024-11-02T16:00:32+00:00'
+updated_at: '2026-07-30T15:27:37+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-30T15:27:37+00:00'
 ---
 
 # Original Description
@@ -32,3 +32,4 @@ The allocators we could support (or force):
 # Discussion History
 # Action History
 - Created by: SyntheticBird45 | 2024-11-02T16:00:00+00:00
+- Closed at: 2026-07-30T15:27:37+00:00
