@@ -7,10 +7,10 @@ labels:
 - C-request
 - E-help-wanted
 created_at: '2025-04-09T12:49:30+00:00'
-updated_at: '2025-05-13T18:46:41+00:00'
+updated_at: '2026-07-31T17:14:52+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-07-31T17:14:52+00:00'
 ---
 
 # Original Description
@@ -29,3 +29,4 @@ I'm all for upstreaming it. People have already showed support early fwiw: https
 
 # Action History
 - Created by: hinto-janai | 2025-04-09T12:49:30+00:00
+- Closed at: 2026-07-31T17:14:52+00:00
