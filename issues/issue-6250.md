@@ -144,7 +144,7 @@ That's very interesting. I'm seeing that too. Thanks for the repro case.
 ## selsta | 2022-07-20T20:40:59+00:00
 Quite sure this issue still exist, will keep it open.
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-10T03:34:43+00:00
+## ghost | 2024-08-10T03:34:43+00:00
 It does exist. I deleted my p2pstate.bin and i am at 96% sync and now it just syncs nothing
 
 `Height: 3102820/3211830 (96.6%) on mainnet, not mining, net hash 2.16 GH/s, v16, 62(out)+4(in) connections, uptime 0d 0h 10m 9s`
@@ -166,7 +166,7 @@ it kinda seems like every block it receives it rescans the entire blockchain aga
 ## selsta | 2024-08-10T17:55:04+00:00
 @pkreuzt what kind of hardware do you have? where is your blockchain saved? also can you open a new issue? this here is unrelated
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-10T23:02:31+00:00
+## ghost | 2024-08-10T23:02:31+00:00
 @selsta I'm running on a [i3-N305](https://www.intel.com/content/www/us/en/products/sku/231805/intel-core-i3n305-processor-6m-cache-up-to-3-80-ghz/specifications.html), 32GB DDR5 RAM, it is a NAS. The blockchain is on a RAIDZ1 (4x16TB HDD) and the raid is mounted locally on the NAS so it is not accesses by monerod over network share or anything like this. monerod is running in debian bookworm.
 
 Ok I will make new issue

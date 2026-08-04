@@ -213,7 +213,7 @@ I changed my RPC port to something totally different out of spec just for my per
 
 this node should have been blocked by the dns blocklist
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-06T05:10:50+00:00
+## ghost | 2024-10-06T05:10:50+00:00
 monero  | 2024-10-06 05:01:05.741       E Transaction not found in pool
 monero  | 2024-10-06 05:01:19.325       E mined block failed verification
 monero  | 2024-10-06 05:01:41.136       E mined block failed verification
@@ -231,7 +231,7 @@ monero  | 2024-10-06 05:03:48.033       E mined block failed verification
 ## nahuhh | 2024-10-06T05:12:36+00:00
 @thisIsNotTheFoxUrLookingFor https://github.com/monero-project/monero/issues/9496#issuecomment-2394809444
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-06T05:14:24+00:00
+## ghost | 2024-10-06T05:14:24+00:00
 > 162.218.65.219:18080
 
 I have DNS blocklist set in my conf @nahuhh 
@@ -242,7 +242,7 @@ Shouldn't a peer be banned after submitting x bad blocks?
 
 Just realised as they are pushing to RPC they are not a peer, I think DNS blocklist is going to ban P2P peers and this might be why it don't work in this case
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-06T05:18:12+00:00
+## ghost | 2024-10-06T05:18:12+00:00
 > At the same time the hashrate of my server drops about 1000Hs
 
 Yah they are trying to DOS us by forcing constant block and TX verification I guess?
@@ -266,12 +266,12 @@ do you have `disable-rpc-ban` enabled?
 
 please see my previous comment - disable public-node and stop providing a remote node for strangers. 
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-06T05:30:57+00:00
+## ghost | 2024-10-06T05:30:57+00:00
 > The above ip is if a spy node _peer_. They arent the ones submitting the blocks
 
 They should spy through Tor lol that is dumb of them
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-06T05:47:53+00:00
+## ghost | 2024-10-06T05:47:53+00:00
 > disable public-node and stop providing a remote node for strangers.
 
 Probably they want this lol, I have the resources to absorb what they are doing so meh I can keep public RPC up
@@ -291,7 +291,7 @@ I think an easy way to fix this would be to not look at the whole pool for restr
 
 FWIW this doesn't explain the other P2P messages/RPC requests that were happening around the same time. It would be good to get more log data if anyone has any.
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-08T09:33:18+00:00
+## ghost | 2024-10-08T09:33:18+00:00
 > the response is around 50-100x faster.
 
 Perhaps in a situation like mining where block propagation time matters, the intention is to try DOS other nodes such that their blocks that are mined have a greater chance of being propagated first, that said, I'm not sure of the stats for orphaned blocks in XMR but I would reckon it would be quite low yea?
@@ -318,7 +318,7 @@ Each of those `Transaction not found in pool` was a block that contained a tx yo
 
 Yeah, we do already have randomised timers for this
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-15T12:19:38+00:00
+## ghost | 2024-10-15T12:19:38+00:00
 ```
 43.255.118.53
 43.255.118.78
@@ -371,7 +371,7 @@ Yeah, we do already have randomised timers for this
 ## selsta | 2024-10-15T12:22:45+00:00
 @thisIsNotTheFoxUrLookingFor did it stop after banning all these IPs?
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-15T12:25:46+00:00
+## ghost | 2024-10-15T12:25:46+00:00
 > @thisIsNotTheFoxUrLookingFor did it stop after banning all these IPs?
 
 Yup, I am running my node (RPC) through cloudflare and I poped in a WAF rule and it has stopped them dead... for now till they roll their proxies and get new IPs.
@@ -379,12 +379,12 @@ Yup, I am running my node (RPC) through cloudflare and I poped in a WAF rule and
 ![image](https://github.com/user-attachments/assets/91085d4d-b746-4884-8233-bd290b0a4d0e)
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-16T07:43:44+00:00
+## ghost | 2024-10-16T07:43:44+00:00
 In just under 19 hours I have blocked > 75k requests from them haha
 ![image](https://github.com/user-attachments/assets/db12d6f1-c87b-4f27-a1fc-753dd9f3d4e7)
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-18T03:28:08+00:00
+## ghost | 2024-10-18T03:28:08+00:00
 I keep playing whackamole with their proxies. Perhaps if we could impose some restrictions on computationally expensive RPC calls in a restricted node this would assist to resolve the issue? Also they are grabbing a tx list of tx in the mempool of every node, it looks like they are trying to observe tx as they propagate through public nodes.
 
 They have a lot of IP addresses across a massive surface area of providers, could be a nation state actor or someone using a botnet of hacked devices.
@@ -396,7 +396,7 @@ I might just whack a password on my node for now, if people are using cake walle
 
 You might want to set firewall rules and perhaps change the port
 
-## thisIsNotTheFoxUrLookingFor | 2024-10-18T04:21:29+00:00
+## ghost | 2024-10-18T04:21:29+00:00
 > @thisIsNotTheFoxUrLookingFor dont just add a password, make sure you disable `--public-node`.
 
 Always it has been disabled. They are scraping `monero.fail`.

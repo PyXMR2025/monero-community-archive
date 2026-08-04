@@ -133,7 +133,7 @@ I'm sorry about that, I don't know how I overlooked that aspect of the HTTP dige
 ## selsta | 2024-03-11T23:40:49+00:00
 We reverted this commit and will soon release a new version.
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-14T11:27:33+00:00
+## ghost | 2024-08-14T11:27:33+00:00
 ~~Is it fixed? i have rpc-login set and I'm getting 401 in v0.18.3.3~~
 
 Oh, I had to set SSL enabled instead of auto-detect and then it worked... I am binding to 0.0.0.0 inside the docker container so it thinks it is an external bind but it is not. i wish it would not baby us so much.
@@ -141,7 +141,7 @@ Oh, I had to set SSL enabled instead of auto-detect and then it worked... I am b
 ## selsta | 2024-08-14T11:46:11+00:00
 @tortxoFFoxtrot yes, the issue was fixed. can you share more information what you are trying to do?
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-14T11:47:17+00:00
+## ghost | 2024-08-14T11:47:17+00:00
 @selsta seems because I am binding to 0.0.0.0 inside the docker container it treats it as an external bind and if it does not have SSL set enabled it just gives 401 nomatter what. When I set SSL enabled instead of autodetect it is working now.
 
 # Action History

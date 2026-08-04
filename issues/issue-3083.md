@@ -155,12 +155,12 @@ How about automatically disabling the RPC login for the restricted bind port whe
 ## ahmafi | 2023-02-01T20:47:27+00:00
 I would also like to see this. Using a user:pass on the restricted and public RPC node doesn't make sense. I want the user:pass only for myself on non-restricted port.
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-28T06:44:53+00:00
+## ghost | 2024-07-28T06:44:53+00:00
 > I would also like to see this. Using a user:pass on the restricted and public RPC node doesn't make sense. I want the user:pass only for myself on non-restricted port.
 
 Same for me, this is madness, set user:pass on full RPC, leave restricted RPC open for public to consume as it's (I assume) most used purpose
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-28T06:50:57+00:00
+## ghost | 2024-07-28T06:50:57+00:00
 > OK, so I thought of a solution that _hopefully_ won't wreck things too much:
 > 
 > `--rpc-restricted-bind-port 18009,user:pass --rpc-bind-port 500`
@@ -169,13 +169,13 @@ Same for me, this is madness, set user:pass on full RPC, leave restricted RPC op
 
 Throws exception now, seems it is no longer allowed to do this, at least not from config file as `rpc-restricted-bind-port=18009,user:pass` monerod throws exception starting up when doing this
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-22T17:50:59+00:00
+## ghost | 2024-08-22T17:50:59+00:00
 Curious, if we diable user:pass and expose public RPC but firewall the private (full) RPC to local network, if I assume a worst case scenario where my network is pwned and they start smashing my full RPC with no auth, what am I looking at as possible damage from that? There is no wallet functionality or any keys around my monerod, I am just connecting to it from wallet on other devices.
 
 ## omurad | 2024-08-23T01:49:30+00:00
 Here's the [list of RPC commands](https://getmonero.dev/interacting/monerod.html#commands). It seems the worst that can happen is the attacker uses your node's CPU to mine for their wallet.
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-24T14:19:10+00:00
+## ghost | 2024-08-24T14:19:10+00:00
 > Here's the [list of RPC commands](https://getmonero.dev/interacting/monerod.html#commands). It seems the worst that can happen is the attacker uses your node's CPU to mine for their wallet.
 
 Looks like also they can faf with things like max in/out peers etc. but yah that's all stuff I can tolerate if it happens, cool.

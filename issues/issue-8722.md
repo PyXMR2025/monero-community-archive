@@ -140,7 +140,7 @@ While Nostr with sites like flare.pub (where hosting is for the user to select) 
 ## kayabaNerve | 2024-07-11T22:08:57+00:00
 I'm late to this discussion but I'm in strong favor of this. If someone wants to pay for RPC calls, they can set up access tokens on their end. If this was successfully used, maybe? Yet the world has gone in favor of either free services (potentially internally subsidized), or corporate-level nodes which have their own infrastructure (not pick a random node and obtain 'credits').
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-27T10:14:12+00:00
+## ghost | 2024-07-27T10:14:12+00:00
 ACK to remove this. Also have seen MSFT Defender for Endpoint restricting the GUI wallet because it thinks it is in the "cryptominer" category of applications that it thinks should not exist in the enterprise.
 
 ## jeffro256 | 2024-07-30T20:57:24+00:00

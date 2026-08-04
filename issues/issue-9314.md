@@ -55,7 +55,7 @@ The Dandelion++ code should select a replacement peer, if available.
 ## toncho6501 | 2024-05-25T13:58:25+00:00
 fake   monero
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-14T10:52:57+00:00
+## ghost | 2024-08-14T10:52:57+00:00
 > fake monero
 
 What is real monero then?

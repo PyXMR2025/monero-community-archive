@@ -8,10 +8,10 @@ labels:
 - database
 - reproduction needed
 created_at: '2023-12-23T14:57:18+00:00'
-updated_at: '2025-08-30T18:22:45+00:00'
+updated_at: '2026-08-01T15:12:30+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-01T15:12:30+00:00'
 ---
 
 # Original Description
@@ -541,3 +541,4 @@ thats stupid, so if i accidentally run monerod with prune blockchain but then im
 
 # Action History
 - Created by: Erquint | 2023-12-23T14:57:18+00:00
+- Closed at: 2026-08-01T15:12:30+00:00

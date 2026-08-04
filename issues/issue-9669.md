@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-07-24T18:50:25+00:00'
+updated_at: '2026-08-02T12:59:08+00:00'
 type: issue
 status: open
 closed_at: null
@@ -47,7 +47,7 @@ See also: #9684.
 | [openssl](https://github.com/openssl/openssl)                     | 3.5.7 (LTS)    | -    | perl   | Daemon    | No                                                           |    Maybe? |          |
 | [protobuf](https://github.com/protocolbuffers/protobuf)           | 21.12          | 35.1     | auto   | Wallet    | No                                                           |        No | (#9478) |
 | [readline](https://ftp.gnu.org/gnu/readline/)                     | 8.0            | 8.3      | auto   | Daemon    | No                                                           |        No |         |
-| [unbound](https://github.com/NLnetLabs/unbound)                   | 1.25.1         | 1.25.2   | auto   | Daemon    | No                                                           |    Maybe? |  #10967       |
+| [unbound](https://github.com/NLnetLabs/unbound)                   | 1.25.2         | -   | auto   | Daemon    | No                                                           |    Maybe? |         |
 | [zeromq](https://github.com/zeromq/libzmq)                        | 4.3.5          | -        | auto   | Daemon    | No                                                           |        No |         |
 
 

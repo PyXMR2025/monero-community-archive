@@ -56,7 +56,7 @@ I would also welcome this option.
 ## reijerh | 2023-03-24T15:01:47+00:00
 Related to this: is there a way to advertise a domain/sub-domain instead of an IP for RPC auto-discovery? This way you can use a reverse proxy (e.g. NGINX) to still host monero RPC when you can only forward 1 port that is already needed for other services.
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-29T08:28:51+00:00
+## ghost | 2024-07-29T08:28:51+00:00
 Did this ever happen?
 
 ## selsta | 2024-07-29T11:12:39+00:00

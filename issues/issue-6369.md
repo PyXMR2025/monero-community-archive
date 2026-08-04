@@ -36,7 +36,7 @@ This would remove the need for a firewall by allowing the unrestricted RPC to be
 ## pvols1979 | 2020-03-25T16:19:08+00:00
 Will this be added soon?  What is the current status?
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-28T06:56:47+00:00
+## ghost | 2024-07-28T06:56:47+00:00
 Now we need to be able to remove user:pass login from unrestricted RPC, or are we expected to scope the unrestricted RPC to LAN only and then expose restricted out to the world using this IP? Is that what people are doing? Seems wrong not to put user:pass on the unrestricted RPC! but is we do it, it also puts user:pass on the public RPC which defeats the point of the public RPC!
 
 # Action History

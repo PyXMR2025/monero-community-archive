@@ -291,7 +291,7 @@ And maybe detect NAT64 prefix using ipv4only.arpa IN AAAA.
 ## 86dd | 2024-08-12T05:15:30+00:00
 Also, I can't seem to see monerod making DNS lookups over IPv6... only ever tries IPv4 for some reason to some random DNS recursors including my DNS recursor, even though I configured IPv6 resolvers in systemd-networkd etc...
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-24T15:10:02+00:00
+## ghost | 2024-08-24T15:10:02+00:00
 > Also, I can't seem to see monerod making DNS lookups over IPv6... only ever tries IPv4 for some reason to some random DNS recursors including my DNS recursor, even though I configured IPv6 resolvers in systemd-networkd etc...
 
 Hello I am trying to peer to you via IPv6 I have resolved IPv6 of both your nodes.
@@ -319,7 +319,7 @@ tcp6       0      0 [::]:18080              [::]:*                  LISTEN
 ```
 Seems like maybe P2P by IPv6 is broken?
 
-## thisIsNotTheFoxUrLookingFor | 2024-08-24T15:29:00+00:00
+## ghost | 2024-08-24T15:29:00+00:00
 Ahah!
 
 I had `proxy=127.0.0.1:9050` in my conf so I guess all connections were being forced to IPv4 and proxied through Tor. Disabling this line sees IPv6 connection to your nodes now.
@@ -345,12 +345,12 @@ You cannot connect to IPv6 addresses over a proxy until #9443 gets merged.
 When #9443 gets merged.
 Remember SocksPort and HiddenService in torrc must be dualstack, if it is not already. ;-)
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-10T01:05:05+00:00
+## ghost | 2024-09-10T01:05:05+00:00
 > You cannot connect to IPv6 addresses over a proxy until #9443 gets merged.
 
 Thanks @vtnerd very much looking forward to this!
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-10T01:06:28+00:00
+## ghost | 2024-09-10T01:06:28+00:00
 > When #9443 gets merged. Remember SocksPort and HiddenService in torrc must be dualstack, if it is not already. ;-)
 
 Do we make hidden service dual stack by utilising `[::1]:18083` for example?
@@ -377,7 +377,7 @@ HiddenServicePort 18081 [::1]:18081
 ```
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-10T22:10:10+00:00
+## ghost | 2024-09-10T22:10:10+00:00
 > Yes, I separated P2P and RPC. You can also put both ports in one HiddenServiceDir. And I always set allow/deny policy on Socks or MetricsPort.
 > 
 > ```

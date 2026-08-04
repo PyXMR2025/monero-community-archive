@@ -207,7 +207,7 @@ Depending on the platform you build on, for example if you build on Linux x86_64
 
 You can add `-D STACK_TRACE=OFF` to your build to prevent this.
 
-## thisIsNotTheFoxUrLookingFor | 2024-07-30T20:14:48+00:00
+## ghost | 2024-07-30T20:14:48+00:00
 Good to know thanks, I am compiling on Ubuntu and getting smashed with these. I will rebuild with -D STACK_TRACE=OFF because I think all the constant stack traces are crippling my machine haha
 
 # Action History
