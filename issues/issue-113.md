@@ -5,7 +5,7 @@ author: MrCyjaneK
 assignees: []
 labels: []
 created_at: '2025-02-10T16:49:10+00:00'
-updated_at: '2026-03-08T15:48:09+00:00'
+updated_at: '2026-08-04T13:29:59+00:00'
 type: issue
 status: open
 closed_at: null
@@ -3483,6 +3483,11 @@ Added these new AOSP repos: arm-optimized-routines, scudo, gwp_asan, system/core
 Now testing building monero_c with this NDK output on your Simplybs!
 
 last CI build: https://github.com/Justxd22/monero-ndk/actions/runs/22824384562
+
+## Cyrix126 | 2026-08-04T13:29:59+00:00
+Currently windows/macos/ios are not reproducible because they include the timestamp of when they were built in their header.
+
+https://github.com/MrCyjaneK/monero_c/pull/191 fix it.
 
 # Action History
 - Created by: MrCyjaneK | 2025-02-10T16:49:10+00:00
