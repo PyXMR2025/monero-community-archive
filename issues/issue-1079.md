@@ -521,7 +521,7 @@ So its that connection between "this client downloaded the blockchain data via R
 
 So yeah, we could do something like a client downloads the needed data from a remote node A, and then disconnects and pushes the tx using remote node B (which could just be a standard node, as you say). But then we get a sybil situation where an attacker could just flood the network with nodes and then be able to make associations because "oh, this client just downloaded this data from node A, but I also own node B and it connected to B to send a tx". 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T13:58:26+00:00
+## ghost | 2024-09-22T13:58:26+00:00
 I like option 3.
 
 As for the concerns r.e. syncing the chain initially through Tor yes I agree, we should not entertain it. But, getmonero.org hosts an old blockchain.raw that is the entire blockchain synced to a few years ago, why don’t we kick off a thing that creates a new blockchain.raw every 24hrs and we can seed it as a torrent amd/or host on getmonero.org for initial offline sync, then they connect via Tor and sunc the remaining 24hrs of blocks?
@@ -533,7 +533,7 @@ It takes just as long to verify the raw as it takes to sync normally (and 2x as 
 
 on the contrary, we should stop providing the raw.
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T14:09:46+00:00
+## ghost | 2024-09-22T14:09:46+00:00
 > So yeah, we could do something like a client downloads the needed data from a remote node A, and then disconnects and pushes the tx using remote node B (which could just be a standard node, as you say). But then we get a sybil situation where an attacker could just flood the network with nodes and then be able to make associations because "oh, this client just downloaded this data from node A, but I also own node B and it connected to B to send a tx".
 
 Mmhmm this is why Tor pins to guard relays on entry and shifts the remaining relays in the circuit frequently to try and stop someone owning both entry and exit (A and B in your case).
@@ -549,14 +549,14 @@ Bootstrap the chain over clearnet, but ensure ANYTHING involving a TX is done ov
 
 If I run my own node, why should I be not allowed to connect to it over clearnet?
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T14:12:03+00:00
+## ghost | 2024-09-22T14:12:03+00:00
 > It takes just as long to verify the raw as it takes to sync normally (and 2x as much space).. and is a central point of failure.
 > 
 > on the contrary, we should stop providing the raw.
 
 The idea is to avoid the burden of dl 200GB over Tor. So basically option 3 Tor all the things but still sync chain over clearnet. But now I think about it why not just pull blocks over clearnet RPC and then enforce everything else through Tor.
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T14:17:04+00:00
+## ghost | 2024-09-22T14:17:04+00:00
 > > I reckon probably forcing the GUI to use remote nodes over Tor/i2p is ideal, like literally don’t let them input anything other than an onion in the GUI.
 > 
 > If I run my own node, why should I be not allowed to connect to it over clearnet?
@@ -568,7 +568,7 @@ Well if the wallets and everything are all geared up to enable you to automatica
 
 Tor slows down wallet sync significantly, and the privacy benefit is small in this case which would mostly help with ISP-level spying. There is also the issue with Tor being easily DDoSed, which would mean you can't submit transactions anymore.
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T14:41:28+00:00
+## ghost | 2024-09-22T14:41:28+00:00
 It also stops remote RPC correlating a supplied TX to an IP as all it sees is IP of the Tor/i2p relay, which is actually a huge privacy bump.
 
 I thought enabling hash/PoW anti DoS on Hidden Services is reducing DDoS over Tor, isn’t this what Haveno implemented to stop their nodes getting DDoSed?
@@ -582,7 +582,7 @@ But that is irrelevant if I control both the node and the wallet.
 
 I just know that over the recent years there were multiple occasions where Tor was unsuably slow to the point where you couldn't even sync a wallet.
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T14:52:45+00:00
+## ghost | 2024-09-22T14:52:45+00:00
 Possible Tor/i2p can have outage but probably not both Tor/i2p both at same time.
 
 My monerod is only Tor, as in I allow Tor P2P incoming via .onion, I have —proxy=127.0.0.1:9050 so any outgoing P2P going to clearnet addresses is done through Tor and I am getting blocks quickly no issue. Of course that doesn’t mean an issue won’t occur but it’s on my todo to add in i2p as well
@@ -602,7 +602,7 @@ AFAIK. BTC does NOT allow you to run in an onion-only mode. It -proxy requires c
 
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T15:05:43+00:00
+## ghost | 2024-09-22T15:05:43+00:00
 > > My monerod is only Tor, as in I allow Tor P2P incoming via .onion, I have —proxy=127.0.0.1:9050 so any outgoing P2P going to clearnet addresses is done through Tor and I am getting blocks quickly no issue.
 > 
 > NO nodes can connect to you. You can ONLY connect to nodes that have incoming connections open.
@@ -618,7 +618,7 @@ Incoming onion peers are not syncing blocks. Anonymous-inbound an entirely diffe
 
 and yes you are sharing blocks, but only with the subset of nodes that have clearnet incoming connections
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T15:09:39+00:00
+## ghost | 2024-09-22T15:09:39+00:00
 > > I also have bitcoin node 100% Tor, literally everything is Tor with it and it also works really well
 > 
 > AFAIK. BTC does NOT allow you to run in an onion-only mode. It -proxy requires clearnet nodes on the other side of the exit node
@@ -633,7 +633,7 @@ See only Tor is ticked, IPv4 and IPv6 are not allowed, not advertised and totall
 
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T15:15:36+00:00
+## ghost | 2024-09-22T15:15:36+00:00
 > and yes you are sharing blocks, but only with the subset of nodes that have clearnet incoming connections
 
 Yes I am not sharing blocks this is what I said, because I have no incoming clearnet connections only Tor. I used to allow clearnet in, but decided against it, really everyone should be using Tor/i2p.
@@ -657,13 +657,13 @@ But yes unfortunately as devs do not allow sharing of blocks over Tor I no longe
 
 correction
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T15:33:05+00:00
+## ghost | 2024-09-22T15:33:05+00:00
 > > monerod -> proxy (Tor) -> I connect to peer and I **send and** receive blocks and TX through  proxy (Tor)
 
 Are you sure? My understanding is we pull information from peers we connect out to and relay it to peers who connect in to us, is this false?
 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T15:47:38+00:00
+## ghost | 2024-09-22T15:47:38+00:00
 > Doesn't Dandelion++ mitigate linking IP addresses with transactions?
 
 It does but Dandelion++ is only used for relaying TX to other peers via P2P. When you connect to a node via RPC, you are not using Dandelion you are telling the node you wish to give it your transaction and the node can correlate it to you, this is what Chainalysis did.
@@ -683,7 +683,7 @@ Yes im sure
 
 as i said in my first reply - dandelion is defeatable. 
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T16:02:54+00:00
+## ghost | 2024-09-22T16:02:54+00:00
 > > > > monerod -> proxy (Tor) -> I connect to peer and I **send and** receive blocks and TX through  proxy (Tor)
 > > 
 > > 
@@ -700,7 +700,7 @@ incoming vs outgoing only decides the direction that initial connection is made,
 
 example. If an outgoing peer mines a block.. or send a tx, you receive it and broadcast it to your outgoing (and incoming peers). You dont just leech off the network. Data flows in both directions. (though its stil centralized since you can only connect to nodes that have incoming connections)
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T16:21:38+00:00
+## ghost | 2024-09-22T16:21:38+00:00
 > > Can you show me where you get this? Because I could have sworn we receive data from the peers we connect to and then we relay it to the peers that connect to us, admittedly I could be wrong as I could be thinking of Bitcoin or something else I am using, but it does seem most logical to pull and push data in this manner in a P2P swarm.
 > 
 > incoming vs outgoing only decides the direction that initial connection is made, after which data flows in both direction.
@@ -719,7 +719,7 @@ If it can (ie dandelion doesn’t do enough), then that will need to be mitigate
 
 Alternatively, if it can’t, then significantly reducing the barriers for users to run their own nodes (reducing blockchain size) will address it. “Light” wallets are the safety concern in this case.
 
-## thisIsNotTheFoxUrLookingFor | 2024-09-22T18:11:14+00:00
+## ghost | 2024-09-22T18:11:14+00:00
 > To make sure we are on the same page here: if you use your own trusted node, can your transaction be traced to that node without the node itself being compromised?
 > 
 > If it can (ie dandelion doesn’t do enough), then that will need to be mitigated.

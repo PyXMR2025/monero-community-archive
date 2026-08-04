@@ -6,10 +6,10 @@ author: orangefren
 assignees: []
 labels: []
 created_at: '2026-07-30T11:55:29+00:00'
-updated_at: '2026-07-30T19:51:48+00:00'
+updated_at: '2026-08-04T12:12:15+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-04T12:12:15+00:00'
 ---
 
 # Original Description
@@ -122,5 +122,23 @@ Check out this comparison table made by user2570: https://cryptpad.fr/sheet/#/2/
 >Last choice: It is likely that I would decline to attend MoneroKon at this time if it's outside of the EU (I don't think there were any other options suggested within the EU?). I do not believe the specific threat actors who might wish to physically harm me would be bold enough to do so in the EU (it would not be a wise tradeoff for them); I cannot be nearly as confident for the other countries that were suggested.
 
 # Discussion History
+## orangefren | 2026-08-04T12:12:15+00:00
+Votes were cast as follows:
+
+**Forum:**
+vostoemisio
+Jeremy_Rand_Lab19
+Siren
+BawdyAnarchist
+ceetee.mx
+ComradeBlin
+
+**Kinoteka:**
+loop.ster
+
+**POSTPONE / Cascade, Yerevan:**
+user2570
+
 # Action History
 - Created by: orangefren | 2026-07-30T11:55:29+00:00
+- Closed at: 2026-08-04T12:12:15+00:00
