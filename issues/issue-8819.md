@@ -7,7 +7,7 @@ labels:
 - enhancement
 - documentation
 created_at: '2023-04-05T21:01:35+00:00'
-updated_at: '2023-12-07T21:19:47+00:00'
+updated_at: '2026-08-04T19:13:54+00:00'
 type: issue
 status: open
 closed_at: null
@@ -31,5 +31,10 @@ Other recommendations:
 
 
 # Discussion History
+## HardenedSteel | 2026-08-04T19:05:27+00:00
+1. Do we mean time locked for very long time are burnt coins?
+2. Already spent; double spending attempt or spent after receiving the coins? Because why a transaction proof would prove the coins are spendable. As the name suggests its proof of transaction.
+3. ~~burnt due to duplication of onetime addresses; how this is possible? do we mean an address with lost private keys?~~
+
 # Action History
 - Created by: UkoeHB | 2023-04-05T21:01:35+00:00
