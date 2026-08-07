@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-request
 created_at: '2025-07-16T18:08:06+00:00'
-updated_at: '2026-05-18T19:28:55+00:00'
+updated_at: '2026-08-06T15:34:59+00:00'
 type: issue
 status: closed
 closed_at: '2026-05-18T19:28:55+00:00'
@@ -42,6 +42,9 @@ Or anything else I can do to help make this happen? (e.g more details on what wo
 
 ## Boog900 | 2025-08-01T22:51:34+00:00
 We have a backlog of big PRs so I want to merge them first before I begin any other big changes. If you would like to work on this then feel free, I would be grateful, although I will get round to this eventually if not.
+
+## mahnunchik | 2026-08-06T15:34:59+00:00
+https://github.com/monero-oxide/monero-oxide
 
 # Action History
 - Created by: binarybaron | 2025-07-16T18:08:06+00:00
