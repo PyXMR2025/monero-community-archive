@@ -20,7 +20,7 @@ Minim xmr is detected by many antiviruses. Please find a solution for this probl
 غالبا تريد التعدين علي أجهزة الضحايا أليس كذلك
 
 
-## wachidlan | 2018-10-21T17:02:01+00:00
+## obaid92 | 2018-10-21T17:02:01+00:00
 you can easily  encrypt it if you want to get rid of this problem 
 
 

@@ -38,7 +38,7 @@ Yeah i know. I'm :)
 ## adevelopcr | 2018-10-17T18:58:29+00:00
 what is this : "I'm :)" ? are you admitting on public hhhhh
 
-## wachidlan | 2018-10-18T23:26:07+00:00
+## obaid92 | 2018-10-18T23:26:07+00:00
 https://github.com/xmrig/xmrig/issues/608#issuecomment-386882513
 
 here is what you looking for  maybe this will help you
