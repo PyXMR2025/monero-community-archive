@@ -5,7 +5,7 @@ author: karelbilek
 assignees: []
 labels: []
 created_at: '2025-10-27T10:04:17+00:00'
-updated_at: '2026-07-19T08:06:09+00:00'
+updated_at: '2026-08-05T17:27:48+00:00'
 type: issue
 status: open
 closed_at: null
@@ -80,6 +80,44 @@ cake seemed to be a great option, but it doesn't look like it supports passphras
 @Hannsek so far I have not seen a good solution how we can implement the Trezor host protocol in our C++ codebase. That's the main blocker.
 
 A rust implementation might work depending on the amount of dependencies.
+
+## mmilata | 2026-08-05T15:54:21+00:00
+We've just published the initial release of the rust library: https://crates.io/crates/trezor-thp. Please let me know if there's anything I can do to help you integrate it.
+
+Dependencies:
+```
+trezor-thp v0.1.0
+├── heapless v0.9.3
+│   ├── hash32 v0.3.1
+│   │   └── byteorder v1.5.0
+│   ├── stable_deref_trait v1.2.1
+│   └── zeroize v1.9.0
+│       └── zeroize_derive v1.5.0 (proc-macro)
+│           ├── proc-macro2 v1.0.107
+│           │   └── unicode-ident v1.0.24
+│           ├── quote v1.0.47
+│           │   └── proc-macro2 v1.0.107 (*)
+│           └── syn v2.0.119
+│               ├── proc-macro2 v1.0.107 (*)
+│               ├── quote v1.0.47 (*)
+│               └── unicode-ident v1.0.24
+├── log v0.4.33
+└── trezor-noise-protocol v0.2.1
+    └── heapless v0.9.3 (*)
+```
+Library user needs to provide AES-256-GCM, SHA-256, and X25519 implementations, also protobuf parser. If you'd rather bring your own Noise XX implementation than use the one in `trezor-noise-protocol`, that might be doable.
+
+## selsta | 2026-08-05T16:03:55+00:00
+@mmilata thank you. Are there any plans for a C++ implementation in the future, or is this planned as the only supported implementation together with Python?
+
+## vampyren | 2026-08-05T16:08:06+00:00
+With all the hacks happening lately i really hope we can see a Trezor 7 support very soon. Dont want my XMR to get stolen or hacked. 
+
+## jpk68 | 2026-08-05T16:42:21+00:00
++1 to @selsta's comment about a C++ implementation; IMO, this would be greatly preferable to using the Rust crate.
+
+## mmilata | 2026-08-05T17:27:48+00:00
+@selsta currently we have no plans for C++ implementation. Only Python, Rust, TypeScript. Might provide C or C++ wrapper for the rust library if you confirm it's something you could use.
 
 # Action History
 - Created by: karelbilek | 2025-10-27T10:04:17+00:00
