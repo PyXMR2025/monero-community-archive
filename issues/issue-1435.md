@@ -5,7 +5,7 @@ author: Rucknium
 assignees: []
 labels: []
 created_at: '2026-08-03T15:00:05+00:00'
-updated_at: '2026-08-03T15:05:44+00:00'
+updated_at: '2026-08-05T16:09:43+00:00'
 type: issue
 status: open
 closed_at: null
@@ -24,15 +24,17 @@ Main discussion topics:
 
 2. Updates. What is everyone working on?
 
-3. FCMP++ to-do list status. [Programming tasks](https://github.com/seraphis-migration/monero/issues/53). [Reviews and audits](https://cryptpad.fr/sheet/#/2/sheet/view/yPVIUywwA9-deE9VF6GYm9bXbPdCerdST3UDEEfBxcM/embed/). [FCMP++ Integration Audit Overview](https://github.com/seraphis-migration/monero/issues/294). [Network upgrade schedule Gantt chart](https://html-preview.github.io/?url=https://github.com/jeffro256/fcmp-carrot-plan/blob/master/fcmp%2B%2B-carrot.html).
+3. [PQ turnstile spend enables a Carrot/Jamtis distinguisher (privacy leak)](https://github.com/jeffro256/carrot/issues/10).
 
-4. [Relative locks with FCMP++](https://github.com/monero-project/research-lab/issues/161).
+4. FCMP++ to-do list status. [Programming tasks](https://github.com/seraphis-migration/monero/issues/53). [Reviews and audits](https://cryptpad.fr/sheet/#/2/sheet/view/yPVIUywwA9-deE9VF6GYm9bXbPdCerdST3UDEEfBxcM/embed/). [FCMP++ Integration Audit Overview](https://github.com/seraphis-migration/monero/issues/294). [Network upgrade schedule Gantt chart](https://html-preview.github.io/?url=https://github.com/jeffro256/fcmp-carrot-plan/blob/master/fcmp%2B%2B-carrot.html).
 
-5. [Shi, Zhang, Ge, Lan, Zhang, & Wang (2026) "Deanonymizing Monero Transactions in Tor Network."](https://arxiv.org/abs/2607.07062)
+5. [Relative locks with FCMP++](https://github.com/monero-project/research-lab/issues/161).
 
-6. [FCMP beta stressnet](https://github.com/seraphis-migration/monero/releases/).
+6. [Shi, Zhang, Ge, Lan, Zhang, & Wang (2026) "Deanonymizing Monero Transactions in Tor Network."](https://arxiv.org/abs/2607.07062)
 
-7. Any other business
+7. [FCMP beta stressnet](https://github.com/seraphis-migration/monero/releases/).
+
+8. Any other business
 
 8. Please comment on GitHub in advance of the meeting if you would like to propose an agenda item.
 

@@ -6,7 +6,7 @@ author: rottenwheel
 assignees: []
 labels: []
 created_at: '2026-07-15T07:38:04+00:00'
-updated_at: '2026-07-19T16:27:02+00:00'
+updated_at: '2026-08-07T18:35:05+00:00'
 type: issue
 status: open
 closed_at: null
@@ -450,6 +450,9 @@ When disputes arose, he enforced bans in the main Monero community channels, whi
 As the title suggests, the role of CCS Coordinator includes gathering consensus, acting as a liaison to Core, and maintaining community processes. It is unreasonable to claim that actions taken by the coordinator, especially those involving assets created for funded projects and sanctions in community spaces, are entirely "outside" his duties. These responsibilities come with influence, which carries accountability.
 
 If coordinators can create, control, or restrict access to resources related to community-funded work without effective oversight or an escalation path, then the distinction between "official CCS duties" and broader outreach becomes artificial. The community deserves clarity on whether such conflicts are governed by any collective process, Core review, or are left to individual discretion.
+
+## SauerNinja | 2026-08-07T18:35:05+00:00
+Oh wow
 
 # Action History
 - Created by: rottenwheel | 2026-07-15T07:38:04+00:00
