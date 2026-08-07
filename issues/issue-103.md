@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-07-28T22:29:26+00:00'
+updated_at: '2026-08-05T01:41:41+00:00'
 type: issue
 status: open
 closed_at: null
@@ -66,6 +66,8 @@ closed_at: null
 | AV | #385 | | | | ❌ |
 | AW | FCMP++ wallet crypto | crypto | https://github.com/monero-project/monero/pull/10134 | | ❌ |
 | AX | wallet: upstream misc stuff before FCMP++ - #10995 | wallet | https://github.com/monero-project/monero/pull/10995 | | ❌ |
+| AY | txpool: Don't queue dup txs for relay in strand - #451 | txpool | |  tx relay v2 | ❌ |
+| AZ | #446 | cryptonote_core | | | ❌ |
 
 
 # Discussion History
