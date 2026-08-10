@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-tracking-issue
 created_at: '2025-05-12T22:34:30+00:00'
-updated_at: '2026-07-28T21:59:45+00:00'
+updated_at: '2026-08-07T22:14:49+00:00'
 type: issue
 status: open
 closed_at: null
@@ -48,8 +48,8 @@ https://github.com/Cuprate/cuprate/pull/585
 https://github.com/Cuprate/cuprate/pull/586
 https://github.com/Cuprate/cuprate/pull/590
 - [ ] Reproducible Build
-- [ ] RPC Timeout mitigation
-https://github.com/Cuprate/cuprate/pull/466
+- [ ] RPC Hardening
+https://github.com/Cuprate/cuprate/pull/675
 
 **Nice to have**:
 
