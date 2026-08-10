@@ -5,7 +5,7 @@ author: 86dd
 assignees: []
 labels: []
 created_at: '2023-04-04T13:46:41+00:00'
-updated_at: '2026-05-13T17:10:42+00:00'
+updated_at: '2026-08-09T17:28:51+00:00'
 type: issue
 status: open
 closed_at: null
@@ -418,6 +418,57 @@ Edit: It seems like this is a Monero+OpenBSD+IPv6 issue. On Linux I'm able to ma
 With #10549 I am able to sync OpenBSD over IPv6 only as well. So now I have a Debian node and a OpenBSD node working with just IPv6 (zero IPv4 connectivity at all.)
 
 I do think we should have some IPv6 peers and maybe enable IPv6 by default, but I'm wondering if it's time to close this issue and open more specific issues (if not already open) addressing other IPv6 concerns.
+
+## 86dd | 2026-08-09T15:44:26+00:00
+Another thing I found: when configuring anonymous transports, it will complain when one specifies an IPv6 like `::1` for the bind parameter.
+It only accepts `ipv4:port` configs, maybe this should be changed on the long term too.
+
+## 86dd | 2026-08-09T16:07:32+00:00
+I decided to scrape xmr.ditatompel.com for nodes with `ipv6_only==true` and again with `host.match(":")` 
+```
+add-priority-node=[2a01:4f9:1a:af2f::2]:18080
+add-priority-node=[2405:4200:f001:e55e::1]:18080
+add-priority-node=[2001:678:68c:fffb::195]:18080
+
+add-priority-node=unova.kescher.at:18080
+add-priority-node=node1-eu.monero.love:18080
+add-priority-node=node.privacyx.co:18080
+add-priority-node=vern.cc:18080
+add-priority-node=xmr.stormycloud.org:18080
+add-priority-node=xmr.thinhhv.com:18080
+add-priority-node=melissa.rocktheshow.co.uk:18080
+add-priority-node=xmr-in-berlin-2.boldsuck.org:18080
+add-priority-node=chad.fiatfaucet.com:18080
+add-priority-node=xmr.hostingwire.net:18080
+add-priority-node=node.vern.cc:18080
+add-priority-node=silentproxy.net:18080
+add-priority-node=node.ulmo.online:18080
+add-priority-node=monero-rpc.cheems.de.box.skhron.com.ua:18080
+add-priority-node=monerod.bibxmr.org:18080
+add-priority-node=silentproxy.net:18080
+add-priority-node=node.xmr.surf:18080
+add-priority-node=xmr-de.boldsuck.org:18080
+add-priority-node=xmr5.doggett.tech:18080
+add-priority-node=ravfx2.its-a-node.org:18080
+add-priority-node=monero.konku.rs:18080
+add-priority-node=xmr-de-2.boldsuck.org:18080
+add-priority-node=monero.konku.rs:18080
+add-priority-node=node.ulmo.online:18080
+add-priority-node=node2-eu.monero.love:18080
+add-priority-node=xmr.diyarciftci.xyz:18080
+add-priority-node=xmr-in-berlin.boldsuck.org:18080
+add-priority-node=xmr.ducks.party:18080
+
+```
+Most of these seem to work, but sadly due to the shitty defaults (`{p2p,rpc}-use-ipv6=1` not being set) some may be filtered or closed.
+
+## shortwavesurfer2009 | 2026-08-09T16:52:40+00:00
+> Another thing I found: when configuring anonymous transports, it will complain when one specifies an IPv6 like `::1` for the bind parameter. It only accepts `ipv4:port` configs, maybe this should be changed on the long term too.
+
+Did you try [::1]
+
+## 86dd | 2026-08-09T17:28:51+00:00
+@shortwavesurfer2009 yes. monerod will complain that the `anonymous-inbound` (not `tx-proxy` which is IPv4-only due to socks4) is not a valid `ipv4:port`.
 
 # Action History
 - Created by: 86dd | 2023-04-04T13:46:41+00:00
