@@ -5,7 +5,7 @@ author: 86dd
 assignees: []
 labels: []
 created_at: '2023-04-04T13:46:41+00:00'
-updated_at: '2026-08-09T17:28:51+00:00'
+updated_at: '2026-08-10T05:44:21+00:00'
 type: issue
 status: open
 closed_at: null
@@ -460,7 +460,8 @@ add-priority-node=xmr-in-berlin.boldsuck.org:18080
 add-priority-node=xmr.ducks.party:18080
 
 ```
-Most of these seem to work, but sadly due to the shitty defaults (`{p2p,rpc}-use-ipv6=1` not being set) some may be filtered or closed.
+Most of these seem to work, but sadly due to the shitty defaults (`{p2p,rpc}-use-ipv6=1` not being set) some may be filtered or closed, despite having `AAAA` in DNS.
+You can find my current list on https://86dd.eu/xmr1/monerod.txt - if you want to add my node, please do it by hostname.
 
 ## shortwavesurfer2009 | 2026-08-09T16:52:40+00:00
 > Another thing I found: when configuring anonymous transports, it will complain when one specifies an IPv6 like `::1` for the bind parameter. It only accepts `ipv4:port` configs, maybe this should be changed on the long term too.

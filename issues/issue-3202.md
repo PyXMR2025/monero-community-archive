@@ -19,7 +19,7 @@ Currently the sweep_all button will try to include unmixable outputs as well. It
 ## dEBRUYNE-1 | 2018-01-29T12:20:00+00:00
 +feature
 
-## mizuki-hikaru | 2018-04-22T02:31:34+00:00
+## ghost | 2018-04-22T02:31:34+00:00
 Gave this an attempt at pull request https://github.com/monero-project/monero/pull/3680 . It uses a function that extracts mixables that is already written in `wallet2.cpp`, however I'm not sure this function is actually doing what is intended. Can anyone review this? ^_^
 
 ## stoffu | 2018-05-04T08:31:29+00:00

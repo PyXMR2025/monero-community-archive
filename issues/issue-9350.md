@@ -8,10 +8,10 @@ labels:
 - low priority
 - discussion
 created_at: '2024-06-03T17:24:44+00:00'
-updated_at: '2024-06-05T11:54:21+00:00'
+updated_at: '2026-08-11T21:17:18+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-11T21:17:18+00:00'
 ---
 
 # Original Description
@@ -92,5 +92,9 @@ So, my question is, **why not handle change in a more elegant manner so that per
 
 Did you try to use accounts instead of subaddresses? That should result in the behaviour you are asking for.
 
+## selsta | 2026-08-11T21:17:18+00:00
+Closing this as the issue becomes less relevant with the upcoming FCMP++ upgrade.
+
 # Action History
 - Created by: ghost | 2024-06-03T17:24:44+00:00
+- Closed at: 2026-08-11T21:17:18+00:00

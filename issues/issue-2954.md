@@ -48,7 +48,7 @@ If anyone else is interested: please ignore me and go for it.
 ## jakubtrnka | 2018-02-26T12:19:09+00:00
 Ok, I'll make a try 
 
-## mizuki-hikaru | 2018-04-13T07:05:57+00:00
+## ghost | 2018-04-13T07:05:57+00:00
 I'm trying to do this.
 
 Am I correct in understanding that we should modify the existing code so that `balance` shows something like "image keys are not imported" instead of the balances when the image keys are not present?
@@ -65,7 +65,7 @@ For the second:
 ```
 So you'll to add a function to wallet2 that chels whether any key images are missing. Pretty much the same as has_multisig_partial_key_images, just a different bool to check.
 
-## mizuki-hikaru | 2018-04-19T02:25:25+00:00
+## ghost | 2018-04-19T02:25:25+00:00
 After looking into this further I think it's not possible to detect if the image keys aren't present, so this is just a simple warning for all watch-only wallets. Is this right?
 
 for example at https://github.com/monero-project/monero/compare/monero-project:master...jcktm:wallet-cli-cold-storage-balance?expand=1

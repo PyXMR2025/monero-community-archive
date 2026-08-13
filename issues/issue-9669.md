@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-08-07T19:03:44+00:00'
+updated_at: '2026-08-12T14:20:59+00:00'
 type: issue
 status: open
 closed_at: null
@@ -24,7 +24,7 @@ Time machine: June 20 2026
 | glibc    | 2.27    | (#9207) |
 | binutils | 2.44    | |
 | cmake    | 3.31.8  | |
-| rust | n/a | (#9801) |
+| rust | 1.93.0 |  |
 
 See also: #9684.
 
@@ -37,7 +37,7 @@ See also: #9684.
 | Package                                                           | Version        | Latest   | System | Desc      | CVEs                                                         | Split [0] | PR      |
 |:------------------------------------------------------------------|:---------------|:---------|--------|-----------|:-------------------------------------------------------------|----------:|:--------|
 | [android-ndk](https://developer.android.com/ndk/downloads)        | 27c (LTS)      | 27d      | -      | Toolchain | No                                                           |           |         |
-| [boost](https://github.com/boostorg/boost)                        | 1.91.0-1         | -   | b2     | Daemon    | No                                                           |       Yes |         |
+| [boost](https://github.com/boostorg/boost)                        | 1.91.0-1         | 1.92.0  | b2     | Daemon    | No                                                           |       Yes |         |
 | [darwin_sdk](https://developer.apple.com/xcode/)                  | 12.2           | 26.1.1   | -      | Toolchain | ?                                                            |           |         |
 | [freebsd_base](https://archive.freebsd.org/old-releases/amd64/)   | 12.3           | 13.5 [2] | -      | Toolchain | ?                                                            |           | (#9667) |
 | [hidapi](https://github.com/libusb/hidapi)                        | 0.15.0         | -        | cmake  | Wallet    | No                                                           |        No |         |
@@ -60,7 +60,7 @@ See also: #10222
 
 | Submodule     | Version     | Latest | PR    |
 |---------------|-------------|--------|-------|
-| [gtest](https://github.com/google/googletest) | 1.15.2 | 1.17.0 | #11064 |
+| [gtest](https://github.com/google/googletest) | 1.17.0 | 1.18.0 |  |
 | [rapidjson](https://github.com/Tencent/rapidjson)     | Feb 5 2025 | ?      |     |
 | [randomx](https://github.com/tevador/RandomX)       | 1.2.2       | 2.0      |       |
 | [supercop](https://github.com/monero-project/supercop/tree/monero)      | Aug 26 2020 | ?      |       |

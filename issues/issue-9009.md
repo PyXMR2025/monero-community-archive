@@ -7,10 +7,10 @@ labels:
 - bug
 - pending review
 created_at: '2023-09-28T22:58:27+00:00'
-updated_at: '2023-12-07T20:18:32+00:00'
+updated_at: '2026-08-11T21:19:35+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-11T21:19:35+00:00'
 ---
 
 # Original Description
@@ -114,5 +114,9 @@ That would be my guess.
 
 But again, since BitMessage is not being maintained, is this issue worth tracking down? I believe most situations don't use binary in a string like this.
 
+## selsta | 2026-08-11T21:19:35+00:00
+Closing as MMS will likely be removed in the future and there are no plans to fix this.
+
 # Action History
 - Created by: lacdael | 2023-09-28T22:58:27+00:00
+- Closed at: 2026-08-11T21:19:35+00:00
