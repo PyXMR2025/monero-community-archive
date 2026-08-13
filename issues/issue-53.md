@@ -5,7 +5,7 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2025-06-05T17:49:37+00:00'
-updated_at: '2026-07-31T18:15:16+00:00'
+updated_at: '2026-08-11T17:53:44+00:00'
 type: issue
 status: open
 closed_at: null
@@ -86,6 +86,7 @@ closed_at: null
 - [x] #388
 - [ ] #389
 - [ ] Tx relay v2
+- [ ] #454
 
 ## Known bugs
 

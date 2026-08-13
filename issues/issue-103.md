@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-08-05T01:41:41+00:00'
+updated_at: '2026-08-11T18:11:52+00:00'
 type: issue
 status: open
 closed_at: null
@@ -26,7 +26,7 @@ closed_at: null
 | H   | View-scan changes and splitting `process_new_transaction()` | wallet | | C | ❌ |
 | I    | Unclamped changes to `mx25519` | crypto | | | ❌ |
 | J    | Faster zero commit | blockchain_db, carrot_core, carrot_impl, cryptonote_core, ringct, wallet | https://github.com/monero-project/monero/pull/10108 | | ✅️ |
-| K   | Collect transparent amount commitments helper | blockchain_db, cryptonote_core, wallet | | J | ❌ |
+| K   | Collect transparent amount commitments helper | blockchain_db, cryptonote_core, wallet | https://github.com/monero-project/monero/pull/11088 | J | ❌ |
 | L   | FCMP++ phase 1 crypto | fcmp_pp, ringct | https://github.com/monero-project/monero/pull/10111, https://github.com/monero-project/monero/pull/10338, https://github.com/monero-project/monero/pull/10135, https://github.com/monero-project/monero/pull/10342, https://github.com/monero-project/monero/pull/10345 (there are more) | | ✅️ |
 | M  | FCMP++ Rust FFI | | | | ❌ |
 | N  | FCMP++ format utils | blockchain_db, cryptonote_basic, cryptonote_core, wallet | | | ❌ |
@@ -54,7 +54,7 @@ closed_at: null
 | AJ | tx pool: don't drop connections relaying key images spent in chain #204 | cryptonote_core | | | ❌ |
 | AK | simplewallet: use passed decrypted payment ID from wallet2 for notifications | simplewallet, wallet | https://github.com/monero-project/monero/pull/10189 | | ✅️ |
 | AL | common: add std equivalent of hash_combine() | common | https://github.com/monero-project/monero/pull/10215 | | ✅️ |
-| AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827 | L | ❌ |
+| AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827, https://github.com/monero-project/monero/pull/10963 | L | ❌ |
 | AN | crypto: add Ed25519->X25519 conversion functions | crypto | https://github.com/monero-project/monero/pull/9828 | L (partially) | ✅️ |
 | AO | cryptonote_basic: add overload for `get_block_longhash()` | cryptonote_basic | https://github.com/monero-project/monero/pull/10039 | | ✅️ |
 | AP | less noisy perf logs #100 | wallet2 | | | ❌ |
@@ -68,6 +68,7 @@ closed_at: null
 | AX | wallet: upstream misc stuff before FCMP++ - #10995 | wallet | https://github.com/monero-project/monero/pull/10995 | | ❌ |
 | AY | txpool: Don't queue dup txs for relay in strand - #451 | txpool | |  tx relay v2 | ❌ |
 | AZ | #446 | cryptonote_core | | | ❌ |
+| BA | Blockchain: static prevalidate_miner_transaction | cryptonote_core | https://github.com/monero-project/monero/pull/11079 | | ❌ |
 
 
 # Discussion History
