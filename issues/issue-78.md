@@ -7,10 +7,10 @@ labels:
 - A-storage
 - C-discussion
 created_at: '2024-02-26T21:35:48+00:00'
-updated_at: '2024-05-27T00:52:02+00:00'
+updated_at: '2026-08-10T21:18:38+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-10T21:18:38+00:00'
 ---
 
 # Original Description
@@ -31,3 +31,4 @@ This was discussed for `monerod` here:
 # Discussion History
 # Action History
 - Created by: hinto-janai | 2024-02-26T21:35:48+00:00
+- Closed at: 2026-08-10T21:18:38+00:00
