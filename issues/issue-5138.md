@@ -1,7 +1,7 @@
 ---
 title: add RPC method to validate address
 source_url: https://github.com/monero-project/monero/issues/5138
-author: vv12131415
+author: vladysta
 assignees: []
 labels: []
 created_at: '2019-02-13T18:00:03+00:00'
@@ -27,5 +27,5 @@ https://github.com/monero-project/monero/pull/5141
 +resolved
 
 # Action History
-- Created by: vv12131415 | 2019-02-13T18:00:03+00:00
+- Created by: vladysta | 2019-02-13T18:00:03+00:00
 - Closed at: 2019-03-19T14:33:57+00:00

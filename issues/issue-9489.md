@@ -3,12 +3,9 @@ title: WHERE SENSE in rpc-login for both core and restricted RPC?!
 source_url: https://github.com/monero-project/monero/issues/9489
 author: itmagpro
 assignees: []
-labels:
-- question
-- low priority
-- more info needed
+labels: []
 created_at: '2024-09-23T00:10:43+00:00'
-updated_at: '2024-11-04T16:05:18+00:00'
+updated_at: '2026-08-13T12:04:44+00:00'
 type: issue
 status: open
 closed_at: null

@@ -6,10 +6,10 @@ assignees: []
 labels:
 - question
 created_at: '2024-11-22T04:01:15+00:00'
-updated_at: '2024-11-28T16:12:32+00:00'
+updated_at: '2026-08-13T12:02:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-13T12:02:57+00:00'
 ---
 
 # Original Description
@@ -50,3 +50,4 @@ Yes it can be ignored if you are ok without incoming connections. It's not an is
 
 # Action History
 - Created by: luckytalk | 2024-11-22T04:01:15+00:00
+- Closed at: 2026-08-13T12:02:57+00:00

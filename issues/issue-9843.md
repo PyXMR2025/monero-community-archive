@@ -6,10 +6,10 @@ author: woodser
 assignees: []
 labels: []
 created_at: '2025-03-17T10:50:21+00:00'
-updated_at: '2025-09-08T21:20:51+00:00'
+updated_at: '2026-08-13T12:05:20+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-13T12:05:20+00:00'
 ---
 
 # Original Description
@@ -46,3 +46,4 @@ I encountered this today when using Haveno. I had turned off my VPN while a trad
 
 # Action History
 - Created by: woodser | 2025-03-17T10:50:21+00:00
+- Closed at: 2026-08-13T12:05:20+00:00
