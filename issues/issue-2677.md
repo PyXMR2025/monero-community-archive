@@ -5,7 +5,7 @@ author: luisdiegohidalgo
 assignees: []
 labels: []
 created_at: '2026-06-26T19:24:42+00:00'
-updated_at: '2026-06-26T21:20:09+00:00'
+updated_at: '2026-08-14T22:23:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -159,6 +159,15 @@ If you still consider that listing OwnBlock is not viable, even though we believ
 
 Please just let us know. In any case, we are grateful that you read our message and took the time to respond.
 
+
+## luisdiegohidalgo | 2026-08-14T22:23:05+00:00
+Hi, just following up on this request. Have you had a chance to review whether OwnBlock would be appropriate to list on the Monero Mining page as an independent SOLO mining option?
+
+As mentioned above, the request is only for an informational listing, not an endorsement. OwnBlock operates as a SOLO-only mining service with direct coinbase payouts and no custodial miner balances.
+
+If you need any additional technical information, verification, or changes to the proposed wording, I'd be happy to provide them.
+
+Thank you for your time and for maintaining the Monero website.
 
 # Action History
 - Created by: luisdiegohidalgo | 2026-06-26T19:24:42+00:00
