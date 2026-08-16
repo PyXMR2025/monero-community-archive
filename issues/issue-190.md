@@ -6,7 +6,7 @@ author: star7js
 assignees: []
 labels: []
 created_at: '2026-07-07T09:09:46+00:00'
-updated_at: '2026-07-07T09:09:46+00:00'
+updated_at: '2026-08-16T10:14:34+00:00'
 type: issue
 status: open
 closed_at: null
@@ -64,5 +64,21 @@ Happy to send a PR if useful. Found while running a Flutter wallet's send-screen
 
 
 # Discussion History
+## johnr365 | 2026-08-16T10:11:01+00:00
+Confirming this independently - I hit the same wall building a Flutter wallet against the official `v0.18.4.6-RC2` prebuilts (`aarch64-apple-darwin`): every valid stagenet address is rejected, and testnet addresses validate for any nonzero nettype. Same table as in the report.
+
+A survey of the wrapper shows the same `int nettype` passthrough at four sites in `monero_wallet2_api_c.cpp`, all hitting deprecated `bool testnet` overloads via the same implicit conversion:
+
+- `MONERO_Wallet_addressValid`
+- `MONERO_Wallet_keyValid`
+- `MONERO_Wallet_keyValid_error`
+- `MONERO_Wallet_paymentIdFromAddress`
+
+(`wallet2_api.h` gives all three statics a deprecated `bool` overload, so `keyValid` and `paymentIdFromAddress` are silently mainnet/testnet only, same as `addressValid`.) The wownero wrapper mirrors all four sites; zano is not affected.
+
+The `static_cast<Monero::NetworkType>(nettype)` fix in the report is right. @star7js if you still want to send your PR, go ahead - otherwise I have the patch for all eight sites (monero + wownero) ready and am happy to submit it.
+
+
+
 # Action History
 - Created by: star7js | 2026-07-07T09:09:46+00:00
