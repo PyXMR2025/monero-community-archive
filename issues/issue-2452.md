@@ -50,7 +50,7 @@ I want to be able to build with HWLOC.
 I am not too sure how to build this?
 
 # Discussion History
-## PostGresSQL | 2021-06-22T12:05:13+00:00
+## cruxis-dev | 2021-06-22T12:05:13+00:00
 https://cmake.org/download/
 Make sure you have cmake installed
 Make sure you compile it with MSYS2 instead of VS 2017.
@@ -61,12 +61,12 @@ https://xmrig.com/docs/miner/cmake-options
 ## Joe23232 | 2021-06-22T12:11:01+00:00
 @FullStack116   This is Windows 10 mate :)
 
-## PostGresSQL | 2021-06-22T12:11:36+00:00
+## cruxis-dev | 2021-06-22T12:11:36+00:00
 > @FullStack116 This is Windows 10 mate :)
 
 updated my previous post
 
-## PostGresSQL | 2021-06-22T12:19:09+00:00
+## cruxis-dev | 2021-06-22T12:19:09+00:00
 > @FullStack116 This is Windows 10 mate :)
 
 Also steps i did to make it work
@@ -97,7 +97,7 @@ Per https://xmrig.com/docs/miner/build/windows:
 
 So am I able to still disable the donate level?
 
-## PostGresSQL | 2021-06-22T12:44:42+00:00
+## cruxis-dev | 2021-06-22T12:44:42+00:00
 > @FullStack116 Hey man thanks for your response
 > 
 > > Download the most recent version of xmrig prebuilt dependencies by using the green Code button and Download ZIP

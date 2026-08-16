@@ -1,7 +1,7 @@
 ---
 title: AMD EPYC 7R32
 source_url: https://github.com/xmrig/xmrig/issues/1956
-author: PostGresSQL
+author: cruxis-dev
 assignees: []
 labels:
 - question
@@ -33,7 +33,7 @@ Operating System : Windows server 2016 base.
 MSR is not available for virtual/cloud machines.
 Thank you.
 
-## PostGresSQL | 2020-11-26T07:41:02+00:00
+## cruxis-dev | 2020-11-26T07:41:02+00:00
 > MSR is not available for virtual/cloud machines.
 > Thank you.
 
@@ -47,7 +47,7 @@ Ok, in other words, MSR works only on physical not virtualized hardware, as I kn
 
 Take a look at this: https://xmrig.com/benchmark?cpu=AMD+EPYC+7R32 both submits have different threads/cache configuration and you 3rd.
 
-## PostGresSQL | 2020-11-26T08:05:08+00:00
+## cruxis-dev | 2020-11-26T08:05:08+00:00
 
 
 > Ok, in other words, MSR works only on physical not virtualized hardware, as I know 7R32 CPU exclusively created for Amazon AWS and not available for others.
@@ -79,5 +79,5 @@ At the very least, run it on the actual hardware (IBM Linux) not in a VM.
 I run xmrig in the Hypervisor environment (non-VM) on Proxmox for example (which is just a Debian mod).
 
 # Action History
-- Created by: PostGresSQL | 2020-11-26T06:58:55+00:00
+- Created by: cruxis-dev | 2020-11-26T06:58:55+00:00
 - Closed at: 2021-04-12T14:34:21+00:00
