@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2026-07-15T16:57:50+00:00'
-updated_at: '2026-07-28T17:30:34+00:00'
+updated_at: '2026-08-19T17:45:55+00:00'
 type: issue
 status: open
 closed_at: null
@@ -417,6 +417,11 @@ Concrete proposal for the FCMP HF: **Reserve `unlock_time = 1` but don't impleme
 Historical note: We based Grease on Monet/Auxchannel on the predicate that timelocks were unlikely to be added into Monero due to the heterogeneity they would introduce. 
 
 But if they were to be implemented in FCMP in a ZK manner, then I agree, this approach is not only much better, it's basically a no-brainer.
+
+## j-berman | 2026-08-19T17:45:55+00:00
+@CjS77 it may be a useful exercise to draft a complete protocol for Grease utilizing the basic primitive currently being proposed in this original description. The code is here: https://github.com/seraphis-migration/monero/pull/445
+
+I think if you were to demonstrate interest in building on top of that primitive, it could potentially strengthen the case for including that primitive in the next fork (and strengthen your request for funding).
 
 # Action History
 - Created by: tevador | 2026-07-15T16:57:50+00:00
