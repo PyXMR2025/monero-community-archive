@@ -5,10 +5,10 @@ author: developergames2d
 assignees: []
 labels: []
 created_at: '2024-02-26T20:15:37+00:00'
-updated_at: '2024-02-27T14:11:19+00:00'
+updated_at: '2026-08-18T16:02:22+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-18T16:02:22+00:00'
 ---
 
 # Original Description
@@ -22,3 +22,4 @@ The default lookahead is 50 accounts and 200 subaddresses per account.
 
 # Action History
 - Created by: developergames2d | 2024-02-26T20:15:37+00:00
+- Closed at: 2026-08-18T16:02:22+00:00
