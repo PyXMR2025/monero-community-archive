@@ -25,6 +25,10 @@ more details please
 ## Boog900 | 2026-06-08T13:14:16+00:00
 This is just an issue for myself, but if you look at monerod it will return some errors in the status field of the JSON response, we will return a http error 
 
+## hiSandog | 2026-07-11T16:56:59+00:00
+Compatibility should be captured per RPC method/error with golden responses from `monerod`, not implemented as a blanket conversion of application errors to HTTP 200. The transport status, JSON `status` field, error code/message, and response body shape all need to match because clients may depend on any of them. Tests should include malformed requests (which should remain transport/protocol errors) versus valid requests reporting daemon state errors.
+
+
 ## Boog900 | 2026-07-11T17:45:02+00:00
 At a certain point we need to draw a line at compatibility, we wont match error messages exactly, the response will also not be the _exact_ byte for byte same.
 
