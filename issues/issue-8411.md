@@ -5,10 +5,10 @@ author: selsta
 assignees: []
 labels: []
 created_at: '2022-06-28T21:46:13+00:00'
-updated_at: '2022-06-28T23:31:54+00:00'
+updated_at: '2026-08-16T15:20:49+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-16T15:20:49+00:00'
 ---
 
 # Original Description
@@ -21,3 +21,4 @@ Alternatively there could be a warning when sending to OpenAlias addresses when 
 # Discussion History
 # Action History
 - Created by: selsta | 2022-06-28T21:46:13+00:00
+- Closed at: 2026-08-16T15:20:49+00:00

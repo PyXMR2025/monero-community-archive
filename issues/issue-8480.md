@@ -6,10 +6,10 @@ author: afungible
 assignees: []
 labels: []
 created_at: '2022-08-02T23:41:01+00:00'
-updated_at: '2023-05-25T21:49:39+00:00'
+updated_at: '2026-08-18T21:52:38+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-18T21:52:38+00:00'
 ---
 
 # Original Description
@@ -275,3 +275,4 @@ Is there a way to set this parameter with JSON-RPC API?
 
 # Action History
 - Created by: afungible | 2022-08-02T23:41:01+00:00
+- Closed at: 2026-08-18T21:52:38+00:00

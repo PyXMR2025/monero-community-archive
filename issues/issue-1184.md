@@ -5,10 +5,10 @@ author: ChristopherKing42
 assignees: []
 labels: []
 created_at: '2016-10-05T18:40:01+00:00'
-updated_at: '2019-09-16T08:14:29+00:00'
+updated_at: '2026-08-18T15:57:49+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-18T15:57:49+00:00'
 ---
 
 # Original Description
@@ -77,5 +77,11 @@ Considering that we'll be getting bulletproofs soon, will this mean that we can 
 ## lacksfish | 2019-09-16T08:14:29+00:00
 CSV would mean locking funds to a certain output, with no way of spending them for the locked time period. On the other hand, nLockTime (on Bitcoin) allows for a low sequence number to be set on the input - so that the funds could be re-spent elsewhere before the locktime is reached.
 
+## selsta | 2026-08-18T15:57:49+00:00
+Closing as a Bitcoin-like nLockTime will likely never get added but there is a proposal for relative locks for FCMP++.
+
+https://github.com/monero-project/research-lab/issues/161
+
 # Action History
 - Created by: ChristopherKing42 | 2016-10-05T18:40:01+00:00
+- Closed at: 2026-08-18T15:57:49+00:00

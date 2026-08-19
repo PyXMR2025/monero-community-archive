@@ -6,10 +6,10 @@ assignees: []
 labels:
 - wallet
 created_at: '2024-12-21T13:10:46+00:00'
-updated_at: '2025-01-05T11:37:36+00:00'
+updated_at: '2026-08-17T17:28:03+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-17T17:28:03+00:00'
 ---
 
 # Original Description
@@ -32,3 +32,4 @@ Which method?
 
 # Action History
 - Created by: woodser | 2024-12-21T13:10:46+00:00
+- Closed at: 2026-08-17T17:28:03+00:00
