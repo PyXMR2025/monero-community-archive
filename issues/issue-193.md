@@ -6,7 +6,7 @@ author: johnr365
 assignees: []
 labels: []
 created_at: '2026-08-16T10:11:00+00:00'
-updated_at: '2026-08-16T10:19:26+00:00'
+updated_at: '2026-08-16T21:33:33+00:00'
 type: issue
 status: open
 closed_at: null
@@ -65,5 +65,81 @@ A LOCK_REFRESH-style guard around the whole of `PendingTransactionImpl::commit` 
 
 
 # Discussion History
+## MrCyjaneK | 2026-08-16T19:50:41+00:00
+Hey @johnr365 could you share code that you are using to commit transaction and all (if any) background calls that are happening?
+
+Are you using Isolates?
+
+Can you turn on printStarts and attach them with the log too?
+
+## johnr365 | 2026-08-16T21:33:33+00:00
+Thanks. Tracing the exact call path uncovered a deterministic invalid-free path that explains all eight crashes. The refresh thread visible in the crash reports appears to have been incidental to this failure, so my earlier attribution to commit/refresh concurrency was incorrect.
+
+**Root cause**: `PendingTransactionImpl::commit()` drains `m_pending_tx` via `pop_back()` as it commits each entry (pending_transaction.cpp, around line 153). My code then calls `txid()` *after* `commit()` returns, and `txid()` just iterates whatever is left in `m_pending_tx` - which is now empty. For an empty vector, `vectorToString()` (helpers.cpp) returns the string literal `""`, not a heap pointer. The bundled Dart wrapper's `PendingTransaction_txid()` unconditionally passes that pointer to `MONERO_free()`, which calls `free()` on a non-heap address - exactly the invalid/misaligned-pointer crash I've been chasing for eight runs now.
+
+There is also a second, related bug: on the non-empty path, `vectorToString()` allocates with `new char[]`, but `MONERO_free()` releases it with `free()` - an allocator mismatch, undefined behavior even when it doesn't crash outright.
+
+My commit code (Dart FFI wrapper, called from my payment engine):
+
+```dart
+String commitTransfer(int handle) {
+  final tx = _pendingTxs.remove(handle);
+  if (tx == null) throw WalletRejection('No such prepared transfer.');
+  _quiesceRefresh();
+  try {
+    return _commitQuiesced(tx);
+  } finally {
+    _resumeRefresh();
+  }
+}
+
+String _commitQuiesced(monero.PendingTransaction tx) {
+  final committed = monero.PendingTransaction_commit(tx, filename: '', overwrite: false);
+  final status = monero.PendingTransaction_status(tx);
+  if (!committed || status != 0) throw WalletRejection(...);
+  final txid = monero.PendingTransaction_txid(tx, ''); // <- called AFTER commit, this is the bug
+  if (txid.isEmpty) throw StateError('commit succeeded but returned no txid');
+  return txid; // deliberately no store() here
+}
+```
+
+The `_quiesceRefresh`/`_resumeRefresh` pair (pause + stop + a synchronous `Wallet_refresh` join around commit) was my own mitigation attempt for the refresh-race theory - I'll likely pull it now, since it was never addressing the real cause.
+
+**Background calls**: nothing else concurrent on my side beyond the pause/stop/refresh/start sequence above (serialized, one send in flight at a time via a wallet-wide lock). I'd assumed a live `WalletImpl::refreshThreadFunc`/`doRefresh` iteration (visible in every crash's stack trace, inside `wallet2::pull_blocks` waiting on the daemon) was the culprit - in hindsight that's probably just incidental background activity, not related to this bug.
+
+**Isolates**: yes, one long-lived Dart isolate per open wallet, spawned once at wallet-open time. Every call (build/commit/store/etc.) goes through a persistent command/reply port to that same isolate for the wallet's whole lifetime - not one isolate per call, and nothing native-side is invoked from more than one Dart isolate.
+
+My proposed caller-side workaround: capture `PendingTransaction_txid()` before calling `commit()`. This avoids the empty-vector/string-literal path because the transaction is still present in `m_pending_tx`.
+
+I implemented and tested this. A no-relay preflight (build, read the txid, discard without committing - no funds move) passed first. I then ran two funded stagenet self-payments with the txid recorded write-ahead before the commit call. Both `commit()` calls returned cleanly, without a crash, and returned the same txid captured before their respective commits:
+
+- `1088b2e17ad6be67a2d3babf53131d26a7ab30925fa48eeb16460d499118dcfc` - confirmed on chain at height 2186949
+- `2c30f59464e23dd2a83c833a5395b4b3eaa5a0d88feb601f63fc9917323c8b74` - confirmed on chain at height 2186961
+
+These are the first two clean commits through this stack, immediately following eight crashes with the post-commit txid ordering.
+
+This is only a workaround for the empty-vector failure, not a complete fix: the non-empty `vectorToString()` path still allocates with `new char[]`, while `MONERO_free()` uses `free()`. Both verification txids took that exact path (a real, non-empty result) without crashing, but two clean runs are not proof that the allocator mismatch is safe under all conditions - it is still undefined behavior on monero_c's side, independent of anything I can fix caller-side.
+
+For monero_c: I think `vectorToString()` should return memory compatible with `MONERO_free()` on every path, including the empty result. For example, allocating with `malloc()`/`strdup()` consistently would fix both the empty-string invalid free and the non-empty allocator mismatch. Documenting the required call order alone would not fix those ownership issues.
+
+printStarts: found it, thanks - `monero.printStarts = true;`. Because my wallet runs in a separate Dart isolate, it had to be enabled inside that wallet isolate rather than in the parent. I repeated the funded verification with it enabled in the correct isolate. The relevant sequence was:
+
+```text
+MONERO: MONERO_PendingTransaction_txid
+MONERO: MONERO_free
+MONERO: MONERO_Wallet_pauseRefresh
+MONERO: MONERO_Wallet_stop
+MONERO: MONERO_Wallet_refresh
+MONERO: MONERO_PendingTransaction_txid
+MONERO: MONERO_free
+MONERO: MONERO_PendingTransaction_commit
+MONERO: MONERO_PendingTransaction_status
+MONERO: MONERO_Wallet_startRefresh
+MONERO: MONERO_Wallet_refreshAsync
+```
+
+The full trace is available as `verify-traced-run.log` if useful.
+
+
 # Action History
 - Created by: johnr365 | 2026-08-16T10:11:00+00:00
