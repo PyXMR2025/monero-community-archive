@@ -1,7 +1,7 @@
 ---
 title: 'DNS error: "unknown node or service"'
 source_url: https://github.com/xmrig/xmrig/issues/217
-author: fogoat
+author: sunk818
 assignees:
 - xmrig
 labels:
@@ -34,10 +34,10 @@ Need more details what DNS server used, buildin in router or some externals and 
 Also possible add feature to cache last successful ip address set and reuse it if get DNS errors.
 Thank you.
 
-## fogoat | 2017-11-27T17:28:47+00:00
+## sunk818 | 2017-11-27T17:28:47+00:00
 Yes, I could put a hosts entry. It'd be nice if DNS fails, xmrig tries to renegotiate address again. I have wireless connection to router if it matters. DNS I use is whatever the router provides and not direct to a public DNS like 8.8.8.8 (Google Public DNS).
 
-## fogoat | 2018-03-15T02:28:12+00:00
+## sunk818 | 2018-03-15T02:28:12+00:00
 So any update to this? Will xmrig renegotiate connection again? I prefer your product over xmr-stak and donate 1% 
 
 ## xmrig | 2018-03-15T03:35:34+00:00
@@ -116,5 +116,5 @@ Run as Administrator
 Yes, my ISP is blocking xmrpool. I've changed the DNS sever on the ISP router, now the blocked sites work on my browsers, but xmrig is still giving error.
 
 # Action History
-- Created by: fogoat | 2017-11-23T04:54:44+00:00
+- Created by: sunk818 | 2017-11-23T04:54:44+00:00
 - Closed at: 2021-04-12T15:56:50+00:00

@@ -1,7 +1,7 @@
 ---
 title: Undefined symbols for architecture x86_64
 source_url: https://github.com/xmrig/xmrig/issues/506
-author: fogoat
+author: sunk818
 assignees: []
 labels: []
 created_at: '2018-04-05T21:16:27+00:00'
@@ -150,5 +150,5 @@ Any thoughts?
 Change `CMAKE_CXX_COMPILER` to `g++`
 
 # Action History
-- Created by: fogoat | 2018-04-05T21:16:27+00:00
+- Created by: sunk818 | 2018-04-05T21:16:27+00:00
 - Closed at: 2018-11-05T13:20:50+00:00

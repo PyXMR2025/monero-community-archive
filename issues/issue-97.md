@@ -46,7 +46,7 @@ keepalive not standard extension, but widely supported, prevent to prevent slow 
 ## xmrig | 2017-10-06T16:11:31+00:00
 Fixed
 
-## fogoat | 2017-11-01T14:52:06+00:00
+## sunk818 | 2017-11-01T14:52:06+00:00
 @xmrig - I thought cryptonote-universal-pool added support for KeepAlive last year?
  https://github.com/zone117x/node-cryptonote-pool/pull/100
 
@@ -58,7 +58,7 @@ Hard to know what is official repo though...
 cryptonote-universal-pool looks abandoned.
 Thank you.
 
-## fogoat | 2017-11-02T23:32:15+00:00
+## sunk818 | 2017-11-02T23:32:15+00:00
 So, fancoder is the original cryptonote-universal-pool?
 
 I found another repo that seems to have keep-alive implemented?

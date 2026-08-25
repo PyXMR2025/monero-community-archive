@@ -1,7 +1,7 @@
 ---
 title: 'Windows Server 2016 Core: background, max-cpu-usage not working'
 source_url: https://github.com/xmrig/xmrig/issues/183
-author: fogoat
+author: sunk818
 assignees: []
 labels: []
 created_at: '2017-10-30T07:43:07+00:00'
@@ -31,7 +31,7 @@ Some times colors can cause issues, actually I surprised never has problem on re
 `max-cpu-usage`
 How many cores in your virtual machine? Miner required run at least one thread, not possible to throttle it.
 
-## fogoat | 2017-11-02T16:56:16+00:00
+## sunk818 | 2017-11-02T16:56:16+00:00
 Server core uses an alternative she'll I think. I think it is called logonui.exe ?
 
 If I use CMD.exe I think there is no problem with colors.
@@ -42,5 +42,5 @@ I have one core on VM.
 On one core no way to use 50% CPU.
 
 # Action History
-- Created by: fogoat | 2017-10-30T07:43:07+00:00
+- Created by: sunk818 | 2017-10-30T07:43:07+00:00
 - Closed at: 2017-11-27T00:36:29+00:00
