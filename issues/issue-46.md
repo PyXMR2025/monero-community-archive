@@ -27,7 +27,7 @@ I spoke to @sdrobertw and we think it will be a great idea to have the folks at 
 ## anonimal | 2017-06-09T02:30:59+00:00
 The call was set for today but was then rescheduled for July. Details to come when they arrive.
 
-## fixxxxxxer | 2017-06-17T05:31:50+00:00
+## realfixer | 2017-06-17T05:31:50+00:00
 @anonimal I would like to reschedule your episode for July 20th, 2017. Will this date work for everyone?
 
 ## anonimal | 2017-06-19T16:54:16+00:00
@@ -42,7 +42,7 @@ Yeah I can make that.
 ## anonimal | 2017-06-21T16:45:37+00:00
 @SamsungGalaxyPlayer 18:00 UTC for the meeting? Let's take that to https://github.com/monero-project/meta/issues/76. As for OpenHours, their set time works for me.
 
-## fixxxxxxer | 2017-06-21T17:05:21+00:00
+## realfixer | 2017-06-21T17:05:21+00:00
 @SamsungGalaxyPlayer OpenHours time will always take place on Thursday's at 16:00 UTC. A weekly countdown is available on www.96Boards.org/OpenHours
 
 I hope this time will work for all of you! Many are looking forward to this episode.
@@ -50,7 +50,7 @@ I hope this time will work for all of you! Many are looking forward to this epis
 ## anonimal | 2017-07-15T19:23:19+00:00
 I've received word that we're scheduled for July 27th. Can you confirm, @sdrobertw?
 
-## fixxxxxxer | 2017-07-16T02:00:57+00:00
+## realfixer | 2017-07-16T02:00:57+00:00
 I am making last confirmations with Shay. For now, July 27th looks like a
 go!  :)
 
@@ -87,7 +87,7 @@ JFTR: 96boards had to reschedule. We're now confirmed for August 17th.
 Bluejeans ref#: https://bluejeans.com/943216362/
 When: Thu 17 Aug 2017 9am – 10:30am Pacific Time 
 
-## fixxxxxxer | 2017-08-02T22:08:14+00:00
+## realfixer | 2017-08-02T22:08:14+00:00
 Yes! We look forward to having you all on the show.
 
 http://www.96boards.org/openhours/
