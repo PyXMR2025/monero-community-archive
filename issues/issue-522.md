@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-bug
 created_at: '2025-07-30T00:38:48+00:00'
-updated_at: '2025-07-30T00:38:48+00:00'
+updated_at: '2026-08-24T23:01:31+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-24T23:01:31+00:00'
 ---
 
 # Original Description
@@ -87,3 +87,4 @@ Aborted (core dumped)
 # Discussion History
 # Action History
 - Created by: ACK-J | 2025-07-30T00:38:48+00:00
+- Closed at: 2026-08-24T23:01:31+00:00
