@@ -217,17 +217,6 @@ I think binding to the address spend pubkey <code>K<sub>s</sub><sup>j</sup></cod
 Both are DAGs. Also, the receiver *still* doesn't need a subaddress lookahead table to recompute amount commitments since they can unwrap <code>K<sub>s</sub><sup>j</sup></code> from <code>K<sub>o</sub></code> using the one-time sender extensions <code>k<sub>o</sub><sup>g,t</sup></code>, which are functions of the public amount commitment value (already available) and the contextualized sender-receiver secret <code>s<sub>sr</sub><sup>ctx</sup></code>, a function of ECDH.
 
 
-## Kreyren | 2025-01-25T08:24:42+00:00
-Referencing Xanadu's blog post released on 22nd Jan 2025 about their implementation of fault-tolerant, networked, scaleable quantum computing at room temperature that if i am understanding the post correctly could be used to efficiently build a quantum computer that is resourceful enough to threaten the monero's cryptography.
-
-* https://xanadu.ai/blog/lighting-up-the-quantum-computing-horizon-with-aurora
-
-In addition to the claims by IBM Senior Vice President about the timeline for quantum computers which i consider credible and strategy of harvest now decrypt later and from my following of cybersecurity and recommendation from experts i understood that such event is recognized as a breaking point for non-PQ cryptography for me as a system administrator that manages open-source code as infrastructure that provides a public monero node to take it offline.
-
-* https://github.com/Arcanyx-org/NiXium/commit/8ebb723fee3418164abf26752df44dad5c83e630
-
-I am sharing this to spread awareness about it and in case i am wrong/over-reacting to change the approach to this issue.
-
 ## SyntheticBird45 | 2025-01-25T13:36:23+00:00
 > Referencing Xanadu's blog post released on 22nd Jan 2025 about their implementation of fault-tolerant, networked, scaleable quantum computing at room temperature that if i am understanding the post correctly could be used to efficiently build a quantum computer that is resourceful enough to threaten the monero's cryptography.
 > 
@@ -252,65 +241,6 @@ Hopefully someone will rectify me if I missed something
 ## kayabaNerve | 2025-01-25T20:58:28+00:00
 @Kreyren Your claim such computers are believed to be available isn't a widely-held, nor well-founded, belief. They're a likelihood over the next 5-10 years.
 
-## Kreyren | 2025-01-27T16:25:39+00:00
-> @Kreyren Your claim such computers are believed to be available isn't a widely-held, nor well-founded, belief. They're a likelihood over the next 5-10 years. -- @kayabaNerve (https://github.com/monero-project/research-lab/issues/131#issuecomment-2614097709)
-
-I don't think that your date prediction is accurate and i do believe it to be an obsolete observation so first lets establish how many qbits are needed to break modern encryption encryption from the quote i got from cybersecurity and personal research:
-* RSA-2048 = 4000-5000 qbits (Shor's algorithm)
-* RSA-3072 = 6000-7000 qbits (Shor's algorithm)
-* ECC-384 = 3000-4000 qbits (Shor's algorithm)
-* AES-256 = Grover's algorithm could reduce the effective key lenght to 128 bit to then require around 2000 qbits
-
-Using reference from the following paper to establish the needed amount of qubits:
-
-* [Shor's Factoring Algorithm and Modern Cryptography. An Illustration of the Capabilities Inherent in Quantum Computers](https://arxiv.org/abs/quant-ph/0411184)
-* https://spectrum.ieee.org/encryptionbusting-quantum-computer-practices-factoring-in-scalable-fiveatom-experiment
-
-Where the understood main problem with QPUs is error correction, cooling and paralellism where the xanadu blog post above claims to have developed chips that are 12 qbits that are fault tolerant, operates at room temperature and is scaleable and nertowrked. That to me seem like a major breakthrough that could enable construction such quantum computer at reasonable economy to break the encryption.
-
-Alternatively IBM claimed to be on the track to release a fault tolerant quantum computer that has over 4000 qbits:
-
-* https://theafricalogistics.com/ibm-to-unveil-largest-quantum-computer-yet-in-2025-revolutionizing-technology-and-industry/
-* https://spectrum.ieee.org/ibm-quantum-computer
-
-Or atom computing developing a quantum computer that has 1180 qbits in 2023:
-
-* https://www.newscientist.com/article/2399246-record-breaking-quantum-computer-has-more-than-1000-qubits/
-
-To me that seems like well founded risk that should be managed as if the prediction above is accurate that could mean that we can expect efficient enough quantum computer this year especially considering that they are getting the funding of major governments for it and that the US/NATO deems it a threat to it's national security:
-
-* https://www.japan.go.jp/kizuna/2024/03/100000_qubit_quantum_computer.html
-* https://www.quantum.gov
-
-Now i think it's important to acknowledge that there is a lot of contradicting data due to people who seem like bad actors claiming that the threat of quantum computers in relation to encryption is far away etc.. I am not saying that you are bad actor, but rather pointing out that it's important to talk to experts on the subject and to have up to date information such as
-
-* https://www.forbes.com/sites/digital-assets/2024/12/16/from-qubits-to-cryptos-what-quantum-means-for-ai-and-bitcoin/
-
-that claims 13 Million qubits to break BTC in single day or even 295 Million qubits for AES-256:
-
-* https://freemindtronic.com/quantum-computing-encryption-threats-risks/
-
-Which do not seem credible to me considering the references above.
-
-Additionally even if we ignore the encryption monero does not manage "Harvest now, decrypt later" ("HNDL") a strategy that aims to store the encrypted data to be then decrypted at a later date. Which is what most security-oriented projects are trying their best to manage such as OpenSSH:
-
-* https://www.zdnet.com/article/openssh-now-defaults-to-protecting-against-quantum-computer-attacks/
-* https://portswigger.net/daily-swig/openssh-9-0-bakes-in-post-quantum-cryptography-to-future-proof-against-attacks
-
-Or messengers such as SimpleX which handles this via implementing NTRU Prime.
-
-So i would argue that at very least Monero should be mitigating HNDL.
-
----
-
-Please feel free to disprove anything i've said it would help to have more credible and objective information on the subject to decide whether to take my monero node online where the main motivation for me to take it down being that it's used by a lot of people (approx. 50? 80?) and i don't want to expose them to what seems to me as privacy and security nightmare.
-
-Also thanks to SyntheticBird45 for the update, i've found following on the subject:
-
-* https://www.reddit.com/r/Monero/comments/1hj3znq/comment/m37dm81
-* https://github.com/jeffro256/carrot/blob/master/carrot.md
-* https://ccs.getmonero.org/proposals/cypherstack-carrot-spec-review.html
-
 ## SyntheticBird45 | 2025-01-27T17:03:14+00:00
 @Kreyren I think you are missing something crucially important in your depiction of the current landscape. 
 
@@ -325,13 +255,6 @@ So no, there are no quantum computers available right now that is capable of bre
 Beyond the confusion of logical and physical, your belief this is a likely risk now means everything is over. HTTPS, effectively every chat app, authenticated build pipelines... It isn't just about Monero.
 
 I'd ask we drop this topic from here. It doesn't contribute to actionable goals regarding having Monero pass the transition.
-
-## Kreyren | 2025-01-27T18:22:54+00:00
-If i may, i tried to discuss PQ with the monero community (on matrix and IRC and ideally i would like to have it in a way that can be referenced in my infrastructure to have it constructive), but it seems that none has experience in this area and it's very difficult to get credible information. Could you recommend me a different place to ask so that i can figure out a threat model?
-
-Or ideally elaborate on the HNDL Management as well.
-
-Feel free to ignore this reply if it's not constructive here.
 
 ## Corneliux-lcx | 2025-02-12T17:15:19+00:00
 @SyntheticBird45 i don't think you or anyone else is in a position to say what is or isn't possible within the next 2 years.

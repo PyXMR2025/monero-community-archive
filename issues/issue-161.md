@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2026-07-15T16:57:50+00:00'
-updated_at: '2026-08-19T17:45:55+00:00'
+updated_at: '2026-08-25T19:09:13+00:00'
 type: issue
 status: open
 closed_at: null
@@ -422,6 +422,89 @@ But if they were to be implemented in FCMP in a ZK manner, then I agree, this ap
 @CjS77 it may be a useful exercise to draft a complete protocol for Grease utilizing the basic primitive currently being proposed in this original description. The code is here: https://github.com/seraphis-migration/monero/pull/445
 
 I think if you were to demonstrate interest in building on top of that primitive, it could potentially strengthen the case for including that primitive in the next fork (and strengthen your request for funding).
+
+## CjS77 | 2026-08-24T14:37:42+00:00
+@j-berman, I did actually spend some time looking into what Grease would need to change to build on top of time locks. My takeaway was -- unsurprisingly -- that they're different enough that beyond some message-passing infra, it would be better to build completely separate protocols. 
+
+Your suggestion is a good one, and I'll certainly consider it, but I was honestly loathe to commit much time to this idea until it got merged.  Yes, I get the chicken-egg nature of this. I guess I'd like to take the temperature on the level of support before committing to anything.
+
+As an aside, I did notice one drawback the time lock approach has vs Grease: You're obliged to record and keep *every* punish tx for the entire lifetime of the channel, so state grows O(n) for n channel updates. Not an issue for moderately active channels (n < 1000), but for some of the applications that I would love to see for channels that involve many thousands of updates  (fine-grained streaming content for example), then Grease might still have the upper hand (There may be ways around this, I haven't given it tons of thought, but it would require something like the VCOF from AuxChannel and Grease v1).
+
+
+
+## j-berman | 2026-08-24T18:34:15+00:00
+The significant pushback against Grease -- at least from MRL -- stemmed from the protocol requiring trust beyond Monero's trust assumptions (either in a KES or an external blockchain). I don't speak for everyone, but I have a hard time seeing significant resistance to a relative timelock if there is a complete payment channel protocol and development path to utilizing the feature established, that does not rely on trust beyond Monero's trust assumptions. Perhaps you could attend next MRL meeting and gauge the interest there.
+
+> You're obliged to record and keep every punish tx for the entire lifetime of the channel, so state grows O(n) for n channel updates
+
+IIRC Bitcoin-based payment channels presently have a similar requirement, and the proposed Eltoo upgrade would remove that requirement. Haven't looked into it much, but perhaps something similar to Eltoo could be done as well? This is also why it would be helpful to have focused R&D on payment channels prior to releasing an upgrade.
+
+## UkoeHB | 2026-08-25T00:00:04+00:00
+If we could make it so `T_N` is derived in a chain from all `T_(< N)`, and always close to the same close address, then the 'newest' punish tx would be effective for all historical closes.
+
+## UkoeHB | 2026-08-25T01:02:58+00:00
+Looking at the **Close** txs, I think you'd need a two round setup. Pre-sig A -> pre-sig B -> final sig A reveals `t_a`.
+
+Looking at the math for a multisig key `K` (Schnorr adaptor sig)
+```
+K = (x_1 + x_2) G
+A = a G  (nonce)
+Y = y G  (adaptor nonce)
+c = H(m, K, A + Y)
+r_1 = a - c x_1
+presig = (A + Y, r_1)
+presig_ver = r_1 * G + Y ?= (A + Y) - c K_1
+                  = (a - c x_1) G + Y
+                  = aG - cx_1G + Y
+                  = A + Y - c K_1
+
+r_2 = y - c x_2
+r = r_1 + r_2 = a + y - c(x_1 + x_2)
+```
+This is with a two round setup. The problem is `r_2` is fully blinded because of the presence of the `c x_2` term. Instead nonce `A` needs to be `A_1 + A_2` (where `A_n = A_n,1 + H(...) A_n,2` with a binonce setup), then they produce `r_1 = a_1 - c_x1` and `r_2 = a_2 - c_x2`, then the final signature is `r_1 + r_2 + y`.
+
+## vctt94 | 2026-08-25T10:54:00+00:00
+I tested this exact two-round construction against the FCMP++ FROST SAL implementation, and it works.
+
+Using the same notation:
+
+```
+K = (x_1 + x_2) G
+
+A = A_1 + A_2
+Y = y G
+
+c = H(m, K, A + Y)
+
+r_1 = a_1 - c x_1
+r_2 = a_2 - c x_2
+
+r' = r_1 + r_2
+r  = r' + y
+```
+
+So the adaptor point Y is included in the aggregate nonce before computing the challenge, while the adaptor scalar y is only applied after aggregating the two partial responses.
+
+Therefore:
+
+```
+y = r - r'
+```
+
+In the FCMP++ FROST SAL, the equivalent construction is to add the adaptor point Y = tT to the aggregate R_O commitment, let both participants produce normal FROST shares, and then complete only the aggregate s_y.
+
+We get:
+
+pre-SAL residuals = (0, Y, 0, 0)
+
+s_y' = aggregate FROST response
+s_y  = s_y' + t
+
+The completed 384-byte SAL is accepted by the unchanged FCMP++ verifier, and:
+
+t = s_y - s_y'
+
+Demo: https://github.com/vctt94/monero/commit/6c5f8ce97
 
 # Action History
 - Created by: tevador | 2026-07-15T16:57:50+00:00
