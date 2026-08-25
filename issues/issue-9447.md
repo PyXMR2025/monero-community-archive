@@ -7,10 +7,10 @@ labels:
 - low priority
 - reproduction needed
 created_at: '2024-08-22T07:02:28+00:00'
-updated_at: '2026-02-18T21:51:06+00:00'
+updated_at: '2026-08-23T20:17:31+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-08-23T20:17:31+00:00'
 ---
 
 # Original Description
@@ -74,3 +74,4 @@ $ curl http://localhost:18083/json_rpc \
 # Discussion History
 # Action History
 - Created by: yagop | 2024-08-22T07:02:28+00:00
+- Closed at: 2026-08-23T20:17:31+00:00
