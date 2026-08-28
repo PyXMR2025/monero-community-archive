@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-08-11T18:11:52+00:00'
+updated_at: '2026-08-25T16:22:06+00:00'
 type: issue
 status: open
 closed_at: null
@@ -54,7 +54,7 @@ closed_at: null
 | AJ | tx pool: don't drop connections relaying key images spent in chain #204 | cryptonote_core | | | ❌ |
 | AK | simplewallet: use passed decrypted payment ID from wallet2 for notifications | simplewallet, wallet | https://github.com/monero-project/monero/pull/10189 | | ✅️ |
 | AL | common: add std equivalent of hash_combine() | common | https://github.com/monero-project/monero/pull/10215 | | ✅️ |
-| AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827, https://github.com/monero-project/monero/pull/10963 | L | ❌ |
+| AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827, https://github.com/monero-project/monero/pull/10963 | L | ✅️ |
 | AN | crypto: add Ed25519->X25519 conversion functions | crypto | https://github.com/monero-project/monero/pull/9828 | L (partially) | ✅️ |
 | AO | cryptonote_basic: add overload for `get_block_longhash()` | cryptonote_basic | https://github.com/monero-project/monero/pull/10039 | | ✅️ |
 | AP | less noisy perf logs #100 | wallet2 | | | ❌ |
