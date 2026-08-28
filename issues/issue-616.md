@@ -6,7 +6,7 @@ assignees: []
 labels:
 - C-tracking-issue
 created_at: '2026-05-18T10:05:42+00:00'
-updated_at: '2026-07-21T10:35:31+00:00'
+updated_at: '2026-08-25T13:21:17+00:00'
 type: issue
 status: open
 closed_at: null
@@ -24,7 +24,7 @@ This is a tracking issue for turning cuprated into a embeddable library with err
 
 ### Steps
 - [x] #592 
-- [ ] Error propagation and panic removal
+- [x] Error propagation and panic removal
     - #585 
     - #586 
     - #590 
