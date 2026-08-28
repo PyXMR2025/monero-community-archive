@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-08-12T14:20:59+00:00'
+updated_at: '2026-08-28T11:26:56+00:00'
 type: issue
 status: open
 closed_at: null
@@ -21,16 +21,13 @@ Time machine: June 20 2026
 |----------|---------|------|
 | gcc      | 15.2.0  |   |
 | clang | 22.1.8 |  |
-| glibc    | 2.27    | (#9207) |
 | binutils | 2.44    | |
 | cmake    | 3.31.8  | |
 | rust | 1.93.0 |  |
 
 See also: #9684.
 
-### Regressions
-
-- Python got re-introduced into the build environment via libxml (Guix commit: 3f1e7cc449ba443ea0c874be3c77b0fa32cbe660)
+StageX will replace Guix in #10223 
 
 ## Depends
 
@@ -44,7 +41,7 @@ See also: #9684.
 | [libsodium](https://github.com/jedisct1/libsodium)                | 1.0.18         | 1.0.22   | auto   | Daemon    | No                                                           |       Yes |         |
 | [libusb](https://github.com/libusb/libusb)                        | 1.0.30         | -   | auto   | Wallet    | No                                                           |        No |         |
 | [ncurses](https://ftp.gnu.org/gnu/ncurses/)                       | 6.1            | 6.6      | auto   | Daemon    | [Yes](https://repology.org/project/ncurses/cves?version=6.1) |        No |         |     
-| [openssl](https://github.com/openssl/openssl)                     | 3.5.7 (LTS)    | -    | perl   | Daemon    | No                                                           |    Maybe? |          |
+| [openssl](https://github.com/openssl/openssl)                     | 3.5.7 (LTS)    | 3.5.8    | perl   | Daemon    | No                                                           |    Maybe? |  #11186        |
 | [protobuf](https://github.com/protocolbuffers/protobuf)           | 21.12          | 35.1     | auto   | Wallet    | No                                                           |        No | (#9478) |
 | [readline](https://ftp.gnu.org/gnu/readline/)                     | 8.0            | 8.3      | auto   | Daemon    | No                                                           |        No |         |
 | [unbound](https://github.com/NLnetLabs/unbound)                   | 1.25.2         | 1.26.0   | auto   | Daemon    | No                                                           |    Maybe? |         |
@@ -65,7 +62,9 @@ See also: #10222
 | [randomx](https://github.com/tevador/RandomX)       | 1.2.2       | 2.0      |       |
 | [supercop](https://github.com/monero-project/supercop/tree/monero)      | Aug 26 2020 | ?      |       |
 
+## Cargo
 
+See #11111 
 
 # Discussion History
 # Action History
