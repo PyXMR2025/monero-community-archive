@@ -183,9 +183,6 @@ closed_at: '2025-06-16T19:14:43+00:00'
 os: windows11 Enterprise
 
 # Discussion History
-## spetterman66 | 2024-12-27T16:58:05+00:00
-disable numa
-
 ## xmrig | 2025-06-16T19:14:43+00:00
 This error means the physical cores don't have direct access to local DDR4 memory because memory sticks are installed in the wrong slots. There should be at least one stick per channel, not two. Like DIMM_A2, DIMM_B2, ...
 
