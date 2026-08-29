@@ -136,7 +136,7 @@ If I'm understanding him correctly, judging by the post he quoted in his reply, 
 ## PPPDUD | 2026-04-08T22:37:10+00:00
 For those of you who don't know the current Monero prices, 867 XMR in USD is $285,797 as of writing.
 
-## pompompur1nn | 2026-04-09T00:45:42+00:00
+## pompompur-in | 2026-04-09T00:45:42+00:00
 if he allegedly stole the 2700+ XMR that was stolen in 2023, he would have stolen over a million US dollars of XMR as of writing this comment
 
 ## phonegobrr | 2026-04-09T06:41:58+00:00
@@ -186,7 +186,7 @@ Also, I know this makes me seem obnoxious, but can we please stop using the R-wo
 
 Edit: Also, your screenshot depicts Claude performing arithmetic on certain cells of an image of a spreadsheet using only machine learning techniques, a task that most humans would probably have trouble with, let alone LLMs. Why should I trust your output? Perhaps you should write a two-column proof to show that I'm wrong in saying that Claude was incorrect.
 
-## pompompur1nn | 2026-04-09T23:02:51+00:00
+## pompompur-in | 2026-04-09T23:02:51+00:00
 multisig is still experimental, even in 2026. i know this as ive personally pentested moneros implementation of it. please shut the fuck up and stop being arrogant thx
 
 ## phonegobrr | 2026-04-10T11:49:09+00:00
@@ -445,7 +445,7 @@ it's also possible that they were spent on blow n hookers. Open up your imaginat
 
 Fuck yes
 
-## pompompur1nn | 2026-04-10T19:50:06+00:00
+## pompompur-in | 2026-04-10T19:50:06+00:00
 hey dweeb, heres a exact quote from a developer on the monero implentation of multisig in a (undisclosed) hackerone report (this probably is bad but its not particularly sensitive).
 "multisig is an experimental feature."
 get a life bud
@@ -461,7 +461,7 @@ Because you have a room temperature IQ I'll just repeat what I said earlier: Are
 
 Also `dweeb` lol fucking boomer
 
-## pompompur1nn | 2026-04-10T20:33:47+00:00
+## pompompur-in | 2026-04-10T20:33:47+00:00
 <img width="1105" height="337" alt="Image" src="https://github.com/user-attachments/assets/5b4673ae-9783-487b-8273-85fab19d0c48" /> you got no clue what ur talking about bro
 
 ## phonegobrr | 2026-04-10T20:37:35+00:00
@@ -531,7 +531,7 @@ In my experience, If an alt starts saying boomer and posting memes its best to n
 
 Eh, it's fine. They're not responding to my question, so I assume that they don't really have a solid argument against me anyway.
 
-## pompompur1nn | 2026-04-12T01:13:15+00:00
+## pompompur-in | 2026-04-12T01:13:15+00:00
 nope @PPPDUD im just asian and all asians have to love a sanrio character
 
 ## PPPDUD | 2026-04-12T13:11:53+00:00

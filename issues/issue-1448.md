@@ -1,0 +1,47 @@
+---
+title: Monero Research Lab Meeting - Wed 26 August 2026, 17:00 UTC
+source_url: https://github.com/monero-project/meta/issues/1448
+author: Rucknium
+assignees: []
+labels: []
+created_at: '2026-08-26T13:40:02+00:00'
+updated_at: '2026-08-26T17:56:08+00:00'
+type: issue
+status: open
+closed_at: null
+---
+
+# Original Description
+Location: [Libera.chat, #monero-research-lab](https://libera.chat/) | [Matrix](https://matrix.to/#/#monero-research-lab:monero.social?via=matrix.org&via=monero.social)
+
+Live log: https://libera.monerologs.net/monero-research-lab
+
+Time: 17:00 UTC [Check in your timezone](https://www.timeanddate.com/worldclock/meeting.html?p1=1440)
+
+Main discussion topics:
+
+1. Greetings
+
+2. Updates. What is everyone working on?
+
+3. FCMP++ to-do list status. [Programming tasks](https://github.com/seraphis-migration/monero/issues/53). [Reviews and audits](https://cryptpad.fr/sheet/#/2/sheet/view/yPVIUywwA9-deE9VF6GYm9bXbPdCerdST3UDEEfBxcM/embed/). [FCMP++ Integration Audit Overview](https://github.com/seraphis-migration/monero/issues/294). [Network upgrade schedule Gantt chart](https://html-preview.github.io/?url=https://github.com/jeffro256/fcmp-carrot-plan/blob/master/fcmp%2B%2B-carrot.html).
+
+4. [Relative locks with FCMP++](https://github.com/monero-project/research-lab/issues/161).
+
+5. [FCMP beta stressnet](https://github.com/seraphis-migration/monero/releases/). [Version 3 launch checklist](https://github.com/seraphis-migration/monero/pull/415).
+
+6. Validating key images. https://github.com/monero-project/monero/pull/11155 and https://github.com/monero-project/monero/pull/11152
+
+7. Any other business
+
+8. Please comment on GitHub in advance of the meeting if you would like to propose an agenda item.
+
+Logs will be posted here after the meeting.
+
+Meeting chairperson: Rucknium
+
+Previous meeting agenda/logs: #1443 
+
+# Discussion History
+# Action History
+- Created by: Rucknium | 2026-08-26T13:40:02+00:00
