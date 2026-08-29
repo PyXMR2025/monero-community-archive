@@ -5,7 +5,7 @@ author: tevador
 assignees: []
 labels: []
 created_at: '2026-07-15T16:57:50+00:00'
-updated_at: '2026-08-25T19:09:13+00:00'
+updated_at: '2026-08-26T17:24:58+00:00'
 type: issue
 status: open
 closed_at: null
@@ -461,7 +461,7 @@ presig_ver = r_1 * G + Y ?= (A + Y) - c K_1
 r_2 = y - c x_2
 r = r_1 + r_2 = a + y - c(x_1 + x_2)
 ```
-This is with a two round setup. The problem is `r_2` is fully blinded because of the presence of the `c x_2` term. Instead nonce `A` needs to be `A_1 + A_2` (where `A_n = A_n,1 + H(...) A_n,2` with a binonce setup), then they produce `r_1 = a_1 - c_x1` and `r_2 = a_2 - c_x2`, then the final signature is `r_1 + r_2 + y`.
+This is with a two round setup. The problem is `r_2` is fully blinded because of the presence of the `c x_2` term. Instead nonce `A` needs to be `A_1 + A_2` (where `A_n = A_n,1 + H(...) A_n,2` with a binonce setup and `Y` multiplied by `H(...)` to avoid key cancelation), then they produce `r_1 = a_1 - c_x1` and `r_2 = a_2 - c_x2`, then the final signature is `r_1 + r_2 + y`.
 
 ## vctt94 | 2026-08-25T10:54:00+00:00
 I tested this exact two-round construction against the FCMP++ FROST SAL implementation, and it works.
