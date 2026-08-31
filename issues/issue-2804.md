@@ -5,7 +5,7 @@ author: mr-tron
 assignees: []
 labels: []
 created_at: '2020-03-09T17:55:09+00:00'
-updated_at: '2020-04-13T17:55:10+00:00'
+updated_at: '2026-08-31T10:40:50+00:00'
 type: issue
 status: open
 closed_at: null
@@ -21,6 +21,9 @@ As far as I know, this feature is not supported yet. Put differently, it will sh
 
 ## rating89us | 2020-04-13T17:55:10+00:00
 @cslashm
+
+## plowsof | 2026-08-31T10:40:50+00:00
+i don't know if this just works or requires some plumbing : https://github.com/monero-project/monero/pull/10983
 
 # Action History
 - Created by: mr-tron | 2020-03-09T17:55:09+00:00
