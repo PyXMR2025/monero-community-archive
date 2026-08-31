@@ -2,11 +2,12 @@
 title: A better way to tell the txpool about spent key images
 source_url: https://github.com/Cuprate/cuprate/issues/695
 author: Boog900
-assignees: []
+assignees:
+- Boog900
 labels:
 - C-proposal
 created_at: '2026-08-26T21:55:32+00:00'
-updated_at: '2026-08-26T21:56:09+00:00'
+updated_at: '2026-08-30T17:35:34+00:00'
 type: issue
 status: open
 closed_at: null
