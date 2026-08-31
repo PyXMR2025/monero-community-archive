@@ -6,7 +6,7 @@ assignees: []
 labels:
 - build system
 created_at: '2025-01-02T19:11:37+00:00'
-updated_at: '2026-08-28T11:26:56+00:00'
+updated_at: '2026-08-29T19:24:03+00:00'
 type: issue
 status: open
 closed_at: null
@@ -40,10 +40,10 @@ StageX will replace Guix in #10223
 | [hidapi](https://github.com/libusb/hidapi)                        | 0.15.0         | -        | cmake  | Wallet    | No                                                           |        No |         |
 | [libsodium](https://github.com/jedisct1/libsodium)                | 1.0.18         | 1.0.22   | auto   | Daemon    | No                                                           |       Yes |         |
 | [libusb](https://github.com/libusb/libusb)                        | 1.0.30         | -   | auto   | Wallet    | No                                                           |        No |         |
-| [ncurses](https://ftp.gnu.org/gnu/ncurses/)                       | 6.1            | 6.6      | auto   | Daemon    | [Yes](https://repology.org/project/ncurses/cves?version=6.1) |        No |         |     
+| [ncurses](https://ftp.gnu.org/gnu/ncurses/)                       | 6.1            | 6.6      | auto   | Daemon    | [Yes](https://repology.org/project/ncurses/cves?version=6.1) |        No | #11208        |     
 | [openssl](https://github.com/openssl/openssl)                     | 3.5.7 (LTS)    | 3.5.8    | perl   | Daemon    | No                                                           |    Maybe? |  #11186        |
 | [protobuf](https://github.com/protocolbuffers/protobuf)           | 21.12          | 35.1     | auto   | Wallet    | No                                                           |        No | (#9478) |
-| [readline](https://ftp.gnu.org/gnu/readline/)                     | 8.0            | 8.3      | auto   | Daemon    | No                                                           |        No |         |
+| [readline](https://ftp.gnu.org/gnu/readline/)                     | 8.0            | 8.3      | auto   | Daemon    | No                                                           |        No | #11208        |
 | [unbound](https://github.com/NLnetLabs/unbound)                   | 1.25.2         | 1.26.0   | auto   | Daemon    | No                                                           |    Maybe? |         |
 | [zeromq](https://github.com/zeromq/libzmq)                        | 4.3.5          | -        | auto   | Daemon    | No                                                           |        No |         |
 
