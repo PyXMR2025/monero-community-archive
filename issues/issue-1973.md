@@ -6,7 +6,7 @@ assignees: []
 labels:
 - question
 created_at: '2020-12-09T15:59:06+00:00'
-updated_at: '2025-05-05T14:03:56+00:00'
+updated_at: '2026-09-01T12:13:53+00:00'
 type: issue
 status: closed
 closed_at: '2021-04-12T14:32:48+00:00'
@@ -680,6 +680,9 @@ On Mar 10 2025, at 2:06 am, SChernykh ***@***.***> wrote:
 ## satyadvi | 2025-05-05T14:03:55+00:00
 msr mod is not getting unabled , i did a bios update and not its not just working.  moreover i'm using OMEN GAMING LAPTOP , can't even access proper bios , what to do??
 
+
+## kelno | 2026-09-01T12:13:53+00:00
+Disabling SVM in bios did fix it for me.
 
 # Action History
 - Created by: rubic0nexe | 2020-12-09T15:59:06+00:00
