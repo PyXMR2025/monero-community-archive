@@ -6,10 +6,10 @@ author: star7js
 assignees: []
 labels: []
 created_at: '2026-07-07T09:09:46+00:00'
-updated_at: '2026-08-16T10:14:34+00:00'
+updated_at: '2026-09-01T04:30:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-01T04:30:04+00:00'
 ---
 
 # Original Description
@@ -82,3 +82,4 @@ The `static_cast<Monero::NetworkType>(nettype)` fix in the report is right. @sta
 
 # Action History
 - Created by: star7js | 2026-07-07T09:09:46+00:00
+- Closed at: 2026-09-01T04:30:04+00:00
