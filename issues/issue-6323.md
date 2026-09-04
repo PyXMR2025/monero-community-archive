@@ -5,7 +5,7 @@ author: godfuture
 assignees: []
 labels: []
 created_at: '2020-02-07T15:15:17+00:00'
-updated_at: '2022-03-16T15:50:52+00:00'
+updated_at: '2026-09-01T21:17:25+00:00'
 type: issue
 status: closed
 closed_at: '2022-03-16T15:50:52+00:00'
@@ -44,6 +44,11 @@ Instead of adding a new random account, I would like to specify the key myself, 
 ## moneromooo-monero | 2020-05-13T14:09:14+00:00
 You can do that in the CLI by specifying the account/subaddress indices. If you mean adding *arbitrary* keys, then that's not how monero works, so no to that. Subaddresses (including accounts) are deterministic, so if you generate some in two wallet files that have the same keys, you'll get the same subaddresses in both. Not sure if that's what you were asking.
 
+
+## godfuture | 2026-09-01T21:17:25+00:00
+> Subaddresses (including accounts) are deterministic, so if you generate some in two wallet files that have the same keys, you'll get the same subaddresses in both. Not sure if that's what you were asking.
+
+Yes, this is what I meant. Lets suppose you are using the same wallet on desktop but also in android, but you add subaddresses only on desktop, then my experience is that these new subaddresses do not show up in android wallet.
 
 # Action History
 - Created by: godfuture | 2020-02-07T15:15:17+00:00
