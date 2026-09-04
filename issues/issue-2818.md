@@ -1,7 +1,7 @@
 ---
 title: Does it support Apple Silicon
 source_url: https://github.com/xmrig/xmrig/issues/2818
-author: verbose117
+author: brillaintlcd
 assignees: []
 labels: []
 created_at: '2021-12-17T14:53:03+00:00'
@@ -21,5 +21,5 @@ Yes the [macos-arm64 release](https://github.com/xmrig/xmrig/releases/download/v
 Compiling your own is also supported.
 
 # Action History
-- Created by: verbose117 | 2021-12-17T14:53:03+00:00
+- Created by: brillaintlcd | 2021-12-17T14:53:03+00:00
 - Closed at: 2021-12-18T09:22:32+00:00
