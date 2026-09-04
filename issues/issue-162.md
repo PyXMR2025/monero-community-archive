@@ -6,7 +6,7 @@ author: Bpivat
 assignees: []
 labels: []
 created_at: '2026-08-24T18:16:21+00:00'
-updated_at: '2026-08-31T17:38:18+00:00'
+updated_at: '2026-09-02T10:16:07+00:00'
 type: issue
 status: open
 closed_at: null
@@ -91,6 +91,9 @@ I maintain https://xmrnetscan.redteam.cash/ , which has a (mostly) uninterrupted
 Both my number and ProbeLab's number only count the reachable nodes, i.e. nodes that have open ports. Unreachable nodes may outnumber reachable nodes by 5-to-1 or 10-to-1. You can get a rough idea by checking the inbound connection count of a reachable node that you operate. Input `status` in the `monerod` console. I usually see inbound counts above one hundred. Nodes' default number of outbound connections is 12. So subtract 12 from the number of your inbound connections (you subtract the average number of reachable nodes' outbound connections connecting to your node), then divide that number by 12. That's approximately how many unreachable nodes are on the network, assuming all nodes use the default 12 outbound connections.
 
 AFAIK, the incentives to running a node haven't been modeled rigorously. It's hard because there are too many unknowns and unknowables. Usually, you would approach research like this by starting with a [willingness to pay](https://en.wikipedia.org/wiki/Willingness_to_pay) survey of the market participants. Getting a representative sample of Monero users to answer a survey like that is going to be very difficult. If you want to see some pretty rigorous modeling on the adversary side, see my ["Subnet Deduplication for Monero Node Peer Selection"](https://github.com/Rucknium/misc-research/blob/main/Monero-Peer-Subnet-Deduplication/pdf/monero-peer-subnet-deduplication.pdf), especially Section 4. My suggestion in the paper was implemented in the node code: https://github.com/monero-project/monero/pull/9939
+
+## Bpivat | 2026-09-02T10:16:07+00:00
+@Rucknium noted, and fair enough. Disclosure: I write these posts with the help of an AI assistant. I'm a French speaker, so I lean on it to get my English clean and to help structure the argument and track down sources. But the questions, the digging (the ProbeLab crawl, the meta-issues, the arXiv/TRM refs) and the conclusions are mine — the LLM is a tool, not the author. I'll flag it up front on anything I post here going forward. Thanks for the heads-up, and for keeping the signal-to-noise high on this repo.
 
 # Action History
 - Created by: Bpivat | 2026-08-24T18:16:21+00:00
