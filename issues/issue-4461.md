@@ -5,7 +5,7 @@ author: godfuture
 assignees: []
 labels: []
 created_at: '2025-06-17T10:58:55+00:00'
-updated_at: '2025-08-26T01:05:47+00:00'
+updated_at: '2026-09-01T21:25:29+00:00'
 type: issue
 status: open
 closed_at: null
@@ -27,6 +27,9 @@ Could you explain in detail? What is your tool?
 If you click the amount of XMR in a transaction, it is copied to clipboard. Pasting the number into other tools of your choice, it shows that decimal separator in number format is not according your current locale setting, but always a dot which is not compatible with my calculator app in win10.
 
 And it seems other areas are also not user locale aware.
+
+## godfuture | 2026-09-01T21:24:43+00:00
+I just noticed, the csv export is also not aware of locale. The amount column has all values printed with dot as decimal places separator. My client computer installation has German locale in which the decimal places separator is comma.
 
 # Action History
 - Created by: godfuture | 2025-06-17T10:58:55+00:00

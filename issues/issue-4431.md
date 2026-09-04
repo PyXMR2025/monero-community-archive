@@ -5,7 +5,7 @@ author: Tzadiko
 assignees: []
 labels: []
 created_at: '2025-04-04T15:55:49+00:00'
-updated_at: '2025-07-04T17:02:39+00:00'
+updated_at: '2026-09-02T01:52:41+00:00'
 type: issue
 status: open
 closed_at: null
@@ -50,6 +50,9 @@ Also, should Address 1 and Address 2 (assuming they're different), just be liste
 
 ## hiddener | 2025-07-04T16:49:09+00:00
 I mean 10 destinations with the same address is 1 address in To (but will be harder to identify it as a batch transfer). 10 destinations with the same address + 2 different addresses is 3 addresses (as you showed above with the recipients)
+
+## twassman | 2026-09-02T01:52:41+00:00
+Another thing is that, in this case, address book entries are not shown — for a transaction to two addresses in the address book, the address book names for those addresses are not shown, unlike a transaction to a single address in the address book.
 
 # Action History
 - Created by: Tzadiko | 2025-04-04T15:55:49+00:00
