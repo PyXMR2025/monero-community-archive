@@ -5,10 +5,10 @@ author: Parckwart
 assignees: []
 labels: []
 created_at: '2020-07-19T13:37:51+00:00'
-updated_at: '2021-03-05T22:47:56+00:00'
+updated_at: '2026-09-05T09:52:32+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:52:32+00:00'
 ---
 
 # Original Description
@@ -31,5 +31,9 @@ Things like bc and parted all work perfectly fine.
 ## Parckwart | 2021-03-05T22:47:56+00:00
 Found a workaround: Setting $TERM to "xterm" did the trick.
 
+## selsta | 2026-09-05T09:52:32+00:00
+This might work better in the future once we move from readline to linenoise.
+
 # Action History
 - Created by: Parckwart | 2020-07-19T13:37:51+00:00
+- Closed at: 2026-09-05T09:52:32+00:00

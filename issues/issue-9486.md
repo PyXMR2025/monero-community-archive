@@ -7,10 +7,10 @@ labels:
 - reproduction needed
 - build system
 created_at: '2024-09-15T20:32:12+00:00'
-updated_at: '2024-09-15T21:39:27+00:00'
+updated_at: '2026-09-05T00:26:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:26:57+00:00'
 ---
 
 # Original Description
@@ -67,5 +67,9 @@ The second build error you posted is expected without applying https://github.co
 ## selsta | 2024-09-15T21:36:00+00:00
 It seems the issue is specifically debug related, can you update the issue title to add debug build?
 
+## selsta | 2026-09-05T00:26:56+00:00
+Resolved in https://github.com/monero-project/monero/pull/9342.
+
 # Action History
 - Created by: philipmw | 2024-09-15T20:32:12+00:00
+- Closed at: 2026-09-05T00:26:57+00:00

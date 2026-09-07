@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2022-07-05T12:31:35+00:00'
-updated_at: '2023-10-28T11:48:55+00:00'
+updated_at: '2026-09-05T10:40:32+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:40:32+00:00'
 ---
 
 # Original Description
@@ -34,5 +34,9 @@ There is a [YouTube video](https://www.youtube.com/watch?v=rGae-vCD_Vo) that exp
 ## JosiahBSharkey | 2023-10-28T11:48:54+00:00
 I have already been attacked with a quantum computer probably by the NSA because my opsec is so good they can't spy on me without hacking me so they think I am a spy or a criminal I had malware installed on my computer over ssh that was running behind tor authorized client it took them a month to break multiple ed25519 keys consistently this happened multiple times it is completely insane to think post quantum crypto doesn't need to be implemented now or that using a post quantum key as a seed for broken crypto is a good solution especially for a privacy coin post quantum crypto should have been implemented years ago when the attacks weren't already possible or even better before the first release because then all transactions would be private instead of being as transparent as Bitcoin to any nation state with enough money quantum computers that can break this aren't a future technology they exist now
 
+## selsta | 2026-09-05T10:40:32+00:00
+Closing, see tevador's comment.
+
 # Action History
 - Created by: ghost | 2022-07-05T12:31:35+00:00
+- Closed at: 2026-09-05T10:40:32+00:00

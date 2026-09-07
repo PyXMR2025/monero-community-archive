@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2022-05-31T21:02:44+00:00'
-updated_at: '2022-07-20T00:42:58+00:00'
+updated_at: '2026-09-05T00:48:30+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:48:30+00:00'
 ---
 
 # Original Description
@@ -43,5 +43,9 @@ I debugged the issue and it's a harmless side effect of how the code is implemen
 ## Cactii1 | 2022-07-20T00:42:46+00:00
 It's testnet, it should be allowed. If it was stagenet or mainnet I'd say there's a need for concern - but on testnet no.
 
+## selsta | 2026-09-05T00:48:29+00:00
+Seems not worth fixing.
+
 # Action History
 - Created by: ghost | 2022-05-31T21:02:44+00:00
+- Closed at: 2026-09-05T00:48:30+00:00

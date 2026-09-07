@@ -5,10 +5,10 @@ author: xmr-karnal
 assignees: []
 labels: []
 created_at: '2018-01-22T16:04:57+00:00'
-updated_at: '2018-01-24T01:06:49+00:00'
+updated_at: '2026-09-05T10:07:13+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:07:13+00:00'
 ---
 
 # Original Description
@@ -93,3 +93,4 @@ I also have the same thought as @moneromooo-monero. Does the hang happen only an
 
 # Action History
 - Created by: xmr-karnal | 2018-01-22T16:04:57+00:00
+- Closed at: 2026-09-05T10:07:13+00:00

@@ -6,10 +6,10 @@ author: bonedaddy
 assignees: []
 labels: []
 created_at: '2020-09-23T01:19:43+00:00'
-updated_at: '2020-09-23T01:57:49+00:00'
+updated_at: '2026-09-05T09:50:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:50:56+00:00'
 ---
 
 # Original Description
@@ -81,3 +81,4 @@ I think its because of https://github.com/monero-project/monero/issues/6459 i ju
 
 # Action History
 - Created by: bonedaddy | 2020-09-23T01:19:43+00:00
+- Closed at: 2026-09-05T09:50:56+00:00

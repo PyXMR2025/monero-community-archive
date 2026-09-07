@@ -5,10 +5,10 @@ author: ahook
 assignees: []
 labels: []
 created_at: '2019-12-30T20:11:36+00:00'
-updated_at: '2020-01-05T11:45:22+00:00'
+updated_at: '2026-09-05T00:09:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:09:43+00:00'
 ---
 
 # Original Description
@@ -55,5 +55,9 @@ Also, I think the idea of support flags should be maintained - who knows what ot
 ## moneromooo-monero | 2020-01-05T11:45:22+00:00
 You can still remove that particular support flag and choose to send full blocks, that is still supported. What would not be is the ability of a peer to say "send me full blocks only".
 
+## selsta | 2026-09-05T00:09:43+00:00
+Implemented in #7275.
+
 # Action History
 - Created by: ahook | 2019-12-30T20:11:36+00:00
+- Closed at: 2026-09-05T00:09:43+00:00

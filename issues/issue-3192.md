@@ -5,10 +5,10 @@ author: keffnet
 assignees: []
 labels: []
 created_at: '2018-01-27T18:37:08+00:00'
-updated_at: '2018-01-27T18:40:26+00:00'
+updated_at: '2026-09-04T23:41:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-04T23:41:46+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ Would there be anything negative with this? I assume that for people that use th
 Thanks
 
 # Discussion History
+## selsta | 2026-09-04T23:41:46+00:00
+This should be resolved in current code.
+
 # Action History
 - Created by: keffnet | 2018-01-27T18:37:08+00:00
+- Closed at: 2026-09-04T23:41:46+00:00

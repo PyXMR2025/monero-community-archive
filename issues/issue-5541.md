@@ -5,10 +5,10 @@ author: aaronovz1
 assignees: []
 labels: []
 created_at: '2019-05-12T20:11:53+00:00'
-updated_at: '2019-08-27T15:13:12+00:00'
+updated_at: '2026-09-05T00:59:06+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:59:06+00:00'
 ---
 
 # Original Description
@@ -18,5 +18,9 @@ open_wallet fails if the wallet is already open but the error and error code is 
 ## moneromooo-monero | 2019-08-27T15:13:12+00:00
 It's a real error. open_wallet does not error out if there is a wallet open.
 
+## selsta | 2026-09-05T00:59:05+00:00
+Resolved in #9581.
+
 # Action History
 - Created by: aaronovz1 | 2019-05-12T20:11:53+00:00
+- Closed at: 2026-09-05T00:59:06+00:00

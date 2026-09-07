@@ -9,10 +9,10 @@ labels:
 - low priority
 - more info needed
 created_at: '2024-02-27T19:13:01+00:00'
-updated_at: '2024-02-28T18:46:50+00:00'
+updated_at: '2026-09-05T10:39:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:39:57+00:00'
 ---
 
 # Original Description
@@ -77,5 +77,9 @@ The bootstrap-daemon feature was created so that someone can scan a wallet and c
 
 The existing code could be improved for such edge cases but it doesn't seem like high priority.
 
+## selsta | 2026-09-05T10:39:57+00:00
+Closing as the bootstrap feature was removed.
+
 # Action History
 - Created by: SyntheticBird45 | 2024-02-27T19:13:01+00:00
+- Closed at: 2026-09-05T10:39:57+00:00

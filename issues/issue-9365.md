@@ -8,10 +8,10 @@ labels:
 - low priority
 - discussion
 created_at: '2024-06-12T13:45:07+00:00'
-updated_at: '2024-06-14T19:26:18+00:00'
+updated_at: '2026-09-05T01:06:21+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:06:21+00:00'
 ---
 
 # Original Description
@@ -100,3 +100,4 @@ The `auto` settings means that the daemon allows SSL and non-SSL connections.
 
 # Action History
 - Created by: jogii2p | 2024-06-12T13:45:07+00:00
+- Closed at: 2026-09-05T01:06:21+00:00

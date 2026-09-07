@@ -5,10 +5,10 @@ author: moneromooo-monero
 assignees: []
 labels: []
 created_at: '2021-04-03T17:21:11+00:00'
-updated_at: '2022-05-25T10:32:50+00:00'
+updated_at: '2026-09-05T01:21:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:21:56+00:00'
 ---
 
 # Original Description
@@ -38,5 +38,9 @@ https://github.com/monero-project/monero/blob/master/src/wallet/wallet2.cpp#L988
 ## ghost | 2021-04-06T22:40:23+00:00
 I opened #7651 to improve the errors, but I didn't add a prompt. I thought doing so would make the behavior of commands inconsistent (since most just produce an error if missing an argument), but it can still be added if we want it.
 
+## selsta | 2026-09-05T01:21:56+00:00
+Resolved in #7651.
+
 # Action History
 - Created by: moneromooo-monero | 2021-04-03T17:21:11+00:00
+- Closed at: 2026-09-05T01:21:56+00:00

@@ -5,7 +5,7 @@ author: who-biz
 assignees: []
 labels: []
 created_at: '2021-11-30T20:26:40+00:00'
-updated_at: '2026-07-08T07:05:39+00:00'
+updated_at: '2026-09-06T00:05:35+00:00'
 type: issue
 status: closed
 closed_at: '2026-06-24T17:47:27+00:00'
@@ -46,7 +46,7 @@ I do not see this warning with `gcc 16.1.1`.
 ## who-biz | 2026-07-08T02:43:49+00:00
 Please note that those changes took place 18 months later.  This does not appear to have _simply gone away_.
 
-~~It looks like mooo was likely incorrect.~~
+It looks like mooo was likely incorrect.
 
 (Edits: Looked into it. Can't find any cause for immediate concern in the isolated functions themselves. But probably depends how we use the archives in practice.)
 

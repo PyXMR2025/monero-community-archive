@@ -5,10 +5,10 @@ author: yuuwe-n
 assignees: []
 labels: []
 created_at: '2022-09-25T17:04:15+00:00'
-updated_at: '2022-11-24T04:58:29+00:00'
+updated_at: '2026-09-05T00:26:29+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:26:29+00:00'
 ---
 
 # Original Description
@@ -68,5 +68,9 @@ Sadly, for now the best fix is to turn it off.
 If I get something better working I'll open another pull  request later on.
 
 
+## selsta | 2026-09-05T00:26:29+00:00
+Resolved in https://github.com/monero-project/monero/pull/8651.
+
 # Action History
 - Created by: yuuwe-n | 2022-09-25T17:04:15+00:00
+- Closed at: 2026-09-05T00:26:29+00:00

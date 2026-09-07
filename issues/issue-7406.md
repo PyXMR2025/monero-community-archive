@@ -5,10 +5,10 @@ author: nick4fake
 assignees: []
 labels: []
 created_at: '2021-02-26T15:25:11+00:00'
-updated_at: '2021-03-11T15:36:35+00:00'
+updated_at: '2026-09-05T00:49:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:49:56+00:00'
 ---
 
 # Original Description
@@ -33,3 +33,4 @@ What is the expected behavior here? To bind every address in the range?
 
 # Action History
 - Created by: nick4fake | 2021-02-26T15:25:11+00:00
+- Closed at: 2026-09-05T00:49:56+00:00

@@ -6,10 +6,10 @@ assignees: []
 labels:
 - bug
 created_at: '2017-07-21T14:55:51+00:00'
-updated_at: '2019-05-23T19:52:48+00:00'
+updated_at: '2026-09-05T01:08:30+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:08:30+00:00'
 ---
 
 # Original Description
@@ -41,3 +41,4 @@ https://github.com/monero-project/monero/pull/2749
 
 # Action History
 - Created by: dEBRUYNE-1 | 2017-07-21T14:55:51+00:00
+- Closed at: 2026-09-05T01:08:30+00:00

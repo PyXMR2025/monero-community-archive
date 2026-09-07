@@ -5,10 +5,10 @@ author: elibroftw
 assignees: []
 labels: []
 created_at: '2022-01-14T00:20:00+00:00'
-updated_at: '2025-12-22T03:35:50+00:00'
+updated_at: '2026-09-04T23:44:06+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-04T23:44:06+00:00'
 ---
 
 # Original Description
@@ -149,5 +149,9 @@ https://github.com/monero-project/monero/blob/48ad374b0d6d6e045128729534dc2508e6
 ```
 pending seems to be for `out` transactions. (get_unconfirmed_payments_out)
 
+## selsta | 2026-09-04T23:44:06+00:00
+Closing as expected behaviour: `pending` returns unconfirmed outgoing transactions, while `pool` returns unconfirmed incoming transactions. Set `pool: true` in your `get_transfers` request to include incoming transactions awaiting confirmation.
+
 # Action History
 - Created by: elibroftw | 2022-01-14T00:20:00+00:00
+- Closed at: 2026-09-04T23:44:06+00:00

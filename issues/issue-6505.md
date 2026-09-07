@@ -6,10 +6,10 @@ author: IvRRimum
 assignees: []
 labels: []
 created_at: '2020-05-04T18:10:50+00:00'
-updated_at: '2020-07-12T10:01:37+00:00'
+updated_at: '2026-09-05T09:51:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:51:12+00:00'
 ---
 
 # Original Description
@@ -32,3 +32,4 @@ I just tried, and it works for me. I created an integrated address in wallet A, 
 
 # Action History
 - Created by: IvRRimum | 2020-05-04T18:10:50+00:00
+- Closed at: 2026-09-05T09:51:12+00:00

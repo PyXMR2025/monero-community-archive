@@ -6,10 +6,10 @@ assignees: []
 labels:
 - question
 created_at: '2024-07-08T03:39:01+00:00'
-updated_at: '2024-07-10T19:21:18+00:00'
+updated_at: '2026-09-05T00:59:14+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:59:14+00:00'
 ---
 
 # Original Description
@@ -22,3 +22,4 @@ It means that this wallet has been used together with an online node before. A c
 
 # Action History
 - Created by: jack-dot-wu | 2024-07-08T03:39:01+00:00
+- Closed at: 2026-09-05T00:59:14+00:00

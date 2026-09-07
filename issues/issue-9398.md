@@ -7,10 +7,10 @@ labels:
 - reproduction needed
 - more info needed
 created_at: '2024-07-15T07:12:11+00:00'
-updated_at: '2024-08-03T23:11:38+00:00'
+updated_at: '2026-09-05T01:07:38+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:07:38+00:00'
 ---
 
 # Original Description
@@ -169,3 +169,4 @@ Did you import key images to the view only wallet?
 
 # Action History
 - Created by: chenxiange | 2024-07-15T07:12:11+00:00
+- Closed at: 2026-09-05T01:07:38+00:00

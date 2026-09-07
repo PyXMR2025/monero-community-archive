@@ -7,10 +7,10 @@ labels:
 - feature
 - proposal
 created_at: '2023-05-25T14:05:34+00:00'
-updated_at: '2024-01-06T13:42:04+00:00'
+updated_at: '2026-09-05T09:50:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:50:27+00:00'
 ---
 
 # Original Description
@@ -24,5 +24,9 @@ monero-wallet-cli supports restoring from seed using the `--restore-from-seed` s
 ## JacksonZ03 | 2024-01-06T13:42:03+00:00
 `--restore-multisig-wallet` flag works just fine for me for restoring multisig wallets from the seed. Not sure if there's any real benefit to this.
 
+## selsta | 2026-09-05T09:50:27+00:00
+Resolved in #8914.
+
 # Action History
 - Created by: woodser | 2023-05-25T14:05:34+00:00
+- Closed at: 2026-09-05T09:50:27+00:00

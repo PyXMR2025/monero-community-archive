@@ -8,10 +8,10 @@ labels:
 - low priority
 - discussion
 created_at: '2024-03-15T02:33:02+00:00'
-updated_at: '2024-03-22T02:56:22+00:00'
+updated_at: '2026-09-05T01:05:56+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:05:56+00:00'
 ---
 
 # Original Description
@@ -46,3 +46,4 @@ Monero could perform some interpretation, but that opens the usual can of worms.
 
 # Action History
 - Created by: SnAFKe | 2024-03-15T02:33:02+00:00
+- Closed at: 2026-09-05T01:05:56+00:00

@@ -5,10 +5,10 @@ author: w3irdrobot
 assignees: []
 labels: []
 created_at: '2021-01-08T15:29:41+00:00'
-updated_at: '2021-01-09T20:08:29+00:00'
+updated_at: '2026-09-05T00:11:01+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:11:01+00:00'
 ---
 
 # Original Description
@@ -84,3 +84,4 @@ strace -o FILENAME monerod usual-arguments
 
 # Action History
 - Created by: w3irdrobot | 2021-01-08T15:29:41+00:00
+- Closed at: 2026-09-05T00:11:01+00:00

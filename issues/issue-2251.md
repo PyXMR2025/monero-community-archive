@@ -6,10 +6,10 @@ author: Gingeropolous
 assignees: []
 labels: []
 created_at: '2017-08-05T11:52:19+00:00'
-updated_at: '2017-10-15T13:22:46+00:00'
+updated_at: '2026-09-05T01:07:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:07:46+00:00'
 ---
 
 # Original Description
@@ -34,3 +34,4 @@ Can you give an all thread stack trace showing what it's doing ?
 
 # Action History
 - Created by: Gingeropolous | 2017-08-05T11:52:19+00:00
+- Closed at: 2026-09-05T01:07:46+00:00

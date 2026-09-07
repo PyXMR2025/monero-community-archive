@@ -6,10 +6,10 @@ author: woodser
 assignees: []
 labels: []
 created_at: '2022-08-23T13:51:11+00:00'
-updated_at: '2022-09-10T23:05:12+00:00'
+updated_at: '2026-09-05T10:21:59+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:21:59+00:00'
 ---
 
 # Original Description
@@ -27,5 +27,9 @@ The only issue is that the transactions do not re-appear after calling `rescan_b
 ## j-berman | 2022-09-10T23:05:12+00:00
 Are you running into this using a custom chain by chance? I can repro when I do that, but it works fine on my end with mainnet/testnet. A few issues can surface when creating an offline wallet and then trying to connect it to a custom chain, this issue included. Like moo said, the offline wallet will set `m_refresh_from_block_height` using [this guess-timated approximate height - 1 month of blocks](https://github.com/monero-project/monero/blob/6402dbee69867c76530b45e8a21b692850fea03f/src/wallet/wallet2.cpp#L4844), and then will [skip processing blocks](https://github.com/monero-project/monero/blob/6402dbee69867c76530b45e8a21b692850fea03f/src/wallet/wallet2.cpp#L2579) until that height. By default that approximate height is going to be pretty high, so a custom chain's low height blocks will get skipped when processing.
 
+## woodser | 2026-09-05T10:21:59+00:00
+Closing this issue - I haven't run into this issue in a long time, and it sounds like moneromooo and j-berman are right that it's an issue with the calculated sync height (this is on a custom chain).
+
 # Action History
 - Created by: woodser | 2022-08-23T13:51:11+00:00
+- Closed at: 2026-09-05T10:21:59+00:00

@@ -6,10 +6,10 @@ assignees: []
 labels:
 - enhancement
 created_at: '2016-12-10T20:06:08+00:00'
-updated_at: '2018-01-08T12:48:36+00:00'
+updated_at: '2026-09-05T01:22:18+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:22:18+00:00'
 ---
 
 # Original Description
@@ -26,5 +26,9 @@ There will be a "hybrid" rescan-with-key-images-set function at some point, that
 ## dEBRUYNE-1 | 2018-01-08T12:44:45+00:00
 +enhancement
 
+## selsta | 2026-09-05T01:22:18+00:00
+Resolved in #4889.
+
 # Action History
 - Created by: rndbr | 2016-12-10T20:06:08+00:00
+- Closed at: 2026-09-05T01:22:18+00:00

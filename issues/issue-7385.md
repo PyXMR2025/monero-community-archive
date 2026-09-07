@@ -6,10 +6,10 @@ author: downystreet
 assignees: []
 labels: []
 created_at: '2021-02-18T21:39:14+00:00'
-updated_at: '2022-05-25T10:03:26+00:00'
+updated_at: '2026-09-05T00:10:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:10:27+00:00'
 ---
 
 # Original Description
@@ -45,3 +45,4 @@ Can you try to run your daemon with `--rpc-ssl disabled` and check if the issue 
 
 # Action History
 - Created by: downystreet | 2021-02-18T21:39:14+00:00
+- Closed at: 2026-09-05T00:10:27+00:00

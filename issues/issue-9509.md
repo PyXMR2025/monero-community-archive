@@ -10,10 +10,10 @@ labels:
 - reproduction needed
 - more info needed
 created_at: '2024-10-09T15:12:50+00:00'
-updated_at: '2025-05-05T19:24:37+00:00'
+updated_at: '2026-09-05T00:47:39+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:47:39+00:00'
 ---
 
 # Original Description
@@ -73,3 +73,4 @@ Regarding the conversation by @iamamyth and @tankf33der, I feel that the issue I
 
 # Action History
 - Created by: ludblom | 2024-10-09T15:12:50+00:00
+- Closed at: 2026-09-05T00:47:39+00:00

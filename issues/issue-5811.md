@@ -5,10 +5,10 @@ author: woodser
 assignees: []
 labels: []
 created_at: '2019-08-14T22:06:59+00:00'
-updated_at: '2019-08-19T23:16:59+00:00'
+updated_at: '2026-09-05T10:06:02+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:06:02+00:00'
 ---
 
 # Original Description
@@ -53,5 +53,9 @@ I'm open to someone writing parallel wallet tx scanner, which simplewallet could
 ## moneromooo-monero | 2019-08-19T23:16:58+00:00
 Oh, and put this new scanner in another file than wallet2.cpp :P
 
+## selsta | 2026-09-05T10:06:02+00:00
+https://github.com/monero-project/monero/pull/10083
+
 # Action History
 - Created by: woodser | 2019-08-14T22:06:59+00:00
+- Closed at: 2026-09-05T10:06:02+00:00

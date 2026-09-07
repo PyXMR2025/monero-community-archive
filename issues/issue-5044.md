@@ -5,10 +5,10 @@ author: TylerTheFox
 assignees: []
 labels: []
 created_at: '2019-01-07T04:07:55+00:00'
-updated_at: '2019-01-08T03:44:27+00:00'
+updated_at: '2026-09-05T01:08:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:08:12+00:00'
 ---
 
 # Original Description
@@ -75,3 +75,4 @@ monerod is being launched with default parameters.
 
 # Action History
 - Created by: TylerTheFox | 2019-01-07T04:07:55+00:00
+- Closed at: 2026-09-05T01:08:12+00:00

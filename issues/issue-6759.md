@@ -5,10 +5,10 @@ author: OxMarco
 assignees: []
 labels: []
 created_at: '2020-08-14T17:26:32+00:00'
-updated_at: '2020-12-23T01:04:04+00:00'
+updated_at: '2026-09-05T00:59:31+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:59:31+00:00'
 ---
 
 # Original Description
@@ -336,3 +336,4 @@ If you use open_wallet etc, you should be able to call auto_refresh on the walle
 
 # Action History
 - Created by: OxMarco | 2020-08-14T17:26:32+00:00
+- Closed at: 2026-09-05T00:59:31+00:00

@@ -5,10 +5,10 @@ author: mattmill30
 assignees: []
 labels: []
 created_at: '2020-12-05T02:55:16+00:00'
-updated_at: '2020-12-05T11:40:02+00:00'
+updated_at: '2026-09-05T01:00:22+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:00:22+00:00'
 ---
 
 # Original Description
@@ -39,3 +39,4 @@ I see you already created https://github.com/monero-project/monero-gui/issues/32
 
 # Action History
 - Created by: mattmill30 | 2020-12-05T02:55:16+00:00
+- Closed at: 2026-09-05T01:00:22+00:00

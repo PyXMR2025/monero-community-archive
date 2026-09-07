@@ -5,10 +5,10 @@ author: j-berman
 assignees: []
 labels: []
 created_at: '2022-12-07T08:48:46+00:00'
-updated_at: '2022-12-07T23:08:18+00:00'
+updated_at: '2026-09-05T10:05:44+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:05:44+00:00'
 ---
 
 # Original Description
@@ -24,5 +24,9 @@ Note, this also sort of corrupted my LMDB database (i.e. it showed a double spen
 
 Basically, one issue followed another in such a case.
 
+## selsta | 2026-09-05T10:05:44+00:00
+Should be resolved by https://github.com/monero-project/monero/pull/10083.
+
 # Action History
 - Created by: j-berman | 2022-12-07T08:48:46+00:00
+- Closed at: 2026-09-05T10:05:44+00:00

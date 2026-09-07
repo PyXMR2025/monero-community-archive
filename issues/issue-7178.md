@@ -5,10 +5,10 @@ author: t-900-a
 assignees: []
 labels: []
 created_at: '2020-12-20T22:06:47+00:00'
-updated_at: '2020-12-20T22:06:47+00:00'
+updated_at: '2026-09-05T00:10:15+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:10:15+00:00'
 ---
 
 # Original Description
@@ -89,5 +89,9 @@ This is not currently the case.
 
 
 # Discussion History
+## selsta | 2026-09-05T00:10:15+00:00
+Obsolete by https://github.com/monero-project/monero/pull/10578.
+
 # Action History
 - Created by: t-900-a | 2020-12-20T22:06:47+00:00
+- Closed at: 2026-09-05T00:10:15+00:00

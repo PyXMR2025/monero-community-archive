@@ -6,10 +6,10 @@ author: ArayofEntropy
 assignees: []
 labels: []
 created_at: '2022-09-14T14:54:31+00:00'
-updated_at: '2022-09-22T03:27:48+00:00'
+updated_at: '2026-09-05T01:23:57+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:23:57+00:00'
 ---
 
 # Original Description
@@ -124,3 +124,4 @@ I also encountered this problem. Why are some addresses in my wallet address lis
 
 # Action History
 - Created by: ArayofEntropy | 2022-09-14T14:54:31+00:00
+- Closed at: 2026-09-05T01:23:57+00:00

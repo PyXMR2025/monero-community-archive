@@ -5,10 +5,10 @@ author: ordtrogen
 assignees: []
 labels: []
 created_at: '2018-04-14T15:52:40+00:00'
-updated_at: '2018-04-14T16:10:43+00:00'
+updated_at: '2026-09-04T23:42:12+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-04T23:42:12+00:00'
 ---
 
 # Original Description
@@ -21,5 +21,9 @@ Do these message indicate things need to be fixed in the source files? (just inc
 ## erciccione | 2018-04-14T16:10:42+00:00
 Correct, but that's beyond my capabilities. Somebody familiar with both QT and C++ should give it a look
 
+## selsta | 2026-09-04T23:42:12+00:00
+Obsolete by https://github.com/monero-project/monero/pull/10675.
+
 # Action History
 - Created by: ordtrogen | 2018-04-14T15:52:40+00:00
+- Closed at: 2026-09-04T23:42:12+00:00
