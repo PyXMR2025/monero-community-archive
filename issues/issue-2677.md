@@ -5,7 +5,7 @@ author: luisdiegohidalgo
 assignees: []
 labels: []
 created_at: '2026-06-26T19:24:42+00:00'
-updated_at: '2026-08-14T22:23:06+00:00'
+updated_at: '2026-09-05T18:21:50+00:00'
 type: issue
 status: open
 closed_at: null
@@ -168,6 +168,15 @@ As mentioned above, the request is only for an informational listing, not an end
 If you need any additional technical information, verification, or changes to the proposed wording, I'd be happy to provide them.
 
 Thank you for your time and for maintaining the Monero website.
+
+## HardenedSteel | 2026-09-05T18:21:50+00:00
+> instead of managing the full node/RPC mining setup themselves.
+
+this is already answered;
+
+> solo-mine to **any (trusted) public rpc node**.
+
+A node shouldn't able to steal the block reward either unlike mining on "solo pool".
 
 # Action History
 - Created by: luisdiegohidalgo | 2026-06-26T19:24:42+00:00
