@@ -5,10 +5,10 @@ author: kinghat
 assignees: []
 labels: []
 created_at: '2020-06-03T19:01:46+00:00'
-updated_at: '2020-06-03T19:01:46+00:00'
+updated_at: '2026-09-05T10:01:53+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:01:52+00:00'
 ---
 
 # Original Description
@@ -18,5 +18,9 @@ nothing major here but should there be a scrollbar activated for when the menu e
 
 
 # Discussion History
+## selsta | 2026-09-05T10:01:52+00:00
+Obsolete by #3361.
+
 # Action History
 - Created by: kinghat | 2020-06-03T19:01:46+00:00
+- Closed at: 2026-09-05T10:01:52+00:00

@@ -6,10 +6,10 @@ author: BaksiLi
 assignees: []
 labels: []
 created_at: '2024-12-12T01:01:23+00:00'
-updated_at: '2025-02-27T19:11:47+00:00'
+updated_at: '2026-09-05T00:54:51+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:54:51+00:00'
 ---
 
 # Original Description
@@ -35,5 +35,9 @@ BTW, https://translate.getmonero.org/engage/monero/ seems down, Error 502
 ## jermanuts | 2025-02-27T19:11:46+00:00
 Yes, this issue have been for years, no one stepped up to fix Weblate yet.
 
+## selsta | 2026-09-05T00:54:50+00:00
+Resolved in #4384.
+
 # Action History
 - Created by: BaksiLi | 2024-12-12T01:01:23+00:00
+- Closed at: 2026-09-05T00:54:51+00:00

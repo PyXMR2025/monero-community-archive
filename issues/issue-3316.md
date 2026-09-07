@@ -5,10 +5,10 @@ author: fubeca
 assignees: []
 labels: []
 created_at: '2021-01-25T20:25:31+00:00'
-updated_at: '2021-01-25T20:25:31+00:00'
+updated_at: '2026-09-05T09:55:22+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:55:22+00:00'
 ---
 
 # Original Description
@@ -20,3 +20,4 @@ Since the application is meant to run in the background for long periods of time
 # Discussion History
 # Action History
 - Created by: fubeca | 2021-01-25T20:25:31+00:00
+- Closed at: 2026-09-05T09:55:22+00:00

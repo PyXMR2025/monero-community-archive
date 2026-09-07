@@ -5,7 +5,7 @@ author: mesvam
 assignees: []
 labels: []
 created_at: '2025-10-16T05:02:10+00:00'
-updated_at: '2026-07-11T13:58:44+00:00'
+updated_at: '2026-09-05T22:54:04+00:00'
 type: issue
 status: open
 closed_at: null
@@ -37,6 +37,9 @@ Workaround is to create wallet somewhere else, then move it to desired location
 i got the same error at the end but i only have 1 drive so does i just make a other files and tries on it? cuz its still on same the drive (windows)
 
 edit : works on the same drive so you just need to make the wallet somewhere else and then it works
+
+## selsta | 2026-09-05T22:54:04+00:00
+@mesvam can you confirm if monero-gui v0.18.5.2 still has this bug?
 
 # Action History
 - Created by: mesvam | 2025-10-16T05:02:10+00:00

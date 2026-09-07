@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2022-12-17T21:29:49+00:00'
-updated_at: '2022-12-18T03:12:57+00:00'
+updated_at: '2026-09-05T01:05:14+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:05:14+00:00'
 ---
 
 # Original Description
@@ -88,5 +88,9 @@ gsettings set org.gnome.shell favorite-apps "['tor-browser.desktop', 'tca.deskto
 ```
 **idk if this is the issue?** Could you tell me if the **monero-gui.desktop** has the same output besides the Exec and **Catagories=** cause I forgot I added `Finance;` before `Network;` in Catagories to see if that fixed the issue but apparently not.
 
+## selsta | 2026-09-05T01:05:14+00:00
+#4300
+
 # Action History
 - Created by: ghost | 2022-12-17T21:29:49+00:00
+- Closed at: 2026-09-05T01:05:14+00:00

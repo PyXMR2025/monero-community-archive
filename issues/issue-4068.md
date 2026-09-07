@@ -5,10 +5,10 @@ author: CryptoGrampy
 assignees: []
 labels: []
 created_at: '2022-11-13T18:22:33+00:00'
-updated_at: '2022-12-12T16:51:44+00:00'
+updated_at: '2026-09-05T00:55:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T00:55:26+00:00'
 ---
 
 # Original Description
@@ -26,5 +26,9 @@ transfer page:
 
 
 
+## selsta | 2026-09-05T00:55:26+00:00
+This was implemented with improvements in the works for future releases.
+
 # Action History
 - Created by: CryptoGrampy | 2022-11-13T18:22:33+00:00
+- Closed at: 2026-09-05T00:55:26+00:00

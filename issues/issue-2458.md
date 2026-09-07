@@ -5,10 +5,10 @@ author: rating89us
 assignees: []
 labels: []
 created_at: '2019-11-23T21:19:40+00:00'
-updated_at: '2019-12-08T22:44:32+00:00'
+updated_at: '2026-09-05T10:01:26+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T10:01:26+00:00'
 ---
 
 # Original Description
@@ -29,5 +29,9 @@ What is the size of your display?
 ## rating89us | 2019-11-23T21:38:10+00:00
 27 inches in 1920 x 1080, but I don't maximize Monero GUI window.
 
+## selsta | 2026-09-05T10:01:26+00:00
+Obsolete by #3361.
+
 # Action History
 - Created by: rating89us | 2019-11-23T21:19:40+00:00
+- Closed at: 2026-09-05T10:01:26+00:00

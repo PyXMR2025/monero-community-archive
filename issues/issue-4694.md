@@ -5,7 +5,7 @@ author: DedovKonstantin
 assignees: []
 labels: []
 created_at: '2026-09-04T12:30:38+00:00'
-updated_at: '2026-09-04T12:30:38+00:00'
+updated_at: '2026-09-04T14:15:37+00:00'
 type: issue
 status: open
 closed_at: null
@@ -23,5 +23,13 @@ DATE:
 2026.08.06
 
 # Discussion History
+## selsta | 2026-09-04T13:57:17+00:00
+Try restoring it from restore height 1.
+
+## DedovKonstantin | 2026-09-04T14:15:37+00:00
+> Try restoring it from restore height 1.
+
+This is that (from height 0).
+
 # Action History
 - Created by: DedovKonstantin | 2026-09-04T12:30:38+00:00

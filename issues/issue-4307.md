@@ -5,10 +5,10 @@ author: SawkeeReemo
 assignees: []
 labels: []
 created_at: '2024-04-18T23:17:39+00:00'
-updated_at: '2024-12-14T00:18:40+00:00'
+updated_at: '2026-09-05T09:56:08+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:56:08+00:00'
 ---
 
 # Original Description
@@ -36,3 +36,4 @@ The dockerfile is only used to build to project, I'm not sure if it makes sense 
 
 # Action History
 - Created by: SawkeeReemo | 2024-04-18T23:17:39+00:00
+- Closed at: 2026-09-05T09:56:08+00:00

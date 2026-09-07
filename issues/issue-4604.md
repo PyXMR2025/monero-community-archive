@@ -5,10 +5,10 @@ author: 24jaking-hue
 assignees: []
 labels: []
 created_at: '2026-06-10T00:21:22+00:00'
-updated_at: '2026-06-16T20:54:23+00:00'
+updated_at: '2026-09-05T01:24:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:24:27+00:00'
 ---
 
 # Original Description
@@ -30,3 +30,4 @@ https://github.com/SChernykh/p2pool/security/advisories/GHSA-fm6j-gf38-p925
 
 # Action History
 - Created by: 24jaking-hue | 2026-06-10T00:21:22+00:00
+- Closed at: 2026-09-05T01:24:27+00:00

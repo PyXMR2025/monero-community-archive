@@ -6,10 +6,10 @@ author: DeeDeeRanged
 assignees: []
 labels: []
 created_at: '2021-04-02T17:36:50+00:00'
-updated_at: '2022-03-28T06:44:12+00:00'
+updated_at: '2026-09-05T01:04:51+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:04:51+00:00'
 ---
 
 # Original Description
@@ -75,3 +75,4 @@ For that I recommend a separate issue and not mixing it into this issue. I also 
 
 # Action History
 - Created by: DeeDeeRanged | 2021-04-02T17:36:50+00:00
+- Closed at: 2026-09-05T01:04:51+00:00

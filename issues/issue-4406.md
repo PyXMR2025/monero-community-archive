@@ -5,10 +5,10 @@ author: LateAtNight25
 assignees: []
 labels: []
 created_at: '2025-01-27T14:40:40+00:00'
-updated_at: '2025-01-27T19:24:09+00:00'
+updated_at: '2026-09-05T01:25:30+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:25:30+00:00'
 ---
 
 # Original Description
@@ -153,3 +153,4 @@ I meant going to Settings -> Wallet, then press "Close this wallet"... and then 
 
 # Action History
 - Created by: LateAtNight25 | 2025-01-27T14:40:40+00:00
+- Closed at: 2026-09-05T01:25:30+00:00

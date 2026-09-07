@@ -5,10 +5,10 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2023-02-20T05:45:41+00:00'
-updated_at: '2023-03-16T09:46:08+00:00'
+updated_at: '2026-09-05T01:02:26+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:02:26+00:00'
 ---
 
 # Original Description
@@ -47,3 +47,4 @@ if there is only one occurrence of systemd then return true?
 # Discussion History
 # Action History
 - Created by: plowsof | 2023-02-20T05:45:41+00:00
+- Closed at: 2026-09-05T01:02:26+00:00

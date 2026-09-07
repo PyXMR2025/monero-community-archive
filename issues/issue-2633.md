@@ -5,10 +5,10 @@ author: nexon33
 assignees: []
 labels: []
 created_at: '2019-12-19T11:11:49+00:00'
-updated_at: '2020-02-11T23:52:32+00:00'
+updated_at: '2026-09-05T01:04:24+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:04:24+00:00'
 ---
 
 # Original Description
@@ -122,3 +122,4 @@ You might be able to use this function directly: https://github.com/monero-proje
 
 # Action History
 - Created by: nexon33 | 2019-12-19T11:11:49+00:00
+- Closed at: 2026-09-05T01:04:24+00:00

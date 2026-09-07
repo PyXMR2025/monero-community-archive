@@ -5,10 +5,10 @@ author: SabriMercimek
 assignees: []
 labels: []
 created_at: '2026-01-23T14:19:44+00:00'
-updated_at: '2026-01-24T09:12:17+00:00'
+updated_at: '2026-09-05T01:03:52+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:03:52+00:00'
 ---
 
 # Original Description
@@ -43,3 +43,4 @@ Thank you that solved the issue!
 
 # Action History
 - Created by: SabriMercimek | 2026-01-23T14:19:44+00:00
+- Closed at: 2026-09-05T01:03:52+00:00

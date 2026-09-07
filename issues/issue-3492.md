@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2021-05-21T02:05:13+00:00'
-updated_at: '2021-07-06T00:03:12+00:00'
+updated_at: '2026-09-05T01:03:42+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:03:42+00:00'
 ---
 
 # Original Description
@@ -66,5 +66,9 @@ i tried and works.
 ```
 I'm able to install the monero-gui.apk on my phone and the GUI is synchronizing as usual- no errors.   
 
+## selsta | 2026-09-05T01:03:42+00:00
+#4043
+
 # Action History
 - Created by: ghost | 2021-05-21T02:05:13+00:00
+- Closed at: 2026-09-05T01:03:42+00:00

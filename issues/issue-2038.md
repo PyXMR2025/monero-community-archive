@@ -5,10 +5,10 @@ author: ghost
 assignees: []
 labels: []
 created_at: '2019-03-27T11:59:15+00:00'
-updated_at: '2019-03-27T15:25:46+00:00'
+updated_at: '2026-09-05T09:55:46+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T09:55:46+00:00'
 ---
 
 # Original Description
@@ -63,3 +63,4 @@ I’m going to do a mock up design for the downloads page to reflect things more
 
 # Action History
 - Created by: ghost | 2019-03-27T11:59:15+00:00
+- Closed at: 2026-09-05T09:55:46+00:00

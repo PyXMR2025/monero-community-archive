@@ -6,10 +6,10 @@ author: CryptoGrampy
 assignees: []
 labels: []
 created_at: '2021-07-12T13:56:15+00:00'
-updated_at: '2021-07-12T14:46:41+00:00'
+updated_at: '2026-09-05T01:03:06+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-05T01:03:06+00:00'
 ---
 
 # Original Description
@@ -28,5 +28,9 @@ If anyone has an old phone they don't care about destroying, would be interestin
 
 I'll pick up a used device this week and start the experiment :+1: 
 
+## selsta | 2026-09-05T01:03:06+00:00
+See #4043.
+
 # Action History
 - Created by: CryptoGrampy | 2021-07-12T13:56:15+00:00
+- Closed at: 2026-09-05T01:03:06+00:00
