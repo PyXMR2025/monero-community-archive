@@ -5,10 +5,10 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2026-06-02T08:05:38+00:00'
-updated_at: '2026-06-02T08:48:12+00:00'
+updated_at: '2026-09-06T05:30:24+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-06T05:30:24+00:00'
 ---
 
 # Original Description
@@ -21,3 +21,4 @@ the payment id is inferred when we add an integrated address* the integrated add
 # Discussion History
 # Action History
 - Created by: plowsof | 2026-06-02T08:05:38+00:00
+- Closed at: 2026-09-06T05:30:24+00:00
