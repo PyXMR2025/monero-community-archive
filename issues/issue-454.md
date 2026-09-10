@@ -5,7 +5,7 @@ author: Boog900
 assignees: []
 labels: []
 created_at: '2026-08-11T17:13:06+00:00'
-updated_at: '2026-08-11T17:53:09+00:00'
+updated_at: '2026-09-10T03:34:55+00:00'
 type: issue
 status: open
 closed_at: null
@@ -23,6 +23,9 @@ P2pool was updated to relay all blocks that pass PoW checks over its network to 
 > Having all nodes check FCMP proofs in parallel is much better than going 1 node then to its peers then to their peers etc
 
 I think we definitely want to stop banning in the monerod version released containing the FCMP++/Carrot fork. And I think we'll want to relay blocks after the PoW check and before expensive checks at some point, potentially before the fork if there's time. Doing the former with the fork version enables implementing the latter at a later time.
+
+## j-berman | 2026-09-10T03:34:55+00:00
+Addressed in the above linked PR
 
 # Action History
 - Created by: Boog900 | 2026-08-11T17:13:06+00:00
