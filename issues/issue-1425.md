@@ -6,7 +6,7 @@ author: rottenwheel
 assignees: []
 labels: []
 created_at: '2026-07-15T07:38:04+00:00'
-updated_at: '2026-08-07T18:35:05+00:00'
+updated_at: '2026-09-08T09:50:39+00:00'
 type: issue
 status: open
 closed_at: null
@@ -453,6 +453,13 @@ If coordinators can create, control, or restrict access to resources related to 
 
 ## SauerNinja | 2026-08-07T18:35:05+00:00
 Oh wow
+
+## plowsof | 2026-09-08T09:50:39+00:00
+in summary: PII would remain on the account after hand over, the account was renamed + rotten still has access (and appears to be using the account to do twitter things), and unbans have been completed.
+
+related: https://docs.x.com/x-api/getting-started/pricing  >20 cent for a tweet made via api
+
+issue can be closed
 
 # Action History
 - Created by: rottenwheel | 2026-07-15T07:38:04+00:00
