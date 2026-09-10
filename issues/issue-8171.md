@@ -5,10 +5,10 @@ author: ACK-J
 assignees: []
 labels: []
 created_at: '2022-02-09T05:04:27+00:00'
-updated_at: '2022-12-02T22:00:40+00:00'
+updated_at: '2026-09-09T20:18:48+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-09T20:18:48+00:00'
 ---
 
 # Original Description
@@ -24,3 +24,4 @@ I've noticed a failed transaction does this.. would be nice if the comments adde
 
 # Action History
 - Created by: ACK-J | 2022-02-09T05:04:27+00:00
+- Closed at: 2026-09-09T20:18:48+00:00

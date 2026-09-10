@@ -7,10 +7,10 @@ assignees: []
 labels:
 - enhancement
 created_at: '2017-09-03T20:46:42+00:00'
-updated_at: '2022-09-30T18:06:45+00:00'
+updated_at: '2026-09-07T22:47:08+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:47:07+00:00'
 ---
 
 # Original Description
@@ -584,5 +584,9 @@ For details see https://gitlab.tails.boum.org/tails/tails/-/issues/17823#note_16
 ## DeeDeeRanged | 2022-09-30T18:06:44+00:00
 Any chance to get the monero package updated to the latest version for Debian testing/sid?
 
+## selsta | 2026-09-07T22:47:07+00:00
+https://tracker.debian.org/pkg/monero
+
 # Action History
 - Created by: scottAnselmo | 2017-09-03T20:46:42+00:00
+- Closed at: 2026-09-07T22:47:07+00:00

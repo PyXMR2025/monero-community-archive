@@ -1,31 +1,23 @@
 ---
-title: monero-wallet-rpc returns incorrect balances and omits transactions when sending
-  to/from the same account
+title: wallet-rpc omits incoming payment records for transfers within the same account
 source_url: https://github.com/monero-project/monero/issues/4500
 author: woodser
 assignees: []
 labels: []
 created_at: '2018-10-04T19:42:38+00:00'
-updated_at: '2019-01-09T08:55:11+00:00'
+updated_at: '2026-09-08T01:03:03+00:00'
 type: issue
 status: open
 closed_at: null
 ---
 
 # Original Description
-This issue may be reproduced by sending a transaction from account 0 to account 0 of the same wallet.
+When sending funds between addresses within the same wallet account, the incoming counterpart is omitted:
 
-Before the transaction has confirmed:
+- Before confirmation, `get_transfers` reports the outgoing pending entry but no incoming pool entry.
+- After confirmation, it reports the `out` entry but no corresponding in entry. `get_bulk_payments` also omits the incoming payment, although `incoming_transfers` exposes the received outputs.
 
-- `get_transfers` does not return the transaction which should be type "pool".
-- `get_accounts` and `get_balance` return incorrect balances.
-
-After the transaction has confirmed:
-
-- `get_accounts` and `get_balance` return the correct balances.
-- `get_transfers` does not return the transaction which should be type "incoming".
-
-Similar results are seen if sending e.g. from account 1 to account 0.
+This issue requests exposing incoming records for same-account payments while continuing to distinguish ordinary change. Current wallet logic treats receipts into the spending account as change, and existing functional tests expect the outgoing-only representation.
 
 # Discussion History
 ## woodser | 2018-10-04T19:46:10+00:00
@@ -74,6 +66,9 @@ Regarding mempool transactions being reflected in the balance, I think the same 
 Sending a transaction from a monero wallet to the same monero wallet using a payment_id, with `make_integrated_address`, as described in this issue, will not show that transaction in `get_transfers in`. The same transaction appears in `get_transfers out`, but with an `payment_id` of `0000000000000000`. The transaction is not found when searching for it with 'get_payments' using the original payment_id.
 
 How am i supposed to find that transaction?
+
+## woodser | 2026-09-08T01:03:02+00:00
+Updated the title and description to focus on missing incoming transaction records for transfers within the same account. The incorrect balance reporting was fixed in [#8159](https://github.com/monero-project/monero/pull/8159).
 
 # Action History
 - Created by: woodser | 2018-10-04T19:42:38+00:00

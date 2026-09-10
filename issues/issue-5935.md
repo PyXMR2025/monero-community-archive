@@ -5,10 +5,10 @@ author: zhongqiuwood
 assignees: []
 labels: []
 created_at: '2019-09-26T08:44:25+00:00'
-updated_at: '2019-09-26T10:43:25+00:00'
+updated_at: '2026-09-07T22:45:43+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:45:43+00:00'
 ---
 
 # Original Description
@@ -28,5 +28,9 @@ Without the feature, thousands of small unspent tx might be selected to satisfy 
 ## zhongqiuwood | 2019-09-26T08:44:51+00:00
 Refer to: https://github.com/monero-project/monero/pull/5934 for the fix.
 
+## selsta | 2026-09-07T22:45:43+00:00
+This proposal was rejected in the linked PR so I'm also closing this issue.
+
 # Action History
 - Created by: zhongqiuwood | 2019-09-26T08:44:25+00:00
+- Closed at: 2026-09-07T22:45:43+00:00

@@ -9,10 +9,10 @@ labels:
 - reproduction needed
 - more info needed
 created_at: '2023-07-17T16:28:40+00:00'
-updated_at: '2024-06-25T11:43:41+00:00'
+updated_at: '2026-09-07T22:42:15+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:42:15+00:00'
 ---
 
 # Original Description
@@ -66,5 +66,9 @@ $ monero-blockchain-ancestry --refresh --log-level=4
 Aborted (core dumped)
 ```
 
+## selsta | 2026-09-07T22:42:15+00:00
+Resolved in #8924.
+
 # Action History
 - Created by: benmordecai | 2023-07-17T16:28:40+00:00
+- Closed at: 2026-09-07T22:42:15+00:00

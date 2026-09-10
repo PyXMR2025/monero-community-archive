@@ -5,10 +5,10 @@ author: woodser
 assignees: []
 labels: []
 created_at: '2018-09-24T13:57:57+00:00'
-updated_at: '2018-09-30T22:04:56+00:00'
+updated_at: '2026-09-08T00:54:47+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-08T00:54:46+00:00'
 ---
 
 # Original Description
@@ -32,5 +32,9 @@ Environment: Mac OS, Stagenet, v0.12.3.0.
 ## woodser | 2018-09-30T22:04:56+00:00
 After talking with @moneromooo-monero, it seems the issue is the incoming transactions are being occluded by their outgoing counterpart since funds are sent from and to the same account.
 
+## woodser | 2026-09-08T00:54:47+00:00
+Closing as a duplicate of https://github.com/monero-project/monero/issues/4500
+
 # Action History
 - Created by: woodser | 2018-09-24T13:57:57+00:00
+- Closed at: 2026-09-08T00:54:46+00:00

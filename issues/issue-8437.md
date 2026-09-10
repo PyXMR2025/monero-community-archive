@@ -5,10 +5,10 @@ author: Thor-x86
 assignees: []
 labels: []
 created_at: '2022-07-15T15:06:51+00:00'
-updated_at: '2022-07-17T17:16:34+00:00'
+updated_at: '2026-09-07T22:41:40+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:41:31+00:00'
 ---
 
 # Original Description
@@ -52,5 +52,9 @@ Extra: -Ofast changed to -O2
 Result: Success
 ```
 
+## selsta | 2026-09-07T22:41:31+00:00
+Resolved in #8924.
+
 # Action History
 - Created by: Thor-x86 | 2022-07-15T15:06:51+00:00
+- Closed at: 2026-09-07T22:41:31+00:00

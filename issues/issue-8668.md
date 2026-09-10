@@ -5,10 +5,10 @@ author: imfiesh
 assignees: []
 labels: []
 created_at: '2022-12-05T00:24:33+00:00'
-updated_at: '2022-12-08T03:50:21+00:00'
+updated_at: '2026-09-09T20:10:00+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-09T20:10:00+00:00'
 ---
 
 # Original Description
@@ -28,3 +28,4 @@ I tend to agree that this (and #8667) are a little misleading insofar as just sh
 
 # Action History
 - Created by: imfiesh | 2022-12-05T00:24:33+00:00
+- Closed at: 2026-09-09T20:10:00+00:00

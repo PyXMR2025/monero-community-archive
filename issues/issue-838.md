@@ -7,10 +7,10 @@ assignees: []
 labels:
 - bug
 created_at: '2016-05-13T08:29:24+00:00'
-updated_at: '2019-09-26T21:43:52+00:00'
+updated_at: '2026-09-07T22:39:45+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:39:45+00:00'
 ---
 
 # Original Description
@@ -89,3 +89,4 @@ So maybe `--p2p-bind-ip-for-real` :)
 
 # Action History
 - Created by: osensei | 2016-05-13T08:29:24+00:00
+- Closed at: 2026-09-07T22:39:45+00:00
