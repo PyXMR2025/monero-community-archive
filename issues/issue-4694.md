@@ -5,7 +5,7 @@ author: DedovKonstantin
 assignees: []
 labels: []
 created_at: '2026-09-04T12:30:38+00:00'
-updated_at: '2026-09-04T14:15:37+00:00'
+updated_at: '2026-09-07T17:26:09+00:00'
 type: issue
 status: open
 closed_at: null
@@ -30,6 +30,9 @@ Try restoring it from restore height 1.
 > Try restoring it from restore height 1.
 
 This is that (from height 0).
+
+## selsta | 2026-09-07T17:25:54+00:00
+One or multiple outputs were missed during wallet scan. This can either be due to wrong restore height, an issue with the subaddres lookahead, or a node issue.
 
 # Action History
 - Created by: DedovKonstantin | 2026-09-04T12:30:38+00:00
