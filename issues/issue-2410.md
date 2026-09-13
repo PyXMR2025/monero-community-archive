@@ -5,10 +5,10 @@ author: peli-pro
 assignees: []
 labels: []
 created_at: '2019-10-08T09:16:53+00:00'
-updated_at: '2019-10-27T19:04:38+00:00'
+updated_at: '2026-09-07T22:52:21+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:52:21+00:00'
 ---
 
 # Original Description
@@ -76,5 +76,9 @@ Is it possible to import key images into GUI wallet?
 To my knowledge you can not import them in the gui, but you can import them with the cli and then they are reflected in the gui.
 The main idea is to give a user a hint that the balance might be wrong and how might resolve it.
 
+## selsta | 2026-09-07T22:52:20+00:00
+Resolved in https://github.com/monero-project/monero-gui/pull/2417.
+
 # Action History
 - Created by: peli-pro | 2019-10-08T09:16:53+00:00
+- Closed at: 2026-09-07T22:52:21+00:00

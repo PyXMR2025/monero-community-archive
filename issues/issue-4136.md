@@ -5,10 +5,10 @@ author: plowsof
 assignees: []
 labels: []
 created_at: '2023-03-25T15:35:52+00:00'
-updated_at: '2023-03-25T15:35:52+00:00'
+updated_at: '2026-09-07T22:52:52+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:52:45+00:00'
 ---
 
 # Original Description
@@ -16,5 +16,9 @@ i dont want to forget this small issue: if you try to install p2pool on an old v
 it should detect the p2pool file is not accessible and fail before checking hashes / show a more relevant error message
 
 # Discussion History
+## selsta | 2026-09-07T22:52:45+00:00
+Resolved in #4147.
+
 # Action History
 - Created by: plowsof | 2023-03-25T15:35:52+00:00
+- Closed at: 2026-09-07T22:52:45+00:00

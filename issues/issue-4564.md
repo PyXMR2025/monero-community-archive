@@ -5,10 +5,10 @@ author: haplo
 assignees: []
 labels: []
 created_at: '2026-01-30T17:00:37+00:00'
-updated_at: '2026-01-30T18:29:59+00:00'
+updated_at: '2026-09-07T22:59:28+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:59:28+00:00'
 ---
 
 # Original Description
@@ -72,5 +72,9 @@ I think the problem might be with the Monero wallet itself, as creating a new wa
 ## selsta | 2026-01-30T18:29:59+00:00
 Wallet cache incompatibility looks different. The fact that the Ledger monero app itself crashes indicates a bug in their code. I'm not aware of any changes recently made on monero's side that would explain this.
 
+## selsta | 2026-09-07T22:59:28+00:00
+Closing as this is an upstream Ledger issue.
+
 # Action History
 - Created by: haplo | 2026-01-30T17:00:37+00:00
+- Closed at: 2026-09-07T22:59:28+00:00

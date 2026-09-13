@@ -6,10 +6,10 @@ assignees: []
 labels:
 - bug
 created_at: '2017-08-14T14:52:25+00:00'
-updated_at: '2018-01-03T15:53:41+00:00'
+updated_at: '2026-09-07T22:51:04+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:51:04+00:00'
 ---
 
 # Original Description
@@ -49,5 +49,9 @@ https://github.com/Timo614/monero/tree/wallet-api-unsigned-transaction-bug-fix h
 
 Not sure on the process for releasing API changes but in the branch I refactored the transfer logic used by the history component so it could be used for unsigned transactions as well. If anyone knows: Are we okay with breaking this API or is it something we need backwards compatibility for? Wondering if it's safe to remove the old methods here as they were broken for that last comment's reasons. If it's just making the two PRs can file those so we can get this fixed just confirming what's ideal here process wise.
 
+## selsta | 2026-09-07T22:51:04+00:00
+Resolved in https://github.com/monero-project/monero-gui/pull/3862
+
 # Action History
 - Created by: Jaqueeee | 2017-08-14T14:52:25+00:00
+- Closed at: 2026-09-07T22:51:04+00:00

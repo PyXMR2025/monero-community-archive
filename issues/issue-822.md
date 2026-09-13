@@ -6,10 +6,10 @@ assignees: []
 labels:
 - feature
 created_at: '2017-08-16T21:25:58+00:00'
-updated_at: '2017-08-18T13:00:10+00:00'
+updated_at: '2026-09-07T22:51:50+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:51:50+00:00'
 ---
 
 # Original Description
@@ -86,5 +86,9 @@ In any case, any weird state can always be fixed by manual import/export, and th
 the bug mentioned in 1.2 is fixed in https://github.com/monero-project/monero/pull/2309
 When creating a view only wallet, all cached data is copied from the full wallet. 
 
+## selsta | 2026-09-07T22:51:50+00:00
+Resolved in https://github.com/monero-project/monero-gui/pull/1415 and https://github.com/monero-project/monero-gui/pull/3435.
+
 # Action History
 - Created by: JollyMort | 2017-08-16T21:25:58+00:00
+- Closed at: 2026-09-07T22:51:50+00:00

@@ -5,10 +5,10 @@ author: peepo5
 assignees: []
 labels: []
 created_at: '2021-11-05T14:36:11+00:00'
-updated_at: '2024-04-11T14:51:59+00:00'
+updated_at: '2026-09-07T22:56:05+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-07T22:56:05+00:00'
 ---
 
 # Original Description
@@ -46,3 +46,4 @@ Preferred scenario is that all files regarding monero are somewhere under .confi
 
 # Action History
 - Created by: peepo5 | 2021-11-05T14:36:11+00:00
+- Closed at: 2026-09-07T22:56:05+00:00
