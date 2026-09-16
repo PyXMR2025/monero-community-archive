@@ -6,10 +6,10 @@ assignees: []
 labels:
 - C-bug
 created_at: '2026-09-02T14:29:55+00:00'
-updated_at: '2026-09-02T14:29:55+00:00'
+updated_at: '2026-09-14T11:32:27+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-14T11:32:27+00:00'
 ---
 
 # Original Description
@@ -24,3 +24,4 @@ We should return `[0; 32]`
 # Discussion History
 # Action History
 - Created by: Boog900 | 2026-09-02T14:29:55+00:00
+- Closed at: 2026-09-14T11:32:27+00:00

@@ -7,10 +7,10 @@ assignees:
 labels:
 - C-proposal
 created_at: '2026-07-23T18:03:16+00:00'
-updated_at: '2026-07-25T14:17:27+00:00'
+updated_at: '2026-09-13T17:58:53+00:00'
 type: issue
-status: open
-closed_at: null
+status: closed
+closed_at: '2026-09-13T17:58:53+00:00'
 ---
 
 # Original Description
@@ -67,3 +67,4 @@ I am working on it btw, just to avoid duplicate work
 
 # Action History
 - Created by: Boog900 | 2026-07-23T18:03:16+00:00
+- Closed at: 2026-09-13T17:58:53+00:00
