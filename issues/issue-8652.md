@@ -65,7 +65,7 @@ but this didn't:
 ## preland | 2025-02-12T05:44:16+00:00
 I can confirm that this behavior still exists, along with the misleading help output that implies that the ring amount is optional. This is probably still low priority unless anyone else is concerned.
 
-## fxrstor | 2025-04-30T17:21:01+00:00
+## wqsv | 2025-04-30T17:21:01+00:00
 ![Image](https://github.com/user-attachments/assets/ffae902c-4910-4d74-b226-49ea31b08fdf)
 This issue still exists afaik.
 

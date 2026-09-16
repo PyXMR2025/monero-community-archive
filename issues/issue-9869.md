@@ -39,7 +39,7 @@ hiոt: xmr iѕ aոothеr сrуptо thаt cɑո аlѕо be bouԍht, ԍооglе it
 ```
 
 # Discussion History
-## fxrstor | 2025-03-26T10:44:28+00:00
+## wqsv | 2025-03-26T10:44:28+00:00
 It's obviously a scam email. Try reporting the email directly via Gmail or the email provider you use. 
 
 ## selsta | 2025-03-26T11:18:55+00:00
@@ -49,7 +49,7 @@ As @U65535F said, mark it as "phishing" in your email provider, and do not inter
 I already reported it as phishing.
 And usually I report such E-Mails on https://www.chainabuse.com/report but here the blockchain is not supported/recognised yet, so I contacted them.
 
-## fxrstor | 2025-03-26T12:46:58+00:00
+## wqsv | 2025-03-26T12:46:58+00:00
 > I already reported it as phishing. And usually I report such E-Mails on https://www.chainabuse.com/report but here the blockchain is not supported/recognised yet, so I contacted them.
 
 I don't think reporting would do anything to attacker's accounts since monero is private coin (means your transactions are not visible, nor the balance), so basically it boils down to untraceable (no one can track you with exceptions of opsec). If you had reported it as phishing, that would generally be enough. No need for extra chainabuse step if they don't support xmr.

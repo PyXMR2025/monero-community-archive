@@ -52,7 +52,7 @@ So only the dependency bump to boost 1.69.0  is pending until we can see a relea
 ## MaxXor | 2025-03-11T18:54:52+00:00
 That's definitely right. I'll happily help testing and spin up a 2nd monero node once all necessary PRs are merged.
 
-## fxrstor | 2025-03-14T14:47:40+00:00
+## wqsv | 2025-03-14T14:47:40+00:00
 > That's definitely right. I'll happily help testing and spin up a 2nd monero node once all necessary PRs are merged.
 
 @MaxXor All PRs are merged.
@@ -206,7 +206,7 @@ note from @Boog900
 
 https://libera.monerologs.net/monero-dev/20250316#c511012
 
-## fxrstor | 2025-03-17T13:55:14+00:00
+## wqsv | 2025-03-17T13:55:14+00:00
 @selsta 
 
 ## nahuhh | 2025-03-17T22:03:26+00:00
