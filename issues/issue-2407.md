@@ -48,7 +48,7 @@ Edit: found it and it was 1 year. So that will be May 14, 2025. https://github.c
 ## shortwavesurfer2009 | 2025-05-31T22:52:54+00:00
 Just an update to this RetoSwap is now over a year old. So it has met that requirement for listing.
 
-## fxrstor | 2025-11-12T01:56:12+00:00
+## wqsv | 2025-11-12T01:56:12+00:00
 > Just an update to this RetoSwap is now over a year old. So it has met that requirement for listing.
 
 This PR adds RetoSwap: #2550
