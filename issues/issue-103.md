@@ -5,7 +5,7 @@ author: jeffro256
 assignees: []
 labels: []
 created_at: '2025-09-15T21:27:56+00:00'
-updated_at: '2026-08-25T16:22:06+00:00'
+updated_at: '2026-09-18T00:10:39+00:00'
 type: issue
 status: open
 closed_at: null
@@ -48,10 +48,10 @@ closed_at: null
 | AD | Daemon: relay empty fluffy block on found block #155 | cryptonote_core | https://github.com/monero-project/monero/pull/10205 | | ✅️ |
 | AE | Daemon: bump fluffy block byte size limit, match new block #159 | cryptonote_basic | | | ❌ |
 | AF |  wallet: CLI & RPC speed up refresh/show_transfers w/large pool #162  | wallet | | | ❌ |
-| AG | Daemon: send tx slices in pool complement response #168 | cryptonote_protocol | | |❌ |
+| ~~AG~~ | ~~Daemon: send tx slices in pool complement response #168~~ | cryptonote_protocol | | | ✅️ (not necessary w/tx relay v2 changes)|
 | AH | blockchain_prune: check DB version | blockchain_utilities | https://github.com/monero-project/monero/pull/10179 | | ✅️ |
 | AI | tx pool: only increment m_txpool_weight for newly added pool txs #194 | cryptonote_core | https://github.com/monero-project/monero/pull/10203 | | ✅️ |
-| AJ | tx pool: don't drop connections relaying key images spent in chain #204 | cryptonote_core | | | ❌ |
+| AJ | tx pool: don't drop connections relaying key images spent in chain #204 | cryptonote_core | https://github.com/monero-project/monero/pull/11339 | | ❌ |
 | AK | simplewallet: use passed decrypted payment ID from wallet2 for notifications | simplewallet, wallet | https://github.com/monero-project/monero/pull/10189 | | ✅️ |
 | AL | common: add std equivalent of hash_combine() | common | https://github.com/monero-project/monero/pull/10215 | | ✅️ |
 | AM | crypto: add FCMP++ generators T, U, & V | crypto | https://github.com/monero-project/monero/pull/9827, https://github.com/monero-project/monero/pull/10963 | L | ✅️ |
@@ -59,7 +59,7 @@ closed_at: null
 | AO | cryptonote_basic: add overload for `get_block_longhash()` | cryptonote_basic | https://github.com/monero-project/monero/pull/10039 | | ✅️ |
 | AP | less noisy perf logs #100 | wallet2 | | | ❌ |
 | AQ | #253 | cryptonote_core | | | ❌ |
-| AR | runaway spans #234, #275 | cryptonote_protocol |https://github.com/monero-project/monero/pull/9495, https://github.com/monero-project/monero/pull/10303 | | ❌ |
+| AR | runaway spans #234, #275 | cryptonote_protocol |https://github.com/monero-project/monero/pull/9495, https://github.com/monero-project/monero/pull/10303 | | ✅️ |
 | AS | common: fix `apply_permutation()` for `std::vector<bool>` | common | https://github.com/monero-project/monero/pull/10273 | | ✅️ | 
 | AT | OOM fix for FCMP++ #228 | | | | ❌ |
 | AU | #359 | | | | ❌ |
