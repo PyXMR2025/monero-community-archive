@@ -1,7 +1,7 @@
 ---
 title: 'question: RandomX'
 source_url: https://github.com/xmrig/xmrig/issues/1035
-author: liminalsoundscapes
+author: DarkllingDuck
 assignees: []
 labels:
 - question
@@ -32,5 +32,5 @@ Good to hear, I have always supported xmrig and would love to see it with Random
 Thank you for all your work, best miner in the business.
 
 # Action History
-- Created by: liminalsoundscapes | 2019-06-14T20:49:39+00:00
+- Created by: DarkllingDuck | 2019-06-14T20:49:39+00:00
 - Closed at: 2019-06-24T13:12:18+00:00

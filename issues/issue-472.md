@@ -1,7 +1,7 @@
 ---
 title: config.json
 source_url: https://github.com/xmrig/xmrig/issues/472
-author: liminalsoundscapes
+author: DarkllingDuck
 assignees: []
 labels:
 - enhancement
@@ -20,12 +20,12 @@ would love a nice solution on how to set a static config filename to the build s
 Why just not use `--config` option?
 Thank you.
 
-## liminalsoundscapes | 2018-03-24T21:01:44+00:00
+## DarkllingDuck | 2018-03-24T21:01:44+00:00
 I can, but some settings i would like to keep as few parameters as possible, i think config.json can still be a default, but an alternative default would be nice as well which could be hardcoded in the cmake option part :)
 
 ## calvintam236 | 2018-03-30T09:15:44+00:00
 A suggestion: run the docker image of xmrig.
 
 # Action History
-- Created by: liminalsoundscapes | 2018-03-23T09:37:17+00:00
+- Created by: DarkllingDuck | 2018-03-23T09:37:17+00:00
 - Closed at: 2019-08-02T13:56:04+00:00

@@ -1,7 +1,7 @@
 ---
 title: Cannot UPX compress anymore
 source_url: https://github.com/xmrig/xmrig/issues/1427
-author: liminalsoundscapes
+author: DarkllingDuck
 assignees: []
 labels: []
 created_at: '2019-12-15T21:22:58+00:00'
@@ -42,5 +42,5 @@ It UPX bug https://github.com/upx/upx/issues/245 nothing I can do with it.
 Thank you.
 
 # Action History
-- Created by: liminalsoundscapes | 2019-12-15T21:22:58+00:00
+- Created by: DarkllingDuck | 2019-12-15T21:22:58+00:00
 - Closed at: 2019-12-22T19:06:41+00:00

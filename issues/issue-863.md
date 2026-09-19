@@ -1,7 +1,7 @@
 ---
 title: Fresh computer with cmake and msys64
 source_url: https://github.com/xmrig/xmrig/issues/863
-author: liminalsoundscapes
+author: DarkllingDuck
 assignees: []
 labels: []
 created_at: '2018-11-01T13:28:12+00:00'
@@ -46,5 +46,5 @@ would appreciate some pointers in the right direction
 
 # Discussion History
 # Action History
-- Created by: liminalsoundscapes | 2018-11-01T13:28:12+00:00
+- Created by: DarkllingDuck | 2018-11-01T13:28:12+00:00
 - Closed at: 2018-11-01T14:15:46+00:00
